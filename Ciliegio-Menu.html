@@ -68,7 +68,7 @@ html,body{height:100%;background:var(--bg);color:var(--white);font-family:'Cormo
 .home-logo-circle .lhint{position:relative;z-index:1;font-family:'Cinzel',serif;font-size:11px;color:var(--white3);text-align:center;line-height:1.6;letter-spacing:1px}
 .home-title{font-family:'Cinzel',serif;font-size:30px;font-weight:400;letter-spacing:5px;color:var(--white);margin-bottom:8px}
 .home-sub{font-size:18px;color:var(--gold);font-style:italic;letter-spacing:1px;margin-bottom:52px}
-.home-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:540px;margin:0 auto 44px}
+.home-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;max-width:700px;margin:0 auto 44px}
 .hcard{
   background:var(--bg2);border:1px solid var(--border2);border-radius:var(--r2);
   padding:30px 22px;cursor:pointer;transition:all .2s;text-align:center;
@@ -317,7 +317,6 @@ textarea{resize:vertical;min-height:72px}
   <button class="btn-home" onclick="goHome()">⌂ Home</button>
   <nav class="topbar-nav">
     <button class="topbar-btn" data-pg="piatti"  onclick="navTo('piatti',this)">Piatti</button>
-    <button class="topbar-btn" data-pg="menu"    onclick="navTo('menu',this)">Compila Menù</button>
     <button class="topbar-btn" data-pg="cal"     onclick="navTo('cal',this)">Prenotazioni</button>
     <button class="topbar-btn" data-pg="stampa"  onclick="navTo('stampa',this)">Stampa</button>
   </nav>
@@ -347,11 +346,6 @@ textarea{resize:vertical;min-height:72px}
         <span class="hcl">Lista Piatti</span>
         <span class="hcd">Gestisci il database per portata</span>
       </div>
-      <div class="hcard" onclick="navTo('menu')">
-        <span class="hci">🍽</span>
-        <span class="hcl">Compila Menù</span>
-        <span class="hcd">Crea i menù del giorno</span>
-      </div>
       <div class="hcard" onclick="navTo('cal')">
         <span class="hci">📅</span>
         <span class="hcl">Prenotazioni</span>
@@ -379,11 +373,11 @@ textarea{resize:vertical;min-height:72px}
   </div>
 </div>
 
-<!-- ══ COMPILA MENU ══ -->
+<!-- ══ COMPILA MENU (nascosto — aperto solo dal calendario via ✏ Modifica) ══ -->
 <div id="page-menu" class="page">
   <div class="content">
-    <!-- HEADER FORM -->
-    <div class="card mb-16">
+    <!-- HEADER FORM — nascosto, compilato programmaticamente dal calendario -->
+    <div class="card mb-16" style="display:none">
       <div class="card-hd"><span class="card-title">Imposta Menù</span></div>
       <div class="form-row">
         <div class="form-group" style="max-width:180px">
@@ -687,8 +681,11 @@ function navTo(name, btn){
   document.getElementById('page-'+name).classList.add('active');
   document.getElementById('topbar').style.display='flex';
   document.querySelectorAll('.topbar-btn').forEach(b=>b.classList.remove('active'));
-  const tb=btn||document.querySelector(`.topbar-btn[data-pg="${name}"]`);
-  if(tb) tb.classList.add('active');
+  // 'menu' è nascosto dalla nav — non evidenziare nessun bottone
+  if(name!=='menu'){
+    const tb=btn||document.querySelector(`.topbar-btn[data-pg="${name}"]`);
+    if(tb) tb.classList.add('active');
+  }
   if(name==='piatti') renderPiatti();
   if(name==='cal') renderCal();
   if(name==='stampa'){ document.getElementById('s-data').value=new Date().toISOString().split('T')[0]; }
@@ -969,7 +966,10 @@ function salvaMenu(){
   const btn=event.currentTarget||event.target;
   const orig=btn.textContent;
   btn.textContent='✓ Salvato!';btn.style.background='var(--green2)';
-  setTimeout(()=>{btn.textContent=orig;btn.style.background='';},1800);
+  setTimeout(()=>{
+    btn.textContent=orig;btn.style.background='';
+    navTo('cal');
+  },1200);
 }
 
 // ══════════════════════════════════════════════════════
@@ -1213,15 +1213,26 @@ function editMenuFromCal(dateStr,serv,nome){
   document.getElementById('m-serv').value=serv;
   document.getElementById('m-nome').value=nome;
   document.getElementById('m-pax').value='';
-  // ricarica pax dall'eventuale prenotazione
   if(nome){
     const dsKey=`${dateStr}_${serv}`;
-    const menuKey=mkKey(dateStr,serv,nome);
+    const mKey=mkKey(dateStr,serv,nome);
     const pren=getPren(dsKey);
-    const g=pren.gruppi.find(x=>x.menuKey===menuKey&&x.nome===nome);
+    const g=pren.gruppi.find(x=>x.menuKey===mKey&&x.nome===nome);
     if(g&&g.pax) document.getElementById('m-pax').value=g.pax;
   }
-  setTimeout(()=>apriEditor(),60);
+  setTimeout(()=>{
+    apriEditor();
+    // inserisce breadcrumb torna al calendario in cima all'editor
+    const editor=document.getElementById('menu-editor');
+    let bc=document.getElementById('back-to-cal');
+    if(!bc){
+      bc=document.createElement('div');
+      bc.id='back-to-cal';
+      bc.style.cssText='margin-bottom:16px';
+      bc.innerHTML=`<button class="btn btn-ghost btn-sm" onclick="navTo('cal');document.getElementById('cal-detail').style.display='block'">← Torna al Calendario</button>`;
+      editor.insertBefore(bc,editor.firstChild);
+    }
+  },60);
 }
 function apriStampaConKey(key){
   const pk=parseKey(key);
