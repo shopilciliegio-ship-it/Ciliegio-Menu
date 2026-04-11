@@ -57,14 +57,14 @@ html,body{height:100%;background:var(--bg);color:var(--white);font-family:'Cormo
 .home-inner{text-align:center;padding:40px 24px;max-width:720px;margin:0 auto}
 .home-logo-area{margin-bottom:44px}
 .home-logo-circle{
-  width:120px;height:120px;margin:0 auto 22px;
-  border:2px solid var(--gold-dim);border-radius:50%;
+  width:130px;height:130px;margin:0 auto 22px;
+  border:2px solid var(--gold);border-radius:8px;
   display:flex;align-items:center;justify-content:center;
   cursor:pointer;position:relative;overflow:hidden;
-  transition:border-color .2s;
+  transition:border-color .2s;background:#0a0a0a;
 }
-.home-logo-circle:hover{border-color:var(--gold)}
-.home-logo-circle img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:50%}
+.home-logo-circle:hover{border-color:var(--gold2);box-shadow:0 0 18px rgba(201,168,76,.2)}
+.home-logo-circle img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;border-radius:6px;padding:6px}
 .home-logo-circle .lhint{position:relative;z-index:1;font-family:'Cinzel',serif;font-size:11px;color:var(--white3);text-align:center;line-height:1.6;letter-spacing:1px}
 .home-title{font-family:'Cinzel',serif;font-size:30px;font-weight:400;letter-spacing:5px;color:var(--white);margin-bottom:8px}
 .home-sub{font-size:18px;color:var(--gold);font-style:italic;letter-spacing:1px;margin-bottom:52px}
@@ -165,12 +165,9 @@ textarea{resize:vertical;min-height:72px}
 .pv-item .pve{color:var(--gold);font-size:15px;font-style:italic}
 
 .preview-price{padding:14px 18px;border-top:1px solid var(--border);background:var(--bg3)}
-.pr-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:5px;font-size:17px}
-.pr-row .pl{color:var(--white3)}.pr-row .pv{color:var(--white2)}
-.pr-total{display:flex;justify-content:space-between;align-items:center;padding-top:10px;margin-top:10px;border-top:1px solid var(--border2)}
+.pr-total{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
 .pr-total .pl{font-family:'Cinzel',serif;font-size:14px;letter-spacing:1px;color:var(--gold)}
-.pr-total .pv{font-size:24px;color:var(--gold)}
-.price-custom{margin-top:10px;display:flex;gap:8px;align-items:center}
+.price-custom{display:flex;gap:8px;align-items:center}
 .price-custom input{flex:1;font-size:19px;padding:7px 11px}
 
 .preview-actions{padding:14px 18px;border-top:1px solid var(--border);display:flex;gap:8px;flex-wrap:wrap}
@@ -322,8 +319,7 @@ textarea{resize:vertical;min-height:72px}
   </nav>
   <div class="topbar-actions">
     <button class="btn btn-ghost btn-sm" onclick="openOv('ov-gh')">☁ GitHub</button>
-    <button class="btn btn-ghost btn-sm" onclick="esportaJson()" title="Salva backup locale">💾</button>
-    <button class="btn btn-ghost btn-sm" onclick="document.getElementById('imp').click()" title="Importa backup">📂</button>
+    <button class="btn btn-ghost btn-sm" onclick="document.getElementById('imp').click()" title="Importa backup">📂 Importa</button>
     <input type="file" id="imp" accept=".json" style="display:none" onchange="importaJson(this)">
   </div>
 </div>
@@ -425,14 +421,11 @@ textarea{resize:vertical;min-height:72px}
             <div class="preview-hd">Anteprima Menù</div>
             <div class="preview-body" id="pv-body"><div class="empty" style="padding:20px">Seleziona i piatti.</div></div>
             <div class="preview-price" id="pv-price" style="display:none">
-              <div id="pv-price-rows"></div>
               <div class="pr-total">
-                <span class="pl">Totale base</span>
-                <span class="pv" id="pv-totale">€ 0</span>
+                <span class="pl">Prezzo Menù €</span>
               </div>
-              <div class="price-custom mt-8">
-                <label class="lbl" style="white-space:nowrap;font-size:12px">Prezzo finale €</label>
-                <input type="number" id="m-prezzo" min="0" step="0.5" placeholder="—">
+              <div class="price-custom">
+                <input type="number" id="m-prezzo" min="0" step="0.5" placeholder="scrivi il prezzo…">
               </div>
             </div>
             <div class="preview-actions">
@@ -586,23 +579,37 @@ textarea{resize:vertical;min-height:72px}
   <div class="modal">
     <button class="modal-close" onclick="closeOv('ov-gh')">✕</button>
     <div class="modal-title">☁ Sincronizza GitHub</div>
-    <p class="text-muted mb-12">Salva e carica tutti i dati nel tuo repository GitHub privato.</p>
+
+    <div style="background:#1a1200;border:1px solid var(--gold-dim);border-radius:var(--r);padding:14px 16px;margin-bottom:18px;font-size:15px;line-height:1.6">
+      <div style="color:var(--gold);font-family:'Cinzel',serif;font-size:13px;letter-spacing:1px;margin-bottom:8px">⚠ SOLUZIONE ERRORE "BAD CREDENTIALS"</div>
+      <div style="color:var(--white2)">
+        Il problema è quasi certamente il <strong style="color:var(--gold)">tipo di token</strong>. Devi usare un <strong style="color:var(--gold)">Personal Access Token Classic</strong>, non fine-grained.<br><br>
+        Come crearlo correttamente:<br>
+        1. Vai su <strong>GitHub → Settings → Developer settings → Personal access tokens → Tokens (classic)</strong><br>
+        2. Clicca <strong>Generate new token (classic)</strong><br>
+        3. Seleziona lo scope <strong>repo</strong> (tutta la riga — dà accesso completo ai repo privati)<br>
+        4. Genera e copia il token (inizia con <code style="color:var(--gold2);background:var(--bg4);padding:1px 5px;border-radius:3px">ghp_</code>)<br><br>
+        <span style="color:var(--white3)">Il file JSON verrà salvato nella root del repository come specificato sotto.</span>
+      </div>
+    </div>
+
     <div class="form-group mb-12">
-      <label class="lbl">Personal Access Token (scope "repo")</label>
+      <label class="lbl">Personal Access Token Classic (inizia con ghp_)</label>
       <input type="password" id="gh-tok" placeholder="ghp_xxxxxxxxxxxxxxxx">
     </div>
     <div class="form-row">
-      <div class="form-group"><label class="lbl">Owner (username)</label><input type="text" id="gh-own" placeholder="tuousername"></div>
-      <div class="form-group"><label class="lbl">Repository</label><input type="text" id="gh-rep" placeholder="ristorante-menu"></div>
+      <div class="form-group"><label class="lbl">Owner (username GitHub)</label><input type="text" id="gh-own" placeholder="shopilciliegio-ship-it"></div>
+      <div class="form-group"><label class="lbl">Repository</label><input type="text" id="gh-rep" placeholder="Ciliegio-Menu"></div>
     </div>
     <div class="form-group mb-16">
-      <label class="lbl">Percorso file</label>
-      <input type="text" id="gh-pth" value="data/menu.json">
+      <label class="lbl">Percorso file (nella root: solo nomefile.json)</label>
+      <input type="text" id="gh-pth" value="menu-data.json" placeholder="menu-data.json">
     </div>
     <div class="flex mb-12">
       <button class="btn btn-gold" onclick="ghSave()">⬆ Salva su GitHub</button>
       <button class="btn btn-green" onclick="ghLoad()">⬇ Carica da GitHub</button>
       <button class="btn btn-ghost btn-sm" onclick="ghSaveCfg()">Salva config</button>
+      <button class="btn btn-ghost btn-sm" onclick="esportaJson()">💾 Backup locale</button>
     </div>
     <div id="gh-st"></div>
   </div>
@@ -703,7 +710,19 @@ function caricaLogo(inp){
   r.onload=e=>{ localStorage.setItem('logo',e.target.result); applyLogo(e.target.result); };
   r.readAsDataURL(f);
 }
-function loadLogo(){ const l=localStorage.getItem('logo'); if(l)applyLogo(l); }
+function loadLogo(){
+  // Prima prova dal localStorage (upload manuale o precedente)
+  const l=localStorage.getItem('logo'); if(l){applyLogo(l);return;}
+  // Poi prova a caricare dal repository GitHub (URL raw pubblico)
+  const logoUrl='https://raw.githubusercontent.com/shopilciliegio-ship-it/Ciliegio-Menu/main/ciliegio_trasparente.png';
+  const img=document.getElementById('logo-img');
+  img.onload=()=>{
+    img.style.display='block';
+    document.getElementById('logo-hint').style.display='none';
+  };
+  img.onerror=()=>{}; // se fallisce rimane il testo
+  img.src=logoUrl;
+}
 function applyLogo(src){
   const img=document.getElementById('logo-img');
   img.src=src; img.style.display='block';
@@ -914,8 +933,7 @@ function flyAdd(portataId){
 function updatePreview(){
   if(!currentMenuKey)return;
   const menu=getMenu(currentMenuKey);
-  let html=''; let baseTotal=0; let hasAny=false;
-  const priceRows=[];
+  let html=''; let hasAny=false;
   PORTATE.forEach(portata=>{
     const ids=menu.piatti[portata.id]||[];
     if(!ids.length)return;
@@ -925,22 +943,10 @@ function updatePreview(){
       <div class="pv-label">${portata.label}</div>
       ${nomi.map(n=>`<div class="pv-item">${n.nome}${n.extra?` <span class="pve">+${n.extra}€</span>`:''}</div>`).join('')}
     </div>`;
-    baseTotal+=portata.prezzoBase;
-    priceRows.push({label:portata.label,base:portata.prezzoBase,extra:nomi.reduce((s,n)=>s+(n.extra||0),0)});
   });
   if(menu.testoLibero) html+=`<div style="margin-top:10px;font-size:14px;color:var(--white3);font-style:italic">${menu.testoLibero}</div>`;
   document.getElementById('pv-body').innerHTML=hasAny?html:'<div class="empty" style="padding:20px">Seleziona i piatti.</div>';
-  const ppEl=document.getElementById('pv-price');
-  if(hasAny){
-    ppEl.style.display='';
-    const totalExtra=priceRows.reduce((s,r)=>s+r.extra,0);
-    document.getElementById('pv-price-rows').innerHTML=priceRows.map(r=>`
-      <div class="pr-row">
-        <span class="pl">${r.label}</span>
-        <span class="pv">€${r.base}${r.extra?` <span style="color:var(--gold);font-size:12px">+${r.extra}€</span>`:''}</span>
-      </div>`).join('');
-    document.getElementById('pv-totale').textContent=`€ ${baseTotal+totalExtra}`;
-  } else ppEl.style.display='none';
+  document.getElementById('pv-price').style.display=hasAny?'':'none';
 }
 
 function salvaMenu(){
@@ -1360,27 +1366,29 @@ function ghSt(msg,t){const el=document.getElementById('gh-st');el.className='gh-
 async function ghSave(){
   const tok=document.getElementById('gh-tok').value.trim(),own=document.getElementById('gh-own').value.trim(),rep=document.getElementById('gh-rep').value.trim(),pth=document.getElementById('gh-pth').value.trim();
   if(!tok||!own||!rep){ghSt('Compila tutti i campi.','err');return;}
-  ghSt('Salvataggio…','info');
+  if(!tok.startsWith('ghp_'))ghSt('⚠ Attenzione: il token non inizia con ghp_ — assicurati di usare un token Classic.','info');
+  else ghSt('Salvataggio in corso…','info');
   try{
     let sha=null;
     try{const r=await fetch(`https://api.github.com/repos/${own}/${rep}/contents/${pth}`,{headers:{Authorization:`token ${tok}`,Accept:'application/vnd.github.v3+json'}});if(r.ok){const j=await r.json();sha=j.sha;}}catch(e){}
-    const body={message:`Menù ${new Date().toISOString().split('T')[0]}`,content:btoa(unescape(encodeURIComponent(JSON.stringify(DB,null,2))))};
+    const body={message:`Menù aggiornato ${new Date().toISOString().split('T')[0]}`,content:btoa(unescape(encodeURIComponent(JSON.stringify(DB,null,2))))};
     if(sha)body.sha=sha;
     const r2=await fetch(`https://api.github.com/repos/${own}/${rep}/contents/${pth}`,{method:'PUT',headers:{Authorization:`token ${tok}`,Accept:'application/vnd.github.v3+json','Content-Type':'application/json'},body:JSON.stringify(body)});
-    if(r2.ok)ghSt('✓ Salvato su GitHub!','ok');
-    else{const e=await r2.json();ghSt('Errore: '+(e.message||r2.status),'err');}
-  }catch(e){ghSt('Errore rete: '+e.message,'err');}
+    const j2=await r2.json();
+    if(r2.ok) ghSt('✓ Dati salvati su GitHub correttamente!','ok');
+    else ghSt(`Errore ${r2.status}: ${j2.message||'sconosciuto'}${j2.message==='Bad credentials'?' → Token non valido o scaduto. Usa un token Classic con scope repo.':''}`, 'err');
+  }catch(e){ghSt('Errore di rete: '+e.message,'err');}
 }
 async function ghLoad(){
   const tok=document.getElementById('gh-tok').value.trim(),own=document.getElementById('gh-own').value.trim(),rep=document.getElementById('gh-rep').value.trim(),pth=document.getElementById('gh-pth').value.trim();
   if(!tok||!own||!rep){ghSt('Compila tutti i campi.','err');return;}
-  ghSt('Caricamento…','info');
+  ghSt('Caricamento da GitHub…','info');
   try{
     const r=await fetch(`https://api.github.com/repos/${own}/${rep}/contents/${pth}`,{headers:{Authorization:`token ${tok}`,Accept:'application/vnd.github.v3+json'}});
-    if(!r.ok){ghSt('File non trovato ('+r.status+')','err');return;}
     const j=await r.json();
+    if(!r.ok){ghSt(`Errore ${r.status}: ${j.message||'sconosciuto'}${j.message==='Bad credentials'?' → Usa un token Classic con scope repo.':''}${r.status===404?' → File non trovato. Controlla il percorso.':''}`, 'err');return;}
     DB=JSON.parse(decodeURIComponent(escape(atob(j.content))));
-    saveDB();renderPiatti();renderCal();ghSt('✓ Caricato da GitHub!','ok');
+    saveDB();renderPiatti();renderCal();ghSt('✓ Dati caricati da GitHub!','ok');
   }catch(e){ghSt('Errore: '+e.message,'err');}
 }
 
