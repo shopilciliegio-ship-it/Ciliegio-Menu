@@ -1108,36 +1108,6 @@
     }
   ],
   "menu": {
-    "2026-04-12_pranzo_Beppe Pranzo": {
-      "piatti": {
-        "antipasto": [
-          "mnsq9hynqk0",
-          "mnsq9hynyoo",
-          "mnsq9hymtkv",
-          "mnsq9hynb4l",
-          "mnsq9hynf4r",
-          "mnsq9hyndkl"
-        ],
-        "primo": [
-          "mnsq9hyns1x",
-          "mnsq9hyngl1"
-        ],
-        "secondo": [
-          "mnsq9hynvd0",
-          "mnsq9hynecd"
-        ],
-        "contorno": [
-          "mnsq9hynciw",
-          "mnsq9hynq3b"
-        ],
-        "dolce": [
-          "mnsq9hyngxs"
-        ]
-      },
-      "testoLibero": "",
-      "prezzo": null,
-      "nomeSpecifico": "Beppe Pranzo"
-    },
     "2026-04-12_cena": {
       "piatti": {
         "antipasto": [
