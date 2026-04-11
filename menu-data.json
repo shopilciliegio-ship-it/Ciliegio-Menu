@@ -1194,6 +1194,37 @@
       "testoLibero": "",
       "prezzo": 35,
       "nomeSpecifico": ""
+    },
+    "2026-04-12_pranzo_altromenu": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hymfrx",
+          "mnsq9hynn6x",
+          "mnsq9hync35",
+          "mnsq9hyn33j",
+          "mnsq9hynmjr"
+        ],
+        "primo": [
+          "mnsq9hynfdo",
+          "mnsq9hynyuo"
+        ],
+        "secondo": [
+          "mnsq9hyn7he",
+          "mnsq9hynxjy"
+        ],
+        "contorno": [
+          "mnsq9hyndcf",
+          "mnsq9hynayz",
+          "mnsq9hynfyz"
+        ],
+        "dolce": [
+          "mnsq9hyngxs",
+          "mnsq9hyntti"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 34,
+      "nomeSpecifico": "altromenu"
     }
   },
   "prenotazioni": {
@@ -1235,6 +1266,12 @@
           "pax": 24,
           "note": "",
           "menuKey": "2026-04-12_pranzo"
+        },
+        {
+          "nome": "altromenu",
+          "pax": 23,
+          "note": "",
+          "menuKey": "2026-04-12_pranzo_altromenu"
         }
       ]
     },
