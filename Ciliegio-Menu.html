@@ -480,7 +480,7 @@ textarea{resize:vertical;min-height:72px}
     <!-- EDITOR -->
     <div id="menu-editor" style="display:none">
       <div style="display:flex;align-items:center;gap:14px;margin-bottom:18px;flex-wrap:wrap">
-        <h2 id="m-editor-title" style="font-family:'Cinzel',serif;font-size:18px;letter-spacing:2px;color:var(--gold);flex:1"></h2>
+        <h2 id="m-editor-title" style="font-family:'Cinzel',serif;font-size:1rem;letter-spacing:2px;color:var(--gold);flex:1"></h2>
       </div>
       <div class="menu-layout">
         <!-- portate + note -->
@@ -574,6 +574,34 @@ textarea{resize:vertical;min-height:72px}
 </div>
 
 </div><!-- /app -->
+
+<!-- ══ MODAL NUOVO MENU ══ -->
+<div id="ov-nuovo-menu" class="overlay hidden">
+  <div class="modal" style="max-width:480px">
+    <button class="modal-close" onclick="closeOv('ov-nuovo-menu')">✕</button>
+    <div class="modal-title">Nuovo Menù</div>
+    <div style="font-size:0.8rem;color:var(--white3);margin-bottom:16px" id="nuovo-menu-label"></div>
+    <input type="hidden" id="nuovo-menu-data">
+    <input type="hidden" id="nuovo-menu-serv">
+    <div class="form-row">
+      <div class="form-group">
+        <label class="lbl">Nome menù / gruppo</label>
+        <input type="text" id="nuovo-menu-nome" placeholder="es: Rossi, Matrimonio Bianchi…"
+          autocomplete="off" autocorrect="off" autocapitalize="words"
+          onkeydown="if(event.key==='Enter')confermaNuovoMenu()">
+      </div>
+      <div class="form-group" style="max-width:110px">
+        <label class="lbl">Pax</label>
+        <input type="number" id="nuovo-menu-pax" min="1" placeholder="—"
+          onkeydown="if(event.key==='Enter')confermaNuovoMenu()">
+      </div>
+    </div>
+    <div class="flex mt-12">
+      <button class="btn btn-gold" onclick="confermaNuovoMenu()">Crea Menù →</button>
+      <button class="btn btn-ghost" onclick="closeOv('ov-nuovo-menu')">Annulla</button>
+    </div>
+  </div>
+</div>
 
 <!-- ══ MODAL PIATTO ══ -->
 <div id="ov-piatto" class="overlay hidden">
@@ -1390,15 +1418,40 @@ function viewMenu(key){
 }
 
 function apriCompilaPerData(dateStr,serv){
+  // Apre un modal veloce per inserire nome e pax, poi lancia l'editor
+  const dt=parseDate(dateStr);
+  const label=`${dt.giornoLungo} — ${cap(serv)}`;
+  document.getElementById('nuovo-menu-label').textContent=label;
+  document.getElementById('nuovo-menu-data').value=dateStr;
+  document.getElementById('nuovo-menu-serv').value=serv;
+  document.getElementById('nuovo-menu-nome').value='';
+  document.getElementById('nuovo-menu-pax').value='';
+  openOv('ov-nuovo-menu');
+  setTimeout(()=>document.getElementById('nuovo-menu-nome').focus(),100);
+}
+function confermaNuovoMenu(){
+  const dateStr=document.getElementById('nuovo-menu-data').value;
+  const serv=document.getElementById('nuovo-menu-serv').value;
+  const nome=document.getElementById('nuovo-menu-nome').value.trim();
+  const pax=document.getElementById('nuovo-menu-pax').value;
+  if(!nome){alert('Inserisci almeno un nome per il menù.');return;}
+  closeOv('ov-nuovo-menu');
   navTo('menu');
   document.getElementById('m-data').value=dateStr;
   document.getElementById('m-serv').value=serv;
-  document.getElementById('m-nome').value='';
-  document.getElementById('m-pax').value='';
+  document.getElementById('m-nome').value=nome;
+  document.getElementById('m-pax').value=pax;
   setTimeout(()=>{
-    // Non apre editor automaticamente: lascia all'utente inserire il nome prima
-    document.getElementById('m-nome').focus();
-    document.getElementById('m-nome').scrollIntoView({behavior:'smooth',block:'center'});
+    apriEditor();
+    const editor=document.getElementById('menu-editor');
+    let bc=document.getElementById('back-to-cal');
+    if(!bc){
+      bc=document.createElement('div');
+      bc.id='back-to-cal';
+      bc.style.cssText='margin-bottom:16px';
+      bc.innerHTML=`<button class="btn btn-ghost btn-sm" onclick="navTo('cal')">← Torna al Calendario</button>`;
+      editor.insertBefore(bc,editor.firstChild);
+    }
   },60);
 }
 function editMenuFromCal(dateStr,serv,nome){
