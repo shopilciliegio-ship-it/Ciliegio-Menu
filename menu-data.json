@@ -1,0 +1,1282 @@
+{
+  "piatti": [
+    {
+      "id": "mnsq9hymoq1",
+      "portata": "antipasto",
+      "nome": "Battuta di manzo con maionese alla paprika",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hymmle",
+      "portata": "antipasto",
+      "nome": "Battuta di manzo con maionese alla senape",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hymfot",
+      "portata": "antipasto",
+      "nome": "Battuta di manzo con maionese all'aglio",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hymfrx",
+      "portata": "antipasto",
+      "nome": "Bruschetta all'olio nuovo",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hymqzy",
+      "portata": "antipasto",
+      "nome": "Bruschetta con finocchiella e finocchiona",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hymnei",
+      "portata": "antipasto",
+      "nome": "Bruschetta con pomodorini e basilico",
+      "extra": 0,
+      "note": "solo periodo estivo"
+    },
+    {
+      "id": "mnsq9hymuqe",
+      "portata": "antipasto",
+      "nome": "Cecina",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hymtkv",
+      "portata": "antipasto",
+      "nome": "Crostone con cavolo nero e pancetta",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hymnw1",
+      "portata": "antipasto",
+      "nome": "Crostone con cipolla e miele",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hyn8gn",
+      "portata": "antipasto",
+      "nome": "Crostone con fagioli e lardo",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynb4l",
+      "portata": "antipasto",
+      "nome": "Crostone con il buristo",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hync35",
+      "portata": "antipasto",
+      "nome": "Crostone con lampredotto e salsa verde",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hyn3m5",
+      "portata": "antipasto",
+      "nome": "Crostone con lenticchie e rigatino",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynlhy",
+      "portata": "antipasto",
+      "nome": "Crostone con trippa e formaggio",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hyn8zn",
+      "portata": "antipasto",
+      "nome": "Crostino con carota, aglio e finocchietto selvatico",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynh2h",
+      "portata": "antipasto",
+      "nome": "Crostino con crema di ceci e scorza di limone",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hyn8jt",
+      "portata": "antipasto",
+      "nome": "Crostino con crema di ceci e soppressata",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynyoo",
+      "portata": "antipasto",
+      "nome": "Crostino con fegatini di pollo, sale grosso e miele",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynkaz",
+      "portata": "antipasto",
+      "nome": "Crostino con gota, pecorino e miele",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hyn5zs",
+      "portata": "antipasto",
+      "nome": "Crostino con prugna e guanciale",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynsn7",
+      "portata": "antipasto",
+      "nome": "Crostino con ricotta, miele, pecorino, pere e granella di noci",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hyndkl",
+      "portata": "antipasto",
+      "nome": "Crostino con salsa di pomodoro e formaggio",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynn6x",
+      "portata": "antipasto",
+      "nome": "Crostino con salsa verde",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynxni",
+      "portata": "antipasto",
+      "nome": "Crostino con salsiccia, ricotta ed erbe aromatiche",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hyneqw",
+      "portata": "antipasto",
+      "nome": "Crostino nero",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynf4r",
+      "portata": "antipasto",
+      "nome": "Crostone fagioli e cotiche",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynak8",
+      "portata": "antipasto",
+      "nome": "Frittini misti di verdure di stagione",
+      "extra": 2,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynqm1",
+      "portata": "antipasto",
+      "nome": "Insalata aromatica con legumi e verdure di stagione",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hyn9ga",
+      "portata": "antipasto",
+      "nome": "Mousse di ricotta ed erbe aromatiche",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynf3u",
+      "portata": "antipasto",
+      "nome": "Panzanella croccante",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hyn33j",
+      "portata": "antipasto",
+      "nome": "Paté di fegatini con fichi secchi",
+      "extra": 1,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynfoi",
+      "portata": "antipasto",
+      "nome": "Polenta al forno con crema di lardo e formaggio",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynxmp",
+      "portata": "antipasto",
+      "nome": "Polenta ripiena con cavolo nero e granella di pancetta",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hyn6l4",
+      "portata": "antipasto",
+      "nome": "Polenta ripiena con scamorza e salsiccia",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynyjk",
+      "portata": "antipasto",
+      "nome": "Polpette della tradizione (cotte nel sugo)",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynqk0",
+      "nome": "Affettati misti toscani",
+      "portata": "antipasto",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynzix",
+      "portata": "antipasto",
+      "nome": "Selezione di formaggi pecorini con miele o marmellata",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynmjr",
+      "portata": "antipasto",
+      "nome": "Tonno del Chianti",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynuwh",
+      "portata": "antipasto",
+      "nome": "Torta salata salsiccia e cipolla",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hyno6u",
+      "portata": "antipasto",
+      "nome": "Tortino di pappa al pomodoro",
+      "extra": 0,
+      "note": "con aggiunta di stracciatella +1€"
+    },
+    {
+      "id": "mnsq9hynxrp",
+      "portata": "antipasto",
+      "nome": "Tortino di patate al rosmarino",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hyngse",
+      "portata": "antipasto",
+      "nome": "Tortino di ribollita con anelli di cipolla",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynfn6",
+      "portata": "primo",
+      "nome": "Crespelle ricotta e noci",
+      "extra": 2,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hyn7jq",
+      "portata": "primo",
+      "nome": "Crespelle ricotta e spinaci",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hyneb6",
+      "portata": "primo",
+      "nome": "Crespelle stracotto e mascarpone",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynj45",
+      "portata": "primo",
+      "nome": "Gnocchi freschi",
+      "extra": 3,
+      "note": "di nostra produzione"
+    },
+    {
+      "id": "mnsq9hynlob",
+      "portata": "primo",
+      "nome": "Lasagne al ragù",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynfdo",
+      "portata": "primo",
+      "nome": "Lasagne con verdure miste",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynyof",
+      "portata": "primo",
+      "nome": "Lasagne con zucca gialla e scamorza",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hyngc2",
+      "portata": "primo",
+      "nome": "Lasagne noci, porri, bietola e pecorino",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynx67",
+      "portata": "primo",
+      "nome": "Malfatti gratinati al profumo di tartufo",
+      "extra": 3,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynyuo",
+      "portata": "primo",
+      "nome": "Malfatti gratinati ricotta, spinaci e pecorino",
+      "extra": 2,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynhyk",
+      "portata": "primo",
+      "nome": "Minestra di ceci con pasta spezzata e crostini",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynkh2",
+      "portata": "primo",
+      "nome": "Panzanella normale o croccante",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynfpv",
+      "portata": "primo",
+      "nome": "Pappa al pomodoro",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynnla",
+      "portata": "primo",
+      "nome": "Pappardelle al ragù di anatra",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hyns1x",
+      "portata": "primo",
+      "nome": "Pappardelle al ragù di cinghiale",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynic3",
+      "portata": "primo",
+      "nome": "Pappardelle al ragù di coniglio",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hyn18u",
+      "portata": "primo",
+      "nome": "Pappardelle al ragù toscano",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynitq",
+      "portata": "primo",
+      "nome": "Pasta con crema di pecorino e guanciale croccante",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynn6z",
+      "portata": "primo",
+      "nome": "Pasta con guanciale e cipolla",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hyn45j",
+      "portata": "primo",
+      "nome": "Pasta con pesto e pomodorini",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynank",
+      "portata": "primo",
+      "nome": "Pasta con ragù dell'orto (vegetariano)",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hyn7pw",
+      "portata": "primo",
+      "nome": "Pasta con salsiccia e cavolo nero",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynm5u",
+      "portata": "primo",
+      "nome": "Pasta con salsiccia, zucca e pecorino",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynj3z",
+      "portata": "primo",
+      "nome": "Pasta con verdure di stagione",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hyn3vj",
+      "portata": "primo",
+      "nome": "Pasta e fagioli",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hyne90",
+      "portata": "primo",
+      "nome": "Pasta salsiccia, zafferano, asparagi e pancetta",
+      "extra": 2,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hyn9ag",
+      "portata": "primo",
+      "nome": "Pici all'aglione",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hyngl1",
+      "portata": "primo",
+      "nome": "Pici cacio e pepe",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hyni4i",
+      "portata": "primo",
+      "nome": "Pici con bruscoli di pane",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hyncjr",
+      "portata": "primo",
+      "nome": "Polenta",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynwdm",
+      "portata": "primo",
+      "nome": "Ribollita",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynn7v",
+      "portata": "primo",
+      "nome": "Risotto con verdure di stagione",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynzzq",
+      "portata": "primo",
+      "nome": "Risotto pinoli e spumante",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hyndew",
+      "portata": "primo",
+      "nome": "Risotto salsiccia e Chianti",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynval",
+      "portata": "primo",
+      "nome": "Tagliatelle al ragù",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hyn6e6",
+      "portata": "primo",
+      "nome": "Tortiglioni all'amatriciana",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hyndep",
+      "portata": "primo",
+      "nome": "Tortiglioni alla carbonara",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hyn8fo",
+      "portata": "primo",
+      "nome": "Tortelli ripieni",
+      "extra": 5,
+      "note": "di nostra produzione"
+    },
+    {
+      "id": "mnsq9hyn1ka",
+      "portata": "primo",
+      "nome": "Zuppa contadina con legumi e cereali",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynpqm",
+      "portata": "primo",
+      "nome": "Zuppa di cipolle gratinata",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynxpi",
+      "portata": "secondo",
+      "nome": "Arista arrosto",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynvd0",
+      "portata": "secondo",
+      "nome": "Arrosto misto 4 cose",
+      "extra": 4,
+      "note": "salsiccia, costole, stinco, fegatelli, scamerita, pollo, coniglio, agnello, tagliata"
+    },
+    {
+      "id": "mnsq9hyn7he",
+      "portata": "secondo",
+      "nome": "Bistecca Fiorentina",
+      "extra": 0,
+      "note": "prezzo a kg"
+    },
+    {
+      "id": "mnsq9hyn1vf",
+      "portata": "secondo",
+      "nome": "Bollito di maiale, pollo e manzo",
+      "extra": 4,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynm2d",
+      "portata": "secondo",
+      "nome": "Capocollo al forno",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynxjy",
+      "portata": "secondo",
+      "nome": "Capocollo ripieno con salsiccia e castagne",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynxg3",
+      "portata": "secondo",
+      "nome": "Capocollo ripieno con salsiccia e noci",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynvay",
+      "portata": "secondo",
+      "nome": "Capocollo ripieno con salsiccia e olive",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynalq",
+      "portata": "secondo",
+      "nome": "Capocollo ripieno con salsiccia e prugne",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hyn38r",
+      "portata": "secondo",
+      "nome": "Capocollo ripieno con salsiccia, pere e gorgonzola",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynxr9",
+      "portata": "secondo",
+      "nome": "Cappone",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hyn885",
+      "portata": "secondo",
+      "nome": "Cinghiale",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynltk",
+      "portata": "secondo",
+      "nome": "Coniglio alla cacciatora",
+      "extra": 2,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hyn5rm",
+      "portata": "secondo",
+      "nome": "Coniglio ripieno",
+      "extra": 5,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynuo1",
+      "portata": "secondo",
+      "nome": "Coscio di maiale arrosto",
+      "extra": 0,
+      "note": "minimo 60 pax"
+    },
+    {
+      "id": "mnsq9hynecd",
+      "portata": "secondo",
+      "nome": "Costole in umido",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hyna89",
+      "portata": "secondo",
+      "nome": "Costoloni di maiale marinati",
+      "extra": 1,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hyn8vg",
+      "portata": "secondo",
+      "nome": "Fagioli con le cotiche",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynty1",
+      "portata": "secondo",
+      "nome": "Fegatelli allo strutto",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynlwj",
+      "portata": "secondo",
+      "nome": "Filetto di maiale al vin santo",
+      "extra": 1,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hyncpy",
+      "portata": "secondo",
+      "nome": "Filetto di maiale in crosta di pane",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynugl",
+      "portata": "secondo",
+      "nome": "Filetto di maiale in salsa di mele",
+      "extra": 1,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynvqs",
+      "portata": "secondo",
+      "nome": "Filetto di maiale su pane tostato con pancetta e cipolle caramellate",
+      "extra": 1,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hyn52x",
+      "portata": "secondo",
+      "nome": "Filetto di manzo al pepe verde",
+      "extra": 5,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynmp5",
+      "portata": "secondo",
+      "nome": "Filetto di manzo vestito al lardo",
+      "extra": 5,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hyndep",
+      "portata": "secondo",
+      "nome": "Fritto misto di pollo, maiale e coniglio",
+      "extra": 2,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynr8v",
+      "portata": "secondo",
+      "nome": "Lampredotto",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynu57",
+      "portata": "secondo",
+      "nome": "Ossobuchi",
+      "extra": 3,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynxxp",
+      "portata": "secondo",
+      "nome": "Peposo",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynul2",
+      "portata": "secondo",
+      "nome": "Salsiccia e fagioli",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynsj0",
+      "portata": "secondo",
+      "nome": "Scottiglia (cacciucco di terra)",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hyn3n0",
+      "portata": "secondo",
+      "nome": "Spezzatino",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynlgw",
+      "portata": "secondo",
+      "nome": "Stracotto toscano con salsa al Chianti",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hyn4sj",
+      "portata": "secondo",
+      "nome": "Tagliata di manzo agli aromi",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynfgf",
+      "portata": "secondo",
+      "nome": "Tagliata di manzo al lardo",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hyndcd",
+      "portata": "secondo",
+      "nome": "Tagliata di manzo al lardo e scaglie di pecorino",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hyn0ay",
+      "portata": "secondo",
+      "nome": "Tagliata di manzo al pepe rosa",
+      "extra": 1,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hyns9r",
+      "portata": "secondo",
+      "nome": "Tagliata di scamerita",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hyneo2",
+      "portata": "secondo",
+      "nome": "Trippa alla senese",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hyncf7",
+      "portata": "contorno",
+      "nome": "Fagioli al fiasco",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynyb2",
+      "portata": "contorno",
+      "nome": "Fagioli all'uccelletta",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynciw",
+      "portata": "contorno",
+      "nome": "Fritto misto",
+      "extra": 2,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynn74",
+      "portata": "contorno",
+      "nome": "Gobbi rifatti al pomodoro",
+      "extra": 2,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynaa5",
+      "portata": "contorno",
+      "nome": "Insalata aromatica con legumi e verdure di stagione",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hyndcf",
+      "portata": "contorno",
+      "nome": "Insalata croccante",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynkgr",
+      "portata": "contorno",
+      "nome": "Insalata mista",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynq3b",
+      "portata": "contorno",
+      "nome": "Melanzane alla parmigiana",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynoka",
+      "portata": "contorno",
+      "nome": "Patate alla fattoressa",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynayz",
+      "portata": "contorno",
+      "nome": "Patate arrosto",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynelb",
+      "portata": "contorno",
+      "nome": "Patate sabbiate",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hyn657",
+      "portata": "contorno",
+      "nome": "Sformato di verdure",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynfyz",
+      "portata": "contorno",
+      "nome": "Spinaci saltati con uvetta",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hync5b",
+      "portata": "contorno",
+      "nome": "Verdure al forno",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hyni20",
+      "portata": "contorno",
+      "nome": "Verdure alla griglia",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynnku",
+      "portata": "dolce",
+      "nome": "Buccellato di mele e noci con crema di vin santo",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynzar",
+      "portata": "dolce",
+      "nome": "Cantucci e vin santo",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hyn14n",
+      "portata": "dolce",
+      "nome": "Crème caramel",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynrci",
+      "portata": "dolce",
+      "nome": "Crostata alla crema",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hyn0dv",
+      "portata": "dolce",
+      "nome": "Crostata alla frutta fresca",
+      "extra": 0,
+      "note": "solo frutta di stagione"
+    },
+    {
+      "id": "mnsq9hynyyk",
+      "portata": "dolce",
+      "nome": "Crostata con marmellata fresca",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynxld",
+      "portata": "dolce",
+      "nome": "Crostata con ricotta e caffè",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hyngxs",
+      "portata": "dolce",
+      "nome": "Crostata con ricotta, pinoli e uvetta",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynlyh",
+      "portata": "dolce",
+      "nome": "Macedonia",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hyn8ay",
+      "portata": "dolce",
+      "nome": "Mousse di ricotta agli agrumi su granella di cantucci",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynj2g",
+      "portata": "dolce",
+      "nome": "Mousse di ricotta al cioccolato su granella di cantucci",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynuou",
+      "portata": "dolce",
+      "nome": "Panna cotta",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hyntti",
+      "portata": "dolce",
+      "nome": "Pinolata alla crema",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynems",
+      "portata": "dolce",
+      "nome": "Salame al caffè",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynj7v",
+      "portata": "dolce",
+      "nome": "Salame al cioccolato",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynccl",
+      "portata": "dolce",
+      "nome": "Salame alla crema",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hyncdc",
+      "portata": "dolce",
+      "nome": "Tiramisù",
+      "extra": 1,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynr74",
+      "portata": "dolce",
+      "nome": "Torta della nonna",
+      "extra": 1,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hyn5co",
+      "portata": "dolce",
+      "nome": "Torta di mele con crema di vin santo",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hynvjy",
+      "portata": "dolce",
+      "nome": "Torta di mele rigirata",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hyn91y",
+      "portata": "dolce",
+      "nome": "Tris di dolci della casa",
+      "extra": 3,
+      "note": ""
+    },
+    {
+      "id": "mnsq9hyn9xv",
+      "portata": "dolce",
+      "nome": "Zuppa inglese",
+      "extra": 0,
+      "note": ""
+    }
+  ],
+  "menu": {
+    "2026-04-12_pranzo_Beppe Pranzo": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hynqk0",
+          "mnsq9hynyoo",
+          "mnsq9hymtkv",
+          "mnsq9hynb4l",
+          "mnsq9hynf4r",
+          "mnsq9hyndkl"
+        ],
+        "primo": [
+          "mnsq9hyns1x",
+          "mnsq9hyngl1"
+        ],
+        "secondo": [
+          "mnsq9hynvd0",
+          "mnsq9hynecd"
+        ],
+        "contorno": [
+          "mnsq9hynciw",
+          "mnsq9hynq3b"
+        ],
+        "dolce": [
+          "mnsq9hyngxs"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": null,
+      "nomeSpecifico": "Beppe Pranzo"
+    },
+    "2026-04-12_cena": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hymnei",
+          "mnsq9hynyoo",
+          "mnsq9hymnw1",
+          "mnsq9hynqm1"
+        ],
+        "primo": [
+          "mnsq9hynhyk",
+          "mnsq9hynn6z"
+        ],
+        "secondo": [
+          "mnsq9hynxr9",
+          "mnsq9hynty1",
+          "mnsq9hyn4sj"
+        ],
+        "contorno": [
+          "mnsq9hync5b",
+          "mnsq9hynoka"
+        ],
+        "dolce": [
+          "mnsq9hyn0dv"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 32,
+      "nomeSpecifico": ""
+    },
+    "2026-04-12_pranzo": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hymmle",
+          "mnsq9hyn8jt",
+          "mnsq9hyndkl",
+          "mnsq9hyn9ga",
+          "mnsq9hynfoi"
+        ],
+        "primo": [
+          "mnsq9hyn7jq",
+          "mnsq9hyn18u"
+        ],
+        "secondo": [
+          "mnsq9hynecd",
+          "mnsq9hyn38r"
+        ],
+        "contorno": [
+          "mnsq9hynq3b",
+          "mnsq9hynfyz"
+        ],
+        "dolce": [
+          "mnsq9hyntti"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 33,
+      "nomeSpecifico": ""
+    },
+    "2026-04-11_pranzo": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hymoq1",
+          "mnsq9hymuqe",
+          "mnsq9hyndkl",
+          "mnsq9hyn9ga",
+          "mnsq9hynyjk"
+        ],
+        "primo": [
+          "mnsq9hyns1x",
+          "mnsq9hynank"
+        ],
+        "secondo": [
+          "mnsq9hynuo1",
+          "mnsq9hynugl"
+        ],
+        "contorno": [
+          "mnsq9hynoka",
+          "mnsq9hynkgr"
+        ],
+        "dolce": [
+          "mnsq9hynlyh"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 35,
+      "nomeSpecifico": ""
+    }
+  },
+  "prenotazioni": {
+    "2026-04-11_pranzo": {
+      "gruppi": [
+        {
+          "nome": "kcjaaysfa",
+          "pax": 22,
+          "note": "3 celiaci 1 intollerante al lattosio",
+          "menuKey": "2026-04-11_pranzo"
+        }
+      ]
+    },
+    "2026-04-10_pranzo": {
+      "gruppi": []
+    },
+    "2026-04-10_cena": {
+      "gruppi": []
+    },
+    "2026-04-11_cena": {
+      "gruppi": []
+    },
+    "2026-04-12_pranzo": {
+      "gruppi": [
+        {
+          "nome": "Beppe Pranzo",
+          "pax": 15,
+          "note": "",
+          "menuKey": "2026-04-12_pranzo_Beppe Pranzo"
+        },
+        {
+          "nome": "Bruppe sdkvh",
+          "pax": 22,
+          "note": "1 celiaco",
+          "menuKey": "2026-04-12_pranzo_Beppe Pranzo"
+        },
+        {
+          "nome": "pippo",
+          "pax": 15,
+          "note": "non vogliono pagare",
+          "menuKey": "2026-04-12_pranzo"
+        }
+      ]
+    },
+    "2026-04-12_cena": {
+      "gruppi": [
+        {
+          "nome": "calafristo asfaf",
+          "pax": 23,
+          "note": "2 vegani",
+          "menuKey": "2026-04-12_cena"
+        }
+      ]
+    }
+  }
+}
