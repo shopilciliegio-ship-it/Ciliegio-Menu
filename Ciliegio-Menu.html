@@ -145,11 +145,11 @@ textarea{resize:vertical;min-height:72px}
 .quick-row{display:flex;gap:6px;margin-top:10px;padding-top:10px;border-top:1px solid var(--border)}
 .quick-row input{flex:1;font-size:17px;padding:7px 10px}
 
-.p-antipasto .portata-hd{border-left:3px solid #c9a84c}.p-antipasto .portata-hd h3{color:#c9a84c}
-.p-primo     .portata-hd{border-left:3px solid #6a9fbc}.p-primo     .portata-hd h3{color:#6a9fbc}
-.p-secondo   .portata-hd{border-left:3px solid #bc6a7a}.p-secondo   .portata-hd h3{color:#bc6a7a}
-.p-contorno  .portata-hd{border-left:3px solid #6abc8a}.p-contorno  .portata-hd h3{color:#6abc8a}
-.p-dolce     .portata-hd{border-left:3px solid #9a7abc}.p-dolce     .portata-hd h3{color:#9a7abc}
+.p-antipasto{border-left:4px solid #c9a84c}.p-antipasto .portata-hd h3{color:#c9a84c}
+.p-primo    {border-left:4px solid #6a9fbc}.p-primo     .portata-hd h3{color:#6a9fbc}
+.p-secondo  {border-left:4px solid #bc6a7a}.p-secondo   .portata-hd h3{color:#bc6a7a}
+.p-contorno {border-left:4px solid #6abc8a}.p-contorno  .portata-hd h3{color:#6abc8a}
+.p-dolce    {border-left:4px solid #9a7abc}.p-dolce     .portata-hd h3{color:#9a7abc}
 
 /* ─── COMPILA MENU ─── */
 .menu-layout{display:grid;grid-template-columns:1fr 330px;gap:18px;align-items:start}
@@ -1024,8 +1024,9 @@ function renderMpPortate(){
     const sec=document.createElement('div');
     sec.className='mp-section';
     sec.id=`mps-${portata.id}`;
+    sec.style.borderLeft=`4px solid ${portataColor(portata.id)}`;
     sec.innerHTML=`
-      <div class="mp-hd" style="border-left:3px solid ${portataColor(portata.id)}">
+      <div class="mp-hd">
         <h3 style="color:${portataColor(portata.id)}">${portata.label}</h3>
         <span class="mp-price">base €${portata.prezzoBase}/pers.</span>
         <span class="mp-cnt" id="mpcnt-${portata.id}">${sel.length} sel.</span>
@@ -1170,9 +1171,25 @@ function renderCal(){
 function apriGiornoDetail(dateStr){
   const dt=parseDate(dateStr);
   const det=document.getElementById('cal-detail');
+
+  // Calcola totali pax per pranzo e cena
+  const totali={};
+  ['pranzo','cena'].forEach(serv=>{
+    const dsKey=`${dateStr}_${serv}`;
+    const pren=getPren(dsKey);
+    const tot=pren.gruppi.reduce((s,g)=>s+(g.pax||1),0);
+    totali[serv]=tot;
+  });
+
+  const badgePranzo=totali.pranzo>0
+    ?`<span style="background:#0f2e18;color:#7ad89a;border:1px solid #1a5c2a;border-radius:20px;padding:4px 14px;font-family:'Cinzel',serif;font-size:13px;letter-spacing:.5px;white-space:nowrap">Pranzo · ${totali.pranzo} pax</span>`:'';
+  const badgeCena=totali.cena>0
+    ?`<span style="background:#0f182e;color:#7a9ad8;border:1px solid #1a2a5c;border-radius:20px;padding:4px 14px;font-family:'Cinzel',serif;font-size:13px;letter-spacing:.5px;white-space:nowrap">Cena · ${totali.cena} pax</span>`:'';
+
   let html=`<div class="giorno-detail">
     <div class="gd-hd">
       <span class="gd-title">${dt.giornoLungo}</span>
+      ${badgePranzo}${badgeCena}
       <button class="btn btn-gold btn-sm" onclick="apriCompilaPerData('${dateStr}','pranzo')">+ Menù Pranzo</button>
       <button class="btn btn-gold btn-sm" onclick="apriCompilaPerData('${dateStr}','cena')">+ Menù Cena</button>
     </div>
