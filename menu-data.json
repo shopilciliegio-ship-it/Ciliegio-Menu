@@ -1133,6 +1133,13 @@
       "portata": "primo",
       "extra": 0,
       "note": "al volo"
+    },
+    {
+      "id": "mo1xei4h6yo",
+      "nome": "Antipasto del Ciliegio",
+      "portata": "antipasto",
+      "extra": 0,
+      "note": "al volo"
     }
   ],
   "menu": {
@@ -1253,6 +1260,20 @@
       "testoLibero": "",
       "prezzo": 34,
       "nomeSpecifico": "altromenu"
+    },
+    "2026-04-15_pranzo_Menu del Giorno": {
+      "piatti": {
+        "antipasto": [
+          "mo1xei4h6yo"
+        ],
+        "primo": [],
+        "secondo": [],
+        "contorno": [],
+        "dolce": []
+      },
+      "testoLibero": "",
+      "prezzo": null,
+      "nomeSpecifico": "Menu del Giorno"
     }
   },
   "prenotazioni": {
@@ -1323,6 +1344,18 @@
       "gruppi": []
     },
     "2026-04-13_cena": {
+      "gruppi": []
+    },
+    "2026-04-16_pranzo": {
+      "gruppi": []
+    },
+    "2026-04-16_cena": {
+      "gruppi": []
+    },
+    "2026-04-15_pranzo": {
+      "gruppi": []
+    },
+    "2026-04-15_cena": {
       "gruppi": []
     }
   }
