@@ -1478,7 +1478,23 @@
       ]
     },
     "2026-04-15_cena": {
-      "gruppi": []
+      "gruppi": [
+        {
+          "nome": "Serafino",
+          "orario": "19:30",
+          "pax": 9,
+          "gratuiti": 0,
+          "bambini": 0,
+          "seggiolini": 0,
+          "contattoNome": "",
+          "contattoTel": "3401601809",
+          "note": "",
+          "menuKey": "2026-04-15_cena_Menù del Sito",
+          "daConfermare": false,
+          "caparra": false,
+          "prezzoSpeciale": 28
+        }
+      ]
     }
   },
   "noteGiorno": {
