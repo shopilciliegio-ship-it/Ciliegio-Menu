@@ -1105,6 +1105,13 @@
       "nome": "Zuppa inglese",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mo1w7cixvs7",
+      "nome": "Crostone con Finocchiella e Finocchiona",
+      "portata": "antipasto",
+      "extra": 0,
+      "note": "al volo"
     }
   ],
   "menu": {
@@ -1225,6 +1232,20 @@
       "testoLibero": "",
       "prezzo": 34,
       "nomeSpecifico": "altromenu"
+    },
+    "2026-04-13_pranzo_Travel Design Italy": {
+      "piatti": {
+        "antipasto": [
+          "mo1w7cixvs7"
+        ],
+        "primo": [],
+        "secondo": [],
+        "contorno": [],
+        "dolce": []
+      },
+      "testoLibero": "",
+      "prezzo": null,
+      "nomeSpecifico": "Travel Design Italy"
     }
   },
   "prenotazioni": {
@@ -1290,6 +1311,12 @@
           "menuKey": "2026-04-12_cena"
         }
       ]
+    },
+    "2026-04-13_pranzo": {
+      "gruppi": []
+    },
+    "2026-04-13_cena": {
+      "gruppi": []
     }
   }
 }
