@@ -1399,7 +1399,22 @@
       "gruppi": []
     },
     "2026-04-15_pranzo": {
-      "gruppi": []
+      "gruppi": [
+        {
+          "nome": "Ovest Viaggi",
+          "orario": "12:30",
+          "pax": 50,
+          "gratuiti": 2,
+          "bambini": 2,
+          "seggiolini": 1,
+          "contattoNome": "Guida Anna",
+          "contattoTel": "",
+          "note": "1 diabetica - 1 no pollo, anatra, pesce, agnello",
+          "menuKey": "2026-04-15_pranzo_OVEST Viaggi",
+          "daConfermare": false,
+          "caparra": false
+        }
+      ]
     },
     "2026-04-15_cena": {
       "gruppi": []
