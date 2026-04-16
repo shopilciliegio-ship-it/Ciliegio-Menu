@@ -1147,6 +1147,13 @@
       "portata": "antipasto",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mo1zvr87ez2",
+      "nome": "Crostino con ricotta, noci e miele",
+      "portata": "antipasto",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -1312,6 +1319,20 @@
       },
       "testoLibero": "",
       "prezzo": 30,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-04-15_cena_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo1zvr87ez2"
+        ],
+        "primo": [],
+        "secondo": [],
+        "contorno": [],
+        "dolce": []
+      },
+      "testoLibero": "",
+      "prezzo": null,
       "nomeSpecifico": "Menù del Sito"
     }
   },
