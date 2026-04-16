@@ -1413,6 +1413,20 @@
           "menuKey": "2026-04-15_pranzo_OVEST Viaggi",
           "daConfermare": false,
           "caparra": false
+        },
+        {
+          "nome": "CAF Bipiano",
+          "orario": "",
+          "pax": 49,
+          "gratuiti": 2,
+          "bambini": 0,
+          "seggiolini": 0,
+          "contattoNome": "",
+          "contattoTel": "",
+          "note": "",
+          "menuKey": "2026-04-15_pranzo_OVEST Viaggi",
+          "daConfermare": false,
+          "caparra": false
         }
       ]
     },
