@@ -1508,6 +1508,21 @@
           "daConfermare": false,
           "caparra": false,
           "prezzoSpeciale": null
+        },
+        {
+          "nome": "PROVA MATRIMONIO",
+          "orario": "",
+          "pax": 2,
+          "gratuiti": 0,
+          "bambini": 0,
+          "seggiolini": 0,
+          "contattoNome": "Francesco e marta",
+          "contattoTel": "",
+          "note": "",
+          "menuKey": null,
+          "daConfermare": false,
+          "caparra": false,
+          "prezzoSpeciale": null
         }
       ]
     }
