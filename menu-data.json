@@ -1493,6 +1493,21 @@
           "daConfermare": false,
           "caparra": false,
           "prezzoSpeciale": 28
+        },
+        {
+          "nome": "Cristina e Beppone",
+          "orario": "20:00",
+          "pax": 4,
+          "gratuiti": 0,
+          "bambini": 0,
+          "seggiolini": 0,
+          "contattoNome": "",
+          "contattoTel": "",
+          "note": "",
+          "menuKey": "2026-04-15_cena_Menù del Sito",
+          "daConfermare": false,
+          "caparra": false,
+          "prezzoSpeciale": null
         }
       ]
     }
