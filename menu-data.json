@@ -1301,12 +1301,21 @@
       "piatti": {
         "antipasto": [
           "mo1yfczjr82",
-          "mo1yflzk1cs"
+          "mo1yflzk1cs",
+          "mnsq9hynkaz"
         ],
-        "primo": [],
-        "secondo": [],
-        "contorno": [],
-        "dolce": []
+        "primo": [
+          "mnsq9hyns1x"
+        ],
+        "secondo": [
+          "mnsq9hynlgw"
+        ],
+        "contorno": [
+          "mnsq9hync5b"
+        ],
+        "dolce": [
+          "mnsq9hyngxs"
+        ]
       },
       "testoLibero": "",
       "prezzo": null,
