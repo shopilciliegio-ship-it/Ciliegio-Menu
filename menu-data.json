@@ -1140,6 +1140,13 @@
       "portata": "antipasto",
       "extra": 0,
       "note": "al volo"
+    },
+    {
+      "id": "mo1yfczjr82",
+      "nome": "Prosciutto Crudo",
+      "portata": "antipasto",
+      "extra": 0,
+      "note": "al volo"
     }
   ],
   "menu": {
@@ -1282,6 +1289,20 @@
       "testoLibero": "",
       "prezzo": 30,
       "nomeSpecifico": "Menu del Giorno"
+    },
+    "2026-04-15_pranzo_OVEST Viaggi": {
+      "piatti": {
+        "antipasto": [
+          "mo1yfczjr82"
+        ],
+        "primo": [],
+        "secondo": [],
+        "contorno": [],
+        "dolce": []
+      },
+      "testoLibero": "",
+      "prezzo": null,
+      "nomeSpecifico": "OVEST Viaggi"
     }
   },
   "prenotazioni": {
