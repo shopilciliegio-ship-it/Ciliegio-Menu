@@ -1427,6 +1427,20 @@
           "menuKey": "2026-04-15_pranzo_OVEST Viaggi",
           "daConfermare": false,
           "caparra": false
+        },
+        {
+          "nome": "EUROPE VOYAGE",
+          "orario": "",
+          "pax": 83,
+          "gratuiti": 0,
+          "bambini": 0,
+          "seggiolini": 0,
+          "contattoNome": "Guida Andrea",
+          "contattoTel": "+39 335652125",
+          "note": "",
+          "menuKey": "2026-04-15_pranzo_OVEST Viaggi",
+          "daConfermare": false,
+          "caparra": false
         }
       ]
     },
