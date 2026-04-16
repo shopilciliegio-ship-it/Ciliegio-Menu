@@ -1275,28 +1275,6 @@
       "prezzo": 34,
       "nomeSpecifico": "altromenu"
     },
-    "2026-04-15_pranzo_Menu del Giorno": {
-      "piatti": {
-        "antipasto": [
-          "mo1xei4h6yo"
-        ],
-        "primo": [
-          "mnsq9hyns1x"
-        ],
-        "secondo": [
-          "mnsq9hynlgw"
-        ],
-        "contorno": [
-          "mnsq9hync5b"
-        ],
-        "dolce": [
-          "mnsq9hyngxs"
-        ]
-      },
-      "testoLibero": "",
-      "prezzo": 30,
-      "nomeSpecifico": "Menu del Giorno"
-    },
     "2026-04-15_pranzo_OVEST Viaggi": {
       "piatti": {
         "antipasto": [
