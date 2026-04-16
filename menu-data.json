@@ -1253,23 +1253,6 @@
       "testoLibero": "",
       "prezzo": 34,
       "nomeSpecifico": "altromenu"
-    },
-    "2026-04-13_pranzo_ViaItalia Degustazione": {
-      "piatti": {
-        "antipasto": [
-          "mnsq9hynqk0",
-          "mnsq9hymnei"
-        ],
-        "primo": [],
-        "secondo": [],
-        "contorno": [],
-        "dolce": [
-          "mnsq9hynzar"
-        ]
-      },
-      "testoLibero": "",
-      "prezzo": 16,
-      "nomeSpecifico": "ViaItalia Degustazione"
     }
   },
   "prenotazioni": {
