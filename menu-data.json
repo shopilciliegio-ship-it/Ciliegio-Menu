@@ -1154,6 +1154,13 @@
       "portata": "antipasto",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mo1zx4sfwtk",
+      "nome": "Pici al ragù",
+      "portata": "primo",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -1324,9 +1331,15 @@
     "2026-04-15_cena_Menù del Sito": {
       "piatti": {
         "antipasto": [
-          "mo1zvr87ez2"
+          "mo1zvr87ez2",
+          "mnsq9hymfrx",
+          "mnsq9hynyjk",
+          "mnsq9hyn9ga",
+          "mnsq9hyn6l4"
         ],
-        "primo": [],
+        "primo": [
+          "mo1zx4sfwtk"
+        ],
         "secondo": [],
         "contorno": [],
         "dolce": []
