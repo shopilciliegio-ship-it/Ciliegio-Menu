@@ -1147,6 +1147,13 @@
       "portata": "antipasto",
       "extra": 0,
       "note": "al volo"
+    },
+    {
+      "id": "mo1yflzk1cs",
+      "nome": "Cecina",
+      "portata": "antipasto",
+      "extra": 0,
+      "note": "al volo"
     }
   ],
   "menu": {
@@ -1293,7 +1300,8 @@
     "2026-04-15_pranzo_OVEST Viaggi": {
       "piatti": {
         "antipasto": [
-          "mo1yfczjr82"
+          "mo1yfczjr82",
+          "mo1yflzk1cs"
         ],
         "primo": [],
         "secondo": [],
