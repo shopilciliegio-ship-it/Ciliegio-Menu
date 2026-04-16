@@ -1119,6 +1119,13 @@
       "portata": "antipasto",
       "extra": 0,
       "note": "al volo"
+    },
+    {
+      "id": "mo1w9vxeqnt",
+      "nome": "Tortino di patate con crema al pecorino",
+      "portata": "antipasto",
+      "extra": 0,
+      "note": "al volo"
     }
   ],
   "menu": {
@@ -1246,7 +1253,8 @@
           "mo1w7cixvs7",
           "mnsq9hynqk0",
           "mnsq9hyn6l4",
-          "mo1w8xtm5r2"
+          "mo1w8xtm5r2",
+          "mo1w9vxeqnt"
         ],
         "primo": [],
         "secondo": [],
