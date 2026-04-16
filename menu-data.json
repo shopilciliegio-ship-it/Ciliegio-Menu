@@ -1340,12 +1340,18 @@
         "primo": [
           "mo1zx4sfwtk"
         ],
-        "secondo": [],
-        "contorno": [],
-        "dolce": []
+        "secondo": [
+          "mnsq9hynxg3"
+        ],
+        "contorno": [
+          "mnsq9hynkgr"
+        ],
+        "dolce": [
+          "mnsq9hynyyk"
+        ]
       },
       "testoLibero": "",
-      "prezzo": null,
+      "prezzo": 30,
       "nomeSpecifico": "Menù del Sito"
     }
   },
