@@ -1266,12 +1266,18 @@
         "primo": [
           "mo1waims7of"
         ],
-        "secondo": [],
-        "contorno": [],
-        "dolce": []
+        "secondo": [
+          "mnsq9hyn4sj"
+        ],
+        "contorno": [
+          "mnsq9hync5b"
+        ],
+        "dolce": [
+          "mnsq9hynccl"
+        ]
       },
       "testoLibero": "",
-      "prezzo": null,
+      "prezzo": 31,
       "nomeSpecifico": "Travel Design Italy"
     }
   },
@@ -1340,7 +1346,14 @@
       ]
     },
     "2026-04-13_pranzo": {
-      "gruppi": []
+      "gruppi": [
+        {
+          "nome": "Travel Design Italy",
+          "pax": 14,
+          "note": "",
+          "menuKey": "2026-04-13_pranzo_Travel Design Italy"
+        }
+      ]
     },
     "2026-04-13_cena": {
       "gruppi": []
