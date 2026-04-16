@@ -1112,6 +1112,13 @@
       "portata": "antipasto",
       "extra": 0,
       "note": "al volo"
+    },
+    {
+      "id": "mo1w8xtm5r2",
+      "nome": "Formaggi Pecorini con Marmellata e/o Miele",
+      "portata": "antipasto",
+      "extra": 0,
+      "note": "al volo"
     }
   ],
   "menu": {
@@ -1236,7 +1243,10 @@
     "2026-04-13_pranzo_Travel Design Italy": {
       "piatti": {
         "antipasto": [
-          "mo1w7cixvs7"
+          "mo1w7cixvs7",
+          "mnsq9hynqk0",
+          "mnsq9hyn6l4",
+          "mo1w8xtm5r2"
         ],
         "primo": [],
         "secondo": [],
