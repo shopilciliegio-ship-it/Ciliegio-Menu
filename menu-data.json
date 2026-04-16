@@ -1361,14 +1361,7 @@
       "gruppi": []
     },
     "2026-04-15_pranzo": {
-      "gruppi": [
-        {
-          "nome": "Menu del Giorno",
-          "pax": 1,
-          "note": "",
-          "menuKey": "2026-04-15_pranzo_Menu del Giorno"
-        }
-      ]
+      "gruppi": []
     },
     "2026-04-15_cena": {
       "gruppi": []
