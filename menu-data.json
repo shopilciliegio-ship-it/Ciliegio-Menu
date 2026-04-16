@@ -1126,6 +1126,13 @@
       "portata": "antipasto",
       "extra": 0,
       "note": "al volo"
+    },
+    {
+      "id": "mo1waims7of",
+      "nome": "Pici al Ragù bianco",
+      "portata": "primo",
+      "extra": 0,
+      "note": "al volo"
     }
   ],
   "menu": {
@@ -1256,7 +1263,9 @@
           "mo1w8xtm5r2",
           "mo1w9vxeqnt"
         ],
-        "primo": [],
+        "primo": [
+          "mo1waims7of"
+        ],
         "secondo": [],
         "contorno": [],
         "dolce": []
