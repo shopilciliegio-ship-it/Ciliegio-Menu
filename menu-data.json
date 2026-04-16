@@ -1320,14 +1320,7 @@
       ]
     },
     "2026-04-13_pranzo": {
-      "gruppi": [
-        {
-          "nome": "ViaItalia Degustazione",
-          "pax": 45,
-          "note": "",
-          "menuKey": "2026-04-13_pranzo_ViaItalia Degustazione"
-        }
-      ]
+      "gruppi": []
     },
     "2026-04-13_cena": {
       "gruppi": []
