@@ -1254,32 +1254,6 @@
       "prezzo": 34,
       "nomeSpecifico": "altromenu"
     },
-    "2026-04-13_pranzo_Travel Design Italy": {
-      "piatti": {
-        "antipasto": [
-          "mo1w7cixvs7",
-          "mnsq9hynqk0",
-          "mnsq9hyn6l4",
-          "mo1w8xtm5r2",
-          "mo1w9vxeqnt"
-        ],
-        "primo": [
-          "mo1waims7of"
-        ],
-        "secondo": [
-          "mnsq9hyn4sj"
-        ],
-        "contorno": [
-          "mnsq9hync5b"
-        ],
-        "dolce": [
-          "mnsq9hynccl"
-        ]
-      },
-      "testoLibero": "",
-      "prezzo": 31,
-      "nomeSpecifico": "Travel Design Italy"
-    },
     "2026-04-13_pranzo_ViaItalia Degustazione": {
       "piatti": {
         "antipasto": [
