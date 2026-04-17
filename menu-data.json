@@ -1597,6 +1597,42 @@
       "testoLibero": "",
       "prezzo": 38,
       "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-04-18_cena_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hyn8zn",
+          "mnsq9hyneqw",
+          "mnsq9hyn3m5",
+          "mnsq9hynsn7",
+          "mnsq9hymoq1",
+          "mnsq9hyngse",
+          "mo1yfczjr82"
+        ],
+        "primo": [
+          "mnsq9hynfpv",
+          "mnsq9hyn45j",
+          "mnsq9hyn18u"
+        ],
+        "secondo": [
+          "mnsq9hyn1vf",
+          "mnsq9hynltk",
+          "mnsq9hynxr9"
+        ],
+        "contorno": [
+          "mnsq9hynaa5",
+          "mnsq9hynfyz",
+          "mnsq9hynoka"
+        ],
+        "dolce": [
+          "mnsq9hynyyk",
+          "mnsq9hyn8ay",
+          "mnsq9hynj2g"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 50,
+      "nomeSpecifico": "Menù del Sito"
     }
   },
   "prenotazioni": {
