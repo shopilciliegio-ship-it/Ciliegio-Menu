@@ -1552,7 +1552,7 @@
           "note": "Patate arrosto al posto dell'insalata - Tagliata al posto del capocollo - se possibile Dolce della casa",
           "menuKey": "2026-04-15_cena_Menù del Sito",
           "daConfermare": false,
-          "caparra": true,
+          "caparra": false,
           "prezzoSpeciale": null
         }
       ]
