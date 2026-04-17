@@ -1506,7 +1506,7 @@
           "contattoTel": "",
           "note": "",
           "menuKey": "2026-04-15_cena_Menù del Sito",
-          "daConfermare": true,
+          "daConfermare": false,
           "caparra": false,
           "prezzoSpeciale": null
         },
