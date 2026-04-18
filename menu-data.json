@@ -1951,7 +1951,7 @@
         {
           "nome": "Giacomo pagliantini",
           "orario": "20:00",
-          "pax": 34,
+          "pax": 32,
           "gratuiti": 0,
           "bambini": 4,
           "seggiolini": 2,
@@ -1960,7 +1960,7 @@
           "note": "cdli  aiajfè posdfpsifg",
           "menuKey": "2026-04-23_pranzo_Menù del Sito",
           "daConfermare": false,
-          "caparra": true,
+          "caparra": false,
           "prezzoSpeciale": null
         }
       ]
