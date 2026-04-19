@@ -2250,7 +2250,23 @@
       "gruppi": []
     },
     "2026-04-23_cena": {
-      "gruppi": []
+      "gruppi": [
+        {
+          "nome": "Carraretto",
+          "orario": "",
+          "pax": 10,
+          "gratuiti": 0,
+          "bambini": 0,
+          "seggiolini": 0,
+          "contattoNome": "Diana",
+          "contattoTel": "",
+          "note": "",
+          "menuKey": "2026-04-23_cena_Menù del Sito",
+          "daConfermare": false,
+          "caparra": false,
+          "prezzoSpeciale": null
+        }
+      ]
     },
     "2026-04-24_pranzo": {
       "gruppi": []
