@@ -2259,7 +2259,23 @@
       "gruppi": []
     },
     "2026-04-23_pranzo": {
-      "gruppi": []
+      "gruppi": [
+        {
+          "nome": "Ciao",
+          "orario": "",
+          "pax": 58,
+          "gratuiti": 0,
+          "bambini": 0,
+          "seggiolini": 0,
+          "contattoNome": "",
+          "contattoTel": "",
+          "note": "",
+          "menuKey": "2026-04-23_pranzo_Ciao",
+          "daConfermare": false,
+          "caparra": false,
+          "prezzoSpeciale": null
+        }
+      ]
     },
     "2026-04-23_cena": {
       "gruppi": [
