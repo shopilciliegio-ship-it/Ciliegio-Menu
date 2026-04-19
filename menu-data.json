@@ -1868,6 +1868,18 @@
       "testoLibero": "",
       "prezzo": null,
       "nomeSpecifico": "Amalfitana Viaggi"
+    },
+    "2026-04-22_pranzo_Caf": {
+      "piatti": {
+        "antipasto": [],
+        "primo": [],
+        "secondo": [],
+        "contorno": [],
+        "dolce": []
+      },
+      "testoLibero": "",
+      "prezzo": null,
+      "nomeSpecifico": "Caf"
     }
   },
   "prenotazioni": {
