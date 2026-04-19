@@ -2065,6 +2065,18 @@
       "testoLibero": "",
       "prezzo": null,
       "nomeSpecifico": "Caf"
+    },
+    "2026-04-24_pranzo_Ciao": {
+      "piatti": {
+        "antipasto": [],
+        "primo": [],
+        "secondo": [],
+        "contorno": [],
+        "dolce": []
+      },
+      "testoLibero": "",
+      "prezzo": null,
+      "nomeSpecifico": "Ciao"
     }
   },
   "prenotazioni": {
