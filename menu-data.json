@@ -1182,6 +1182,13 @@
       "portata": "antipasto",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mo68jqekj3x",
+      "nome": "Antipasto misto toscano",
+      "portata": "antipasto",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -1820,6 +1827,20 @@
       "testoLibero": "",
       "prezzo": null,
       "nomeSpecifico": "Michelangelo"
+    },
+    "2026-04-22_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo68jqekj3x"
+        ],
+        "primo": [],
+        "secondo": [],
+        "contorno": [],
+        "dolce": []
+      },
+      "testoLibero": "",
+      "prezzo": null,
+      "nomeSpecifico": "Menù del Sito"
     }
   },
   "prenotazioni": {
@@ -2176,6 +2197,12 @@
       ]
     },
     "2026-04-20_cena": {
+      "gruppi": []
+    },
+    "2026-04-22_pranzo": {
+      "gruppi": []
+    },
+    "2026-04-22_cena": {
       "gruppi": []
     }
   },
