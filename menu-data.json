@@ -1189,6 +1189,13 @@
       "portata": "antipasto",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mo68pp64giu",
+      "nome": "Pasta fresca al ragù toscano",
+      "portata": "primo",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -1833,7 +1840,9 @@
         "antipasto": [
           "mo68jqekj3x"
         ],
-        "primo": [],
+        "primo": [
+          "mo68pp64giu"
+        ],
         "secondo": [],
         "contorno": [],
         "dolce": []
