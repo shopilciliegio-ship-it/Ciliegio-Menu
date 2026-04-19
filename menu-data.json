@@ -2360,7 +2360,23 @@
       ]
     },
     "2026-04-22_cena": {
-      "gruppi": []
+      "gruppi": [
+        {
+          "nome": "Matteini",
+          "orario": "20:00",
+          "pax": 22,
+          "gratuiti": 0,
+          "bambini": 1,
+          "seggiolini": 0,
+          "contattoNome": "",
+          "contattoTel": "3387824693",
+          "note": "",
+          "menuKey": "2026-04-22_cena_Menù del Sito",
+          "daConfermare": false,
+          "caparra": false,
+          "prezzoSpeciale": null
+        }
+      ]
     }
   },
   "noteGiorno": {
