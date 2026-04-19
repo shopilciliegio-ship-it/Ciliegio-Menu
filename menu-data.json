@@ -2227,7 +2227,23 @@
       "gruppi": []
     },
     "2026-04-22_pranzo": {
-      "gruppi": []
+      "gruppi": [
+        {
+          "nome": "Amalfitana viaggi",
+          "orario": "",
+          "pax": 84,
+          "gratuiti": 9,
+          "bambini": 0,
+          "seggiolini": 0,
+          "contattoNome": "",
+          "contattoTel": "",
+          "note": "",
+          "menuKey": "2026-04-22_pranzo_Amalfitana Viaggi",
+          "daConfermare": false,
+          "caparra": false,
+          "prezzoSpeciale": 15
+        }
+      ]
     },
     "2026-04-22_cena": {
       "gruppi": []
