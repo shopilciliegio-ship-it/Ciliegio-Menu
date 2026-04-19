@@ -2265,6 +2265,21 @@
           "daConfermare": false,
           "caparra": false,
           "prezzoSpeciale": null
+        },
+        {
+          "nome": "Cicognini",
+          "orario": "",
+          "pax": 10,
+          "gratuiti": 0,
+          "bambini": 0,
+          "seggiolini": 0,
+          "contattoNome": "",
+          "contattoTel": "",
+          "note": "",
+          "menuKey": "2026-04-23_cena_Menù del Sito",
+          "daConfermare": false,
+          "caparra": false,
+          "prezzoSpeciale": null
         }
       ]
     },
