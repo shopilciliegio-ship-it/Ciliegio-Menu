@@ -2307,6 +2307,21 @@
           "daConfermare": false,
           "caparra": false,
           "prezzoSpeciale": null
+        },
+        {
+          "nome": "Sabrina",
+          "orario": "17:00",
+          "pax": 20,
+          "gratuiti": 2,
+          "bambini": 0,
+          "seggiolini": 0,
+          "contattoNome": "Lorenzo Tarzia",
+          "contattoTel": "3517604265",
+          "note": "Cena + Degustazione",
+          "menuKey": "2026-04-23_cena_T.D.I.",
+          "daConfermare": false,
+          "caparra": false,
+          "prezzoSpeciale": null
         }
       ]
     },
