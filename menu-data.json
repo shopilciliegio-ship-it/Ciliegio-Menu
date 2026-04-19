@@ -2388,7 +2388,23 @@
       ]
     },
     "2026-04-24_pranzo": {
-      "gruppi": []
+      "gruppi": [
+        {
+          "nome": "Caf",
+          "orario": "",
+          "pax": 50,
+          "gratuiti": 0,
+          "bambini": 0,
+          "seggiolini": 0,
+          "contattoNome": "",
+          "contattoTel": "",
+          "note": "",
+          "menuKey": "2026-04-24_pranzo_Caf",
+          "daConfermare": false,
+          "caparra": false,
+          "prezzoSpeciale": null
+        }
+      ]
     },
     "2026-04-24_cena": {
       "gruppi": []
