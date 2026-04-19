@@ -2197,12 +2197,19 @@
         "primo": [
           "mo6ag8zh5dl"
         ],
-        "secondo": [],
-        "contorno": [],
-        "dolce": []
+        "secondo": [
+          "mnsq9hynm2d",
+          "mnsq9hyn4sj"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
       },
       "testoLibero": "",
-      "prezzo": null,
+      "prezzo": 36,
       "nomeSpecifico": "Menù del Sito"
     }
   },
