@@ -2082,7 +2082,23 @@
       "gruppi": []
     },
     "2026-04-20_pranzo": {
-      "gruppi": []
+      "gruppi": [
+        {
+          "nome": "Bacciolo",
+          "orario": "13:00",
+          "pax": 82,
+          "gratuiti": 0,
+          "bambini": 1,
+          "seggiolini": 0,
+          "contattoNome": "Franco",
+          "contattoTel": "3395988861",
+          "note": "Veranda - Aperitivo in barriccaia",
+          "menuKey": "2026-04-20_pranzo_Menù del Sito",
+          "daConfermare": false,
+          "caparra": false,
+          "prezzoSpeciale": null
+        }
+      ]
     },
     "2026-04-20_cena": {
       "gruppi": []
