@@ -1175,6 +1175,13 @@
       "portata": "dolce",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mo687di42u2",
+      "nome": "Crostino con lampredotto e salsa verde",
+      "portata": "antipasto",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -1757,6 +1764,24 @@
       "testoLibero": "",
       "prezzo": 16,
       "nomeSpecifico": "Viaitalia"
+    },
+    "2026-04-20_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hynyoo",
+          "mnsq9hynqk0",
+          "mnsq9hynyjk",
+          "mo1w8xtm5r2",
+          "mo687di42u2"
+        ],
+        "primo": [],
+        "secondo": [],
+        "contorno": [],
+        "dolce": []
+      },
+      "testoLibero": "",
+      "prezzo": null,
+      "nomeSpecifico": "Menù del Sito"
     }
   },
   "prenotazioni": {
@@ -2046,6 +2071,12 @@
       ]
     },
     "2026-04-21_cena": {
+      "gruppi": []
+    },
+    "2026-04-20_pranzo": {
+      "gruppi": []
+    },
+    "2026-04-20_cena": {
       "gruppi": []
     }
   },
