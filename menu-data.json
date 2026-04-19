@@ -2512,7 +2512,23 @@
       ]
     },
     "2026-04-21_cena": {
-      "gruppi": []
+      "gruppi": [
+        {
+          "nome": "Globus",
+          "orario": "",
+          "pax": 0,
+          "gratuiti": 0,
+          "bambini": 0,
+          "seggiolini": 0,
+          "contattoNome": "Ricco Luca",
+          "contattoTel": "3394795272",
+          "note": "Ls418",
+          "menuKey": "2026-04-21_cena_Menù del Sito",
+          "daConfermare": false,
+          "caparra": false,
+          "prezzoSpeciale": null
+        }
+      ]
     },
     "2026-04-20_pranzo": {
       "gruppi": [
