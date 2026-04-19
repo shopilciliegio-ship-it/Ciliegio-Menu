@@ -1224,6 +1224,13 @@
       "portata": "primo",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mo6a6s6d607",
+      "nome": "Pappardelle al ragù con bocconi di maiale e vitella",
+      "portata": "primo",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -2100,6 +2107,26 @@
       "testoLibero": "",
       "prezzo": 35,
       "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-04-25_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hyneqw",
+          "mnsq9hynqk0",
+          "mo1w8xtm5r2",
+          "mnsq9hynfoi",
+          "mnsq9hynsn7"
+        ],
+        "primo": [
+          "mo6a6s6d607"
+        ],
+        "secondo": [],
+        "contorno": [],
+        "dolce": []
+      },
+      "testoLibero": "",
+      "prezzo": null,
+      "nomeSpecifico": "Menù del Sito"
     }
   },
   "prenotazioni": {
@@ -2679,6 +2706,12 @@
           "prezzoSpeciale": null
         }
       ]
+    },
+    "2026-04-25_pranzo": {
+      "gruppi": []
+    },
+    "2026-04-25_cena": {
+      "gruppi": []
     }
   },
   "noteGiorno": {
