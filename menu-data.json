@@ -2009,7 +2009,23 @@
       "gruppi": []
     },
     "2026-04-21_pranzo": {
-      "gruppi": []
+      "gruppi": [
+        {
+          "nome": "Viaitalia",
+          "orario": "15:30",
+          "pax": 23,
+          "gratuiti": 0,
+          "bambini": 0,
+          "seggiolini": 0,
+          "contattoNome": "",
+          "contattoTel": "",
+          "note": "",
+          "menuKey": "2026-04-21_pranzo_Viaitalia",
+          "daConfermare": false,
+          "caparra": false,
+          "prezzoSpeciale": 16
+        }
+      ]
     },
     "2026-04-21_cena": {
       "gruppi": []
