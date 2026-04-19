@@ -1210,6 +1210,13 @@
       "portata": "secondo",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mo69lwc5p4m",
+      "nome": "Formaggi pecorini con cipolle",
+      "portata": "antipasto",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -1978,6 +1985,21 @@
       "testoLibero": "",
       "prezzo": null,
       "nomeSpecifico": "Ciao"
+    },
+    "2026-04-23_cena_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hyno6u",
+          "mo69lwc5p4m"
+        ],
+        "primo": [],
+        "secondo": [],
+        "contorno": [],
+        "dolce": []
+      },
+      "testoLibero": "",
+      "prezzo": null,
+      "nomeSpecifico": "Menù del Sito"
     }
   },
   "prenotazioni": {
