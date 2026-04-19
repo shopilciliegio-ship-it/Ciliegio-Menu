@@ -1956,11 +1956,15 @@
         "secondo": [
           "mo69j5b1uwp"
         ],
-        "contorno": [],
-        "dolce": []
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
       },
       "testoLibero": "",
-      "prezzo": null,
+      "prezzo": 30,
       "nomeSpecifico": "Menù del Sito"
     }
   },
