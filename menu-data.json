@@ -1924,12 +1924,18 @@
         "primo": [
           "mo699pdh68y"
         ],
-        "secondo": [],
-        "contorno": [],
-        "dolce": []
+        "secondo": [
+          "mnsq9hyn4sj"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mnsq9hyn5co"
+        ]
       },
       "testoLibero": "",
-      "prezzo": null,
+      "prezzo": 31,
       "nomeSpecifico": "Menù del Sito"
     }
   },
