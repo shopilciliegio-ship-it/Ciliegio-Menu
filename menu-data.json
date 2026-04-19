@@ -1880,6 +1880,18 @@
       "testoLibero": "",
       "prezzo": null,
       "nomeSpecifico": "Caf"
+    },
+    "2026-04-22_pranzo_Europe Voyage": {
+      "piatti": {
+        "antipasto": [],
+        "primo": [],
+        "secondo": [],
+        "contorno": [],
+        "dolce": []
+      },
+      "testoLibero": "",
+      "prezzo": null,
+      "nomeSpecifico": "Europe Voyage"
     }
   },
   "prenotazioni": {
