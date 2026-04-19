@@ -1892,6 +1892,18 @@
       "testoLibero": "",
       "prezzo": null,
       "nomeSpecifico": "Europe Voyage"
+    },
+    "2026-04-22_pranzo_Italia High Lights": {
+      "piatti": {
+        "antipasto": [],
+        "primo": [],
+        "secondo": [],
+        "contorno": [],
+        "dolce": []
+      },
+      "testoLibero": "",
+      "prezzo": null,
+      "nomeSpecifico": "Italia High Lights"
     }
   },
   "prenotazioni": {
