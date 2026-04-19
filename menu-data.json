@@ -2127,6 +2127,21 @@
           "daConfermare": false,
           "caparra": false,
           "prezzoSpeciale": null
+        },
+        {
+          "nome": "Ciao",
+          "orario": "",
+          "pax": 65,
+          "gratuiti": 0,
+          "bambini": 0,
+          "seggiolini": 0,
+          "contattoNome": "",
+          "contattoTel": "",
+          "note": "15 no lunch",
+          "menuKey": "2026-04-20_pranzo_Ciao",
+          "daConfermare": false,
+          "caparra": false,
+          "prezzoSpeciale": null
         }
       ]
     },
