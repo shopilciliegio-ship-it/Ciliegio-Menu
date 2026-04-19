@@ -2762,6 +2762,12 @@
     },
     "2026-04-25_cena": {
       "gruppi": []
+    },
+    "2026-04-26_pranzo": {
+      "gruppi": []
+    },
+    "2026-04-26_cena": {
+      "gruppi": []
     }
   },
   "noteGiorno": {
@@ -2770,7 +2776,8 @@
     "2026-04-21": "No Mirko pranzo - No Rosy cena",
     "2026-04-20": "Dare Sistola",
     "2026-04-22": "No Fiore",
-    "2026-04-23": "No Giulia a pranzo"
+    "2026-04-23": "No Giulia a pranzo",
+    "2026-04-26": "No monne"
   },
   "traduzioni": {
     "mnsq9hymnei": "Bruschetta with cherry tomatoes and basil",
