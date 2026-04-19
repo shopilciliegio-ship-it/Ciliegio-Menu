@@ -1217,6 +1217,13 @@
       "portata": "antipasto",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mo69nj18fdk",
+      "nome": "Straccetti al ragù",
+      "portata": "primo",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -1990,9 +1997,15 @@
       "piatti": {
         "antipasto": [
           "mnsq9hyno6u",
-          "mo69lwc5p4m"
+          "mo69lwc5p4m",
+          "mnsq9hyn8gn",
+          "mnsq9hynxmp",
+          "mnsq9hynmjr"
         ],
-        "primo": [],
+        "primo": [
+          "mnsq9hynhyk",
+          "mo69nj18fdk"
+        ],
         "secondo": [],
         "contorno": [],
         "dolce": []
