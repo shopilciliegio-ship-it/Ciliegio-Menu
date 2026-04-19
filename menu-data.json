@@ -1252,6 +1252,13 @@
       "portata": "antipasto",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mo6ag8zh5dl",
+      "nome": "Tortiglioni con crema di porri, briciole di pane, pancetta e guanciale croccante",
+      "portata": "primo",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -2181,9 +2188,15 @@
     "2026-04-26_pranzo_Menù del Sito": {
       "piatti": {
         "antipasto": [
-          "mnsq9hyngse"
+          "mnsq9hyngse",
+          "mnsq9hynxmp",
+          "mnsq9hynqk0",
+          "mnsq9hynmjr",
+          "mnsq9hymfot"
         ],
-        "primo": [],
+        "primo": [
+          "mo6ag8zh5dl"
+        ],
         "secondo": [],
         "contorno": [],
         "dolce": []
