@@ -1231,6 +1231,13 @@
       "portata": "primo",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mo6a8gotq38",
+      "nome": "Arrosto con salsiccia, stinco, scamerita e coniglio",
+      "portata": "secondo",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -2120,7 +2127,9 @@
         "primo": [
           "mo6a6s6d607"
         ],
-        "secondo": [],
+        "secondo": [
+          "mo6a8gotq38"
+        ],
         "contorno": [],
         "dolce": []
       },
