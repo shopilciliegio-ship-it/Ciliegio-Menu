@@ -1196,6 +1196,13 @@
       "portata": "primo",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mo699pdh68y",
+      "nome": "Pici al ragù di cinghiale",
+      "portata": "primo",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -1904,6 +1911,26 @@
       "testoLibero": "",
       "prezzo": null,
       "nomeSpecifico": "Italia High Lights"
+    },
+    "2026-04-22_cena_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hyneqw",
+          "mnsq9hynqk0",
+          "mnsq9hynmjr",
+          "mnsq9hyno6u",
+          "mo1w8xtm5r2"
+        ],
+        "primo": [
+          "mo699pdh68y"
+        ],
+        "secondo": [],
+        "contorno": [],
+        "dolce": []
+      },
+      "testoLibero": "",
+      "prezzo": null,
+      "nomeSpecifico": "Menù del Sito"
     }
   },
   "prenotazioni": {
