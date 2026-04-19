@@ -1947,25 +1947,15 @@
       "gruppi": []
     },
     "2026-04-23_pranzo": {
-      "gruppi": [
-        {
-          "nome": "Giacomo pagliantini",
-          "orario": "20:00",
-          "pax": 32,
-          "gratuiti": 0,
-          "bambini": 4,
-          "seggiolini": 2,
-          "contattoNome": "",
-          "contattoTel": "33562512454",
-          "note": "cdli  aiajfè posdfpsifg",
-          "menuKey": "2026-04-23_pranzo_Menù del Sito",
-          "daConfermare": false,
-          "caparra": false,
-          "prezzoSpeciale": null
-        }
-      ]
+      "gruppi": []
     },
     "2026-04-23_cena": {
+      "gruppi": []
+    },
+    "2026-04-24_pranzo": {
+      "gruppi": []
+    },
+    "2026-04-24_cena": {
       "gruppi": []
     }
   },
