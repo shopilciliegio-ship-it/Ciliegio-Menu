@@ -1808,6 +1808,18 @@
       "testoLibero": "",
       "prezzo": null,
       "nomeSpecifico": "Caf"
+    },
+    "2026-04-20_pranzo_Michelangelo": {
+      "piatti": {
+        "antipasto": [],
+        "primo": [],
+        "secondo": [],
+        "contorno": [],
+        "dolce": []
+      },
+      "testoLibero": "",
+      "prezzo": null,
+      "nomeSpecifico": "Michelangelo"
     }
   },
   "prenotazioni": {
