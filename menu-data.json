@@ -1757,18 +1757,6 @@
       "testoLibero": "",
       "prezzo": 16,
       "nomeSpecifico": "Viaitalia"
-    },
-    "2026-04-21_pranzo_Ciao Florence": {
-      "piatti": {
-        "antipasto": [],
-        "primo": [],
-        "secondo": [],
-        "contorno": [],
-        "dolce": []
-      },
-      "testoLibero": "",
-      "prezzo": null,
-      "nomeSpecifico": "Ciao Florence"
     }
   },
   "prenotazioni": {
