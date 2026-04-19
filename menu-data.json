@@ -1238,6 +1238,13 @@
       "portata": "secondo",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mo6a9ojxhja",
+      "nome": "Mousse di ricotta agli agrumi e salsa al limone",
+      "portata": "dolce",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -2128,10 +2135,15 @@
           "mo6a6s6d607"
         ],
         "secondo": [
-          "mo6a8gotq38"
+          "mo6a8gotq38",
+          "mnsq9hynlgw"
         ],
-        "contorno": [],
-        "dolce": []
+        "contorno": [
+          "mnsq9hynaa5"
+        ],
+        "dolce": [
+          "mo6a9ojxhja"
+        ]
       },
       "testoLibero": "",
       "prezzo": null,
