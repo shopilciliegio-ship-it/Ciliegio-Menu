@@ -1245,6 +1245,13 @@
       "portata": "dolce",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mo6acrp1vak",
+      "nome": "Gran tagliere del Ciliegio",
+      "portata": "antipasto",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -2147,6 +2154,20 @@
       },
       "testoLibero": "",
       "prezzo": 39,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-04-25_cena_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo6acrp1vak"
+        ],
+        "primo": [],
+        "secondo": [],
+        "contorno": [],
+        "dolce": []
+      },
+      "testoLibero": "",
+      "prezzo": null,
       "nomeSpecifico": "Menù del Sito"
     }
   },
