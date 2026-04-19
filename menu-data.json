@@ -2019,6 +2019,18 @@
       "testoLibero": "",
       "prezzo": 35,
       "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-04-23_cena_T.D.I.": {
+      "piatti": {
+        "antipasto": [],
+        "primo": [],
+        "secondo": [],
+        "contorno": [],
+        "dolce": []
+      },
+      "testoLibero": "",
+      "prezzo": null,
+      "nomeSpecifico": "T.D.I."
     }
   },
   "prenotazioni": {
