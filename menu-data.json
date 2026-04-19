@@ -1740,6 +1740,23 @@
       "testoLibero": "",
       "prezzo": null,
       "nomeSpecifico": "Michelangelo"
+    },
+    "2026-04-21_pranzo_Viaitalia": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hynqk0",
+          "mnsq9hymfrx"
+        ],
+        "primo": [],
+        "secondo": [],
+        "contorno": [],
+        "dolce": [
+          "mnsq9hynzar"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 16,
+      "nomeSpecifico": "Viaitalia"
     }
   },
   "prenotazioni": {
