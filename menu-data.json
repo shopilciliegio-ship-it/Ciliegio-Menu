@@ -1161,6 +1161,13 @@
       "portata": "primo",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mo67h4xg40w",
+      "nome": "Pasta fresca al ragù di cinghiale",
+      "portata": "primo",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -1691,6 +1698,22 @@
       },
       "testoLibero": "",
       "prezzo": 35,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-04-21_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo1xei4h6yo"
+        ],
+        "primo": [
+          "mo67h4xg40w"
+        ],
+        "secondo": [],
+        "contorno": [],
+        "dolce": []
+      },
+      "testoLibero": "",
+      "prezzo": null,
       "nomeSpecifico": "Menù del Sito"
     }
   },
