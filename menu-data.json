@@ -2796,6 +2796,21 @@
           "daConfermare": true,
           "caparra": false,
           "prezzoSpeciale": null
+        },
+        {
+          "nome": "beppe rosati",
+          "orario": "13:30",
+          "pax": 34,
+          "gratuiti": 0,
+          "bambini": 2,
+          "seggiolini": 1,
+          "contattoNome": "",
+          "contattoTel": "362568498",
+          "note": "",
+          "menuKey": "2026-04-22_pranzo_Menù del Sito",
+          "daConfermare": true,
+          "caparra": false,
+          "prezzoSpeciale": 28
         }
       ]
     },
