@@ -4,8 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gestione Menù — Cucina Toscana</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
 <style>
 :root{
   --bg:#0a0a0a;--bg2:#111111;--bg3:#1a1a1a;--bg4:#222222;
@@ -17,7 +18,7 @@
   --r:4px;--r2:8px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html,body{height:100%;background:var(--bg);color:var(--white);font-family:'Cormorant Garamond',Georgia,serif;font-size:21px;line-height:1.55}
+html,body{height:100%;background:var(--bg);color:var(--white);font-family:'Nunito',Candara,'Gill Sans',Calibri,sans-serif;font-size:21px;line-height:1.55}
 
 ::-webkit-scrollbar{width:6px;height:6px}
 ::-webkit-scrollbar-track{background:var(--bg2)}
@@ -44,7 +45,7 @@ html,body{height:100%;background:var(--bg);color:var(--white);font-family:'Cormo
 .topbar-nav{display:flex;gap:2px;margin-left:4px}
 .topbar-btn{
   background:none;border:none;cursor:pointer;
-  font-family:'Cormorant Garamond',serif;font-size:20px;
+  font-family:'Nunito',Candara,'Gill Sans',Calibri,sans-serif;font-size:20px;
   color:var(--white3);padding:7px 16px;border-radius:var(--r);
   transition:all .15s;border-bottom:2px solid transparent;white-space:nowrap;
 }
@@ -68,7 +69,7 @@ html,body{height:100%;background:var(--bg);color:var(--white);font-family:'Cormo
 .home-logo-circle .lhint{position:relative;z-index:1;font-family:'Cinzel',serif;font-size:11px;color:var(--white3);text-align:center;line-height:1.6;letter-spacing:1px}
 .home-title{font-family:'Cinzel',serif;font-size:30px;font-weight:400;letter-spacing:5px;color:var(--white);margin-bottom:8px}
 .home-sub{font-size:18px;color:var(--gold);font-style:italic;letter-spacing:1px;margin-bottom:52px}
-.home-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;max-width:700px;margin:0 auto 44px}
+.home-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:480px;margin:0 auto 44px}
 .hcard{
   background:var(--bg2);border:1px solid var(--border2);border-radius:var(--r2);
   padding:30px 22px;cursor:pointer;transition:all .2s;text-align:center;
@@ -78,6 +79,16 @@ html,body{height:100%;background:var(--bg);color:var(--white);font-family:'Cormo
 .hcard .hcl{font-family:'Cinzel',serif;font-size:13px;letter-spacing:2px;color:var(--gold);display:block;margin-bottom:6px}
 .hcard .hcd{font-size:15px;color:var(--white3)}
 .home-foot{font-size:14px;color:var(--white3);letter-spacing:2px}
+.hcard-wide{
+  background:var(--bg2);border:1px solid var(--gold-dim);border-radius:var(--r2);
+  padding:22px 28px;cursor:pointer;transition:all .2s;
+  display:flex;align-items:center;gap:18px;
+  grid-column:1/-1;
+}
+.hcard-wide:hover{border-color:var(--gold);background:var(--bg3);transform:translateY(-2px)}
+.hcard-wide .hci{font-size:28px;flex-shrink:0}
+.hcard-wide .hw-text .hcl{font-family:'Cinzel',serif;font-size:14px;letter-spacing:2px;color:var(--gold);display:block;margin-bottom:4px}
+.hcard-wide .hw-text .hcd{font-size:15px;color:var(--white3)}
 
 /* ─── CONTENT ─── */
 .content{flex:1;padding:24px;max-width:1320px;width:100%;margin:0 auto}
@@ -96,7 +107,7 @@ html,body{height:100%;background:var(--bg);color:var(--white);font-family:'Cormo
 .btn{
   display:inline-flex;align-items:center;gap:6px;
   border:none;border-radius:var(--r);cursor:pointer;
-  font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:500;
+  font-family:'Nunito',Candara,'Gill Sans',Calibri,sans-serif;font-size:19px;font-weight:500;
   padding:9px 18px;transition:all .15s;white-space:nowrap;letter-spacing:.4px;
 }
 .btn-gold{background:var(--gold);color:#0a0a0a}
@@ -120,7 +131,7 @@ html,body{height:100%;background:var(--bg);color:var(--white);font-family:'Cormo
 label.lbl{font-size:13px;font-weight:500;color:var(--white3);letter-spacing:.8px;text-transform:uppercase}
 input,select,textarea{
   background:var(--bg3);border:1px solid var(--border2);border-radius:var(--r);
-  color:var(--white);font-family:'Cormorant Garamond',serif;font-size:20px;
+  color:var(--white);font-family:'Nunito',Candara,'Gill Sans',Calibri,sans-serif;font-size:20px;
   padding:10px 13px;transition:border-color .2s;width:100%;
 }
 input:focus,select:focus,textarea:focus{outline:none;border-color:var(--gold)}
@@ -195,6 +206,7 @@ textarea{resize:vertical;min-height:72px}
 .cal-day:hover{background:var(--bg3)}
 .cal-day.other-month{opacity:.25;cursor:default;pointer-events:none}
 .cal-day.today .cal-dn{background:var(--gold);color:var(--bg);border-radius:50%;width:26px;height:26px;display:flex;align-items:center;justify-content:center}
+.cal-note-dot{position:absolute;top:5px;right:5px;width:8px;height:8px;background:#c0392b;border-radius:50%;}
 .cal-dn{font-size:15px;font-weight:500;color:var(--white2);margin-bottom:5px;width:26px;text-align:center}
 
 /* pillole calendario - verde per pranzo, blu per cena */
@@ -276,12 +288,12 @@ textarea{resize:vertical;min-height:72px}
 .gh-info{background:#0d1020;color:#6a7abc;border:1px solid #2d2d5c}
 
 /* ─── A4 ─── */
-#a4-wrap{width:794px;background:#fff;color:#1a1208;margin:22px auto;font-family:'Cormorant Garamond',Georgia,serif;box-shadow:0 4px 32px rgba(0,0,0,.5);display:none}
+#a4-wrap{width:794px;background:#fff;color:#1a1208;margin:22px auto;font-family:'Nunito',Candara,'Gill Sans',Calibri,sans-serif;box-shadow:0 4px 32px rgba(0,0,0,.5);display:none}
 #a4-wrap.show{display:block}
 .a4p{padding:36px 44px;min-height:1123px;display:flex;flex-direction:column}
 .a4-top{text-align:center;margin-bottom:14px}
 .a4-data{font-family:'Cinzel',serif;font-size:50px;font-weight:400;line-height:1;color:#1a1208}
-.a4-giorno{font-family:'Cormorant Garamond',serif;font-size:21px;font-style:italic;color:#6b3520;margin-top:5px}
+.a4-giorno{font-family:'Nunito',Candara,'Gill Sans',Calibri,sans-serif;font-size:21px;font-style:italic;color:#6b3520;margin-top:5px}
 .a4-rist{font-size:12px;letter-spacing:2.5px;text-transform:uppercase;color:#8a7060;margin-top:6px}
 .a4-serv{text-align:center;font-family:'Cinzel',serif;font-size:14px;letter-spacing:4px;color:#6b3520;border-top:1px solid #d4c9a8;border-bottom:1px solid #d4c9a8;padding:8px 0;margin:10px 0}
 .a4-div{border:none;border-top:1px solid #d4c9a8;margin:10px 0}
@@ -315,7 +327,6 @@ textarea{resize:vertical;min-height:72px}
   <nav class="topbar-nav">
     <button class="topbar-btn" data-pg="piatti"  onclick="navTo('piatti',this)">Piatti</button>
     <button class="topbar-btn" data-pg="cal"     onclick="navTo('cal',this)">Prenotazioni</button>
-    <button class="topbar-btn" data-pg="stampa"  onclick="navTo('stampa',this)">Stampa</button>
   </nav>
   <div class="topbar-actions">
     <span id="sync-status" style="font-size:14px;color:var(--white3);font-family:'Cinzel',serif;letter-spacing:.5px;padding:0 8px;white-space:nowrap">● Locale</span>
@@ -348,10 +359,19 @@ textarea{resize:vertical;min-height:72px}
         <span class="hcl">Prenotazioni</span>
         <span class="hcd">Calendario mensile completo</span>
       </div>
-      <div class="hcard" onclick="navTo('stampa')">
-        <span class="hci">🖨</span>
-        <span class="hcl">Stampa / Esporta</span>
-        <span class="hcd">A4 e JPG 650×919 per il sito</span>
+      <div class="hcard-wide" onclick="apriJPGModal()">
+        <span class="hci">📸</span>
+        <div class="hw-text">
+          <span class="hcl">Genera JPG per Sito</span>
+          <span class="hcd">Crea le immagini dei menù del giorno da pubblicare online — 650×919 px, 300 dpi</span>
+        </div>
+      </div>
+      <div class="hcard-wide" onclick="navTo('traduzioni')" style="border-color:#1a3a6a">
+        <span class="hci">🇬🇧</span>
+        <div class="hw-text">
+          <span class="hcl" style="color:#5a9ad8">Traduzioni Inglese</span>
+          <span class="hcd">Gestisci e verifica le traduzioni dei menù del sito</span>
+        </div>
       </div>
     </div>
     <div class="home-foot">TRADIZIONE · QUALITÀ · TERRITORIO</div>
@@ -487,7 +507,7 @@ textarea{resize:vertical;min-height:72px}
       <div class="a4-serv" id="a4-serv"></div>
       <hr class="a4-div">
       <div class="a4-sec">Prenotazioni</div>
-      <table class="a4-pren-table"><thead><tr><th>Nome / Gruppo</th><th>Pax</th><th>Menù</th></tr></thead><tbody id="a4-tbody"></tbody></table>
+      <table class="a4-pren-table"><thead><tr><th>Nome / Gruppo</th><th>Pax</th><th>Menù / Note</th></tr></thead><tbody id="a4-tbody"></tbody></table>
       <div id="a4-totcop" style="font-size:12px;color:#8a7060;text-align:right;margin-top:5px"></div>
       <div id="a4-menus"></div>
       <div class="a4-footer">— Cucina Toscana Tradizionale —</div>
@@ -497,7 +517,81 @@ textarea{resize:vertical;min-height:72px}
   </div>
 </div>
 
+<!-- ══ PAGE TRADUZIONI ══ -->
+<div id="page-traduzioni" class="page">
+  <div class="content">
+    <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;flex-wrap:wrap">
+      <span style="font-size:24px">🇬🇧</span>
+      <span style="font-family:'Cinzel',serif;font-size:18px;letter-spacing:2px;color:#5a9ad8">TRADUZIONI INGLESE</span>
+      <div style="flex:1"></div>
+      <div style="display:flex;gap:10px;align-items:flex-end;flex-wrap:wrap">
+        <div class="form-group" style="margin-bottom:0">
+          <label class="lbl">Da</label><input type="date" id="tr-da" onchange="renderTraduzioni()">
+        </div>
+        <div class="form-group" style="margin-bottom:0">
+          <label class="lbl">A</label><input type="date" id="tr-a" onchange="renderTraduzioni()">
+        </div>
+        <button class="btn btn-sm" style="background:#1a3a6a;color:#5a9ad8;border:1px solid #1a5c8a" onclick="traduciTuttoAuto()">🌐 Traduci tutto automaticamente</button>
+        <button class="btn btn-ghost btn-sm" onclick="navTo('home')">← Home</button>
+      </div>
+    </div>
+    <div id="tr-content"></div>
+  </div>
+</div>
+
 </div><!-- /app -->
+
+<!-- ══ MODAL JPG SITO ══ -->
+<div id="ov-jpg" class="overlay hidden">
+  <div class="modal" style="max-width:620px">
+    <button class="modal-close" onclick="closeOv('ov-jpg')">✕</button>
+    <div class="modal-title">📸 Genera JPG per Sito</div>
+    <p class="text-muted mb-12">Vengono esportati solo i <strong style="color:var(--gold)">Menù del Sito</strong> (menù senza nome specifico). Le immagini vengono generate a 650×919 px con sfondo diverso per ogni giorno della settimana.</p>
+
+    <div class="form-row mb-12">
+      <div class="form-group">
+        <label class="lbl">Da data</label>
+        <input type="date" id="jpg-da" onchange="aggiornaListaJPG()">
+      </div>
+      <div class="form-group">
+        <label class="lbl">A data</label>
+        <input type="date" id="jpg-a" onchange="aggiornaListaJPG()">
+      </div>
+    </div>
+
+    <div id="jpg-menu-list" style="margin-bottom:16px;max-height:220px;overflow-y:auto"></div>
+
+    <div class="form-row mb-12">
+      <div class="form-group">
+        <label class="lbl">Salva su</label>
+        <select id="jpg-save-mode">
+          <option value="download">💾 Download ZIP sul dispositivo</option>
+          <option value="github">☁ Carica su GitHub (cartella immagini-sito/)</option>
+        </select>
+      </div>
+      <div class="form-group" style="max-width:130px">
+        <label class="lbl">Prezzo bimbi €</label>
+        <input type="number" id="jpg-prezzo-bimbi" value="13" min="0" step="0.5">
+      </div>
+    </div>
+    <label style="display:flex;align-items:center;gap:10px;cursor:pointer;margin-bottom:16px;font-size:15px;color:var(--white2)">
+      <input type="checkbox" id="jpg-include-en" style="width:17px;height:17px;accent-color:#5a9ad8;cursor:pointer">
+      <span>🇬🇧 Includi versione inglese (02-15-EN.jpg)</span>
+    </label>
+
+    <div id="jpg-progress" style="display:none;margin-bottom:14px">
+      <div style="font-size:15px;color:var(--white3);margin-bottom:8px" id="jpg-progress-text">Generazione in corso…</div>
+      <div style="background:var(--bg4);border-radius:4px;height:8px;overflow:hidden">
+        <div id="jpg-progress-bar" style="height:100%;background:var(--gold);width:0%;transition:width .3s"></div>
+      </div>
+    </div>
+
+    <div class="flex">
+      <button class="btn btn-gold" id="jpg-start-btn" onclick="avviaGeneraJPG()">✦ Genera immagini</button>
+      <button class="btn btn-ghost" onclick="closeOv('ov-jpg')">Annulla</button>
+    </div>
+  </div>
+</div>
 
 <!-- ══ MODAL NUOVO MENU ══ -->
 <div id="ov-nm" class="overlay hidden">
@@ -510,13 +604,8 @@ textarea{resize:vertical;min-height:72px}
     <div class="form-row">
       <div class="form-group">
         <label class="lbl">Nome gruppo / persona</label>
-        <input type="text" id="nm-nome" placeholder="es: Rossi, Matrimonio Bianchi…"
+        <input type="text" id="nm-nome" placeholder="es: Rossi, Matrimonio Bianchi… oppure lascia vuoto"
           autocomplete="off" autocorrect="off" autocapitalize="words"
-          onkeydown="if(event.key==='Enter')confermaNuovoMenu()">
-      </div>
-      <div class="form-group" style="max-width:110px">
-        <label class="lbl">Pax</label>
-        <input type="number" id="nm-pax" min="1" placeholder="—"
           onkeydown="if(event.key==='Enter')confermaNuovoMenu()">
       </div>
     </div>
@@ -574,32 +663,100 @@ textarea{resize:vertical;min-height:72px}
   </div>
 </div>
 
-<!-- ══ MODAL ACCODA PRENOTAZIONE ══ -->
-<div id="ov-accoda" class="overlay hidden">
-  <div class="modal">
-    <button class="modal-close" onclick="closeOv('ov-accoda')">✕</button>
-    <div class="modal-title">Accoda Prenotazione</div>
-    <p class="text-muted mb-12" id="accoda-desc"></p>
+<!-- ══ MODAL PRENOTAZIONE (usato per Accoda e Modifica) ══ -->
+<div id="ov-pren" class="overlay hidden">
+  <div class="modal" style="max-width:580px">
+    <button class="modal-close" onclick="closeOv('ov-pren')">✕</button>
+    <div class="modal-title" id="pren-modal-title">Prenotazione</div>
+    <div id="pren-modal-desc" style="color:var(--gold);font-size:15px;margin-bottom:16px;font-style:italic"></div>
+    <input type="hidden" id="pren-dskey">
+    <input type="hidden" id="pren-gi"> <!-- -1 = nuova -->
+    <input type="hidden" id="pren-menukey-fixed"> <!-- se accoda da menù specifico -->
+
+    <!-- RIGA 1: nome + orario -->
     <div class="form-row">
       <div class="form-group">
         <label class="lbl">Nome / Gruppo</label>
-        <input type="text" id="accoda-nome" placeholder="es: Famiglia Verdi">
+        <input type="text" id="pren-nome" autocomplete="off" autocorrect="off" autocapitalize="words" placeholder="es: Famiglia Rossi">
       </div>
-      <div class="form-group" style="max-width:120px">
-        <label class="lbl">Pax</label>
-        <input type="number" id="accoda-pax" min="1" placeholder="2">
+      <div class="form-group" style="max-width:130px">
+        <label class="lbl">Orario</label>
+        <input type="time" id="pren-orario" placeholder="12:30">
       </div>
     </div>
-    <div class="form-group mb-12">
-      <label class="lbl">Note</label>
-      <input type="text" id="accoda-note" placeholder="Allergie, richieste speciali…">
+
+    <!-- RIGA 2: pax adulti + gratuiti + bambini + seggiolini -->
+    <div class="form-row">
+      <div class="form-group">
+        <label class="lbl">Pax adulti</label>
+        <input type="number" id="pren-pax" min="0" placeholder="0">
+      </div>
+      <div class="form-group">
+        <label class="lbl">Gratuità</label>
+        <input type="number" id="pren-gratuiti" min="0" placeholder="0" title="Guide, accompagnatori…">
+      </div>
+      <div class="form-group">
+        <label class="lbl">Bambini</label>
+        <input type="number" id="pren-bambini" min="0" placeholder="0">
+      </div>
+      <div class="form-group">
+        <label class="lbl">Seggiolini</label>
+        <input type="number" id="pren-seggiolini" min="0" placeholder="0">
+      </div>
     </div>
+
+    <!-- RIGA 3: contatto -->
+    <div class="form-row">
+      <div class="form-group">
+        <label class="lbl">Nome contatto</label>
+        <input type="text" id="pren-contatto-nome" autocomplete="off" placeholder="Mario Rossi">
+      </div>
+      <div class="form-group">
+        <label class="lbl">Telefono</label>
+        <input type="tel" id="pren-contatto-tel" autocomplete="off" placeholder="+39 333 1234567">
+      </div>
+    </div>
+
+    <!-- NOTE -->
+    <div class="form-group" style="margin-bottom:14px">
+      <label class="lbl">Note (allergie, richieste speciali…)</label>
+      <input type="text" id="pren-note" autocomplete="off" placeholder="es: 1 celiaco, niente glutine, tavolo vicino alla finestra…">
+    </div>
+
+    <!-- MENU ASSEGNATO + PREZZO SPECIALE -->
+    <div class="form-row" id="pren-menu-group">
+      <div class="form-group">
+        <label class="lbl">Menù assegnato</label>
+        <select id="pren-menukey"></select>
+      </div>
+      <div class="form-group" style="max-width:150px">
+        <label class="lbl">Prezzo speciale €</label>
+        <input type="number" id="pren-prezzo-speciale" min="0" step="0.5" placeholder="es: 28">
+      </div>
+    </div>
+
+    <!-- FLAG: DA CONFERMARE + CAPARRA -->
+    <div style="display:flex;gap:20px;margin-bottom:18px;flex-wrap:wrap">
+      <label style="display:flex;align-items:center;gap:10px;cursor:pointer;font-size:16px;color:var(--white2)">
+        <input type="checkbox" id="pren-da-confermare" style="width:18px;height:18px;accent-color:#c9a84c;cursor:pointer">
+        <span>
+          <span style="color:var(--gold);font-family:'Cinzel',serif;font-size:13px;letter-spacing:1px">DA CONFERMARE</span>
+          <span style="display:block;font-size:13px;color:var(--white3)">non conta nei totali</span>
+        </span>
+      </label>
+      <label style="display:flex;align-items:center;gap:10px;cursor:pointer;font-size:16px;color:var(--white2)">
+        <input type="checkbox" id="pren-caparra" style="width:18px;height:18px;accent-color:#6abc8a;cursor:pointer">
+        <span>
+          <span style="color:#6abc8a;font-family:'Cinzel',serif;font-size:13px;letter-spacing:1px">CAPARRA</span>
+          <span style="display:block;font-size:13px;color:var(--white3)">in attesa pagamento caparra</span>
+        </span>
+      </label>
+    </div>
+
     <div class="flex">
-      <button class="btn btn-gold" onclick="salvaAccoda()">Aggiungi</button>
-      <button class="btn btn-ghost" onclick="closeOv('ov-accoda')">Annulla</button>
+      <button class="btn btn-gold" onclick="salvaPren()">✓ Salva Prenotazione</button>
+      <button class="btn btn-ghost" onclick="closeOv('ov-pren')">Annulla</button>
     </div>
-    <input type="hidden" id="accoda-dskey">
-    <input type="hidden" id="accoda-menukey">
   </div>
 </div>
 
@@ -680,7 +837,10 @@ textarea{resize:vertical;min-height:72px}
 //   - Accoda prenotazione: aggiunge un gruppo a DB.prenotazioni["data_serv"]
 //     collegato a un menuKey esistente (può usare il menù generale o uno specifico)
 
-let DB = { piatti:[], menu:{}, prenotazioni:{} };
+let DB = { piatti:[], menu:{}, prenotazioni:{}, noteGiorno:{}, traduzioni:{} };
+// noteGiorno["YYYY-MM-DD"] = "testo nota"
+// traduzioni[piattoId] = "english name"
+// traduzioni["tl_DATE_serv"] = "english testoLibero"
 let calYear, calMonth;
 let editingPiattoId = null;
 let currentMenuKey = null;
@@ -787,6 +947,20 @@ async function autoLoad(){
 }
 function cap(s){ return s?s.charAt(0).toUpperCase()+s.slice(1):''; }
 
+// pax di una prenotazione — 0 se ha flag attivo (da confermare o caparra)
+function paxG(g){ return (g.daConfermare||g.caparra) ? 0 : (g.pax||0)+(g.bambini||0); }
+// pax totali confermati di un array di gruppi
+function paxTot(gruppi){ return gruppi.reduce((s,g)=>s+paxG(g),0); }
+// label riassuntiva pax per una prenotazione
+function paxLabel(g){
+  const parts=[];
+  if(g.pax) parts.push(`${g.pax} ad.`);
+  if(g.gratuiti) parts.push(`${g.gratuiti} gr.`);
+  if(g.bambini) parts.push(`${g.bambini} bimbi`);
+  if(g.seggiolini) parts.push(`${g.seggiolini} segg.`);
+  return parts.join(' + ')||'—';
+}
+
 // ══════════════════════════════════════════════════════
 // INIT
 // ══════════════════════════════════════════════════════
@@ -836,6 +1010,7 @@ function navTo(name, btn){
   if(name==='piatti') renderPiatti();
   if(name==='cal') renderCal();
   if(name==='stampa'){ document.getElementById('s-data').value=new Date().toISOString().split('T')[0]; }
+  if(name==='traduzioni') navToTraduzioni();
 }
 
 function openOv(id){ document.getElementById(id).classList.remove('hidden'); }
@@ -854,7 +1029,7 @@ function loadLogo(){
   // Prima prova dal localStorage (upload manuale o precedente)
   const l=localStorage.getItem('logo'); if(l){applyLogo(l);return;}
   // Poi prova a caricare dal repository GitHub (URL raw pubblico)
-  const logoUrl='https://raw.githubusercontent.com/shopilciliegio-ship-it/Ciliegio-Menu/main/ciliegio_trasparente.png';
+  const logoUrl='https://raw.githubusercontent.com/shopilciliegio-ship-it/Ciliegio-Menu/main/ciliegio_nero_trasparente.png';
   const img=document.getElementById('logo-img');
   img.onload=()=>{
     img.style.display='block';
@@ -918,6 +1093,8 @@ function toggleBox(hd){ const b=hd.nextElementSibling; b.style.display=b.style.d
 function quickAdd(portataId){
   const inp=document.getElementById('q-'+portataId);
   const nome=inp.value.trim(); if(!nome)return;
+  const dup=DB.piatti.find(p=>p.portata===portataId&&p.nome.toLowerCase()===nome.toLowerCase());
+  if(dup){inp.value='';alert(`"${nome}" è già presente in questa portata.`);return;}
   DB.piatti.push({id:uid(),nome,portata:portataId,extra:0,note:''});
   inp.value=''; saveDB(); renderPiatti();
   if(currentMenuKey) renderMpPortate();
@@ -1065,7 +1242,19 @@ function flyAdd(portataId){
   if(!currentMenuKey)return;
   const inp=document.getElementById('fly-'+portataId);
   const nome=inp.value.trim(); if(!nome)return;
-  const p={id:uid(),nome,portata:portataId,extra:0,note:'al volo'};
+  const dup=DB.piatti.find(p=>p.portata===portataId&&p.nome.toLowerCase()===nome.toLowerCase());
+  if(dup){
+    // piatto già esiste — aggiungilo solo al menù corrente se non c'è già
+    const menu=getMenu(currentMenuKey);
+    if(!menu.piatti[portataId].includes(dup.id)){
+      menu.piatti[portataId].push(dup.id);
+      inp.value=''; saveDB(); renderMpPortate(); updatePreview();
+    } else {
+      inp.value=''; alert(`"${nome}" è già nel menù.`);
+    }
+    return;
+  }
+  const p={id:uid(),nome,portata:portataId,extra:0,note:''};
   DB.piatti.push(p);
   getMenu(currentMenuKey).piatti[portataId].push(p.id);
   inp.value=''; saveDB(); renderMpPortate(); updatePreview();
@@ -1096,27 +1285,11 @@ function salvaMenu(){
   menu.testoLibero=document.getElementById('m-note').value;
   const pv=document.getElementById('m-prezzo').value;
   menu.prezzo=pv!==''?parseFloat(pv):null;
-  const pk=parseKey(currentMenuKey);
-  if(pk.nome){
-    const dsKey=`${pk.data}_${pk.serv}`;
-    const pren=getPren(dsKey);
-    const pax=parseInt(document.getElementById('m-pax').value)||null;
-    // trova prenotazione esistente per questo menuKey e nome
-    const existing=pren.gruppi.find(g=>g.menuKey===currentMenuKey&&g.nome===pk.nome);
-    if(existing){
-      if(pax) existing.pax=pax;
-    } else {
-      pren.gruppi.push({nome:pk.nome,pax:pax||1,note:'',menuKey:currentMenuKey});
-    }
-  }
   saveDB(); renderCal();
   const btn=event.currentTarget||event.target;
   const orig=btn.textContent;
   btn.textContent='✓ Salvato!';btn.style.background='var(--green2)';
-  setTimeout(()=>{
-    btn.textContent=orig;btn.style.background='';
-    navTo('cal');
-  },1200);
+  setTimeout(()=>{ btn.textContent=orig;btn.style.background=''; navTo('cal'); },1200);
 }
 
 // ══════════════════════════════════════════════════════
@@ -1146,13 +1319,17 @@ function renderCal(){
     const el=document.createElement('div');
     el.className='cal-day'+(dateStr===today?' today':'');
     let html=`<div class="cal-dn">${d}</div>`;
+    // pallino rosso se c'è una nota ristorante
+    if(DB.noteGiorno&&DB.noteGiorno[dateStr]){
+      html+=`<div class="cal-note-dot" title="Nota ristorante"></div>`;
+    }
     ['pranzo','cena'].forEach(serv=>{
       const dsKey=`${dateStr}_${serv}`;
       const pren=DB.prenotazioni[dsKey];
       const hasMenus=Object.keys(DB.menu).some(k=>k.startsWith(dsKey));
       const hasPren=pren&&pren.gruppi.length>0;
       if(!hasMenus&&!hasPren)return;
-      const totPax=pren?pren.gruppi.reduce((s,g)=>s+(g.pax||1),0):0;
+      const totPax=pren?paxTot(pren.gruppi):0;
       const nomi=pren?pren.gruppi.map(g=>g.nome).join(', '):'';
       html+=`<div class="cpill cpill-${serv}" onclick="event.stopPropagation();apriGiornoDetail('${dateStr}')">
         <span class="cp-label">${cap(serv)}</span>
@@ -1177,23 +1354,43 @@ function apriGiornoDetail(dateStr){
   ['pranzo','cena'].forEach(serv=>{
     const dsKey=`${dateStr}_${serv}`;
     const pren=getPren(dsKey);
-    const tot=pren.gruppi.reduce((s,g)=>s+(g.pax||1),0);
+    const tot=paxTot(pren.gruppi);
     totali[serv]=tot;
   });
 
   const badgePranzo=totali.pranzo>0
-    ?`<span style="background:#0f2e18;color:#7ad89a;border:1px solid #1a5c2a;border-radius:20px;padding:4px 14px;font-family:'Cinzel',serif;font-size:13px;letter-spacing:.5px;white-space:nowrap">Pranzo · ${totali.pranzo} pax</span>`:'';
+    ?`<span style="background:#0f2e18;color:#7ad89a;border:1px solid #1a5c2a;border-radius:20px;padding:4px 14px;font-family:'Cinzel',serif;font-size:13px;letter-spacing:.5px;white-space:nowrap">Pranzo · ${totali.pranzo} pax</span>
+      <button class="btn btn-ghost btn-sm" onclick="stampaServizio('${dateStr}','pranzo')" title="Stampa servizio pranzo" style="padding:4px 10px">🖨 Pranzo</button>`:'';
   const badgeCena=totali.cena>0
-    ?`<span style="background:#0f182e;color:#7a9ad8;border:1px solid #1a2a5c;border-radius:20px;padding:4px 14px;font-family:'Cinzel',serif;font-size:13px;letter-spacing:.5px;white-space:nowrap">Cena · ${totali.cena} pax</span>`:'';
+    ?`<span style="background:#0f182e;color:#7a9ad8;border:1px solid #1a2a5c;border-radius:20px;padding:4px 14px;font-family:'Cinzel',serif;font-size:13px;letter-spacing:.5px;white-space:nowrap">Cena · ${totali.cena} pax</span>
+      <button class="btn btn-ghost btn-sm" onclick="stampaServizio('${dateStr}','cena')" title="Stampa servizio cena" style="padding:4px 10px">🖨 Cena</button>`:'';
+
+  const notaGiorno=(DB.noteGiorno&&DB.noteGiorno[dateStr])||'';
+  const badgeNota=notaGiorno
+    ?`<span style="background:#200a0a;color:#e06060;border:1px solid #5c1a1a;border-radius:20px;padding:4px 14px;font-family:'Cinzel',serif;font-size:13px;letter-spacing:.5px;white-space:nowrap">📝 Note</span>`:'';
 
   let html=`<div class="giorno-detail">
     <div class="gd-hd">
       <span class="gd-title">${dt.giornoLungo}</span>
-      ${badgePranzo}${badgeCena}
+      ${badgePranzo}${badgeCena}${badgeNota}
       <button class="btn btn-gold btn-sm" onclick="apriCompilaPerData('${dateStr}','pranzo')">+ Menù Pranzo</button>
       <button class="btn btn-gold btn-sm" onclick="apriCompilaPerData('${dateStr}','cena')">+ Menù Cena</button>
     </div>
-    <div class="gd-body">`;
+    <div class="gd-body">
+
+    <!-- BLOCCO NOTE RISTORANTE -->
+    <div style="margin-bottom:18px">
+      <div class="service-label">
+        <span style="background:#200a0a;color:#e06060;border:1px solid #5c1a1a;border-radius:10px;padding:2px 12px;font-family:'Cinzel',serif;font-size:12px;letter-spacing:1.5px">Note Ristorante</span>
+      </div>
+      <div style="background:var(--bg3);border:1px solid #5c1a1a;border-radius:var(--r);padding:10px 14px">
+        <textarea id="nota-giorno-${dateStr}"
+          style="width:100%;background:transparent;border:none;color:var(--white2);font-family:'Nunito',Candara,'Gill Sans',Calibri,sans-serif;font-size:16px;resize:vertical;min-height:48px;max-height:140px;outline:none;line-height:1.5"
+          placeholder="Es: Nadia assente, Giulia esce alle 16.15…"
+          onchange="salvaNotaGiornoDebounce('${dateStr}',this.value)"
+          oninput="scheduleNotaSave('${dateStr}',this.value)">${notaGiorno}</textarea>
+      </div>
+    </div>`;
 
   let hasAnything=false;
   ['pranzo','cena'].forEach(serv=>{
@@ -1213,23 +1410,35 @@ function apriGiornoDetail(dateStr){
         const priceLabel=DB.menu[mKey].prezzo!=null?` · €${DB.menu[mKey].prezzo}`:'';
         // prenotazioni associate a questo menu
         const prenMenu=pren.gruppi.filter(g=>g.menuKey===mKey);
-        const totPax=prenMenu.reduce((s,g)=>s+(g.pax||1),0);
+        const totPax=paxTot(prenMenu);
 
         html+=`<div class="menu-card">
           <div class="menu-card-hd">
             <span class="mc-label">Menù</span>
-            <span class="mc-name">${pk.nome||'del Giorno'}</span>
+            <span class="mc-name">${pk.nome||'del Sito'}</span>
             <span class="mc-info">${nPiatti} piatti${priceLabel}</span>
           </div>
           <div class="menu-card-pren">`;
 
         if(prenMenu.length){
-          prenMenu.forEach((g,gi)=>{
+          prenMenu.forEach((g)=>{
             const giGlobal=pren.gruppi.indexOf(g);
-            html+=`<div class="pren-item">
-              <span class="pi-nome">${g.nome}</span>
-              <span class="pi-pax">${g.pax||1} pax</span>
-              ${g.note?`<span class="pi-note">${g.note}</span>`:''}
+            const flagDC=g.daConfermare?`<span style="background:#2a1f00;color:var(--gold);border:1px solid var(--gold-dim);border-radius:3px;padding:1px 7px;font-family:'Cinzel',serif;font-size:11px;letter-spacing:.5px">DA CONF.</span>`:'';
+            const flagCA=g.caparra?`<span style="background:#0f2010;color:#7ad89a;border:1px solid #1a5c2a;border-radius:3px;padding:1px 7px;font-family:'Cinzel',serif;font-size:11px;letter-spacing:.5px">CAPARRA</span>`:'';
+            html+=`<div class="pren-item" style="${(g.daConfermare||g.caparra)?'opacity:.65':''}">
+              <div style="flex:1;min-width:0">
+                <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+                  <span class="pi-nome">${g.nome}</span>
+                  ${flagDC}${flagCA}
+                </div>
+                <div style="font-size:13px;color:var(--white3);margin-top:2px;display:flex;gap:10px;flex-wrap:wrap">
+                  <span class="pi-pax">${paxLabel(g)}</span>
+                  ${g.orario?`<span>🕐 ${g.orario}</span>`:''}
+                  ${g.prezzoSpeciale!=null?`<span style="color:var(--gold)">€ ${g.prezzoSpeciale}/pers.</span>`:''}
+                  ${g.contattoNome||g.contattoTel?`<span>📞 ${[g.contattoNome,g.contattoTel].filter(Boolean).join(' ')}</span>`:''}
+                  ${g.note?`<span style="font-style:italic">${g.note}</span>`:''}
+                </div>
+              </div>
               <button class="btn btn-ghost btn-xs" onclick="editPren('${dsKey}',${giGlobal})">✏</button>
               <button class="btn btn-danger btn-xs" onclick="delPren('${dsKey}',${giGlobal})">✕</button>
             </div>`;
@@ -1257,10 +1466,21 @@ function apriGiornoDetail(dateStr){
         <div style="font-family:'Cinzel',serif;font-size:13px;color:var(--white3);margin-bottom:8px;letter-spacing:1px">PRENOTAZIONI SENZA MENÙ ASSEGNATO</div>`;
       orfane.forEach(g=>{
         const gi=pren.gruppi.indexOf(g);
-        html+=`<div class="pren-item">
-          <span class="pi-nome">${g.nome}</span>
-          <span class="pi-pax">${g.pax||1} pax</span>
-          ${g.note?`<span class="pi-note">${g.note}</span>`:''}
+        const flagDC=g.daConfermare?`<span style="background:#2a1f00;color:var(--gold);border:1px solid var(--gold-dim);border-radius:3px;padding:1px 7px;font-family:'Cinzel',serif;font-size:11px;letter-spacing:.5px">DA CONF.</span>`:'';
+        const flagCA=g.caparra?`<span style="background:#0f2010;color:#7ad89a;border:1px solid #1a5c2a;border-radius:3px;padding:1px 7px;font-family:'Cinzel',serif;font-size:11px;letter-spacing:.5px">CAPARRA</span>`:'';
+        html+=`<div class="pren-item" style="${(g.daConfermare||g.caparra)?'opacity:.65':''}">
+          <div style="flex:1;min-width:0">
+            <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+              <span class="pi-nome">${g.nome}</span>${flagDC}${flagCA}
+            </div>
+            <div style="font-size:13px;color:var(--white3);margin-top:2px;display:flex;gap:10px;flex-wrap:wrap">
+              <span class="pi-pax">${paxLabel(g)}</span>
+              ${g.orario?`<span>🕐 ${g.orario}</span>`:''}
+              ${g.prezzoSpeciale!=null?`<span style="color:var(--gold)">€ ${g.prezzoSpeciale}/pers.</span>`:''}
+              ${g.contattoNome||g.contattoTel?`<span>📞 ${[g.contattoNome,g.contattoTel].filter(Boolean).join(' ')}</span>`:''}
+              ${g.note?`<span style="font-style:italic">${g.note}</span>`:''}
+            </div>
+          </div>
           <button class="btn btn-ghost btn-xs" onclick="editPren('${dsKey}',${gi})">✏</button>
           <button class="btn btn-danger btn-xs" onclick="delPren('${dsKey}',${gi})">✕</button>
         </div>`;
@@ -1279,49 +1499,100 @@ function apriGiornoDetail(dateStr){
 }
 
 // ── ACCODA PRENOTAZIONE ──
-function openAccoda(dsKey, menuKey){
-  const pk=parseKey(menuKey);
-  const label=pk.nome?pk.nome:'Menù Generale';
-  document.getElementById('accoda-desc').textContent=`Aggiungi un gruppo/persona al menù "${label}"`;
-  document.getElementById('accoda-dskey').value=dsKey;
-  document.getElementById('accoda-menukey').value=menuKey;
-  document.getElementById('accoda-nome').value='';
-  document.getElementById('accoda-pax').value='';
-  document.getElementById('accoda-note').value='';
-  openOv('ov-accoda');
-  setTimeout(()=>document.getElementById('accoda-nome').focus(),80);
+// ── HELPER: popola il modal prenotazione ──
+function openPrenModal({dsKey, gi=-1, menuKeyFixed='', title='Prenotazione', desc=''}){
+  document.getElementById('pren-dskey').value=dsKey;
+  document.getElementById('pren-gi').value=gi;
+  document.getElementById('pren-menukey-fixed').value=menuKeyFixed;
+  document.getElementById('pren-modal-title').textContent=title;
+  document.getElementById('pren-modal-desc').textContent=desc;
+
+  // carica dati esistenti se modifica, altrimenti azzera
+  const g = gi>=0 ? getPren(dsKey).gruppi[gi] : null;
+  document.getElementById('pren-nome').value          = g?.nome||'';
+  document.getElementById('pren-orario').value        = g?.orario||'';
+  document.getElementById('pren-pax').value           = g?.pax||'';
+  document.getElementById('pren-gratuiti').value      = g?.gratuiti||'';
+  document.getElementById('pren-bambini').value       = g?.bambini||'';
+  document.getElementById('pren-seggiolini').value    = g?.seggiolini||'';
+  document.getElementById('pren-contatto-nome').value = g?.contattoNome||'';
+  document.getElementById('pren-contatto-tel').value  = g?.contattoTel||'';
+  document.getElementById('pren-note').value          = g?.note||'';
+  document.getElementById('pren-da-confermare').checked = g?.daConfermare||false;
+  document.getElementById('pren-caparra').checked       = g?.caparra||false;
+  document.getElementById('pren-prezzo-speciale').value = g?.prezzoSpeciale!=null?g.prezzoSpeciale:'';
+
+  // popola select menù
+  const sel=document.getElementById('pren-menukey');
+  sel.innerHTML='<option value="">— nessun menù assegnato —</option>';
+  const allMenuKeys=Object.keys(DB.menu).filter(k=>k.startsWith(dsKey+'_')||k===dsKey);
+  allMenuKeys.forEach(k=>{
+    const pk=parseKey(k);
+    const opt=document.createElement('option');
+    opt.value=k;
+    opt.textContent=pk.nome||'Menù del Sito';
+    if((g?.menuKey||menuKeyFixed)===k) opt.selected=true;
+    sel.appendChild(opt);
+  });
+  // se arriva da accoda con menù fisso, selezionalo e mostra il gruppo select
+  if(menuKeyFixed){
+    sel.value=menuKeyFixed;
+  }
+
+  openOv('ov-pren');
+  setTimeout(()=>document.getElementById('pren-nome').focus(),80);
 }
-function openAccodaLibero(dsKey){
-  // accoda senza menù specificato → apre modal
-  document.getElementById('accoda-desc').textContent='Aggiungi prenotazione (senza menù specifico assegnato)';
-  document.getElementById('accoda-dskey').value=dsKey;
-  document.getElementById('accoda-menukey').value='';
-  document.getElementById('accoda-nome').value='';
-  document.getElementById('accoda-pax').value='';
-  document.getElementById('accoda-note').value='';
-  openOv('ov-accoda');
-  setTimeout(()=>document.getElementById('accoda-nome').focus(),80);
-}
-function salvaAccoda(){
-  const nome=document.getElementById('accoda-nome').value.trim();
-  if(!nome){alert('Inserisci un nome.');return;}
-  const dsKey=document.getElementById('accoda-dskey').value;
-  const menuKey=document.getElementById('accoda-menukey').value||null;
-  const pax=parseInt(document.getElementById('accoda-pax').value)||1;
-  const note=document.getElementById('accoda-note').value.trim();
+
+function salvaPren(){
+  const dsKey   = document.getElementById('pren-dskey').value;
+  const gi      = parseInt(document.getElementById('pren-gi').value);
+  const nome    = document.getElementById('pren-nome').value.trim();
+  if(!nome){alert('Inserisci un nome o gruppo.');return;}
+  const g = {
+    nome,
+    orario:       document.getElementById('pren-orario').value,
+    pax:          parseInt(document.getElementById('pren-pax').value)||0,
+    gratuiti:     parseInt(document.getElementById('pren-gratuiti').value)||0,
+    bambini:      parseInt(document.getElementById('pren-bambini').value)||0,
+    seggiolini:   parseInt(document.getElementById('pren-seggiolini').value)||0,
+    contattoNome: document.getElementById('pren-contatto-nome').value.trim(),
+    contattoTel:  document.getElementById('pren-contatto-tel').value.trim(),
+    note:         document.getElementById('pren-note').value.trim(),
+    menuKey:      document.getElementById('pren-menukey').value||null,
+    daConfermare: document.getElementById('pren-da-confermare').checked,
+    caparra:      document.getElementById('pren-caparra').checked,
+    prezzoSpeciale: document.getElementById('pren-prezzo-speciale').value!==''
+      ? parseFloat(document.getElementById('pren-prezzo-speciale').value) : null,
+  };
   const pren=getPren(dsKey);
-  pren.gruppi.push({nome,pax,note,menuKey});
-  saveDB(); closeOv('ov-accoda');
+  if(gi>=0) pren.gruppi[gi]=g; // modifica
+  else pren.gruppi.push(g);    // nuova
+  saveDB(); closeOv('ov-pren');
   apriGiornoDetail(dsKey.split('_')[0]);
   renderCal();
 }
+
+function openAccoda(dsKey, menuKey){
+  const pk=parseKey(menuKey);
+  openPrenModal({
+    dsKey,
+    gi:-1,
+    menuKeyFixed:menuKey,
+    title:'Accoda Prenotazione',
+    desc:`Menù: ${pk.nome||'Menù del Sito'}`
+  });
+}
+function openAccodaLibero(dsKey){
+  openPrenModal({dsKey, gi:-1, title:'Nuova Prenotazione', desc:''});
+}
 function editPren(dsKey, gi){
   const g=getPren(dsKey).gruppi[gi];
-  const nome=prompt('Nome:',g.nome); if(nome===null)return;
-  const pax=parseInt(prompt('Pax:',g.pax||1))||1;
-  const note=prompt('Note:',g.note||'')||'';
-  g.nome=nome.trim(); g.pax=pax; g.note=note;
-  saveDB(); apriGiornoDetail(dsKey.split('_')[0]); renderCal();
+  openPrenModal({
+    dsKey, gi,
+    menuKeyFixed:'',
+    title:'Modifica Prenotazione',
+    desc:''
+  });
 }
 function delPren(dsKey,gi){
   if(!confirm('Eliminare questa prenotazione?'))return;
@@ -1329,12 +1600,38 @@ function delPren(dsKey,gi){
   saveDB(); apriGiornoDetail(dsKey.split('_')[0]); renderCal();
 }
 
+let _notaTimer={};
+function scheduleNotaSave(dateStr, testo){
+  clearTimeout(_notaTimer[dateStr]);
+  _notaTimer[dateStr]=setTimeout(()=>salvaNotaGiorno(dateStr,testo), 1200);
+}
+function salvaNotaGiorno(dateStr, testo){
+  if(!DB.noteGiorno) DB.noteGiorno={};
+  if(testo.trim()) DB.noteGiorno[dateStr]=testo;
+  else delete DB.noteGiorno[dateStr];
+  saveDB();
+  // aggiorna solo il pallino nella cella del calendario senza re-render completo
+  const cells=document.querySelectorAll('.cal-day');
+  cells.forEach(cell=>{
+    const dn=cell.querySelector('.cal-dn');
+    if(!dn)return;
+    // trova la cella giusta cercando il numero del giorno
+    const d=parseInt(dn.textContent);
+    const ds=`${calYear}-${String(calMonth+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+    if(ds!==dateStr)return;
+    let dot=cell.querySelector('.cal-note-dot');
+    if(testo.trim()&&!dot){
+      dot=document.createElement('div'); dot.className='cal-note-dot'; cell.appendChild(dot);
+    } else if(!testo.trim()&&dot) dot.remove();
+  });
+}
+
 // ── VIEW MENU ──
 function viewMenu(key){
   const pk=parseKey(key);
   const menu=getMenu(key);
   const dt=parseDate(pk.data);
-  let html=`<div class="modal-title">Menù ${pk.nome||'del Giorno'} — ${dt.giornoLungo} — ${cap(pk.serv)}</div>`;
+  let html=`<div class="modal-title">Menù ${pk.nome||'del Sito'} — ${dt.giornoLungo} — ${cap(pk.serv)}</div>`;
   html+=`<div class="flex mb-16">
     <button class="btn btn-gold btn-sm" onclick="editMenuFromCal('${pk.data}','${pk.serv}','${pk.nome}');closeOv('ov-mv')">✏ Modifica</button>
     <button class="btn btn-dark btn-sm" onclick="apriStampaConKey('${key}');closeOv('ov-mv')">🖨 Stampa</button>
@@ -1364,22 +1661,19 @@ function apriCompilaPerData(dateStr,serv){
   document.getElementById('nm-data').value=dateStr;
   document.getElementById('nm-serv').value=serv;
   document.getElementById('nm-nome').value='';
-  document.getElementById('nm-pax').value='';
   openOv('ov-nm');
   setTimeout(()=>document.getElementById('nm-nome').focus(),100);
 }
 function confermaNuovoMenu(){
   const dateStr=document.getElementById('nm-data').value;
   const serv=document.getElementById('nm-serv').value;
-  const nome=document.getElementById('nm-nome').value.trim();
-  if(!nome){alert('Inserisci un nome.');return;}
-  const pax=document.getElementById('nm-pax').value;
+  const nomeInput=document.getElementById('nm-nome').value.trim();
+  const nome=nomeInput||'Menù del Sito';
   closeOv('ov-nm');
-  // usa editMenuFromCal che funziona già correttamente
   document.getElementById('m-data').value=dateStr;
   document.getElementById('m-serv').value=serv;
   document.getElementById('m-nome').value=nome;
-  document.getElementById('m-pax').value=pax;
+  document.getElementById('m-pax').value='';
   navTo('menu');
   setTimeout(()=>{
     apriEditor();
@@ -1421,6 +1715,228 @@ function editMenuFromCal(dateStr,serv,nome){
     }
   },60);
 }
+function stampaServizio(dateStr, serv){
+  const dt=parseDate(dateStr);
+  const dsKey=`${dateStr}_${serv}`;
+  const pren=getPren(dsKey);
+  const allMenuKeys=Object.keys(DB.menu).filter(k=>k.startsWith(dsKey+'_')||k===dsKey);
+  const nota=(DB.noteGiorno&&DB.noteGiorno[dateStr])||'';
+  const totConf=paxTot(pren.gruppi);
+
+  // script inline per auto-scala + stampa — costruito a runtime evitando il tag nel sorgente
+  const _s='<scr'+'ipt>', _e='<'+'/script>';
+  const inlineScript=_s+`
+(function(){
+  var A4H=1090;
+  var page=document.getElementById('page');
+  function fit(){
+    page.style.transform='';
+    var h=page.scrollHeight;
+    if(h>A4H){
+      var scale=A4H/h;
+      page.style.transform='scale('+scale.toFixed(4)+')';
+      page.style.transformOrigin='top left';
+      document.body.style.height=Math.ceil(h*scale)+'px';
+    }
+  }
+  function go(){ fit(); setTimeout(function(){window.print();},500); }
+  if(document.fonts&&document.fonts.ready){ document.fonts.ready.then(go); }
+  else { setTimeout(go,700); }
+  window.addEventListener('resize',fit);
+})();
+`+_e;
+
+  function paxFull(g){
+    const p=[];
+    if(g.pax)        p.push(`${g.pax} ${g.pax===1?'adulto':'adulti'}`);
+    if(g.gratuiti)   p.push(`${g.gratuiti} gratuità`);
+    if(g.bambini)    p.push(`${g.bambini} ${g.bambini===1?'bambino':'bambini'}`);
+    if(g.seggiolini) p.push(`${g.seggiolini} ${g.seggiolini===1?'seggiolino':'seggiolini'}`);
+    return p.join(' + ')||'—';
+  }
+
+  // Costruisce le righe prenotazioni per un menù — tutte le info su UNA riga compatta
+  function buildPrenRows(prenList){
+    if(!prenList.length) return `<div class="prow"><div class="pfull" style="font-style:italic;color:#888">Nessuna prenotazione accodata.</div></div>`;
+    return prenList.map(g=>{
+      const pending=g.daConfermare||g.caparra;
+      const flags=[];
+      if(g.daConfermare) flags.push('DA CONFERMARE');
+      if(g.caparra)      flags.push('CAPARRA');
+      const flagStr=flags.length?` <span class="flag">${flags.join(' · ')}</span>`:'';
+      // dettagli inline separati da spazio em
+      const info=[];
+      if(g.orario)                              info.push(`Ore ${g.orario}`);
+      if(g.contattoNome||g.contattoTel)         info.push(`Tel: ${[g.contattoNome,g.contattoTel].filter(Boolean).join(' ')}`);
+      if(g.prezzoSpeciale!=null)                info.push(`Prezzo speciale: €${g.prezzoSpeciale}/pers.`);
+      if(g.note)                                info.push(g.note);
+      const infoStr=info.length?`<span class="pinfo">${info.join('  ·  ')}</span>`:'';
+      return `<div class="prow${pending?' pending':''}">
+        <span class="pnome">${g.nome}${flagStr}</span>
+        ${infoStr}
+        <span class="ppax">${paxFull(g)}</span>
+      </div>`;
+    }).join('');
+  }
+
+  // Costruisce HTML piatti di un menù
+  function buildPiattiHTML(mKey){
+    const menu=DB.menu[mKey]; if(!menu)return'';
+    let s='';
+    PORTATE.forEach(portata=>{
+      const ids=menu.piatti[portata.id]||[];
+      if(!ids.length)return;
+      const nomi=ids.map(id=>{
+        const p=DB.piatti.find(x=>x.id===id);
+        return p?p.nome+(p.extra?` <em>(+€${p.extra})</em>`:''):'?';
+      }).join('  ·  ');
+      s+=`<div class="prow-piatti"><span class="plbl">${portata.label}</span><span class="pitems">${nomi}</span></div>`;
+    });
+    if(menu.testoLibero) s+=`<div class="mpnote">${menu.testoLibero}</div>`;
+    return s;
+  }
+
+  // SEZIONE PRENOTAZIONI HTML
+  let prenHTML='';
+  allMenuKeys.forEach(mKey=>{
+    const pk=parseKey(mKey);
+    const menu=DB.menu[mKey];
+    const prenMenu=pren.gruppi.filter(g=>g.menuKey===mKey);
+    const totPaxMenu=paxTot(prenMenu);
+    const priceInfo=menu.prezzo!=null?`  ·  €${menu.prezzo} a persona`:'';
+    prenHTML+=`<div class="mblock">
+      <div class="mblock-hd">
+        <span class="mlabel">Menù</span>
+        <span class="mname">${pk.nome||'Menù del Sito'}</span>
+        <span class="minfo">${totPaxMenu} coperti${priceInfo}</span>
+      </div>
+      ${buildPrenRows(prenMenu)}
+    </div>`;
+  });
+  const orfane=pren.gruppi.filter(g=>!g.menuKey||!DB.menu[g.menuKey]);
+  if(orfane.length){
+    prenHTML+=`<div class="mblock"><div class="mblock-hd"><span class="mname">Senza menù assegnato</span></div>${buildPrenRows(orfane)}</div>`;
+  }
+
+  // SEZIONE MENU HTML — 1 o 2 colonne
+  let menuHTML='';
+  if(allMenuKeys.length){
+    const cols=allMenuKeys.length>=2?2:1;
+    if(cols===2){
+      menuHTML=`<div class="menu-cols">`;
+      allMenuKeys.forEach(mKey=>{
+        const pk=parseKey(mKey);
+        const menu=DB.menu[mKey];
+        const pl=menu.prezzo!=null?`  ·  €${menu.prezzo} a persona`:'';
+        menuHTML+=`<div class="mcol">
+          <div class="mptitle">${pk.nome||'Menù del Sito'}<span class="mpprezzo">${pl}</span></div>
+          ${buildPiattiHTML(mKey)}
+        </div>`;
+      });
+      menuHTML+=`</div>`;
+    } else {
+      const mKey=allMenuKeys[0];
+      const pk=parseKey(mKey);
+      const menu=DB.menu[mKey];
+      const pl=menu.prezzo!=null?`  ·  €${menu.prezzo} a persona`:'';
+      menuHTML=`<div class="mpblock">
+        <div class="mptitle">${pk.nome||'Menù del Sito'}<span class="mpprezzo">${pl}</span></div>
+        ${buildPiattiHTML(mKey)}
+      </div>`;
+    }
+  }
+
+  const html=`<!DOCTYPE html><html lang="it"><head><meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;color:#000}
+body{font-family:'Nunito',Candara,'Gill Sans',Calibri,sans-serif;background:#fff;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+/* AUTO-SCALA: il contenuto si restringe per stare in una pagina */
+.page{
+  width:210mm;
+  padding:7mm 10mm 7mm;
+  margin:0 auto;
+  /* scala automatica per stare in un foglio */
+  transform-origin:top left;
+}
+
+/* INTESTAZIONE */
+.header{text-align:center;border-bottom:3px solid #000;padding-bottom:4mm;margin-bottom:4mm}
+h1.data{font-family:'Cinzel',serif;font-size:40px;font-weight:600;line-height:1;letter-spacing:1px}
+.servizio{font-family:'Cinzel',serif;font-size:18px;letter-spacing:6px;text-transform:uppercase;margin-top:3px;font-weight:500}
+
+/* NOTA */
+.nota-box{border:2px solid #000;padding:4px 9px;margin-bottom:4mm;font-size:14px;font-style:italic;font-weight:600}
+.nota-box b{font-style:normal;font-size:11px;letter-spacing:1px;font-family:'Cinzel',serif;margin-right:6px}
+
+/* SEZIONI */
+.sec{font-family:'Cinzel',serif;font-size:12px;letter-spacing:3px;text-transform:uppercase;border-bottom:2px solid #000;padding-bottom:2px;margin-bottom:3mm;margin-top:4mm}
+
+/* BLOCCHI PRENOTAZIONI */
+.mblock{margin-bottom:3mm;border:1.5px solid #000;page-break-inside:avoid;break-inside:avoid}
+.mblock-hd{background:#000;color:#fff;padding:4px 9px;display:flex;align-items:baseline;gap:8px}
+.mblock-hd *{color:#fff}
+.mlabel{font-family:'Cinzel',serif;font-size:10px;letter-spacing:2px;color:#bbb!important;text-transform:uppercase;flex-shrink:0}
+.mname{font-family:'Cinzel',serif;font-size:16px;font-weight:600;flex:1}
+.minfo{font-size:13px;color:#ccc!important;flex-shrink:0}
+
+/* RIGA PRENOTAZIONE — tutto su una riga */
+.prow{display:flex;align-items:baseline;gap:8px;padding:4px 9px;border-bottom:1px solid #ccc;font-size:14px;flex-wrap:nowrap}
+.prow:last-child{border-bottom:none}
+.prow.pending{background:#f8f8f8}
+.pnome{font-size:15px;font-weight:700;flex-shrink:0;min-width:120px}
+.flag{display:inline-block;border:1.5px solid #000;border-radius:2px;padding:0 5px;font-size:9px;font-family:'Cinzel',serif;letter-spacing:.5px;vertical-align:middle;margin-left:4px}
+.pinfo{flex:1;font-size:13px;color:#333;white-space:normal;line-height:1.4}
+.ppax{font-size:14px;font-weight:700;flex-shrink:0;text-align:right;min-width:100px}
+
+/* TOTALE */
+.totale{border:2px solid #000;padding:5px 10px;display:flex;justify-content:space-between;align-items:center;margin-top:2mm}
+.totale span:first-child{font-family:'Cinzel',serif;font-size:12px;letter-spacing:1px}
+.totale span:last-child{font-size:18px;font-weight:700;font-family:'Cinzel',serif}
+
+/* MENU PIATTI — 2 colonne */
+.menu-cols{display:grid;grid-template-columns:1fr 1fr;gap:5mm;margin-top:0}
+.mcol{}
+.mpblock{}
+.mptitle{font-family:'Cinzel',serif;font-size:14px;font-weight:600;border-bottom:2px solid #000;padding-bottom:2px;margin-bottom:3px;display:flex;justify-content:space-between;align-items:baseline}
+.mpprezzo{font-size:12px;font-weight:400}
+.prow-piatti{display:flex;gap:6px;padding:3px 0;border-bottom:1px solid #ddd;align-items:baseline}
+.prow-piatti:last-child{border-bottom:none}
+.plbl{font-family:'Cinzel',serif;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:#444;min-width:80px;flex-shrink:0}
+.pitems{font-size:14px;flex:1;line-height:1.4}
+.mpnote{font-size:12px;font-style:italic;color:#555;margin-top:2px;padding-left:86px}
+
+.footer{text-align:center;font-size:10px;color:#666;margin-top:4mm;padding-top:2mm;border-top:1px solid #ccc;letter-spacing:2px;font-family:'Cinzel',serif}
+
+@media print{
+  html,body{margin:0;padding:0}
+  @page{size:A4 portrait;margin:0}
+  .page{transform:none!important;width:210mm;padding:7mm 10mm}
+}
+</style>
+</head>
+<body>
+<div class="page" id="page">
+
+<div class="header">
+  <h1 class="data">${dt.dayOfWeek}, ${dt.d} ${MESI_S[dt.m-1]} ${dt.y}</h1>
+  <div class="servizio">${serv==='pranzo'?'Pranzo':'Cena'}</div>
+</div>
+${nota?`<div class="nota-box"><b>Note ristorante</b>${nota}</div>`:''}
+<div class="sec">Prenotazioni</div>
+${prenHTML}
+<div class="totale"><span>Totale coperti confermati</span><span>${totConf}</span></div>
+${allMenuKeys.length?`<div class="sec" style="margin-top:5mm">Menù</div>${menuHTML}`:''}
+<div class="footer">Cucina Toscana Tradizionale  ·  ${dt.giornoLungo}  ·  ${serv==='pranzo'?'Pranzo':'Cena'}</div>
+
+</div>
+${inlineScript}
+</body></html>`;
+
+  const w=window.open('','_blank','width=950,height=900');
+  w.document.write(html);
+  w.document.close();
+}
 function apriStampaConKey(key){
   const pk=parseKey(key);
   navTo('stampa');
@@ -1452,12 +1968,19 @@ function generaA4(){
   const gruppiToShow=nome?pren.gruppi.filter(g=>g.nome===nome||g.menuKey===mkKey(data,serv,nome)):pren.gruppi;
   if(gruppiToShow.length){
     tbody.innerHTML=gruppiToShow.map(g=>{
-      totCop+=(g.pax||1);
-      const ml=g.menuKey?parseKey(g.menuKey).nome||'—':'—';
-      return `<tr><td>${g.nome}</td><td>${g.pax||1}</td><td>${ml}${g.note?' · '+g.note:''}</td></tr>`;
+      const confermata=!g.daConfermare&&!g.caparra;
+      const paxAdulti=(g.pax||0)+(g.bambini||0);
+      if(confermata) totCop+=paxAdulti;
+      const paxStr=paxLabel(g);
+      const flags=[g.daConfermare?'DA CONF.':'',g.caparra?'CAPARRA':''].filter(Boolean).join(' ');
+      const ml=g.menuKey?parseKey(g.menuKey).nome||'Menù del Sito':'—';
+      const prezzoStr=g.prezzoSpeciale!=null?` · Prezzo: €${g.prezzoSpeciale}/pers.`:'';
+      const extra=[g.orario?`ore ${g.orario}`:'',g.note||'',flags].filter(Boolean).join(' · ');
+      const rowStyle=confermata?'':' style="opacity:0.6;font-style:italic"';
+      return `<tr${rowStyle}><td>${g.nome}${g.contattoNome?`<br><small style="color:#8a7060">${g.contattoNome}${g.contattoTel?' · '+g.contattoTel:''}</small>`:''}</td><td>${paxStr}</td><td>${ml}${prezzoStr}${extra?' · '+extra:''}</td></tr>`;
     }).join('');
   } else tbody.innerHTML='<tr><td colspan="3" style="font-style:italic;color:#8a7060">Nessuna prenotazione.</td></tr>';
-  document.getElementById('a4-totcop').textContent=totCop?`Totale coperti: ${totCop}`:'';
+  document.getElementById('a4-totcop').textContent=totCop?`Totale coperti confermati: ${totCop}`:'';
 
   // menu
   const mwrap=document.getElementById('a4-menus');
@@ -1618,6 +2141,656 @@ function defaultPiatti(){
     ['dolce','Buccellato di mele e noci con crema di vin santo'],['dolce','Cantucci e vin santo'],['dolce','Crème caramel'],['dolce','Crostata alla crema'],['dolce','Crostata alla frutta fresca',0,'solo frutta di stagione'],['dolce','Crostata con marmellata fresca'],['dolce','Crostata con ricotta e caffè'],['dolce','Crostata con ricotta, pinoli e uvetta'],['dolce','Macedonia'],['dolce','Mousse di ricotta agli agrumi su granella di cantucci'],['dolce','Mousse di ricotta al cioccolato su granella di cantucci'],['dolce','Panna cotta'],['dolce','Pinolata alla crema'],['dolce','Salame al caffè'],['dolce','Salame al cioccolato'],['dolce','Salame alla crema'],['dolce','Tiramisù',1,''],['dolce','Torta della nonna',1,''],['dolce','Torta di mele con crema di vin santo'],['dolce','Torta di mele rigirata'],['dolce','Tris di dolci della casa',3,''],['dolce','Zuppa inglese'],
   ];
   return L.map(x=>({id:uid(),portata:x[0],nome:x[1],extra:x[2]||0,note:x[3]||''}));
+}
+
+// ══════════════════════════════════════════════════════
+// JPG GENERAZIONE PER SITO
+// ══════════════════════════════════════════════════════
+
+// Backgrounds per giorno settimana [bgTop, bgBottom, accent, textDark]
+// Indice = getDay(): 0=Dom, 1=Lun, 2=Mar, 3=Mer, 4=Gio, 5=Ven, 6=Sab
+const JPG_BG_CFGS = [
+  ['#fdf8f0','#e8d4a8','#8b6310','#3d2408'], // Domenica  – avorio/oro
+  ['#edf4e8','#c4ddb0','#2d6a18','#153808'], // Lunedì    – verde salvia
+  ['#f8ece0','#e0b888','#8b3a10','#4d1e04'], // Martedì   – terracotta
+  ['#f5f1e0','#d8cc88','#5a4e00','#3d3400'], // Mercoledì – oro oliva
+  ['#f4ece8','#d0a0a0','#6a1818','#4d0a0a'], // Giovedì   – borgogna
+  ['#fef8dc','#f0cc40','#8b5e00','#5c3d00'], // Venerdì   – ambra
+  ['#eaecf8','#aab8dc','#1a2870','#0a1448'], // Sabato    – blu ardesia
+];
+
+const GIORNI_IT = ['domenica','lunedì','martedì','mercoledì','giovedì','venerdì','sabato'];
+
+// Numero file: Mon-pranzo=02, Mon-cena=03 … Sun-pranzo=14, Sun-cena=15
+function getJPGFileNum(dow, serv){
+  // dow: 0=Dom,1=Lun...6=Sab → indice Mon=0...Sun=6
+  const idx = dow===0 ? 6 : dow-1;
+  return idx*2 + (serv==='pranzo'?2:3);
+}
+function getJPGFileName(dateStr, serv){
+  const dow = new Date(dateStr+'T12:00:00').getDay();
+  const n = getJPGFileNum(dow, serv);
+  return `${String(n).padStart(2,'0')}-${GIORNI_IT[dow]}-${serv}.jpg`;
+}
+
+// Inietta DPI 300 nell'header JFIF del JPEG
+function setJPEGDPI(b64, dpi){
+  try{
+    const bin=atob(b64); const u8=new Uint8Array(bin.length);
+    for(let i=0;i<bin.length;i++) u8[i]=bin.charCodeAt(i);
+    if(u8[0]===0xFF&&u8[1]===0xD8&&u8[2]===0xFF&&u8[3]===0xE0){
+      u8[13]=1; // units=DPI
+      u8[14]=(dpi>>8)&0xFF; u8[15]=dpi&0xFF;
+      u8[16]=(dpi>>8)&0xFF; u8[17]=dpi&0xFF;
+    }
+    let s=''; for(let i=0;i<u8.length;i++) s+=String.fromCharCode(u8[i]);
+    return btoa(s);
+  }catch(e){ return b64; }
+}
+
+// Apri modal e mostra la lista dei menù esportabili
+// helper: filtra menu del sito per range date
+function getJPGKeys(da, a){
+  return Object.keys(DB.menu).filter(k=>{
+    const pk=parseKey(k);
+    if(pk.nome && pk.nome!=='Menù del Sito') return false;
+    if(da && pk.data<da) return false;
+    if(a && pk.data>a) return false;
+    return true;
+  }).sort();
+}
+
+function aggiornaListaJPG(){
+  const da=document.getElementById('jpg-da').value;
+  const a=document.getElementById('jpg-a').value;
+  const keys=getJPGKeys(da,a);
+  const list=document.getElementById('jpg-menu-list');
+  if(!keys.length){
+    list.innerHTML='<div class="empty" style="padding:16px">Nessun Menù del Sito nel periodo selezionato.</div>';
+    return;
+  }
+  list.innerHTML=keys.map(k=>{
+    const pk=parseKey(k); const dt=parseDate(pk.data);
+    const fn=getJPGFileName(pk.data,pk.serv);
+    const nPiatti=countPiattiMenu(k);
+    return `<div style="display:flex;align-items:center;gap:10px;padding:7px 10px;border-radius:var(--r);background:var(--bg3);margin-bottom:6px;font-size:15px">
+      <span style="color:var(--gold);font-family:'Cinzel',serif;font-size:13px;min-width:180px">${fn}</span>
+      <span style="flex:1;color:var(--white2)">${dt.giornoLungo} — ${cap(pk.serv)}</span>
+      <span style="color:var(--white3)">${nPiatti} piatti</span>
+    </div>`;
+  }).join('');
+}
+
+function apriJPGModal(){
+  // default: lunedì-domenica della settimana corrente
+  const today=new Date();
+  const dow=today.getDay();
+  const diffToMon=dow===0?-6:1-dow;
+  const mon=new Date(today); mon.setDate(today.getDate()+diffToMon);
+  const sun=new Date(mon); sun.setDate(mon.getDate()+6);
+  const fmt=d=>d.toISOString().split('T')[0];
+  document.getElementById('jpg-da').value=fmt(mon);
+  document.getElementById('jpg-a').value=fmt(sun);
+  aggiornaListaJPG();
+  document.getElementById('jpg-progress').style.display='none';
+  document.getElementById('jpg-start-btn').disabled=false;
+  document.getElementById('jpg-start-btn').textContent='✦ Genera immagini';
+  openOv('ov-jpg');
+}
+
+// Avvia la generazione di tutti i JPG
+async function avviaGeneraJPG(){
+  const da=document.getElementById('jpg-da').value;
+  const a=document.getElementById('jpg-a').value;
+  const keys=getJPGKeys(da,a);
+  if(!keys.length){alert('Nessun Menù del Sito nel periodo selezionato.');return;}
+
+  const includeEn=document.getElementById('jpg-include-en')?.checked||false;
+  const pBar=document.getElementById('jpg-progress-bar');
+  const pTxt=document.getElementById('jpg-progress-text');
+  const startBtn=document.getElementById('jpg-start-btn');
+  document.getElementById('jpg-progress').style.display='block';
+  startBtn.disabled=true; startBtn.textContent='Generazione…';
+
+  const mode=document.getElementById('jpg-save-mode').value;
+  const zip=mode==='download'?new JSZip():null;
+
+  // Calcola totale step per barra progresso
+  const totalSteps=keys.length*(includeEn?2:1);
+  let done=0;
+
+  // ── ITALIANO ──
+  for(const mKey of keys){
+    const pk=parseKey(mKey);
+    const fname=getJPGFileName(pk.data,pk.serv);
+    pTxt.textContent=`🇮🇹 ${fname} (${done+1}/${totalSteps})…`;
+    try{
+      const canvas=await renderMenuJPGWithLang(mKey,'it');
+      if(canvas){
+        const b64=setJPEGDPI(canvas.toDataURL('image/jpeg',0.92).split(',')[1],300);
+        if(mode==='github') await uploadJPGGitHub(b64,fname);
+        else zip.file(fname,b64,{base64:true});
+      }
+    }catch(e){console.error('IT JPG error',mKey,e);}
+    done++;
+    pBar.style.width=Math.round(done/totalSteps*100)+'%';
+  }
+
+  // ── INGLESE ──
+  if(includeEn){
+    for(const mKey of keys){
+      const pk=parseKey(mKey);
+      const fname=getJPGFileNameEN(pk.data,pk.serv);
+      pTxt.textContent=`🇬🇧 ${fname} (${done+1}/${totalSteps})…`;
+      try{
+        const canvas=await renderMenuJPGWithLang(mKey,'en');
+        if(canvas){
+          const b64=setJPEGDPI(canvas.toDataURL('image/jpeg',0.92).split(',')[1],300);
+          if(mode==='github') await uploadJPGGitHub(b64,fname);
+          else zip.file(fname,b64,{base64:true});
+        }
+      }catch(e){console.error('EN JPG error',mKey,e);}
+      done++;
+      pBar.style.width=Math.round(done/totalSteps*100)+'%';
+    }
+  }
+
+  // ── SCARICA ZIP ──
+  if(mode==='download'&&zip){
+    pTxt.textContent='Compressione zip in corso…';
+    const blob=await zip.generateAsync({type:'blob'});
+    const el=document.createElement('a');
+    el.href=URL.createObjectURL(blob);
+    el.download=`menu-sito-${da}_${a}${includeEn?'-IT+EN':''}.zip`;
+    el.click();
+  }
+
+  const nEn=includeEn?` + ${keys.length} EN`:'';
+  pTxt.textContent=`✓ Completato! ${keys.length} IT${nEn} immagini ${mode==='github'?'caricate su GitHub':'nello zip'}.`;
+  startBtn.textContent='✓ Fatto! → Home';
+  startBtn.disabled=false;
+  startBtn.onclick=()=>{ closeOv('ov-jpg'); goHome(); };
+}
+
+async function uploadJPGGitHub(b64, filename){
+  const cfg=JSON.parse(localStorage.getItem('ghcfg')||'{}');
+  if(!cfg.tok||!cfg.own||!cfg.rep) return;
+  const path=`immagini-sito/${filename}`;
+  let sha=null;
+  try{
+    const r=await fetch(`https://api.github.com/repos/${cfg.own}/${cfg.rep}/contents/${path}`,
+      {headers:{Authorization:`token ${cfg.tok}`,Accept:'application/vnd.github.v3+json'}});
+    if(r.ok){const j=await r.json();sha=j.sha;}
+  }catch(e){}
+  const body={message:`Immagine sito: ${filename}`,content:b64};
+  if(sha)body.sha=sha;
+  await fetch(`https://api.github.com/repos/${cfg.own}/${cfg.rep}/contents/${path}`,{
+    method:'PUT',
+    headers:{Authorization:`token ${cfg.tok}`,Accept:'application/vnd.github.v3+json','Content-Type':'application/json'},
+    body:JSON.stringify(body)
+  });
+}
+
+// Render del singolo JPG su canvas 650×919
+async function renderMenuJPG(mKey){
+  return renderMenuJPGWithLang(mKey,'it');
+}
+async function _renderMenuJPG_orig(mKey){
+  const pk=parseKey(mKey);
+  const menu=DB.menu[mKey]; if(!menu)return null;
+  const dt=parseDate(pk.data);
+  const dow=new Date(pk.data+'T12:00:00').getDay();
+  const [bgTop,bgBot,accent,textDark]=JPG_BG_CFGS[dow];
+
+  const W=650,H=919;
+  const cv=document.createElement('canvas');
+  cv.width=W; cv.height=H;
+  const c=cv.getContext('2d');
+
+  // ── SFONDO GRADIENTE ──
+  const gr=c.createLinearGradient(0,0,W*0.45,H);
+  gr.addColorStop(0,bgTop); gr.addColorStop(1,bgBot);
+  c.fillStyle=gr; c.fillRect(0,0,W,H);
+
+  // Texture: linee diagonali sottili
+  c.save(); c.globalAlpha=0.07; c.strokeStyle='#ffffff'; c.lineWidth=1.2;
+  for(let i=-H;i<W+H;i+=26){
+    c.beginPath(); c.moveTo(i,0); c.lineTo(i+H*0.65,H); c.stroke();
+  }
+  c.restore();
+
+  // ── CORNICE DOPPIA ──
+  const bm=18;
+  c.strokeStyle=accent; c.lineWidth=2.2;
+  c.strokeRect(bm,bm,W-bm*2,H-bm*2);
+  c.lineWidth=0.8;
+  c.strokeRect(bm+7,bm+7,W-bm*2-14,H-bm*2-14);
+
+  // Angoli con rombo decorativo
+  const diamond=(cx,cy,s)=>{
+    c.fillStyle=accent;
+    c.beginPath(); c.moveTo(cx,cy-s); c.lineTo(cx+s,cy); c.lineTo(cx,cy+s); c.lineTo(cx-s,cy);
+    c.closePath(); c.fill();
+  };
+  [[bm,bm],[W-bm,bm],[bm,H-bm],[W-bm,H-bm]].forEach(([x,y])=>diamond(x,y,5));
+
+  // Helper: testo centrato
+  const ct=(text,y,font,color,mw)=>{
+    c.font=font; c.fillStyle=color; c.textAlign='center';
+    c.fillText(text,W/2,y,mw||W-80);
+  };
+  // Helper: linea ornamentale
+  const line=(y,double=false)=>{
+    const mx=bm+38;
+    c.strokeStyle=accent; c.lineWidth=0.9;
+    if(double){
+      c.beginPath(); c.moveTo(mx,y-2.5); c.lineTo(W-mx,y-2.5); c.stroke();
+      c.beginPath(); c.moveTo(mx,y+2.5); c.lineTo(W-mx,y+2.5); c.stroke();
+    } else {
+      c.beginPath(); c.moveTo(mx,y); c.lineTo(W-mx,y); c.stroke();
+    }
+  };
+
+  let y=bm+14;
+
+  // ── LOGO (niente linea sopra — direttamente dalla cornice) ──
+  const LOGO_URL='https://raw.githubusercontent.com/shopilciliegio-ship-it/Ciliegio-Menu/main/ciliegio_nero_trasparente.png';
+  await new Promise(res=>{
+    const img=new Image();
+    img.crossOrigin='anonymous';
+    img.onload=()=>{
+      try{
+        const maxH=115,maxW=270;
+        const scale=Math.min(maxH/img.height,maxW/img.width);
+        const lw=Math.round(img.width*scale),lh=Math.round(img.height*scale);
+        c.drawImage(img,Math.round((W-lw)/2),y,lw,lh); y+=lh;
+      }catch(e){}
+      res();
+    };
+    img.onerror=()=>res();
+    setTimeout(()=>res(),5000);
+    img.src=LOGO_URL;
+  });
+
+  // ── DOPPIA RIGA sotto il logo ──
+  y+=8;
+  const line2Y=y;
+  line(line2Y,true);
+
+  // ── DOPPIA RIGA sotto data/servizio (spazio compatto come il footer: 60px) ──
+  const line3Y=line2Y+82;
+  line(line3Y,true);
+
+  // ── DATA + SERVIZIO centrati verticalmente tra le due righe ──
+  const dateBlockH=52;
+  let ty=line2Y + Math.round((line3Y-line2Y-dateBlockH)/2) + 22;
+  const dataStr=`${dt.dayOfWeek.toUpperCase()}, ${dt.d} ${MESI_S[dt.m-1].toUpperCase()} ${dt.y}`;
+  ct(dataStr, ty, `bold 22px 'Nunito',Candara,sans-serif`, textDark); ty+=30;
+  const servLabel=pk.serv==='pranzo'?'P  R  A  N  Z  O':'C  E  N  A';
+  ct(servLabel, ty, `bold 15px 'Cinzel',Georgia,serif`, accent);
+
+  y=line3Y+14;
+
+  // ── PORTATE — binary search per riempire TUTTO lo spazio disponibile ──
+  const footerTop=H-bm-72; // dove inizia il footer
+  const spaceH=footerTop-y-8;
+  const portateOk=PORTATE.filter(p=>(menu.piatti[p.id]||[]).length>0);
+
+  // Calcola altezza totale con un dato font size (misura wrap reali)
+  function calcH(fs){
+    const hdrFs=Math.round(fs*0.78);
+    const hdrLH=hdrFs*2.2;
+    const dishLH=fs*1.5;
+    const gapLH=fs*0.7;
+    let h=0;
+    portateOk.forEach(portata=>{
+      h+=hdrLH;
+      (menu.piatti[portata.id]||[]).forEach(id=>{
+        const p=DB.piatti.find(x=>x.id===id); if(!p)return;
+        const nome=p.nome; // sovrapprezzo non mostrato nel JPG
+        c.font=`${fs}px 'Nunito',Candara,'Gill Sans',Calibri,sans-serif`;
+        h+=c.measureText(nome).width>W-100 ? dishLH*1.9 : dishLH;
+      });
+      h+=gapLH;
+    });
+    if(menu.testoLibero) h+=fs*1.2;
+    return h;
+  }
+
+  // Binary search: massimo fs tale che calcH(fs) <= spaceH
+  let lo=10, hi=36, fs=16;
+  for(let i=0;i<12;i++){
+    const mid=Math.round((lo+hi)/2);
+    if(calcH(mid)<=spaceH){ lo=mid; fs=mid; }
+    else hi=mid-1;
+  }
+  fs=Math.max(11,fs);
+
+  const hdrFs=Math.round(fs*0.78);
+  const hdrLH=hdrFs*2.2;
+  const dishLH=fs*1.5;
+  const gapLH=fs*0.7;
+
+  // Centra verticalmente nello spazio
+  const totalH=calcH(fs);
+  y+=Math.max(0,Math.round((spaceH-totalH)/2));
+
+  portateOk.forEach(portata=>{
+    const ids=menu.piatti[portata.id]||[];
+    ct(`✦  ${portata.label.toUpperCase()}  ✦`,y+hdrFs*0.85,`bold ${hdrFs}px 'Cinzel',Georgia,serif`,accent,W-80);
+    y+=hdrLH;
+    ids.forEach(id=>{
+      const p=DB.piatti.find(x=>x.id===id); if(!p)return;
+      const nome=p.nome; // sovrapprezzo non mostrato nel JPG
+      c.font=`${fs}px 'Nunito',Candara,'Gill Sans',Calibri,sans-serif`;
+      c.fillStyle=textDark; c.textAlign='center';
+      if(c.measureText(nome).width>W-100){
+        const words=nome.split(' '); const mid=Math.ceil(words.length/2);
+        c.fillText(words.slice(0,mid).join(' '),W/2,y+fs*0.85,W-90);
+        c.fillText(words.slice(mid).join(' '),W/2,y+fs*0.85+dishLH*0.95,W-90);
+        y+=dishLH*1.9;
+      } else {
+        c.fillText(nome,W/2,y+fs*0.85,W-90);
+        y+=dishLH;
+      }
+    });
+    y+=gapLH;
+  });
+  if(menu.testoLibero){
+    c.font=`italic ${Math.round(fs*0.72)}px 'Nunito',Candara,'Gill Sans',Calibri,sans-serif`;
+    c.fillStyle=textDark; c.textAlign='center'; c.globalAlpha=0.75;
+    c.fillText(menu.testoLibero,W/2,y+fs*0.8,W-100);
+    c.globalAlpha=1;
+  }
+
+  // ── PREZZI IN FONDO ──
+  const bY=footerTop;
+  line(bY,true);
+  const pBimbi=parseFloat(document.getElementById('jpg-prezzo-bimbi')?.value)||13;
+  const priceStr=menu.prezzo!=null?menu.prezzo.toFixed(2).replace('.',','):'—';
+  ct(`MENÙ COMPLETO A PERSONA  € ${priceStr}`,bY+26,`bold 15px 'Nunito',Candara,sans-serif`,textDark);
+  ct(`DISPONIBILI SU RICHIESTA  MENÙ BIMBI  AD € ${pBimbi.toFixed(2).replace('.',',')}`,bY+48,`11px 'Nunito',Candara,sans-serif`,accent,W-80);
+
+  return cv;
+}
+
+// ══════════════════════════════════════════════════════
+// TRADUZIONI INGLESE
+// ══════════════════════════════════════════════════════
+
+const MESI_EN=['January','February','March','April','May','June','July','August','September','October','November','December'];
+const GIORNI_EN=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+
+async function tradurreMyMemory(text){
+  try{
+    const r=await fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(text)}&langpair=it|en`);
+    const j=await r.json();
+    const t=j.responseData?.translatedText||'';
+    return t&&t!==text?t:null;
+  }catch(e){return null;}
+}
+
+function renderTraduzioni(){
+  const da=document.getElementById('tr-da')?.value||'';
+  const a=document.getElementById('tr-a')?.value||'';
+  if(!DB.traduzioni) DB.traduzioni={};
+  const keys=getJPGKeys(da,a);
+  const box=document.getElementById('tr-content');
+  if(!keys.length){
+    box.innerHTML='<div class="empty">Nessun Menù del Sito nel periodo selezionato.</div>';
+    return;
+  }
+  let html='';
+  keys.forEach(mKey=>{
+    const pk=parseKey(mKey);
+    const menu=DB.menu[mKey];
+    const dt=parseDate(pk.data);
+    const tlKey=`tl_${pk.data}_${pk.serv}`;
+    html+=`<div class="card mb-16" id="tr-card-${mKey.replace(/[^a-z0-9]/gi,'_')}">
+      <div class="card-hd" style="background:var(--bg3)">
+        <span class="card-title" style="color:#5a9ad8">${dt.giornoLungo} — ${cap(pk.serv)}</span>
+        <button class="btn btn-sm" style="background:#1a3a6a;color:#5a9ad8;border:1px solid #1a5c8a;margin-left:auto" onclick="traduciMenuAuto('${mKey}')">🌐 Traduci questo menù</button>
+      </div>
+      <div style="padding:14px">`;
+    PORTATE.forEach(portata=>{
+      const ids=menu.piatti[portata.id]||[];
+      if(!ids.length)return;
+      html+=`<div style="margin-bottom:14px">
+        <div style="font-family:'Cinzel',serif;font-size:12px;letter-spacing:1.5px;color:var(--gold);margin-bottom:8px">${portata.label.toUpperCase()}</div>`;
+      ids.forEach(id=>{
+        const p=DB.piatti.find(x=>x.id===id); if(!p)return;
+        const enVal=DB.traduzioni[id]||'';
+        html+=`<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:6px;align-items:center">
+          <div style="font-size:15px;color:var(--white3);padding:6px 8px;background:var(--bg2);border-radius:4px">${p.nome}</div>
+          <input type="text" value="${enVal.replace(/"/g,'&quot;')}" placeholder="English translation…"
+            style="background:var(--bg3);border:1px solid #1a5c8a;color:var(--white);border-radius:4px;padding:6px 8px;font-size:15px;font-family:inherit"
+            oninput="salvaTraduzione('${id}',this.value)">
+        </div>`;
+      });
+      html+=`</div>`;
+    });
+    if(menu.testoLibero){
+      const enNote=DB.traduzioni[tlKey]||'';
+      html+=`<div style="margin-top:10px;border-top:1px solid var(--border);padding-top:10px">
+        <div style="font-family:'Cinzel',serif;font-size:11px;letter-spacing:1px;color:var(--white3);margin-bottom:6px">NOTE MENÙ</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+          <div style="font-size:14px;color:var(--white3);padding:6px 8px;background:var(--bg2);border-radius:4px;font-style:italic">${menu.testoLibero}</div>
+          <input type="text" value="${enNote.replace(/"/g,'&quot;')}" placeholder="English note…"
+            style="background:var(--bg3);border:1px solid #1a5c8a;color:var(--white);border-radius:4px;padding:6px 8px;font-size:14px;font-family:inherit;font-style:italic"
+            oninput="salvaTraduzione('${tlKey}',this.value)">
+        </div>
+      </div>`;
+    }
+    html+=`</div></div>`;
+  });
+  box.innerHTML=html;
+}
+
+function salvaTraduzione(key, val){
+  if(!DB.traduzioni) DB.traduzioni={};
+  if(val.trim()) DB.traduzioni[key]=val.trim();
+  else delete DB.traduzioni[key];
+  saveDB();
+}
+
+async function traduciMenuAuto(mKey){
+  const menu=DB.menu[mKey];
+  if(!menu)return;
+  if(!DB.traduzioni) DB.traduzioni={};
+  const pk=parseKey(mKey);
+  const tlKey=`tl_${pk.data}_${pk.serv}`;
+  const allIds=PORTATE.flatMap(p=>menu.piatti[p.id]||[]);
+  let done=0;
+  for(const id of allIds){
+    const p=DB.piatti.find(x=>x.id===id); if(!p)continue;
+    if(DB.traduzioni[id]) continue; // già tradotto
+    const t=await tradurreMyMemory(p.nome);
+    if(t) DB.traduzioni[id]=t;
+    done++;
+    if(done%3===0) await new Promise(r=>setTimeout(r,300)); // throttle
+  }
+  if(menu.testoLibero&&!DB.traduzioni[tlKey]){
+    const t=await tradurreMyMemory(menu.testoLibero);
+    if(t) DB.traduzioni[tlKey]=t;
+  }
+  saveDB();
+  renderTraduzioni();
+}
+
+async function traduciTuttoAuto(){
+  const da=document.getElementById('tr-da')?.value||'';
+  const a=document.getElementById('tr-a')?.value||'';
+  const keys=getJPGKeys(da,a);
+  for(const mKey of keys) await traduciMenuAuto(mKey);
+}
+
+function navToTraduzioni(){
+  // default range = settimana corrente
+  const today=new Date();
+  const dow=today.getDay();
+  const diffToMon=dow===0?-6:1-dow;
+  const mon=new Date(today); mon.setDate(today.getDate()+diffToMon);
+  const sun=new Date(mon); sun.setDate(mon.getDate()+6);
+  const fmt=d=>d.toISOString().split('T')[0];
+  document.getElementById('tr-da').value=fmt(mon);
+  document.getElementById('tr-a').value=fmt(sun);
+  renderTraduzioni();
+}
+
+// ── RENDER JPG IN INGLESE ──
+function getJPGFileNameEN(dateStr, serv){
+  const dow=new Date(dateStr+'T12:00:00').getDay();
+  const n=getJPGFileNum(dow,serv);
+  return `${String(n).padStart(2,'0')}-${GIORNI_IT[dow]}-${serv}-EN.jpg`;
+}
+
+async function renderMenuJPGEn(mKey){
+  const pk=parseKey(mKey);
+  const menu=DB.menu[mKey]; if(!menu)return null;
+  if(!DB.traduzioni) DB.traduzioni={};
+  // Crea una versione "menu" con nomi tradotti
+  const menuEn={
+    piatti:{},
+    testoLibero: DB.traduzioni[`tl_${pk.data}_${pk.serv}`]||menu.testoLibero,
+    prezzo: menu.prezzo
+  };
+  PORTATE.forEach(p=>{
+    menuEn.piatti[p.id]=(menu.piatti[p.id]||[]).map(id=>id); // stessi id
+  });
+  // Override DB.piatti nomi temporaneamente? No - passa traduzioni a renderMenuJPG
+  return renderMenuJPGWithLang(mKey, 'en');
+}
+
+async function renderMenuJPGWithLang(mKey, lang){
+  const pk=parseKey(mKey);
+  const menu=DB.menu[mKey]; if(!menu)return null;
+  const dt=parseDate(pk.data);
+  const dow=new Date(pk.data+'T12:00:00').getDay();
+  const [bgTop,bgBot,accent,textDark]=JPG_BG_CFGS[dow];
+  const isEn=(lang==='en');
+  if(!DB.traduzioni) DB.traduzioni={};
+
+  const W=650,H=919;
+  const cv=document.createElement('canvas');
+  cv.width=W; cv.height=H;
+  const c=cv.getContext('2d');
+
+  // sfondo
+  const gr=c.createLinearGradient(0,0,W*0.45,H);
+  gr.addColorStop(0,bgTop); gr.addColorStop(1,bgBot);
+  c.fillStyle=gr; c.fillRect(0,0,W,H);
+  c.save(); c.globalAlpha=0.07; c.strokeStyle='#ffffff'; c.lineWidth=1.2;
+  for(let i=-H;i<W+H;i+=26){ c.beginPath(); c.moveTo(i,0); c.lineTo(i+H*0.65,H); c.stroke(); }
+  c.restore();
+
+  const bm=18;
+  c.strokeStyle=accent; c.lineWidth=2.2;
+  c.strokeRect(bm,bm,W-bm*2,H-bm*2);
+  c.lineWidth=0.8;
+  c.strokeRect(bm+7,bm+7,W-bm*2-14,H-bm*2-14);
+  const diamond=(cx,cy,s)=>{ c.fillStyle=accent; c.beginPath(); c.moveTo(cx,cy-s); c.lineTo(cx+s,cy); c.lineTo(cx,cy+s); c.lineTo(cx-s,cy); c.closePath(); c.fill(); };
+  [[bm,bm],[W-bm,bm],[bm,H-bm],[W-bm,H-bm]].forEach(([x,y])=>diamond(x,y,5));
+
+  const ct=(text,y,font,color,maxW)=>{ c.font=font; c.fillStyle=color; c.textAlign='center'; c.fillText(text,W/2,y,maxW||W-80); };
+  const line=(y,double=false)=>{
+    const mx=bm+38; c.strokeStyle=accent; c.lineWidth=0.9;
+    if(double){ c.beginPath();c.moveTo(mx,y-2.5);c.lineTo(W-mx,y-2.5);c.stroke(); c.beginPath();c.moveTo(mx,y+2.5);c.lineTo(W-mx,y+2.5);c.stroke(); }
+    else{ c.beginPath();c.moveTo(mx,y);c.lineTo(W-mx,y);c.stroke(); }
+  };
+
+  let y=bm+14;
+
+  // LOGO
+  const LOGO_URL='https://raw.githubusercontent.com/shopilciliegio-ship-it/Ciliegio-Menu/main/ciliegio_nero_trasparente.png';
+  await new Promise(res=>{
+    const img=new Image(); img.crossOrigin='anonymous';
+    img.onload=()=>{ try{ const maxH=115,maxW=270; const sc=Math.min(maxH/img.height,maxW/img.width); const lw=Math.round(img.width*sc),lh=Math.round(img.height*sc); c.drawImage(img,Math.round((W-lw)/2),y,lw,lh); y+=lh; }catch(e){} res(); };
+    img.onerror=()=>res(); setTimeout(()=>res(),5000); img.src=LOGO_URL;
+  });
+
+  y+=8; const line2Y=y; line(line2Y,true);
+  const line3Y=line2Y+82; line(line3Y,true);
+
+  // DATA in lingua
+  let dataStr;
+  if(isEn){
+    dataStr=`${GIORNI_EN[dow].toUpperCase()}, ${dt.d} ${MESI_EN[dt.m-1].toUpperCase()} ${dt.y}`;
+  } else {
+    dataStr=`${dt.dayOfWeek.toUpperCase()}, ${dt.d} ${MESI_S[dt.m-1].toUpperCase()} ${dt.y}`;
+  }
+  const servLabel=isEn
+    ?(pk.serv==='pranzo'?'L  U  N  C  H':'D  I  N  N  E  R')
+    :(pk.serv==='pranzo'?'P  R  A  N  Z  O':'C  E  N  A');
+  const dateBlockH=52;
+  let ty=line2Y+Math.round((line3Y-line2Y-dateBlockH)/2)+22;
+  ct(dataStr,ty,`bold 22px 'Nunito',Candara,sans-serif`,textDark); ty+=30;
+  ct(servLabel,ty,`bold 15px 'Cinzel',Georgia,serif`,accent);
+  y=line3Y+14;
+
+  // PORTATE
+  const footerTop=H-bm-72;
+  const spaceH=footerTop-y-8;
+  const portateOk=PORTATE.filter(p=>(menu.piatti[p.id]||[]).length>0);
+  const tlKey=`tl_${pk.data}_${pk.serv}`;
+  const testoLiberoEn=isEn?(DB.traduzioni[tlKey]||menu.testoLibero):menu.testoLibero;
+
+  function calcH(fs){
+    const hdrFs=Math.round(fs*0.78),hdrLH=hdrFs*2.2,dishLH=fs*1.5,gapLH=fs*0.7;
+    let h=0;
+    portateOk.forEach(portata=>{
+      h+=hdrLH;
+      (menu.piatti[portata.id]||[]).forEach(id=>{
+        const p=DB.piatti.find(x=>x.id===id); if(!p)return;
+        const nome=isEn?(DB.traduzioni[id]||p.nome):p.nome;
+        c.font=`${fs}px 'Nunito',Candara,sans-serif`;
+        h+=c.measureText(nome).width>W-100?dishLH*1.9:dishLH;
+      });
+      h+=gapLH;
+    });
+    if(testoLiberoEn) h+=fs*1.2;
+    return h;
+  }
+
+  let lo=10,hi=36,fs=16;
+  for(let i=0;i<12;i++){ const mid=Math.round((lo+hi)/2); if(calcH(mid)<=spaceH){lo=mid;fs=mid;}else hi=mid-1; }
+  fs=Math.max(11,fs);
+
+  const hdrFs=Math.round(fs*0.78),hdrLH=hdrFs*2.2,dishLH=fs*1.5,gapLH=fs*0.7;
+  const totalH=calcH(fs);
+  y+=Math.max(0,Math.round((spaceH-totalH)/2));
+
+  const portataLabelsEn={antipasto:'Starters',primo:'First Courses',secondo:'Main Courses',contorno:'Side Dishes',dolce:'Desserts'};
+
+  portateOk.forEach(portata=>{
+    const ids=menu.piatti[portata.id]||[];
+    const lbl=isEn?(portataLabelsEn[portata.id]||portata.label):portata.label;
+    c.font=`bold ${hdrFs}px 'Cinzel',Georgia,serif`; c.fillStyle=accent; c.textAlign='center';
+    c.fillText(`✦  ${lbl.toUpperCase()}  ✦`,W/2,y+hdrFs*0.85,W-80); y+=hdrLH;
+    ids.forEach(id=>{
+      const p=DB.piatti.find(x=>x.id===id); if(!p)return;
+      const nome=isEn?(DB.traduzioni[id]||p.nome):p.nome;
+      c.font=`${fs}px 'Nunito',Candara,sans-serif`; c.fillStyle=textDark; c.textAlign='center';
+      if(c.measureText(nome).width>W-100){
+        const words=nome.split(' '),mid=Math.ceil(words.length/2);
+        c.fillText(words.slice(0,mid).join(' '),W/2,y+fs*0.85,W-90);
+        c.fillText(words.slice(mid).join(' '),W/2,y+fs*0.85+dishLH*0.95,W-90);
+        y+=dishLH*1.9;
+      } else { c.fillText(nome,W/2,y+fs*0.85,W-90); y+=dishLH; }
+    });
+    y+=gapLH;
+  });
+  if(testoLiberoEn){ c.font=`italic ${Math.round(fs*0.72)}px 'Nunito',Candara,sans-serif`; c.fillStyle=textDark; c.textAlign='center'; c.globalAlpha=0.75; c.fillText(testoLiberoEn,W/2,y+fs*0.8,W-100); c.globalAlpha=1; }
+
+  const bY=footerTop;
+  line(bY,true);
+  const pBimbi=parseFloat(document.getElementById('jpg-prezzo-bimbi')?.value)||13;
+  const priceStr=menu.prezzo!=null?menu.prezzo.toFixed(2).replace('.',','):'—';
+  const footerLine1=isEn?`FULL MENU PER PERSON  € ${priceStr}`:`MENÙ COMPLETO A PERSONA  € ${priceStr}`;
+  const footerLine2=isEn?`AVAILABLE ON REQUEST  CHILDREN'S MENU  € ${pBimbi.toFixed(2).replace('.',',')}`:`DISPONIBILI SU RICHIESTA  MENÙ BIMBI  AD € ${pBimbi.toFixed(2).replace('.',',')}`;
+  ct(footerLine1,bY+26,`bold 15px 'Nunito',Candara,sans-serif`,textDark);
+  ct(footerLine2,bY+48,`11px 'Nunito',Candara,sans-serif`,accent,W-80);
+
+  return cv;
 }
 
 init();
