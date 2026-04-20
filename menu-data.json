@@ -1259,6 +1259,13 @@
       "portata": "primo",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mo76cwvebr1",
+      "nome": "Straccetti al ragù di cinghiale",
+      "portata": "primo",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -2238,6 +2245,22 @@
       "testoLibero": "",
       "prezzo": 36,
       "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-04-27_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo1xei4h6yo"
+        ],
+        "primo": [
+          "mo76cwvebr1"
+        ],
+        "secondo": [],
+        "contorno": [],
+        "dolce": []
+      },
+      "testoLibero": "",
+      "prezzo": null,
+      "nomeSpecifico": "Menù del Sito"
     }
   },
   "prenotazioni": {
@@ -2828,6 +2851,12 @@
       "gruppi": []
     },
     "2026-04-26_cena": {
+      "gruppi": []
+    },
+    "2026-04-27_pranzo": {
+      "gruppi": []
+    },
+    "2026-04-27_cena": {
       "gruppi": []
     }
   },
