@@ -2860,7 +2860,23 @@
       "gruppi": []
     },
     "2026-04-27_pranzo": {
-      "gruppi": []
+      "gruppi": [
+        {
+          "nome": "Ovest",
+          "orario": "12:30",
+          "pax": 37,
+          "gratuiti": 1,
+          "bambini": 0,
+          "seggiolini": 0,
+          "contattoNome": "",
+          "contattoTel": "",
+          "note": "2 celiaci",
+          "menuKey": "2026-04-27_pranzo_Menù del Sito",
+          "daConfermare": false,
+          "caparra": false,
+          "prezzoSpeciale": 24
+        }
+      ]
     },
     "2026-04-27_cena": {
       "gruppi": []
