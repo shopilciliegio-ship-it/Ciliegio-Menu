@@ -2279,23 +2279,10 @@
       "gruppi": []
     },
     "2026-04-12_pranzo": {
-      "gruppi": [
-        {
-          "nome": "altromenu",
-          "pax": 23,
-          "note": "",
-          "menuKey": "2026-04-12_pranzo_altromenu"
-        }
-      ]
+      "gruppi": []
     },
     "2026-04-12_cena": {
       "gruppi": [
-        {
-          "nome": "calafristo asfaf",
-          "pax": 23,
-          "note": "2 vegani",
-          "menuKey": "2026-04-12_cena"
-        },
         {
           "nome": "sdsòòss",
           "pax": 65,
