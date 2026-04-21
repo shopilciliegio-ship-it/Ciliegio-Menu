@@ -2281,12 +2281,6 @@
     "2026-04-12_pranzo": {
       "gruppi": [
         {
-          "nome": "sdffsdf",
-          "pax": 24,
-          "note": "",
-          "menuKey": "2026-04-12_pranzo"
-        },
-        {
           "nome": "altromenu",
           "pax": 23,
           "note": "",
