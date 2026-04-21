@@ -1615,7 +1615,13 @@
     },
     "2026-04-20_pranzo_Menù del Sito": {
       "piatti": {
-        "antipasto": [],
+        "antipasto": [
+          "mnsq9hynyoo",
+          "mnsq9hynqk0",
+          "mnsq9hynyjk",
+          "mo1w8xtm5r2",
+          "mo687di42u2"
+        ],
         "primo": [
           "mo1waims7of"
         ],
