@@ -1327,35 +1327,6 @@
       "prezzo": 33,
       "nomeSpecifico": ""
     },
-    "2026-04-11_pranzo": {
-      "piatti": {
-        "antipasto": [
-          "mnsq9hymoq1",
-          "mnsq9hymuqe",
-          "mnsq9hyndkl",
-          "mnsq9hyn9ga",
-          "mnsq9hynyjk"
-        ],
-        "primo": [
-          "mnsq9hyns1x",
-          "mnsq9hynank"
-        ],
-        "secondo": [
-          "mnsq9hynuo1",
-          "mnsq9hynugl"
-        ],
-        "contorno": [
-          "mnsq9hynoka",
-          "mnsq9hynkgr"
-        ],
-        "dolce": [
-          "mnsq9hynlyh"
-        ]
-      },
-      "testoLibero": "",
-      "prezzo": 35,
-      "nomeSpecifico": ""
-    },
     "2026-04-12_pranzo_altromenu": {
       "piatti": {
         "antipasto": [
