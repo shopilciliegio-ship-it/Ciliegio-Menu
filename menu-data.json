@@ -253,13 +253,6 @@
       "note": ""
     },
     {
-      "id": "mnsq9hynzix",
-      "portata": "antipasto",
-      "nome": "Selezione di formaggi pecorini con miele o marmellata",
-      "extra": 0,
-      "note": ""
-    },
-    {
       "id": "mnsq9hynmjr",
       "portata": "antipasto",
       "nome": "Tonno del Chianti",
@@ -1161,127 +1154,114 @@
       "portata": "primo",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mo67h4xg40w",
+      "nome": "Pasta fresca al ragù di cinghiale",
+      "portata": "primo",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mo67hzucqmt",
+      "nome": "Dolce della casa",
+      "portata": "dolce",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mo687di42u2",
+      "nome": "Crostino con lampredotto e salsa verde",
+      "portata": "antipasto",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mo68jqekj3x",
+      "nome": "Antipasto misto toscano",
+      "portata": "antipasto",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mo68pp64giu",
+      "nome": "Pasta fresca al ragù toscano",
+      "portata": "primo",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mo699pdh68y",
+      "nome": "Pici al ragù di cinghiale",
+      "portata": "primo",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mo69j5b1uwp",
+      "nome": "Scamerita alla griglia",
+      "portata": "secondo",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mo69lwc5p4m",
+      "nome": "Formaggi pecorini con cipolle",
+      "portata": "antipasto",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mo69nj18fdk",
+      "nome": "Straccetti al ragù",
+      "portata": "primo",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mo6a6s6d607",
+      "nome": "Pappardelle al ragù con bocconi di maiale e vitella",
+      "portata": "primo",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mo6a8gotq38",
+      "nome": "Arrosto con salsiccia, stinco, scamerita e coniglio",
+      "portata": "secondo",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mo6a9ojxhja",
+      "nome": "Mousse di ricotta agli agrumi e salsa al limone",
+      "portata": "dolce",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mo6acrp1vak",
+      "nome": "Gran tagliere del Ciliegio",
+      "portata": "antipasto",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mo6ag8zh5dl",
+      "nome": "Tortiglioni con crema di porri, briciole di pane, pancetta e guanciale croccante",
+      "portata": "primo",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mo76cwvebr1",
+      "nome": "Straccetti al ragù di cinghiale",
+      "portata": "primo",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
-    "2026-04-12_cena": {
-      "piatti": {
-        "antipasto": [
-          "mnsq9hymnei",
-          "mnsq9hynyoo",
-          "mnsq9hymnw1",
-          "mnsq9hynqm1"
-        ],
-        "primo": [
-          "mnsq9hynhyk",
-          "mnsq9hynn6z"
-        ],
-        "secondo": [
-          "mnsq9hynxr9",
-          "mnsq9hynty1",
-          "mnsq9hyn4sj"
-        ],
-        "contorno": [
-          "mnsq9hync5b",
-          "mnsq9hynoka"
-        ],
-        "dolce": [
-          "mnsq9hyn0dv"
-        ]
-      },
-      "testoLibero": "",
-      "prezzo": 32,
-      "nomeSpecifico": ""
-    },
-    "2026-04-12_pranzo": {
-      "piatti": {
-        "antipasto": [
-          "mnsq9hymmle",
-          "mnsq9hyn8jt",
-          "mnsq9hyndkl",
-          "mnsq9hyn9ga",
-          "mnsq9hynfoi"
-        ],
-        "primo": [
-          "mnsq9hyn7jq",
-          "mnsq9hyn18u"
-        ],
-        "secondo": [
-          "mnsq9hynecd",
-          "mnsq9hyn38r"
-        ],
-        "contorno": [
-          "mnsq9hynq3b",
-          "mnsq9hynfyz"
-        ],
-        "dolce": [
-          "mnsq9hyntti"
-        ]
-      },
-      "testoLibero": "",
-      "prezzo": 33,
-      "nomeSpecifico": ""
-    },
-    "2026-04-11_pranzo": {
-      "piatti": {
-        "antipasto": [
-          "mnsq9hymoq1",
-          "mnsq9hymuqe",
-          "mnsq9hyndkl",
-          "mnsq9hyn9ga",
-          "mnsq9hynyjk"
-        ],
-        "primo": [
-          "mnsq9hyns1x",
-          "mnsq9hynank"
-        ],
-        "secondo": [
-          "mnsq9hynuo1",
-          "mnsq9hynugl"
-        ],
-        "contorno": [
-          "mnsq9hynoka",
-          "mnsq9hynkgr"
-        ],
-        "dolce": [
-          "mnsq9hynlyh"
-        ]
-      },
-      "testoLibero": "",
-      "prezzo": 35,
-      "nomeSpecifico": ""
-    },
-    "2026-04-12_pranzo_altromenu": {
-      "piatti": {
-        "antipasto": [
-          "mnsq9hymfrx",
-          "mnsq9hynn6x",
-          "mnsq9hync35",
-          "mnsq9hyn33j",
-          "mnsq9hynmjr"
-        ],
-        "primo": [
-          "mnsq9hynfdo",
-          "mnsq9hynyuo"
-        ],
-        "secondo": [
-          "mnsq9hyn7he",
-          "mnsq9hynxjy"
-        ],
-        "contorno": [
-          "mnsq9hyndcf",
-          "mnsq9hynayz",
-          "mnsq9hynfyz"
-        ],
-        "dolce": [
-          "mnsq9hyngxs",
-          "mnsq9hyntti"
-        ]
-      },
-      "testoLibero": "",
-      "prezzo": 34,
-      "nomeSpecifico": "altromenu"
-    },
     "2026-04-15_pranzo_OVEST Viaggi": {
       "piatti": {
         "antipasto": [
@@ -1353,124 +1333,6 @@
       },
       "testoLibero": "",
       "prezzo": 30,
-      "nomeSpecifico": "Menù del Sito"
-    },
-    "2026-04-13_pranzo_Menù del Sito": {
-      "piatti": {
-        "antipasto": [
-          "mnsq9hymnei",
-          "mnsq9hynyoo",
-          "mnsq9hyndkl",
-          "mnsq9hynqm1",
-          "mnsq9hynuwh"
-        ],
-        "primo": [
-          "mnsq9hynfdo",
-          "mnsq9hynank"
-        ],
-        "secondo": [
-          "mnsq9hyn38r",
-          "mnsq9hyn8vg"
-        ],
-        "contorno": [
-          "mnsq9hynkgr",
-          "mnsq9hynayz"
-        ],
-        "dolce": [
-          "mnsq9hyn0dv"
-        ]
-      },
-      "testoLibero": "",
-      "prezzo": 34,
-      "nomeSpecifico": "Menù del Sito"
-    },
-    "2026-04-13_cena_Menù del Sito": {
-      "piatti": {
-        "antipasto": [
-          "mnsq9hymnei",
-          "mnsq9hynkaz",
-          "mnsq9hynxni",
-          "mnsq9hynb4l",
-          "mnsq9hynqm1",
-          "mnsq9hynxmp"
-        ],
-        "primo": [
-          "mnsq9hyns1x",
-          "mnsq9hyn45j"
-        ],
-        "secondo": [
-          "mnsq9hynltk"
-        ],
-        "contorno": [
-          "mnsq9hyn657"
-        ],
-        "dolce": [
-          "mnsq9hynj2g"
-        ]
-      },
-      "testoLibero": "",
-      "prezzo": 32,
-      "nomeSpecifico": "Menù del Sito"
-    },
-    "2026-04-14_pranzo_Menù del Sito": {
-      "piatti": {
-        "antipasto": [
-          "mnsq9hynyoo",
-          "mo1zvr87ez2",
-          "mnsq9hyn8gn",
-          "mnsq9hync35",
-          "mnsq9hynxrp"
-        ],
-        "primo": [
-          "mnsq9hynic3",
-          "mnsq9hynfpv"
-        ],
-        "secondo": [
-          "mnsq9hyn1vf",
-          "mnsq9hyn52x"
-        ],
-        "contorno": [
-          "mnsq9hynayz",
-          "mnsq9hynaa5"
-        ],
-        "dolce": [
-          "mnsq9hynxld",
-          "mnsq9hyn8ay"
-        ]
-      },
-      "testoLibero": "",
-      "prezzo": 40,
-      "nomeSpecifico": "Menù del Sito"
-    },
-    "2026-04-14_cena_Menù del Sito": {
-      "piatti": {
-        "antipasto": [
-          "mnsq9hymuqe",
-          "mnsq9hyn8jt",
-          "mo1zvr87ez2",
-          "mnsq9hynfoi",
-          "mnsq9hyn9ga",
-          "mnsq9hynuwh"
-        ],
-        "primo": [
-          "mnsq9hynzzq",
-          "mnsq9hyngl1"
-        ],
-        "secondo": [
-          "mnsq9hyncpy",
-          "mnsq9hynxxp"
-        ],
-        "contorno": [
-          "mnsq9hynayz",
-          "mnsq9hyndcf"
-        ],
-        "dolce": [
-          "mnsq9hyn8ay",
-          "mnsq9hynccl"
-        ]
-      },
-      "testoLibero": "",
-      "prezzo": 38,
       "nomeSpecifico": "Menù del Sito"
     },
     "2026-04-16_pranzo_Menù del Sito": {
@@ -1692,18 +1554,512 @@
       "testoLibero": "",
       "prezzo": 35,
       "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-04-21_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo1xei4h6yo"
+        ],
+        "primo": [
+          "mo67h4xg40w"
+        ],
+        "secondo": [
+          "mnsq9hynlgw"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 30,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-04-21_pranzo_Michelangelo": {
+      "piatti": {
+        "antipasto": [],
+        "primo": [],
+        "secondo": [],
+        "contorno": [],
+        "dolce": []
+      },
+      "testoLibero": "",
+      "prezzo": null,
+      "nomeSpecifico": "Michelangelo"
+    },
+    "2026-04-21_pranzo_Viaitalia": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hynqk0",
+          "mnsq9hymfrx"
+        ],
+        "primo": [],
+        "secondo": [],
+        "contorno": [],
+        "dolce": [
+          "mnsq9hynzar"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 16,
+      "nomeSpecifico": "Viaitalia"
+    },
+    "2026-04-20_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hynyoo",
+          "mnsq9hynqk0",
+          "mnsq9hynyjk",
+          "mo1w8xtm5r2",
+          "mo687di42u2"
+        ],
+        "primo": [
+          "mo1waims7of"
+        ],
+        "secondo": [
+          "mnsq9hynxg3"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mnsq9hynnku"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 30,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-04-20_pranzo_Ciao": {
+      "piatti": {
+        "antipasto": [],
+        "primo": [],
+        "secondo": [],
+        "contorno": [],
+        "dolce": []
+      },
+      "testoLibero": "",
+      "prezzo": null,
+      "nomeSpecifico": "Ciao"
+    },
+    "2026-04-20_pranzo_Caf": {
+      "piatti": {
+        "antipasto": [],
+        "primo": [],
+        "secondo": [],
+        "contorno": [],
+        "dolce": []
+      },
+      "testoLibero": "",
+      "prezzo": null,
+      "nomeSpecifico": "Caf"
+    },
+    "2026-04-20_pranzo_Michelangelo": {
+      "piatti": {
+        "antipasto": [],
+        "primo": [],
+        "secondo": [],
+        "contorno": [],
+        "dolce": []
+      },
+      "testoLibero": "",
+      "prezzo": null,
+      "nomeSpecifico": "Michelangelo"
+    },
+    "2026-04-22_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo68jqekj3x"
+        ],
+        "primo": [
+          "mo68pp64giu"
+        ],
+        "secondo": [
+          "mnsq9hyn4sj"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mnsq9hynzar"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 30,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-04-22_pranzo_Amalfitana Viaggi": {
+      "piatti": {
+        "antipasto": [],
+        "primo": [],
+        "secondo": [],
+        "contorno": [],
+        "dolce": []
+      },
+      "testoLibero": "",
+      "prezzo": null,
+      "nomeSpecifico": "Amalfitana Viaggi"
+    },
+    "2026-04-22_pranzo_Caf": {
+      "piatti": {
+        "antipasto": [],
+        "primo": [],
+        "secondo": [],
+        "contorno": [],
+        "dolce": []
+      },
+      "testoLibero": "",
+      "prezzo": null,
+      "nomeSpecifico": "Caf"
+    },
+    "2026-04-22_pranzo_Europe Voyage": {
+      "piatti": {
+        "antipasto": [],
+        "primo": [],
+        "secondo": [],
+        "contorno": [],
+        "dolce": []
+      },
+      "testoLibero": "",
+      "prezzo": null,
+      "nomeSpecifico": "Europe Voyage"
+    },
+    "2026-04-22_pranzo_Italia High Lights": {
+      "piatti": {
+        "antipasto": [],
+        "primo": [],
+        "secondo": [],
+        "contorno": [],
+        "dolce": []
+      },
+      "testoLibero": "",
+      "prezzo": null,
+      "nomeSpecifico": "Italia High Lights"
+    },
+    "2026-04-22_cena_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hyneqw",
+          "mnsq9hynqk0",
+          "mnsq9hynmjr",
+          "mnsq9hyno6u",
+          "mo1w8xtm5r2"
+        ],
+        "primo": [
+          "mo699pdh68y"
+        ],
+        "secondo": [
+          "mnsq9hyn4sj"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mnsq9hyn5co"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 31,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-04-23_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo68jqekj3x"
+        ],
+        "primo": [
+          "mo67h4xg40w"
+        ],
+        "secondo": [
+          "mo69j5b1uwp"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 30,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-04-23_pranzo_Ciao": {
+      "piatti": {
+        "antipasto": [],
+        "primo": [],
+        "secondo": [],
+        "contorno": [],
+        "dolce": []
+      },
+      "testoLibero": "",
+      "prezzo": null,
+      "nomeSpecifico": "Ciao"
+    },
+    "2026-04-23_cena_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hyno6u",
+          "mo69lwc5p4m",
+          "mnsq9hyn8gn",
+          "mnsq9hynxmp",
+          "mnsq9hynmjr"
+        ],
+        "primo": [
+          "mnsq9hynhyk",
+          "mo69nj18fdk"
+        ],
+        "secondo": [
+          "mnsq9hyncpy"
+        ],
+        "contorno": [
+          "mnsq9hynelb"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 35,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-04-23_cena_T.D.I.": {
+      "piatti": {
+        "antipasto": [],
+        "primo": [],
+        "secondo": [],
+        "contorno": [],
+        "dolce": []
+      },
+      "testoLibero": "",
+      "prezzo": null,
+      "nomeSpecifico": "T.D.I."
+    },
+    "2026-04-24_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo68jqekj3x"
+        ],
+        "primo": [
+          "mo68pp64giu"
+        ],
+        "secondo": [
+          "mnsq9hyncpy"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 30,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-04-24_pranzo_Caf": {
+      "piatti": {
+        "antipasto": [],
+        "primo": [],
+        "secondo": [],
+        "contorno": [],
+        "dolce": []
+      },
+      "testoLibero": "",
+      "prezzo": null,
+      "nomeSpecifico": "Caf"
+    },
+    "2026-04-24_pranzo_Ciao": {
+      "piatti": {
+        "antipasto": [],
+        "primo": [],
+        "secondo": [],
+        "contorno": [],
+        "dolce": []
+      },
+      "testoLibero": "",
+      "prezzo": null,
+      "nomeSpecifico": "Ciao"
+    },
+    "2026-04-21_cena_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo1xei4h6yo"
+        ],
+        "primo": [
+          "mnsq9hynhyk",
+          "mo67h4xg40w"
+        ],
+        "secondo": [
+          "mnsq9hyncpy"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 35,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-04-25_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hyneqw",
+          "mnsq9hynqk0",
+          "mo1w8xtm5r2",
+          "mnsq9hynfoi",
+          "mnsq9hynsn7"
+        ],
+        "primo": [
+          "mo6a6s6d607"
+        ],
+        "secondo": [
+          "mo6a8gotq38",
+          "mnsq9hynlgw"
+        ],
+        "contorno": [
+          "mnsq9hynaa5"
+        ],
+        "dolce": [
+          "mo6a9ojxhja"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 39,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-04-25_cena_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo6acrp1vak"
+        ],
+        "primo": [
+          "mo699pdh68y"
+        ],
+        "secondo": [
+          "mnsq9hyn4sj"
+        ],
+        "contorno": [
+          "mnsq9hync5b"
+        ],
+        "dolce": [
+          "mnsq9hyn5co"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 32,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-04-26_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hyngse",
+          "mnsq9hynxmp",
+          "mnsq9hynqk0",
+          "mnsq9hynmjr",
+          "mnsq9hymfot"
+        ],
+        "primo": [
+          "mo6ag8zh5dl"
+        ],
+        "secondo": [
+          "mnsq9hynm2d",
+          "mnsq9hyn4sj"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 36,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-04-24_cena_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hynqk0",
+          "mnsq9hynmjr",
+          "mnsq9hyngse",
+          "mnsq9hynfoi",
+          "mnsq9hynuwh"
+        ],
+        "primo": [
+          "mnsq9hynlob",
+          "mnsq9hyngl1"
+        ],
+        "secondo": [
+          "mnsq9hyn4sj"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mnsq9hyn5co"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 36,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-04-27_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo1xei4h6yo"
+        ],
+        "primo": [
+          "mo76cwvebr1"
+        ],
+        "secondo": [
+          "mnsq9hyn4sj"
+        ],
+        "contorno": [
+          "mnsq9hync5b"
+        ],
+        "dolce": [
+          "mnsq9hyngxs"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 32,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-05-02_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hynqk0"
+        ],
+        "primo": [
+          "mo1zx4sfwtk",
+          "mnsq9hynpqm"
+        ],
+        "secondo": [
+          "mnsq9hyn38r",
+          "mnsq9hynxjy",
+          "mnsq9hynlgw"
+        ],
+        "contorno": [
+          "mnsq9hynoka"
+        ],
+        "dolce": [
+          "mnsq9hynnku"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 32,
+      "nomeSpecifico": "Menù del Sito"
     }
   },
   "prenotazioni": {
     "2026-04-11_pranzo": {
-      "gruppi": [
-        {
-          "nome": "kcjaaysfa",
-          "pax": 22,
-          "note": "3 celiaci 1 intollerante al lattosio",
-          "menuKey": "2026-04-11_pranzo"
-        }
-      ]
+      "gruppi": []
     },
     "2026-04-10_pranzo": {
       "gruppi": []
@@ -1715,48 +2071,10 @@
       "gruppi": []
     },
     "2026-04-12_pranzo": {
-      "gruppi": [
-        {
-          "nome": "pippo",
-          "pax": 15,
-          "note": "non vogliono pagare",
-          "menuKey": "2026-04-12_pranzo"
-        },
-        {
-          "nome": "lkaslls",
-          "pax": 52,
-          "note": "33 bischeri e 1 asino",
-          "menuKey": "2026-04-12_pranzo"
-        },
-        {
-          "nome": "sdffsdf",
-          "pax": 24,
-          "note": "",
-          "menuKey": "2026-04-12_pranzo"
-        },
-        {
-          "nome": "altromenu",
-          "pax": 23,
-          "note": "",
-          "menuKey": "2026-04-12_pranzo_altromenu"
-        }
-      ]
+      "gruppi": []
     },
     "2026-04-12_cena": {
-      "gruppi": [
-        {
-          "nome": "calafristo asfaf",
-          "pax": 23,
-          "note": "2 vegani",
-          "menuKey": "2026-04-12_cena"
-        },
-        {
-          "nome": "sdsòòss",
-          "pax": 65,
-          "note": "1 celiaco 3 vegetariani",
-          "menuKey": "2026-04-12_cena"
-        }
-      ]
+      "gruppi": []
     },
     "2026-04-13_pranzo": {
       "gruppi": []
@@ -1918,10 +2236,596 @@
     },
     "2026-04-19_cena": {
       "gruppi": []
+    },
+    "2026-04-23_pranzo": {
+      "gruppi": [
+        {
+          "nome": "Ciao",
+          "orario": "",
+          "pax": 58,
+          "gratuiti": 0,
+          "bambini": 0,
+          "seggiolini": 0,
+          "contattoNome": "",
+          "contattoTel": "",
+          "note": "",
+          "menuKey": "2026-04-23_pranzo_Ciao",
+          "daConfermare": false,
+          "caparra": false,
+          "prezzoSpeciale": null
+        }
+      ]
+    },
+    "2026-04-23_cena": {
+      "gruppi": [
+        {
+          "nome": "Carraretto",
+          "orario": "",
+          "pax": 10,
+          "gratuiti": 0,
+          "bambini": 0,
+          "seggiolini": 0,
+          "contattoNome": "Diana",
+          "contattoTel": "",
+          "note": "",
+          "menuKey": "2026-04-23_cena_Menù del Sito",
+          "daConfermare": false,
+          "caparra": false,
+          "prezzoSpeciale": null
+        },
+        {
+          "nome": "Cicognini",
+          "orario": "",
+          "pax": 10,
+          "gratuiti": 0,
+          "bambini": 0,
+          "seggiolini": 0,
+          "contattoNome": "",
+          "contattoTel": "",
+          "note": "",
+          "menuKey": "2026-04-23_cena_Menù del Sito",
+          "daConfermare": false,
+          "caparra": false,
+          "prezzoSpeciale": null
+        },
+        {
+          "nome": "Muca",
+          "orario": "",
+          "pax": 10,
+          "gratuiti": 0,
+          "bambini": 0,
+          "seggiolini": 0,
+          "contattoNome": "Alfons",
+          "contattoTel": "",
+          "note": "",
+          "menuKey": "2026-04-23_cena_Menù del Sito",
+          "daConfermare": false,
+          "caparra": false,
+          "prezzoSpeciale": null
+        },
+        {
+          "nome": "Sabrina",
+          "orario": "17:00",
+          "pax": 20,
+          "gratuiti": 2,
+          "bambini": 0,
+          "seggiolini": 0,
+          "contattoNome": "Lorenzo Tarzia",
+          "contattoTel": "3517604265",
+          "note": "Cena + Degustazione",
+          "menuKey": "2026-04-23_cena_T.D.I.",
+          "daConfermare": false,
+          "caparra": false,
+          "prezzoSpeciale": null
+        }
+      ]
+    },
+    "2026-04-24_pranzo": {
+      "gruppi": [
+        {
+          "nome": "Caf",
+          "orario": "",
+          "pax": 50,
+          "gratuiti": 0,
+          "bambini": 0,
+          "seggiolini": 0,
+          "contattoNome": "",
+          "contattoTel": "",
+          "note": "",
+          "menuKey": "2026-04-24_pranzo_Caf",
+          "daConfermare": false,
+          "caparra": false,
+          "prezzoSpeciale": null
+        },
+        {
+          "nome": "Ciao",
+          "orario": "",
+          "pax": 30,
+          "gratuiti": 0,
+          "bambini": 0,
+          "seggiolini": 0,
+          "contattoNome": "",
+          "contattoTel": "",
+          "note": "",
+          "menuKey": "2026-04-24_pranzo_Ciao",
+          "daConfermare": false,
+          "caparra": false,
+          "prezzoSpeciale": null
+        },
+        {
+          "nome": "Mancaniello",
+          "orario": "13:30",
+          "pax": 45,
+          "gratuiti": 0,
+          "bambini": 0,
+          "seggiolini": 0,
+          "contattoNome": "Daniele",
+          "contattoTel": "3479193901",
+          "note": "",
+          "menuKey": "2026-04-24_pranzo_Menù del Sito",
+          "daConfermare": false,
+          "caparra": false,
+          "prezzoSpeciale": null
+        }
+      ]
+    },
+    "2026-04-24_cena": {
+      "gruppi": []
+    },
+    "2026-04-21_pranzo": {
+      "gruppi": [
+        {
+          "nome": "Viaitalia",
+          "orario": "15:30",
+          "pax": 23,
+          "gratuiti": 0,
+          "bambini": 0,
+          "seggiolini": 0,
+          "contattoNome": "Polonia",
+          "contattoTel": "",
+          "note": "",
+          "menuKey": "2026-04-21_pranzo_Viaitalia",
+          "daConfermare": false,
+          "caparra": false,
+          "prezzoSpeciale": 16
+        },
+        {
+          "nome": "Michelangelo",
+          "orario": "14:00",
+          "pax": 15,
+          "gratuiti": 0,
+          "bambini": 0,
+          "seggiolini": 0,
+          "contattoNome": "00230484",
+          "contattoTel": "",
+          "note": "",
+          "menuKey": "2026-04-21_pranzo_Michelangelo",
+          "daConfermare": false,
+          "caparra": false,
+          "prezzoSpeciale": 18
+        },
+        {
+          "nome": "Ciao Florence",
+          "orario": "13:00",
+          "pax": 53,
+          "gratuiti": 0,
+          "bambini": 0,
+          "seggiolini": 0,
+          "contattoNome": "",
+          "contattoTel": "",
+          "note": "",
+          "menuKey": "2026-04-21_pranzo_Menù del Sito",
+          "daConfermare": false,
+          "caparra": false,
+          "prezzoSpeciale": null
+        }
+      ]
+    },
+    "2026-04-21_cena": {
+      "gruppi": [
+        {
+          "nome": "Globus",
+          "orario": "",
+          "pax": 0,
+          "gratuiti": 0,
+          "bambini": 0,
+          "seggiolini": 0,
+          "contattoNome": "Ricco Luca",
+          "contattoTel": "3394795272",
+          "note": "Ls418",
+          "menuKey": "2026-04-21_cena_Menù del Sito",
+          "daConfermare": false,
+          "caparra": false,
+          "prezzoSpeciale": null
+        }
+      ]
+    },
+    "2026-04-20_pranzo": {
+      "gruppi": [
+        {
+          "nome": "Bacciolo",
+          "orario": "13:00",
+          "pax": 82,
+          "gratuiti": 0,
+          "bambini": 1,
+          "seggiolini": 0,
+          "contattoNome": "Franco",
+          "contattoTel": "3395988861",
+          "note": "Veranda - Aperitivo in barriccaia",
+          "menuKey": "2026-04-20_pranzo_Menù del Sito",
+          "daConfermare": false,
+          "caparra": false,
+          "prezzoSpeciale": null
+        },
+        {
+          "nome": "Ciao",
+          "orario": "",
+          "pax": 65,
+          "gratuiti": 0,
+          "bambini": 0,
+          "seggiolini": 0,
+          "contattoNome": "",
+          "contattoTel": "",
+          "note": "15 no lunch",
+          "menuKey": "2026-04-20_pranzo_Ciao",
+          "daConfermare": false,
+          "caparra": false,
+          "prezzoSpeciale": null
+        },
+        {
+          "nome": "Caf",
+          "orario": "",
+          "pax": 68,
+          "gratuiti": 0,
+          "bambini": 0,
+          "seggiolini": 0,
+          "contattoNome": "",
+          "contattoTel": "",
+          "note": "",
+          "menuKey": "2026-04-20_pranzo_Caf",
+          "daConfermare": false,
+          "caparra": false,
+          "prezzoSpeciale": null
+        },
+        {
+          "nome": "Michelangelo",
+          "orario": "13:30",
+          "pax": 70,
+          "gratuiti": 2,
+          "bambini": 0,
+          "seggiolini": 0,
+          "contattoNome": "230016",
+          "contattoTel": "",
+          "note": "",
+          "menuKey": "2026-04-20_pranzo_Michelangelo",
+          "daConfermare": false,
+          "caparra": false,
+          "prezzoSpeciale": 18
+        }
+      ]
+    },
+    "2026-04-20_cena": {
+      "gruppi": []
+    },
+    "2026-04-22_pranzo": {
+      "gruppi": [
+        {
+          "nome": "Amalfitana viaggi",
+          "orario": "",
+          "pax": 84,
+          "gratuiti": 9,
+          "bambini": 0,
+          "seggiolini": 0,
+          "contattoNome": "",
+          "contattoTel": "",
+          "note": "",
+          "menuKey": "2026-04-22_pranzo_Amalfitana Viaggi",
+          "daConfermare": false,
+          "caparra": false,
+          "prezzoSpeciale": 15
+        },
+        {
+          "nome": "Caf",
+          "orario": "",
+          "pax": 30,
+          "gratuiti": 0,
+          "bambini": 0,
+          "seggiolini": 0,
+          "contattoNome": "",
+          "contattoTel": "",
+          "note": "",
+          "menuKey": "2026-04-22_pranzo_Caf",
+          "daConfermare": false,
+          "caparra": false,
+          "prezzoSpeciale": null
+        },
+        {
+          "nome": "Europe Voyage",
+          "orario": "",
+          "pax": 30,
+          "gratuiti": 0,
+          "bambini": 0,
+          "seggiolini": 0,
+          "contattoNome": "",
+          "contattoTel": "",
+          "note": "",
+          "menuKey": "2026-04-22_pranzo_Europe Voyage",
+          "daConfermare": false,
+          "caparra": false,
+          "prezzoSpeciale": null
+        },
+        {
+          "nome": "Italia High Lights",
+          "orario": "14:30",
+          "pax": 0,
+          "gratuiti": 0,
+          "bambini": 0,
+          "seggiolini": 0,
+          "contattoNome": "",
+          "contattoTel": "",
+          "note": "Degustazione",
+          "menuKey": "2026-04-22_pranzo_Italia High Lights",
+          "daConfermare": true,
+          "caparra": false,
+          "prezzoSpeciale": null
+        }
+      ]
+    },
+    "2026-04-22_cena": {
+      "gruppi": [
+        {
+          "nome": "Matteini",
+          "orario": "20:00",
+          "pax": 22,
+          "gratuiti": 0,
+          "bambini": 1,
+          "seggiolini": 0,
+          "contattoNome": "",
+          "contattoTel": "3387824693",
+          "note": "",
+          "menuKey": "2026-04-22_cena_Menù del Sito",
+          "daConfermare": false,
+          "caparra": false,
+          "prezzoSpeciale": null
+        }
+      ]
+    },
+    "2026-04-25_pranzo": {
+      "gruppi": []
+    },
+    "2026-04-25_cena": {
+      "gruppi": []
+    },
+    "2026-04-26_pranzo": {
+      "gruppi": []
+    },
+    "2026-04-26_cena": {
+      "gruppi": []
+    },
+    "2026-04-27_pranzo": {
+      "gruppi": [
+        {
+          "nome": "Ovest",
+          "orario": "12:30",
+          "pax": 37,
+          "gratuiti": 1,
+          "bambini": 0,
+          "seggiolini": 0,
+          "contattoNome": "",
+          "contattoTel": "",
+          "note": "2 celiaci - Prosciutto Crudo + cecina + crostino pecorino gota e miele al posto del antipasto toscano",
+          "menuKey": "2026-04-27_pranzo_Menù del Sito",
+          "daConfermare": false,
+          "caparra": false,
+          "prezzoSpeciale": 24
+        }
+      ]
+    },
+    "2026-04-27_cena": {
+      "gruppi": []
+    },
+    "2026-04-28_pranzo": {
+      "gruppi": []
+    },
+    "2026-04-28_cena": {
+      "gruppi": []
+    },
+    "2026-05-02_pranzo": {
+      "gruppi": []
+    },
+    "2026-05-02_cena": {
+      "gruppi": []
     }
   },
   "noteGiorno": {
     "2026-04-16": "Na",
-    "2026-04-15": "bejhfcfgdcfev  gfdyggg"
+    "2026-04-15": "bejhfcfgdcfev  gfdyggg",
+    "2026-04-21": "No Mirko pranzo - No Rosy cena",
+    "2026-04-20": "Dare Sistola",
+    "2026-04-22": "No Fiore",
+    "2026-04-23": "No Giulia a pranzo",
+    "2026-04-26": "No monne a pranzo"
+  },
+  "traduzioni": {
+    "mnsq9hymnei": "Bruschetta with cherry tomatoes and basil",
+    "mnsq9hynkaz": "Crostini with pork jowl, pecorino, and honey",
+    "mnsq9hynxni": "Crostini with sausage, ricotta cheese and herbs",
+    "mnsq9hynb4l": "Toasted slice of bread with buristo salami",
+    "mnsq9hynqm1": "Aromatic salad with legumes and seasonal vegetables",
+    "mnsq9hynxmp": "Polenta stuffed with black cabbage and bacon grain",
+    "mnsq9hyns1x": "Pappardelle with Wild Boar sauce",
+    "mnsq9hyn45j": "Pasta with pesto and cherry tomatoes",
+    "mnsq9hynltk": "Rabbit \"alla cacciatora\"",
+    "mnsq9hyn657": "Vegetable Mold",
+    "mnsq9hynj2g": "Chocolate ricotta mousse on crumbled cantucci",
+    "mnsq9hynyoo": "Crostini with chicken livers, coarse salt and honey",
+    "mnsq9hyndkl": "Crostini with tomato sauce and cheese",
+    "mnsq9hynuwh": "Sausage and Onion Quiche",
+    "mnsq9hynfdo": "Lasagna with mixed vegetables",
+    "mnsq9hynank": "Pasta with vegetable sauce (vegetarian)",
+    "mnsq9hyn38r": "Stuffed pork neck with sausage, pears and gorgonzola",
+    "mnsq9hyn8vg": "Beans with pork rind",
+    "mnsq9hynkgr": "Mixed salad",
+    "mnsq9hynayz": "Roast potatoes",
+    "mnsq9hyn0dv": "Fresh fruit tart",
+    "mnsq9hyn8jt": "Crostini with chickpea cream and soppressata salami",
+    "mo1zvr87ez2": "Crostini with ricotta, walnuts and honey",
+    "mnsq9hynfoi": "Baked polenta with lard and cheese cream",
+    "mnsq9hyn9ga": "Ricotta and aromatic herbs mousse",
+    "mnsq9hynzzq": "Risotto with pine nuts and sparkling wine",
+    "mnsq9hyngl1": "Pici with cheese and black pepper",
+    "mnsq9hyncpy": "Pork fillet in bread crust",
+    "mnsq9hynxxp": "Peposo beef stew",
+    "mnsq9hyndcf": "Crispy salad",
+    "mnsq9hyn8ay": "Citrus ricotta mousse on crumbled cantucci",
+    "mnsq9hynccl": "Salami shaped cake with Cream",
+    "mnsq9hyn8gn": "Toasted slice of bread with beans and lard",
+    "mnsq9hync35": "Toasted slice of bread with lampredotto and green sauce",
+    "mnsq9hynxrp": "Rosemary potato pie",
+    "mnsq9hynic3": "Pappardelle with rabbit sauce",
+    "mnsq9hyn1vf": "Boiled pork, chicken and beef",
+    "mnsq9hyn52x": "Beef fillet with green peppercorn sauce",
+    "mnsq9hynaa5": "Aromatic salad with legumes and seasonal vegetables",
+    "mnsq9hynxld": "Tart with ricotta and coffee",
+    "mnsq9hymfrx": "Bruschetta with fresh olive oil",
+    "mnsq9hynyjk": "Traditional meatballs (cooked in sauce)",
+    "mnsq9hyn6l4": "Stuffed polenta with scamorza and sausage",
+    "mo1zx4sfwtk": "Pici with meat sauce",
+    "mnsq9hynxg3": "Stuffed pork neck with sausage and walnuts",
+    "mnsq9hynyyk": "Tart with fresh jam",
+    "mo1xei4h6yo": "Il Ciliegio mixed appetizer",
+    "mnsq9hynlgw": "Tuscan Beef stew with Chianti sauce",
+    "mnsq9hync5b": "Roasted vegetables",
+    "mnsq9hyngxs": "Tart with ricotta, pine nuts and raisins",
+    "mnsq9hymfot": "Hand-chopped beef with garlic mayonnaise",
+    "mnsq9hyngse": "Ribollita pie with onion rings",
+    "mnsq9hynnla": "Pappardelle with duck sauce",
+    "mnsq9hyna89": "Marinated pork ribs",
+    "mnsq9hynfyz": "Sautéed spinach with raisins",
+    "mnsq9hyn5rm": "Stuffed rabbit",
+    "mnsq9hynecd": "Stewed pork ribs",
+    "mnsq9hynems": "Salami shaped cake with coffee",
+    "mnsq9hynh2h": "Crostini with chickpea cream and lemon peel",
+    "mnsq9hymtkv": "Toasted slice of bread with black cabbage and bacon",
+    "mnsq9hymqzy": "Bruschetta with fennel and fennel salami",
+    "mnsq9hynyuo": "Malfatti au gratin with ricotta, spinach, and pecorino",
+    "mnsq9hyn18u": "Pappardelle with Tuscan sauce",
+    "mnsq9hynalq": "Stuffed pork neck with sausage and plums",
+    "mnsq9hyn8zn": "Crostini with carrot, garlic and wild fennel",
+    "mnsq9hyneqw": "Crostini with liver sauce",
+    "mnsq9hyn3m5": "Toasted slice of bread with lentils and seasoned bacon",
+    "mnsq9hynsn7": "Crostini with ricotta cheese, honey, pecorino cheese, pears and chopped walnuts",
+    "mnsq9hymoq1": "Hand-chopped beef with paprika mayonnaise",
+    "mo1yfczjr82": "Cured Ham",
+    "mnsq9hynxr9": "Capon",
+    "mnsq9hynoka": "Potatoes boiled and then sautéed with tomatoes",
+    "mnsq9hynlob": "Lasagna with meat sauce",
+    "mnsq9hyn8fo": "Stuffed tortelli",
+    "mnsq9hynlwj": "Pork fillet with vin santo",
+    "mnsq9hynelb": "Boiled potatoes topped with breadcrumbs",
+    "mnsq9hynq3b": "Aubergine with parmesan",
+    "mnsq9hynuou": "Panna Cotta",
+    "mnsq9hyn33j": "Liver paté with dried figs",
+    "mnsq9hynm5u": "Pasta with sausage, pumpkin and pecorino cheese",
+    "mnsq9hynn6z": "Pasta with pork jowl and onion",
+    "mnsq9hynuo1": "Roast pork leg",
+    "mnsq9hymmle": "Hand-chopped beef with mustard mayonnaise",
+    "mnsq9hynitq": "Pasta with pecorino cream and crispy pork jowl",
+    "mnsq9hynhyk": "Chickpea soup with broken pasta and pieces of bread",
+    "mnsq9hynvqs": "Pork fillet on toasted bread with bacon and caramelized onions",
+    "mnsq9hynnku": "Apple and walnut muffin with cream of vin santo",
+    "mnsq9hymnw1": "Toasted slice of bread with onion and honey",
+    "mnsq9hynlhy": "Toasted slice of bread with tripe and cheese",
+    "mnsq9hyn5zs": "Crostini with plum and pork jowl",
+    "mnsq9hynn6x": "Crostini with green sauce",
+    "mnsq9hynf4r": "Toasted slice of bread with beans and pork rinds",
+    "mnsq9hynak8": "Mixed fried of seasonal vegetables",
+    "mnsq9hynf3u": "Crispy panzanella (Tuscan bread salad)",
+    "mnsq9hynqk0": "Assorted Tuscan cold cuts",
+    "mnsq9hynzix": "Selection of pecorino cheeses with honey or jam",
+    "mnsq9hynmjr": "Chianti tuna - Salted pork, slow-cooked in white wine with herbs",
+    "mnsq9hyno6u": "Tomato soup pie",
+    "mnsq9hynfn6": "Ricotta and Walnut Crepes",
+    "mnsq9hyn7jq": "Ricotta and Spinach Crepes",
+    "mnsq9hyneb6": "Crepes with braised beef and mascarpone",
+    "mnsq9hynj45": "Fresh gnocchi",
+    "mnsq9hynyof": "Lasagna with yellow pumpkin and scamorza",
+    "mnsq9hyngc2": "Lasagna with walnuts, leeks, chard, and pecorino cheese",
+    "mnsq9hynx67": "Malfatti au gratin with Truffle Flavor",
+    "mnsq9hynkh2": "Normal or crispy panzanella (Tuscan bread salad)",
+    "mnsq9hyn7pw": "Pasta with sausage and black cabbage",
+    "mnsq9hynj3z": "Pasta with seasonal vegetables",
+    "mnsq9hyn3vj": "Pasta e Fagioli (Pasta and Beans)",
+    "mnsq9hyne90": "Pasta with sausage, saffron, asparagus, and bacon",
+    "mnsq9hyn9ag": "Pici with Garlic Sauce",
+    "mnsq9hyni4i": "Pici with bread crumbs",
+    "mnsq9hyncjr": "Cornmeal polenta",
+    "mnsq9hynwdm": "Ribollita Tuscan vegetable soup",
+    "mnsq9hynn7v": "Risotto with seasonal vegetables",
+    "mnsq9hyndew": "Risotto with Sausage and Chianti",
+    "mnsq9hynval": "Tagliatelle with meat sauce",
+    "mnsq9hyn6e6": "Tortiglioni with Amatriciana Sauce",
+    "mnsq9hyn1ka": "Peasant soup with legumes and cereals",
+    "mnsq9hynpqm": "Onion Soup au Gratin",
+    "mnsq9hynxpi": "Roasted pork loin",
+    "mnsq9hynvd0": "Mixed Roast of 4 Items",
+    "mnsq9hyn7he": "Fiorentina Steak",
+    "mnsq9hynm2d": "Baked pork neck",
+    "mnsq9hynxjy": "Stuffed pork neck with sausage and chestnuts",
+    "mnsq9hynvay": "Stuffed pork neck with sausage and olives",
+    "mnsq9hyn885": "Wild boar",
+    "mnsq9hynty1": "Pork liver with aromas cooked into lard",
+    "mnsq9hynugl": "Pork fillet in apple sauce",
+    "mnsq9hynmp5": "Beef fillet coated with lard",
+    "mnsq9hyndep": "Mixed fried chicken, pork and rabbit",
+    "mnsq9hynul2": "Sausage and beans",
+    "mnsq9hynsj0": "Scottiglia (called earth cacciucco) - mixed meat stew with aromas",
+    "mnsq9hyn3n0": "Beef stew with flavorings",
+    "mnsq9hyn4sj": "Sliced beef with flavourings",
+    "mnsq9hynfgf": "Sliced beef with lard",
+    "mnsq9hyndcd": "Sliced beef with lard and pecorino cheese flakes",
+    "mnsq9hyn0ay": "Sliced beef with pink pepper",
+    "mnsq9hyns9r": "Sliced pork neck",
+    "mnsq9hyneo2": "Sienese-style tripe",
+    "mnsq9hyncf7": "Beans cooked in a flask",
+    "mnsq9hynyb2": "Fagioli all'uccelletta - Boiled beans in a tomato soup",
+    "mnsq9hynciw": "Mixed fried vegetables",
+    "mnsq9hynn74": "Cardoon, first boiled, then fried, and finally sautéed with tomatoes",
+    "mnsq9hyni20": "Grilled Vegetables",
+    "mnsq9hynzar": "Cantucci biscuits and Vin Santo ",
+    "mnsq9hynrci": "Cream tart",
+    "mnsq9hyntti": "Pinolata with cream",
+    "mnsq9hynj7v": "Salami shaped cake with Chocolate",
+    "mnsq9hyn5co": "Apple Cake with Cream of Vin Santo",
+    "mnsq9hynvjy": "Upside-Down Apple Cake",
+    "mnsq9hyn91y": "Trio of house-made desserts",
+    "mnsq9hyn9xv": "English Trifle",
+    "mo1w7cixvs7": "Toasted slice of bread with fennel and fennel salami",
+    "mo1w8xtm5r2": "Pecorini Cheeses with Marmalade and/or Honey",
+    "mo1w9vxeqnt": "Potato pie with pecorino cream",
+    "mo1waims7of": "Pici with white meat sauce",
+    "mnsq9hymuqe": "Chickpea flour cake",
+    "mnsq9hynfpv": "Tomato soup",
+    "mnsq9hynr8v": "Lampredotto - Boiled beef tripe with flavorings",
+    "mnsq9hynu57": "Bovine hock",
+    "mnsq9hyn14n": "Crème caramel",
+    "mnsq9hynlyh": "Fruit salad",
+    "mnsq9hyncdc": "Tiramisù",
+    "mnsq9hynr74": "Grandma's Cake",
+    "mo68jqekj3x": "Tuscan mixed appetizer",
+    "mo687di42u2": "Crostini with lampredotto and green sauce",
+    "mo69lwc5p4m": "Pecorini Cheeses with onion",
+    "mo6acrp1vak": "Big Il Ciliegio mixed appetizer",
+    "mo6a6s6d607": "Pappardelle with meat sauce and chunks of pork and veal",
+    "mo67h4xg40w": "Fresh pasta with wild boar sauce",
+    "mo68pp64giu": "Fresh pasta with tuscan meat sauce",
+    "mo699pdh68y": "Pici with wild boar sauce",
+    "mo76cwvebr1": "Straccetti pasta with wild boar sauce",
+    "mo69nj18fdk": "Straccetti pasta with meat sauce",
+    "mo6ag8zh5dl": "Tortiglioni pasta with leek cream, breadcrumbs, bacon, and crispy pork shank",
+    "mo6a8gotq38": "Mixed Roast with sausage, shank, pork neck and rabbit",
+    "mo69j5b1uwp": "Grilled pork neck",
+    "mo67hzucqmt": "House special dessert",
+    "mo6a9ojxhja": "Ricotta mousse with citrus fruits and lemon sauce"
   }
 }
