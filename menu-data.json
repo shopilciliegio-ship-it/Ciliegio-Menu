@@ -2296,14 +2296,7 @@
   },
   "prenotazioni": {
     "2026-04-11_pranzo": {
-      "gruppi": [
-        {
-          "nome": "kcjaaysfa",
-          "pax": 22,
-          "note": "3 celiaci 1 intollerante al lattosio",
-          "menuKey": "2026-04-11_pranzo"
-        }
-      ]
+      "gruppi": []
     },
     "2026-04-10_pranzo": {
       "gruppi": []
