@@ -2281,12 +2281,6 @@
     "2026-04-12_pranzo": {
       "gruppi": [
         {
-          "nome": "pippo",
-          "pax": 15,
-          "note": "non vogliono pagare",
-          "menuKey": "2026-04-12_pranzo"
-        },
-        {
           "nome": "lkaslls",
           "pax": 52,
           "note": "33 bischeri e 1 asino",
