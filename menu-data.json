@@ -1269,35 +1269,6 @@
     }
   ],
   "menu": {
-    "2026-04-12_cena": {
-      "piatti": {
-        "antipasto": [
-          "mnsq9hymnei",
-          "mnsq9hynyoo",
-          "mnsq9hymnw1",
-          "mnsq9hynqm1"
-        ],
-        "primo": [
-          "mnsq9hynhyk",
-          "mnsq9hynn6z"
-        ],
-        "secondo": [
-          "mnsq9hynxr9",
-          "mnsq9hynty1",
-          "mnsq9hyn4sj"
-        ],
-        "contorno": [
-          "mnsq9hync5b",
-          "mnsq9hynoka"
-        ],
-        "dolce": [
-          "mnsq9hyn0dv"
-        ]
-      },
-      "testoLibero": "",
-      "prezzo": 32,
-      "nomeSpecifico": ""
-    },
     "2026-04-15_pranzo_OVEST Viaggi": {
       "piatti": {
         "antipasto": [
