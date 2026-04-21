@@ -7,6 +7,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
 <style>
 :root{
   --bg:#0a0a0a;--bg2:#111111;--bg3:#1a1a1a;--bg4:#222222;
@@ -78,7 +79,10 @@ html,body{height:100%;background:var(--bg);color:var(--white);font-family:'Nunit
 .hcard .hci{font-size:30px;margin-bottom:12px;display:block}
 .hcard .hcl{font-family:'Cinzel',serif;font-size:13px;letter-spacing:2px;color:var(--gold);display:block;margin-bottom:6px}
 .hcard .hcd{font-size:15px;color:var(--white3)}
-.home-foot{font-size:14px;color:var(--white3);letter-spacing:2px}
+.tab-bar{display:flex;gap:0;border-bottom:1px solid var(--border);margin-bottom:18px}
+.tab-btn{padding:9px 22px;font-family:'Cinzel',serif;font-size:12px;letter-spacing:1.5px;color:var(--white3);cursor:pointer;border-bottom:2px solid transparent;transition:all .15s;background:none;border-top:none;border-left:none;border-right:none}
+.tab-btn.active{color:var(--gold);border-bottom-color:var(--gold)}
+.badge-warn{display:inline-flex;align-items:center;justify-content:center;background:#8b3a10;color:#fff;border-radius:50%;width:20px;height:20px;font-size:11px;font-weight:700;margin-left:6px;vertical-align:middle}
 .hcard-wide{
   background:var(--bg2);border:1px solid var(--gold-dim);border-radius:var(--r2);
   padding:22px 28px;cursor:pointer;transition:all .2s;
@@ -353,6 +357,7 @@ textarea{resize:vertical;min-height:72px}
         <span class="hci">📋</span>
         <span class="hcl">Lista Piatti</span>
         <span class="hcd">Gestisci il database per portata</span>
+        <span id="home-badge-en" style="display:none;margin-top:8px;background:#8b3a10;color:#fff;border-radius:20px;padding:2px 10px;font-size:12px;letter-spacing:.5px"></span>
       </div>
       <div class="hcard" onclick="navTo('cal')">
         <span class="hci">📅</span>
@@ -366,13 +371,6 @@ textarea{resize:vertical;min-height:72px}
           <span class="hcd">Crea le immagini dei menù del giorno da pubblicare online — 650×919 px, 300 dpi</span>
         </div>
       </div>
-      <div class="hcard-wide" onclick="navTo('traduzioni')" style="border-color:#1a3a6a">
-        <span class="hci">🇬🇧</span>
-        <div class="hw-text">
-          <span class="hcl" style="color:#5a9ad8">Traduzioni Inglese</span>
-          <span class="hcd">Gestisci e verifica le traduzioni dei menù del sito</span>
-        </div>
-      </div>
     </div>
     <div class="home-foot">TRADIZIONE · QUALITÀ · TERRITORIO</div>
   </div>
@@ -381,12 +379,19 @@ textarea{resize:vertical;min-height:72px}
 <!-- ══ PIATTI ══ -->
 <div id="page-piatti" class="page">
   <div class="content">
-    <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;flex-wrap:wrap">
+    <div style="display:flex;align-items:center;gap:14px;margin-bottom:16px;flex-wrap:wrap">
       <span class="sec-title" style="margin:0;border:none;padding:0">Lista Piatti</span>
       <button class="btn btn-gold btn-sm" onclick="openModalPiatto()">+ Nuovo Piatto</button>
+      <div style="flex:1"></div>
+      <span id="badge-untranslated" style="display:none;background:#8b3a10;color:#fff;border-radius:20px;padding:3px 12px;font-size:13px;cursor:pointer" onclick="switchPiattiTab('eng')">⚠ Piatti da tradurre</span>
+    </div>
+    <div class="tab-bar">
+      <button class="tab-btn active" id="tab-btn-ita" onclick="switchPiattiTab('ita')">🇮🇹 Italiano</button>
+      <button class="tab-btn" id="tab-btn-eng" onclick="switchPiattiTab('eng')">🇬🇧 English <span id="tab-eng-badge"></span></button>
     </div>
     <input type="text" id="srch-piatti" placeholder="Cerca piatto…" style="width:100%;margin-bottom:16px" oninput="renderPiatti()">
     <div id="portate-wrap" class="portate-grid"></div>
+    <div id="eng-wrap" style="display:none"></div>
   </div>
 </div>
 
@@ -517,28 +522,6 @@ textarea{resize:vertical;min-height:72px}
   </div>
 </div>
 
-<!-- ══ PAGE TRADUZIONI ══ -->
-<div id="page-traduzioni" class="page">
-  <div class="content">
-    <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;flex-wrap:wrap">
-      <span style="font-size:24px">🇬🇧</span>
-      <span style="font-family:'Cinzel',serif;font-size:18px;letter-spacing:2px;color:#5a9ad8">TRADUZIONI INGLESE</span>
-      <div style="flex:1"></div>
-      <div style="display:flex;gap:10px;align-items:flex-end;flex-wrap:wrap">
-        <div class="form-group" style="margin-bottom:0">
-          <label class="lbl">Da</label><input type="date" id="tr-da" onchange="renderTraduzioni()">
-        </div>
-        <div class="form-group" style="margin-bottom:0">
-          <label class="lbl">A</label><input type="date" id="tr-a" onchange="renderTraduzioni()">
-        </div>
-        <button class="btn btn-sm" style="background:#1a3a6a;color:#5a9ad8;border:1px solid #1a5c8a" onclick="traduciTuttoAuto()">🌐 Traduci tutto automaticamente</button>
-        <button class="btn btn-ghost btn-sm" onclick="navTo('home')">← Home</button>
-      </div>
-    </div>
-    <div id="tr-content"></div>
-  </div>
-</div>
-
 </div><!-- /app -->
 
 <!-- ══ MODAL JPG SITO ══ -->
@@ -565,7 +548,7 @@ textarea{resize:vertical;min-height:72px}
       <div class="form-group">
         <label class="lbl">Salva su</label>
         <select id="jpg-save-mode">
-          <option value="download">💾 Download ZIP sul dispositivo</option>
+          <option value="download">💾 Download sul dispositivo</option>
           <option value="github">☁ Carica su GitHub (cartella immagini-sito/)</option>
         </select>
       </div>
@@ -574,10 +557,6 @@ textarea{resize:vertical;min-height:72px}
         <input type="number" id="jpg-prezzo-bimbi" value="13" min="0" step="0.5">
       </div>
     </div>
-    <label style="display:flex;align-items:center;gap:10px;cursor:pointer;margin-bottom:16px;font-size:15px;color:var(--white2)">
-      <input type="checkbox" id="jpg-include-en" style="width:17px;height:17px;accent-color:#5a9ad8;cursor:pointer">
-      <span>🇬🇧 Includi versione inglese (02-15-EN.jpg)</span>
-    </label>
 
     <div id="jpg-progress" style="display:none;margin-bottom:14px">
       <div style="font-size:15px;color:var(--white3);margin-bottom:8px" id="jpg-progress-text">Generazione in corso…</div>
@@ -840,7 +819,6 @@ textarea{resize:vertical;min-height:72px}
 let DB = { piatti:[], menu:{}, prenotazioni:{}, noteGiorno:{}, traduzioni:{} };
 // noteGiorno["YYYY-MM-DD"] = "testo nota"
 // traduzioni[piattoId] = "english name"
-// traduzioni["tl_DATE_serv"] = "english testoLibero"
 let calYear, calMonth;
 let editingPiattoId = null;
 let currentMenuKey = null;
@@ -981,6 +959,9 @@ function init(){
   } else {
     setSyncStatus('offline');
   }
+  if(!DB.traduzioni) DB.traduzioni={};
+  // piccolo delay per permettere al DOM di essere pronto
+  setTimeout(aggiornaBadgeTraduzione, 200);
 }
 
 // ══════════════════════════════════════════════════════
@@ -1007,10 +988,9 @@ function navTo(name, btn){
     const tb=btn||document.querySelector(`.topbar-btn[data-pg="${name}"]`);
     if(tb) tb.classList.add('active');
   }
-  if(name==='piatti') renderPiatti();
+  if(name==='piatti'){ renderPiatti(); aggiornaBadgeTraduzione(); }
   if(name==='cal') renderCal();
   if(name==='stampa'){ document.getElementById('s-data').value=new Date().toISOString().split('T')[0]; }
-  if(name==='traduzioni') navToTraduzioni();
 }
 
 function openOv(id){ document.getElementById(id).classList.remove('hidden'); }
@@ -2245,7 +2225,6 @@ async function avviaGeneraJPG(){
   const keys=getJPGKeys(da,a);
   if(!keys.length){alert('Nessun Menù del Sito nel periodo selezionato.');return;}
 
-  const includeEn=document.getElementById('jpg-include-en')?.checked||false;
   const pBar=document.getElementById('jpg-progress-bar');
   const pTxt=document.getElementById('jpg-progress-text');
   const startBtn=document.getElementById('jpg-start-btn');
@@ -2254,59 +2233,50 @@ async function avviaGeneraJPG(){
 
   const mode=document.getElementById('jpg-save-mode').value;
   const zip=mode==='download'?new JSZip():null;
-
-  // Calcola totale step per barra progresso
-  const totalSteps=keys.length*(includeEn?2:1);
+  const total=keys.length*2; // IT + EN sempre
   let done=0;
 
-  // ── ITALIANO ──
+  // ── 🇮🇹 ITALIANO ──
   for(const mKey of keys){
     const pk=parseKey(mKey);
     const fname=getJPGFileName(pk.data,pk.serv);
-    pTxt.textContent=`🇮🇹 ${fname} (${done+1}/${totalSteps})…`;
+    pTxt.textContent=`🇮🇹 ${fname} (${done+1}/${total})…`;
     try{
-      const canvas=await renderMenuJPGWithLang(mKey,'it');
+      const canvas=await renderMenuJPG(mKey);
       if(canvas){
         const b64=setJPEGDPI(canvas.toDataURL('image/jpeg',0.92).split(',')[1],300);
         if(mode==='github') await uploadJPGGitHub(b64,fname);
         else zip.file(fname,b64,{base64:true});
       }
-    }catch(e){console.error('IT JPG error',mKey,e);}
-    done++;
-    pBar.style.width=Math.round(done/totalSteps*100)+'%';
+    }catch(e){console.error('IT error',mKey,e);}
+    done++; pBar.style.width=Math.round(done/total*100)+'%';
   }
 
-  // ── INGLESE ──
-  if(includeEn){
-    for(const mKey of keys){
-      const pk=parseKey(mKey);
-      const fname=getJPGFileNameEN(pk.data,pk.serv);
-      pTxt.textContent=`🇬🇧 ${fname} (${done+1}/${totalSteps})…`;
-      try{
-        const canvas=await renderMenuJPGWithLang(mKey,'en');
-        if(canvas){
-          const b64=setJPEGDPI(canvas.toDataURL('image/jpeg',0.92).split(',')[1],300);
-          if(mode==='github') await uploadJPGGitHub(b64,fname);
-          else zip.file(fname,b64,{base64:true});
-        }
-      }catch(e){console.error('EN JPG error',mKey,e);}
-      done++;
-      pBar.style.width=Math.round(done/totalSteps*100)+'%';
-    }
+  // ── 🇬🇧 INGLESE ──
+  for(const mKey of keys){
+    const pk=parseKey(mKey);
+    const fname=getJPGFileNameEN(pk.data,pk.serv);
+    pTxt.textContent=`🇬🇧 ${fname} (${done+1}/${total})…`;
+    try{
+      const canvas=await renderMenuJPGEN(mKey);
+      if(canvas){
+        const b64=setJPEGDPI(canvas.toDataURL('image/jpeg',0.92).split(',')[1],300);
+        if(mode==='github') await uploadJPGGitHub(b64,fname);
+        else zip.file(fname,b64,{base64:true});
+      }
+    }catch(e){console.error('EN error',mKey,e);}
+    done++; pBar.style.width=Math.round(done/total*100)+'%';
   }
 
-  // ── SCARICA ZIP ──
   if(mode==='download'&&zip){
-    pTxt.textContent='Compressione zip in corso…';
+    pTxt.textContent='Compressione ZIP…';
     const blob=await zip.generateAsync({type:'blob'});
     const el=document.createElement('a');
     el.href=URL.createObjectURL(blob);
-    el.download=`menu-sito-${da}_${a}${includeEn?'-IT+EN':''}.zip`;
+    el.download=`menu-sito-${da}_${a}-IT+EN.zip`;
     el.click();
   }
-
-  const nEn=includeEn?` + ${keys.length} EN`:'';
-  pTxt.textContent=`✓ Completato! ${keys.length} IT${nEn} immagini ${mode==='github'?'caricate su GitHub':'nello zip'}.`;
+  pTxt.textContent=`✓ ${keys.length} IT + ${keys.length} EN ${mode==='github'?'caricati su GitHub':'nello ZIP'}.`;
   startBtn.textContent='✓ Fatto! → Home';
   startBtn.disabled=false;
   startBtn.onclick=()=>{ closeOv('ov-jpg'); goHome(); };
@@ -2333,9 +2303,6 @@ async function uploadJPGGitHub(b64, filename){
 
 // Render del singolo JPG su canvas 650×919
 async function renderMenuJPG(mKey){
-  return renderMenuJPGWithLang(mKey,'it');
-}
-async function _renderMenuJPG_orig(mKey){
   const pk=parseKey(mKey);
   const menu=DB.menu[mKey]; if(!menu)return null;
   const dt=parseDate(pk.data);
@@ -2515,167 +2482,134 @@ async function _renderMenuJPG_orig(mKey){
 }
 
 // ══════════════════════════════════════════════════════
-// TRADUZIONI INGLESE
+// TAB PIATTI — ITA / ENG
 // ══════════════════════════════════════════════════════
 
-const MESI_EN=['January','February','March','April','May','June','July','August','September','October','November','December'];
-const GIORNI_EN=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+let _piattiTab='ita';
+
+function switchPiattiTab(tab){
+  _piattiTab=tab;
+  document.getElementById('tab-btn-ita').classList.toggle('active',tab==='ita');
+  document.getElementById('tab-btn-eng').classList.toggle('active',tab==='eng');
+  document.getElementById('portate-wrap').style.display=tab==='ita'?'':'none';
+  document.getElementById('srch-piatti').style.display=tab==='ita'?'':'none';
+  document.getElementById('eng-wrap').style.display=tab==='eng'?'':'none';
+  if(tab==='eng') renderEngTab();
+}
+
+function contaNoTraduzione(){
+  if(!DB.traduzioni) DB.traduzioni={};
+  return DB.piatti.filter(p=>!DB.traduzioni[p.id]).length;
+}
+
+function aggiornaBadgeTraduzione(){
+  if(!DB.traduzioni) DB.traduzioni={};
+  const n=contaNoTraduzione();
+  // badge pagina piatti
+  const badge=document.getElementById('badge-untranslated');
+  const tabBadge=document.getElementById('tab-eng-badge');
+  if(badge){ badge.style.display=n>0?'inline-block':'none'; if(n>0) badge.textContent=`⚠ ${n} piatt${n===1?'o':'i'} da tradurre`; }
+  if(tabBadge){ tabBadge.innerHTML=n>0?`<span class="badge-warn">${n}</span>`:''; }
+  // badge homepage
+  const homeBadge=document.getElementById('home-badge-en');
+  if(homeBadge){ homeBadge.style.display=n>0?'inline-block':'none'; if(n>0) homeBadge.textContent=`⚠ ${n} piatt${n===1?'o':'i'} senza traduzione 🇬🇧`; }
+}
+
+function renderEngTab(){
+  if(!DB.traduzioni) DB.traduzioni={};
+  const box=document.getElementById('eng-wrap');
+  let html=`<div style="display:flex;justify-content:flex-end;margin-bottom:12px">
+    <button class="btn btn-sm" style="background:#1a3a6a;color:#5a9ad8;border:1px solid #1a5c8a" onclick="traduciTuttiAuto()">🌐 Traduci tutti automaticamente</button>
+  </div>`;
+  PORTATE.forEach(portata=>{
+    const piatti=DB.piatti.filter(p=>p.portata===portata.id).sort((a,b)=>a.nome.localeCompare(b.nome));
+    if(!piatti.length)return;
+    html+=`<div style="margin-bottom:22px">
+      <div style="font-family:'Cinzel',serif;font-size:12px;letter-spacing:1.5px;color:var(--gold);margin-bottom:10px;padding-bottom:5px;border-bottom:1px solid var(--border)">${portata.label.toUpperCase()}</div>`;
+    piatti.forEach(p=>{
+      const enVal=(DB.traduzioni[p.id]||'').replace(/"/g,'&quot;');
+      const missing=!DB.traduzioni[p.id];
+      html+=`<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:7px;align-items:center">
+        <div style="font-size:16px;color:var(--white3);padding:7px 10px;background:var(--bg3);border-radius:var(--r)">${p.nome}</div>
+        <div style="position:relative">
+          <input type="text" value="${enVal}" placeholder="English name…"
+            style="width:100%;background:${missing?'#1a0e0a':'var(--bg3)'};border:1px solid ${missing?'#8b3a10':'#1a5c8a'};color:var(--white);border-radius:var(--r);padding:7px 10px;font-size:16px;font-family:inherit"
+            oninput="salvaTrad('${p.id}',this.value);this.style.background='var(--bg3)';this.style.borderColor='#1a5c8a'">
+        </div>
+      </div>`;
+    });
+    html+=`</div>`;
+  });
+  box.innerHTML=html;
+}
+
+function salvaTrad(id, val){
+  if(!DB.traduzioni) DB.traduzioni={};
+  if(val.trim()) DB.traduzioni[id]=val.trim();
+  else delete DB.traduzioni[id];
+  saveDB();
+  aggiornaBadgeTraduzione();
+  const tabBadge=document.getElementById('tab-eng-badge');
+  const n=contaNoTraduzione();
+  tabBadge.innerHTML=n>0?`<span class="badge-warn">${n}</span>`:'';
+}
 
 async function tradurreMyMemory(text){
   try{
     const r=await fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(text)}&langpair=it|en`);
     const j=await r.json();
     const t=j.responseData?.translatedText||'';
-    return t&&t!==text?t:null;
+    return t&&t.toLowerCase()!==text.toLowerCase()?t:null;
   }catch(e){return null;}
 }
 
-function renderTraduzioni(){
-  const da=document.getElementById('tr-da')?.value||'';
-  const a=document.getElementById('tr-a')?.value||'';
+async function traduciTuttiAuto(){
   if(!DB.traduzioni) DB.traduzioni={};
-  const keys=getJPGKeys(da,a);
-  const box=document.getElementById('tr-content');
-  if(!keys.length){
-    box.innerHTML='<div class="empty">Nessun Menù del Sito nel periodo selezionato.</div>';
-    return;
-  }
-  let html='';
-  keys.forEach(mKey=>{
-    const pk=parseKey(mKey);
-    const menu=DB.menu[mKey];
-    const dt=parseDate(pk.data);
-    const tlKey=`tl_${pk.data}_${pk.serv}`;
-    html+=`<div class="card mb-16" id="tr-card-${mKey.replace(/[^a-z0-9]/gi,'_')}">
-      <div class="card-hd" style="background:var(--bg3)">
-        <span class="card-title" style="color:#5a9ad8">${dt.giornoLungo} — ${cap(pk.serv)}</span>
-        <button class="btn btn-sm" style="background:#1a3a6a;color:#5a9ad8;border:1px solid #1a5c8a;margin-left:auto" onclick="traduciMenuAuto('${mKey}')">🌐 Traduci questo menù</button>
-      </div>
-      <div style="padding:14px">`;
-    PORTATE.forEach(portata=>{
-      const ids=menu.piatti[portata.id]||[];
-      if(!ids.length)return;
-      html+=`<div style="margin-bottom:14px">
-        <div style="font-family:'Cinzel',serif;font-size:12px;letter-spacing:1.5px;color:var(--gold);margin-bottom:8px">${portata.label.toUpperCase()}</div>`;
-      ids.forEach(id=>{
-        const p=DB.piatti.find(x=>x.id===id); if(!p)return;
-        const enVal=DB.traduzioni[id]||'';
-        html+=`<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:6px;align-items:center">
-          <div style="font-size:15px;color:var(--white3);padding:6px 8px;background:var(--bg2);border-radius:4px">${p.nome}</div>
-          <input type="text" value="${enVal.replace(/"/g,'&quot;')}" placeholder="English translation…"
-            style="background:var(--bg3);border:1px solid #1a5c8a;color:var(--white);border-radius:4px;padding:6px 8px;font-size:15px;font-family:inherit"
-            oninput="salvaTraduzione('${id}',this.value)">
-        </div>`;
-      });
-      html+=`</div>`;
-    });
-    if(menu.testoLibero){
-      const enNote=DB.traduzioni[tlKey]||'';
-      html+=`<div style="margin-top:10px;border-top:1px solid var(--border);padding-top:10px">
-        <div style="font-family:'Cinzel',serif;font-size:11px;letter-spacing:1px;color:var(--white3);margin-bottom:6px">NOTE MENÙ</div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
-          <div style="font-size:14px;color:var(--white3);padding:6px 8px;background:var(--bg2);border-radius:4px;font-style:italic">${menu.testoLibero}</div>
-          <input type="text" value="${enNote.replace(/"/g,'&quot;')}" placeholder="English note…"
-            style="background:var(--bg3);border:1px solid #1a5c8a;color:var(--white);border-radius:4px;padding:6px 8px;font-size:14px;font-family:inherit;font-style:italic"
-            oninput="salvaTraduzione('${tlKey}',this.value)">
-        </div>
-      </div>`;
-    }
-    html+=`</div></div>`;
-  });
-  box.innerHTML=html;
-}
-
-function salvaTraduzione(key, val){
-  if(!DB.traduzioni) DB.traduzioni={};
-  if(val.trim()) DB.traduzioni[key]=val.trim();
-  else delete DB.traduzioni[key];
-  saveDB();
-}
-
-async function traduciMenuAuto(mKey){
-  const menu=DB.menu[mKey];
-  if(!menu)return;
-  if(!DB.traduzioni) DB.traduzioni={};
-  const pk=parseKey(mKey);
-  const tlKey=`tl_${pk.data}_${pk.serv}`;
-  const allIds=PORTATE.flatMap(p=>menu.piatti[p.id]||[]);
+  const daFare=DB.piatti.filter(p=>!DB.traduzioni[p.id]);
+  if(!daFare.length){alert('Tutti i piatti sono già tradotti!');return;}
+  const box=document.getElementById('eng-wrap');
+  box.insertAdjacentHTML('afterbegin','<div id="tr-status" style="color:var(--gold);font-size:14px;margin-bottom:12px">Traduzione in corso…</div>');
   let done=0;
-  for(const id of allIds){
-    const p=DB.piatti.find(x=>x.id===id); if(!p)continue;
-    if(DB.traduzioni[id]) continue; // già tradotto
+  for(const p of daFare){
     const t=await tradurreMyMemory(p.nome);
-    if(t) DB.traduzioni[id]=t;
-    done++;
-    if(done%3===0) await new Promise(r=>setTimeout(r,300)); // throttle
-  }
-  if(menu.testoLibero&&!DB.traduzioni[tlKey]){
-    const t=await tradurreMyMemory(menu.testoLibero);
-    if(t) DB.traduzioni[tlKey]=t;
+    if(t){ DB.traduzioni[p.id]=t; done++; }
+    if(done%5===0){ saveDB(); }
+    await new Promise(r=>setTimeout(r,200));
   }
   saveDB();
-  renderTraduzioni();
+  document.getElementById('tr-status')?.remove();
+  renderEngTab();
+  aggiornaBadgeTraduzione();
 }
 
-async function traduciTuttoAuto(){
-  const da=document.getElementById('tr-da')?.value||'';
-  const a=document.getElementById('tr-a')?.value||'';
-  const keys=getJPGKeys(da,a);
-  for(const mKey of keys) await traduciMenuAuto(mKey);
-}
+// ══════════════════════════════════════════════════════
+// JPG INGLESE
+// ══════════════════════════════════════════════════════
+const MESI_EN=['January','February','March','April','May','June','July','August','September','October','November','December'];
+const GIORNI_EN_FULL=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+const PORTATE_EN={antipasto:'Starters',primo:'First Courses',secondo:'Main Courses',contorno:'Side Dishes',dolce:'Desserts'};
 
-function navToTraduzioni(){
-  // default range = settimana corrente
-  const today=new Date();
-  const dow=today.getDay();
-  const diffToMon=dow===0?-6:1-dow;
-  const mon=new Date(today); mon.setDate(today.getDate()+diffToMon);
-  const sun=new Date(mon); sun.setDate(mon.getDate()+6);
-  const fmt=d=>d.toISOString().split('T')[0];
-  document.getElementById('tr-da').value=fmt(mon);
-  document.getElementById('tr-a').value=fmt(sun);
-  renderTraduzioni();
-}
-
-// ── RENDER JPG IN INGLESE ──
-function getJPGFileNameEN(dateStr, serv){
+function getJPGFileNameEN(dateStr,serv){
   const dow=new Date(dateStr+'T12:00:00').getDay();
   const n=getJPGFileNum(dow,serv);
-  return `${String(n).padStart(2,'0')}-${GIORNI_IT[dow]}-${serv}-EN.jpg`;
+  return `${String(n).padStart(2,'0')}-${GIORNI_IT[dow]}-${serv}-en.jpg`;
 }
 
-async function renderMenuJPGEn(mKey){
+async function renderMenuJPGEN(mKey){
+  // Identico a renderMenuJPG ma con testi in inglese
   const pk=parseKey(mKey);
   const menu=DB.menu[mKey]; if(!menu)return null;
   if(!DB.traduzioni) DB.traduzioni={};
-  // Crea una versione "menu" con nomi tradotti
-  const menuEn={
-    piatti:{},
-    testoLibero: DB.traduzioni[`tl_${pk.data}_${pk.serv}`]||menu.testoLibero,
-    prezzo: menu.prezzo
-  };
-  PORTATE.forEach(p=>{
-    menuEn.piatti[p.id]=(menu.piatti[p.id]||[]).map(id=>id); // stessi id
-  });
-  // Override DB.piatti nomi temporaneamente? No - passa traduzioni a renderMenuJPG
-  return renderMenuJPGWithLang(mKey, 'en');
-}
-
-async function renderMenuJPGWithLang(mKey, lang){
-  const pk=parseKey(mKey);
-  const menu=DB.menu[mKey]; if(!menu)return null;
   const dt=parseDate(pk.data);
   const dow=new Date(pk.data+'T12:00:00').getDay();
   const [bgTop,bgBot,accent,textDark]=JPG_BG_CFGS[dow];
-  const isEn=(lang==='en');
-  if(!DB.traduzioni) DB.traduzioni={};
 
   const W=650,H=919;
   const cv=document.createElement('canvas');
   cv.width=W; cv.height=H;
   const c=cv.getContext('2d');
 
-  // sfondo
+  // sfondo + texture (identico IT)
   const gr=c.createLinearGradient(0,0,W*0.45,H);
   gr.addColorStop(0,bgTop); gr.addColorStop(1,bgBot);
   c.fillStyle=gr; c.fillRect(0,0,W,H);
@@ -2684,23 +2618,17 @@ async function renderMenuJPGWithLang(mKey, lang){
   c.restore();
 
   const bm=18;
-  c.strokeStyle=accent; c.lineWidth=2.2;
-  c.strokeRect(bm,bm,W-bm*2,H-bm*2);
-  c.lineWidth=0.8;
-  c.strokeRect(bm+7,bm+7,W-bm*2-14,H-bm*2-14);
+  c.strokeStyle=accent; c.lineWidth=2.2; c.strokeRect(bm,bm,W-bm*2,H-bm*2);
+  c.lineWidth=0.8; c.strokeRect(bm+7,bm+7,W-bm*2-14,H-bm*2-14);
   const diamond=(cx,cy,s)=>{ c.fillStyle=accent; c.beginPath(); c.moveTo(cx,cy-s); c.lineTo(cx+s,cy); c.lineTo(cx,cy+s); c.lineTo(cx-s,cy); c.closePath(); c.fill(); };
   [[bm,bm],[W-bm,bm],[bm,H-bm],[W-bm,H-bm]].forEach(([x,y])=>diamond(x,y,5));
 
   const ct=(text,y,font,color,maxW)=>{ c.font=font; c.fillStyle=color; c.textAlign='center'; c.fillText(text,W/2,y,maxW||W-80); };
-  const line=(y,double=false)=>{
-    const mx=bm+38; c.strokeStyle=accent; c.lineWidth=0.9;
-    if(double){ c.beginPath();c.moveTo(mx,y-2.5);c.lineTo(W-mx,y-2.5);c.stroke(); c.beginPath();c.moveTo(mx,y+2.5);c.lineTo(W-mx,y+2.5);c.stroke(); }
-    else{ c.beginPath();c.moveTo(mx,y);c.lineTo(W-mx,y);c.stroke(); }
-  };
+  const dline=(y)=>{ const mx=bm+38; c.strokeStyle=accent; c.lineWidth=0.9; c.beginPath();c.moveTo(mx,y-2.5);c.lineTo(W-mx,y-2.5);c.stroke(); c.beginPath();c.moveTo(mx,y+2.5);c.lineTo(W-mx,y+2.5);c.stroke(); };
 
   let y=bm+14;
 
-  // LOGO
+  // logo
   const LOGO_URL='https://raw.githubusercontent.com/shopilciliegio-ship-it/Ciliegio-Menu/main/ciliegio_nero_trasparente.png';
   await new Promise(res=>{
     const img=new Image(); img.crossOrigin='anonymous';
@@ -2708,31 +2636,22 @@ async function renderMenuJPGWithLang(mKey, lang){
     img.onerror=()=>res(); setTimeout(()=>res(),5000); img.src=LOGO_URL;
   });
 
-  y+=8; const line2Y=y; line(line2Y,true);
-  const line3Y=line2Y+82; line(line3Y,true);
+  y+=8; const line2Y=y; dline(line2Y);
+  const line3Y=line2Y+82; dline(line3Y);
 
-  // DATA in lingua
-  let dataStr;
-  if(isEn){
-    dataStr=`${GIORNI_EN[dow].toUpperCase()}, ${dt.d} ${MESI_EN[dt.m-1].toUpperCase()} ${dt.y}`;
-  } else {
-    dataStr=`${dt.dayOfWeek.toUpperCase()}, ${dt.d} ${MESI_S[dt.m-1].toUpperCase()} ${dt.y}`;
-  }
-  const servLabel=isEn
-    ?(pk.serv==='pranzo'?'L  U  N  C  H':'D  I  N  N  E  R')
-    :(pk.serv==='pranzo'?'P  R  A  N  Z  O':'C  E  N  A');
+  // data + servizio in inglese
+  const dataStr=`${GIORNI_EN_FULL[dow].toUpperCase()}, ${MESI_EN[dt.m-1].toUpperCase()} ${dt.d}, ${dt.y}`;
+  const servLabel=pk.serv==='pranzo'?'L  U  N  C  H':'D  I  N  N  E  R';
   const dateBlockH=52;
   let ty=line2Y+Math.round((line3Y-line2Y-dateBlockH)/2)+22;
   ct(dataStr,ty,`bold 22px 'Nunito',Candara,sans-serif`,textDark); ty+=30;
   ct(servLabel,ty,`bold 15px 'Cinzel',Georgia,serif`,accent);
   y=line3Y+14;
 
-  // PORTATE
+  // portate con nomi inglesi
   const footerTop=H-bm-72;
   const spaceH=footerTop-y-8;
   const portateOk=PORTATE.filter(p=>(menu.piatti[p.id]||[]).length>0);
-  const tlKey=`tl_${pk.data}_${pk.serv}`;
-  const testoLiberoEn=isEn?(DB.traduzioni[tlKey]||menu.testoLibero):menu.testoLibero;
 
   function calcH(fs){
     const hdrFs=Math.round(fs*0.78),hdrLH=hdrFs*2.2,dishLH=fs*1.5,gapLH=fs*0.7;
@@ -2741,13 +2660,13 @@ async function renderMenuJPGWithLang(mKey, lang){
       h+=hdrLH;
       (menu.piatti[portata.id]||[]).forEach(id=>{
         const p=DB.piatti.find(x=>x.id===id); if(!p)return;
-        const nome=isEn?(DB.traduzioni[id]||p.nome):p.nome;
+        const nome=DB.traduzioni[id]||p.nome;
         c.font=`${fs}px 'Nunito',Candara,sans-serif`;
         h+=c.measureText(nome).width>W-100?dishLH*1.9:dishLH;
       });
       h+=gapLH;
     });
-    if(testoLiberoEn) h+=fs*1.2;
+    if(menu.testoLibero) h+=fs*1.2;
     return h;
   }
 
@@ -2759,16 +2678,14 @@ async function renderMenuJPGWithLang(mKey, lang){
   const totalH=calcH(fs);
   y+=Math.max(0,Math.round((spaceH-totalH)/2));
 
-  const portataLabelsEn={antipasto:'Starters',primo:'First Courses',secondo:'Main Courses',contorno:'Side Dishes',dolce:'Desserts'};
-
   portateOk.forEach(portata=>{
     const ids=menu.piatti[portata.id]||[];
-    const lbl=isEn?(portataLabelsEn[portata.id]||portata.label):portata.label;
+    const lbl=PORTATE_EN[portata.id]||portata.label;
     c.font=`bold ${hdrFs}px 'Cinzel',Georgia,serif`; c.fillStyle=accent; c.textAlign='center';
     c.fillText(`✦  ${lbl.toUpperCase()}  ✦`,W/2,y+hdrFs*0.85,W-80); y+=hdrLH;
     ids.forEach(id=>{
       const p=DB.piatti.find(x=>x.id===id); if(!p)return;
-      const nome=isEn?(DB.traduzioni[id]||p.nome):p.nome;
+      const nome=DB.traduzioni[id]||p.nome; // fallback italiano
       c.font=`${fs}px 'Nunito',Candara,sans-serif`; c.fillStyle=textDark; c.textAlign='center';
       if(c.measureText(nome).width>W-100){
         const words=nome.split(' '),mid=Math.ceil(words.length/2);
@@ -2779,16 +2696,13 @@ async function renderMenuJPGWithLang(mKey, lang){
     });
     y+=gapLH;
   });
-  if(testoLiberoEn){ c.font=`italic ${Math.round(fs*0.72)}px 'Nunito',Candara,sans-serif`; c.fillStyle=textDark; c.textAlign='center'; c.globalAlpha=0.75; c.fillText(testoLiberoEn,W/2,y+fs*0.8,W-100); c.globalAlpha=1; }
+  if(menu.testoLibero){ c.font=`italic ${Math.round(fs*0.72)}px 'Nunito',Candara,sans-serif`; c.fillStyle=textDark; c.textAlign='center'; c.globalAlpha=0.75; c.fillText(menu.testoLibero,W/2,y+fs*0.8,W-100); c.globalAlpha=1; }
 
-  const bY=footerTop;
-  line(bY,true);
+  const bY=footerTop; dline(bY);
   const pBimbi=parseFloat(document.getElementById('jpg-prezzo-bimbi')?.value)||13;
   const priceStr=menu.prezzo!=null?menu.prezzo.toFixed(2).replace('.',','):'—';
-  const footerLine1=isEn?`FULL MENU PER PERSON  € ${priceStr}`:`MENÙ COMPLETO A PERSONA  € ${priceStr}`;
-  const footerLine2=isEn?`AVAILABLE ON REQUEST  CHILDREN'S MENU  € ${pBimbi.toFixed(2).replace('.',',')}`:`DISPONIBILI SU RICHIESTA  MENÙ BIMBI  AD € ${pBimbi.toFixed(2).replace('.',',')}`;
-  ct(footerLine1,bY+26,`bold 15px 'Nunito',Candara,sans-serif`,textDark);
-  ct(footerLine2,bY+48,`11px 'Nunito',Candara,sans-serif`,accent,W-80);
+  ct(`FULL MENU PER PERSON  € ${priceStr}`,bY+26,`bold 15px 'Nunito',Candara,sans-serif`,textDark);
+  ct(`AVAILABLE ON REQUEST  ·  CHILDREN'S MENU  ·  € ${pBimbi.toFixed(2).replace('.',',')}`,bY+48,`11px 'Nunito',Candara,sans-serif`,accent,W-80);
 
   return cv;
 }
