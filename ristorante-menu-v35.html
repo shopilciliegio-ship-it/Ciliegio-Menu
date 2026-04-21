@@ -357,6 +357,7 @@ textarea{resize:vertical;min-height:72px}
         <span class="hci">📋</span>
         <span class="hcl">Lista Piatti</span>
         <span class="hcd">Gestisci il database per portata</span>
+        <span id="home-badge-en" style="display:none;margin-top:8px;background:#8b3a10;color:#fff;border-radius:20px;padding:2px 10px;font-size:12px;letter-spacing:.5px"></span>
       </div>
       <div class="hcard" onclick="navTo('cal')">
         <span class="hci">📅</span>
@@ -368,6 +369,13 @@ textarea{resize:vertical;min-height:72px}
         <div class="hw-text">
           <span class="hcl">Genera JPG per Sito</span>
           <span class="hcd">Crea le immagini dei menù del giorno da pubblicare online — 650×919 px, 300 dpi</span>
+        </div>
+      </div>
+      <div class="hcard-wide" onclick="apriModalQR()" style="border-color:#1a3a6a">
+        <span class="hci">📱</span>
+        <div class="hw-text">
+          <span class="hcl" style="color:#5a9ad8">QR Code &amp; Link App</span>
+          <span class="hcd">Apri rapidamente su un nuovo dispositivo — scansiona o condividi il link</span>
         </div>
       </div>
     </div>
@@ -568,6 +576,18 @@ textarea{resize:vertical;min-height:72px}
       <button class="btn btn-gold" id="jpg-start-btn" onclick="avviaGeneraJPG()">✦ Genera immagini</button>
       <button class="btn btn-ghost" onclick="closeOv('ov-jpg')">Annulla</button>
     </div>
+  </div>
+</div>
+
+<!-- ══ MODAL QR CODE ══ -->
+<div id="ov-qr" class="overlay hidden">
+  <div class="modal" style="max-width:440px;text-align:center">
+    <button class="modal-close" onclick="closeOv('ov-qr')">✕</button>
+    <div class="modal-title">📱 Apri su nuovo dispositivo</div>
+    <div id="qr-canvas-wrap" style="margin:18px auto 14px;display:inline-block;background:#fff;padding:14px;border-radius:10px"></div>
+    <div id="qr-url-box" style="font-size:13px;color:var(--white3);word-break:break-all;margin-bottom:16px;padding:8px 12px;background:var(--bg3);border-radius:var(--r);border:1px solid var(--border)"></div>
+    <div style="font-size:14px;color:var(--white3);margin-bottom:16px">Scansiona con la fotocamera del telefono per aprire l'app</div>
+    <button class="btn btn-ghost" onclick="copiaLinkQR()">📋 Copia link</button>
   </div>
 </div>
 
@@ -2502,17 +2522,42 @@ function contaNoTraduzione(){
 }
 
 function aggiornaBadgeTraduzione(){
+  if(!DB.traduzioni) DB.traduzioni={};
   const n=contaNoTraduzione();
+  // badge pagina piatti
   const badge=document.getElementById('badge-untranslated');
   const tabBadge=document.getElementById('tab-eng-badge');
-  if(n>0){
-    badge.style.display='inline-block';
-    badge.textContent=`⚠ ${n} piatt${n===1?'o':'i'} da tradurre`;
-    tabBadge.innerHTML=`<span class="badge-warn">${n}</span>`;
-  } else {
-    badge.style.display='none';
-    tabBadge.innerHTML='';
+  if(badge){ badge.style.display=n>0?'inline-block':'none'; if(n>0) badge.textContent=`⚠ ${n} piatt${n===1?'o':'i'} da tradurre`; }
+  if(tabBadge){ tabBadge.innerHTML=n>0?`<span class="badge-warn">${n}</span>`:''; }
+  // badge homepage
+  const homeBadge=document.getElementById('home-badge-en');
+  if(homeBadge){ homeBadge.style.display=n>0?'inline-block':'none'; if(n>0) homeBadge.textContent=`⚠ ${n} piatt${n===1?'o':'i'} senza traduzione 🇬🇧`; }
+}
+
+// ── QR CODE ──
+function apriModalQR(){
+  const url=window.location.href.split('?')[0].split('#')[0];
+  document.getElementById('qr-url-box').textContent=url;
+  const wrap=document.getElementById('qr-canvas-wrap');
+  wrap.innerHTML='';
+  function buildQR(){
+    new QRCode(wrap,{text:url,width:200,height:200,colorDark:'#000',colorLight:'#fff',correctLevel:QRCode.CorrectLevel.M});
   }
+  if(typeof QRCode!=='undefined'){ buildQR(); }
+  else{
+    const s=document.createElement('script');
+    s.src='https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js';
+    s.onload=buildQR; document.head.appendChild(s);
+  }
+  openOv('ov-qr');
+}
+function copiaLinkQR(){
+  const url=document.getElementById('qr-url-box').textContent;
+  navigator.clipboard?.writeText(url).then(()=>{
+    const btn=document.querySelector('#ov-qr .btn-ghost');
+    const o=btn.textContent; btn.textContent='✓ Copiato!';
+    setTimeout(()=>btn.textContent=o,1800);
+  }).catch(()=>alert(url));
 }
 
 function renderEngTab(){
