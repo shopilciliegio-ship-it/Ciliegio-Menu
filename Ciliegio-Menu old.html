@@ -208,7 +208,7 @@ textarea{resize:vertical;min-height:72px}
 .cal-dow{text-align:center;padding:11px 4px;font-family:'Cinzel',serif;font-size:12px;letter-spacing:1.5px;color:var(--gold);background:var(--bg3);border-bottom:1px solid var(--border)}
 .cal-day{min-height:96px;padding:7px;background:var(--bg2);border:1px solid var(--border);cursor:pointer;transition:background .15s;position:relative;vertical-align:top}
 .cal-day:hover{background:var(--bg3)}
-.cal-day.other-month{opacity:.42;pointer-events:auto;cursor:pointer}
+.cal-day.other-month{opacity:.25;cursor:default;pointer-events:none}
 .cal-day.today .cal-dn{background:var(--gold);color:var(--bg);border-radius:50%;width:26px;height:26px;display:flex;align-items:center;justify-content:center}
 .cal-note-dot{position:absolute;top:5px;right:5px;width:8px;height:8px;background:#c0392b;border-radius:50%;}
 .cal-dn{font-size:15px;font-weight:500;color:var(--white2);margin-bottom:5px;width:26px;text-align:center}
@@ -1290,17 +1290,16 @@ function renderCal(){
     const el=document.createElement('div'); el.className='cal-dow'; el.textContent=d; wrap.appendChild(el);
   });
   const first=new Date(calYear,calMonth,1);
-  const startDow=(first.getDay()+6)%7; // 0=Lun
+  const startDow=(first.getDay()+6)%7;
   const daysInMonth=new Date(calYear,calMonth+1,0).getDate();
   const today=new Date().toISOString().split('T')[0];
-
-  // helper: crea cella giorno (sia mese corrente che adiacente)
-  function buildCell(dateObj, isOtherMonth){
-    const y=dateObj.getFullYear(), m=dateObj.getMonth(), d=dateObj.getDate();
-    const dateStr=`${y}-${String(m+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+  for(let i=0;i<startDow;i++){const el=document.createElement('div');el.className='cal-day other-month';wrap.appendChild(el);}
+  for(let d=1;d<=daysInMonth;d++){
+    const dateStr=`${calYear}-${String(calMonth+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
     const el=document.createElement('div');
-    el.className='cal-day'+(isOtherMonth?' other-month':'')+(dateStr===today?' today':'');
+    el.className='cal-day'+(dateStr===today?' today':'');
     let html=`<div class="cal-dn">${d}</div>`;
+    // pallino rosso se c'è una nota ristorante
     if(DB.noteGiorno&&DB.noteGiorno[dateStr]){
       html+=`<div class="cal-note-dot" title="Nota ristorante"></div>`;
     }
@@ -1321,25 +1320,8 @@ function renderCal(){
     el.addEventListener('click',()=>apriGiornoDetail(dateStr));
     wrap.appendChild(el);
   }
-
-  // Giorni del mese PRECEDENTE per riempire prima settimana
-  const prevMonthDays=new Date(calYear,calMonth,0).getDate();
-  for(let i=startDow-1;i>=0;i--){
-    buildCell(new Date(calYear,calMonth-1,prevMonthDays-i), true);
-  }
-
-  // Giorni del mese CORRENTE
-  for(let d=1;d<=daysInMonth;d++){
-    buildCell(new Date(calYear,calMonth,d), false);
-  }
-
-  // Giorni del mese SUCCESSIVO per riempire ultima settimana
   const total=startDow+daysInMonth;
-  const rem=total%7===0?0:7-(total%7);
-  for(let i=1;i<=rem;i++){
-    buildCell(new Date(calYear,calMonth+1,i), true);
-  }
-
+  const rem=7-(total%7); if(rem<7) for(let i=0;i<rem;i++){const el=document.createElement('div');el.className='cal-day other-month';wrap.appendChild(el);}
   document.getElementById('cal-detail').style.display='none';
 }
 
