@@ -1287,6 +1287,13 @@
       "portata": "secondo",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mohaxdaa2wx",
+      "nome": "Formaggi misti",
+      "portata": "antipasto",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -2186,6 +2193,22 @@
       },
       "testoLibero": "",
       "prezzo": 35,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-05-02_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hynyoo",
+          "mnsq9hynqk0",
+          "mohaxdaa2wx"
+        ],
+        "primo": [],
+        "secondo": [],
+        "contorno": [],
+        "dolce": []
+      },
+      "testoLibero": "",
+      "prezzo": null,
       "nomeSpecifico": "Menù del Sito"
     }
   },
