@@ -1259,6 +1259,13 @@
       "portata": "primo",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mohajvs4pzb",
+      "nome": "Pasta fresca con porri e guanciale",
+      "portata": "primo",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -2029,6 +2036,22 @@
       },
       "testoLibero": "",
       "prezzo": 32,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-04-28_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo1xei4h6yo"
+        ],
+        "primo": [
+          "mohajvs4pzb"
+        ],
+        "secondo": [],
+        "contorno": [],
+        "dolce": []
+      },
+      "testoLibero": "",
+      "prezzo": null,
       "nomeSpecifico": "Menù del Sito"
     }
   },
