@@ -2215,12 +2215,19 @@
           "mnsq9hynhyk",
           "mohazkpebcj"
         ],
-        "secondo": [],
-        "contorno": [],
-        "dolce": []
+        "secondo": [
+          "mnsq9hynxxp"
+        ],
+        "contorno": [
+          "mnsq9hynayz",
+          "mnsq9hynyb2"
+        ],
+        "dolce": [
+          "mnsq9hynvjy"
+        ]
       },
       "testoLibero": "",
-      "prezzo": null,
+      "prezzo": 37,
       "nomeSpecifico": "Menù del Sito"
     }
   },
