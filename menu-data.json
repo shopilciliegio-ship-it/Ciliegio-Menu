@@ -1294,6 +1294,13 @@
       "portata": "antipasto",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mohazkpebcj",
+      "nome": "Pici al ragù toscano",
+      "portata": "primo",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -2200,9 +2207,14 @@
         "antipasto": [
           "mnsq9hynyoo",
           "mnsq9hynqk0",
-          "mohaxdaa2wx"
+          "mohaxdaa2wx",
+          "mnsq9hynfoi",
+          "mnsq9hyngse"
         ],
-        "primo": [],
+        "primo": [
+          "mnsq9hynhyk",
+          "mohazkpebcj"
+        ],
         "secondo": [],
         "contorno": [],
         "dolce": []
