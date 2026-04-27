@@ -1280,6 +1280,13 @@
       "portata": "dolce",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mohavjo1cxl",
+      "nome": "Arrosto con maiale, pollo e tagliata di manzo",
+      "portata": "secondo",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -2154,6 +2161,24 @@
         "dolce": [
           "mohatliymxm"
         ]
+      },
+      "testoLibero": "",
+      "prezzo": null,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-05-01_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo1xei4h6yo"
+        ],
+        "primo": [
+          "mnsq9hynnla"
+        ],
+        "secondo": [
+          "mohavjo1cxl"
+        ],
+        "contorno": [],
+        "dolce": []
       },
       "testoLibero": "",
       "prezzo": null,
