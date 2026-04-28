@@ -2251,8 +2251,14 @@ async function avviaGeneraJPG(){
 
   const mode=document.getElementById('jpg-save-mode').value;
   const zip=mode==='download'?new JSZip():null;
-  const total=keys.length*2; // IT + EN sempre
+  const total=keys.length*2; // IT + EN
   let done=0;
+
+  // ── Se GitHub: elimina prima tutti i vecchi JPG nella cartella ──
+  if(mode==='github'){
+    pTxt.textContent='🗑 Pulizia vecchi file su GitHub…';
+    await svuotaCartellaImmaginiGitHub();
+  }
 
   // ── 🇮🇹 ITALIANO ──
   for(const mKey of keys){
@@ -2298,6 +2304,30 @@ async function avviaGeneraJPG(){
   startBtn.textContent='✓ Fatto! → Home';
   startBtn.disabled=false;
   startBtn.onclick=()=>{ closeOv('ov-jpg'); goHome(); };
+}
+
+// Elenca e cancella tutti i file JPG nella cartella immagini-sito/ su GitHub
+async function svuotaCartellaImmaginiGitHub(){
+  const cfg=JSON.parse(localStorage.getItem('ghcfg')||'{}');
+  if(!cfg.tok||!cfg.own||!cfg.rep) return;
+  const headers={Authorization:`token ${cfg.tok}`,Accept:'application/vnd.github.v3+json'};
+  try{
+    const r=await fetch(`https://api.github.com/repos/${cfg.own}/${cfg.rep}/contents/immagini-sito`,{headers});
+    if(!r.ok) return; // cartella vuota o non esiste ancora — ok
+    const files=await r.json();
+    if(!Array.isArray(files)) return;
+    // filtra solo i JPG con pattern numerato (es. 02-lunedì-pranzo.jpg)
+    const jpgFiles=files.filter(f=>f.type==='file'&&/^\d{2}-/.test(f.name)&&f.name.endsWith('.jpg'));
+    for(const f of jpgFiles){
+      await fetch(`https://api.github.com/repos/${cfg.own}/${cfg.rep}/contents/immagini-sito/${f.name}`,{
+        method:'DELETE',
+        headers:{...headers,'Content-Type':'application/json'},
+        body:JSON.stringify({message:`Rimozione vecchio menù: ${f.name}`,sha:f.sha})
+      });
+      // piccola pausa per non saturare le API
+      await new Promise(r=>setTimeout(r,150));
+    }
+  }catch(e){console.error('Errore pulizia GitHub:',e);}
 }
 
 async function uploadJPGGitHub(b64, filename){
