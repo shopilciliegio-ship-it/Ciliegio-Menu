@@ -1259,6 +1259,48 @@
       "portata": "primo",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mohajvs4pzb",
+      "nome": "Pasta fresca con porri e guanciale",
+      "portata": "primo",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mohapamzsdf",
+      "nome": "Pasta fresca alla Amatriciana",
+      "portata": "primo",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mohatliymxm",
+      "nome": "Torta con ricotta, pinoli e uvetta",
+      "portata": "dolce",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mohavjo1cxl",
+      "nome": "Arrosto con maiale, pollo e tagliata di manzo",
+      "portata": "secondo",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mohaxdaa2wx",
+      "nome": "Formaggi misti",
+      "portata": "antipasto",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mohazkpebcj",
+      "nome": "Pici al ragù toscano",
+      "portata": "primo",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -2030,6 +2072,148 @@
       "testoLibero": "",
       "prezzo": 32,
       "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-04-28_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo1xei4h6yo"
+        ],
+        "primo": [
+          "mohajvs4pzb"
+        ],
+        "secondo": [
+          "mo69j5b1uwp"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 30,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-04-28_cena_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hynqk0",
+          "mnsq9hymtkv",
+          "mnsq9hynsn7",
+          "mnsq9hyno6u",
+          "mnsq9hynlhy"
+        ],
+        "primo": [
+          "mo1zx4sfwtk"
+        ],
+        "secondo": [
+          "mnsq9hynxxp"
+        ],
+        "contorno": [
+          "mnsq9hync5b"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 30,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-04-29_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo1xei4h6yo"
+        ],
+        "primo": [
+          "mohapamzsdf"
+        ],
+        "secondo": [
+          "mnsq9hyn4sj"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 30,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-04-30_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo68jqekj3x"
+        ],
+        "primo": [
+          "mo76cwvebr1"
+        ],
+        "secondo": [
+          "mnsq9hyn4sj"
+        ],
+        "contorno": [
+          "mnsq9hync5b"
+        ],
+        "dolce": [
+          "mohatliymxm"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 32,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-05-01_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo1xei4h6yo"
+        ],
+        "primo": [
+          "mnsq9hynnla"
+        ],
+        "secondo": [
+          "mohavjo1cxl"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mnsq9hyn0dv"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 35,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-05-02_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hynyoo",
+          "mnsq9hynqk0",
+          "mohaxdaa2wx",
+          "mnsq9hynfoi",
+          "mnsq9hyngse"
+        ],
+        "primo": [
+          "mnsq9hynhyk",
+          "mohazkpebcj"
+        ],
+        "secondo": [
+          "mnsq9hynxxp"
+        ],
+        "contorno": [
+          "mnsq9hynayz",
+          "mnsq9hynyb2"
+        ],
+        "dolce": [
+          "mnsq9hynvjy"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 37,
+      "nomeSpecifico": "Menù del Sito"
     }
   },
   "prenotazioni": {
@@ -2616,6 +2800,18 @@
     },
     "2026-05-01_cena": {
       "gruppi": []
+    },
+    "2026-04-29_pranzo": {
+      "gruppi": []
+    },
+    "2026-04-29_cena": {
+      "gruppi": []
+    },
+    "2026-04-30_pranzo": {
+      "gruppi": []
+    },
+    "2026-04-30_cena": {
+      "gruppi": []
     }
   },
   "noteGiorno": {
@@ -2625,8 +2821,7 @@
     "2026-04-20": "Dare Sistola",
     "2026-04-22": "No Fiore",
     "2026-04-23": "No Giulia a pranzo",
-    "2026-04-26": "No monne a pranzo",
-    "2026-05-01": "CIAO BELLI"
+    "2026-04-26": "No monne a pranzo"
   },
   "traduzioni": {
     "mnsq9hymnei": "Bruschetta with cherry tomatoes and basil",
@@ -2808,6 +3003,12 @@
     "mo6a8gotq38": "Mixed Roast with sausage, shank, pork neck and rabbit",
     "mo69j5b1uwp": "Grilled pork neck",
     "mo67hzucqmt": "House special dessert",
-    "mo6a9ojxhja": "Ricotta mousse with citrus fruits and lemon sauce"
+    "mo6a9ojxhja": "Ricotta mousse with citrus fruits and lemon sauce",
+    "mohaxdaa2wx": "Assorted Cheeses",
+    "mohapamzsdf": "Fresh pasta with Amatriciana Sauce",
+    "mohajvs4pzb": "Fresh pasta with leeks and bacon",
+    "mohazkpebcj": "Pici with Tuscan meat sauce",
+    "mohavjo1cxl": "Mixed Roast with pork, chicken, and sliced beef",
+    "mohatliymxm": "Cake with ricotta, pine nuts, and raisins"
   }
 }
