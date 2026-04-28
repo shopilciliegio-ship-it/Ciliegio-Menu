@@ -373,7 +373,7 @@ textarea{resize:vertical;min-height:72px}
       </div>
     </div>
     <div class="home-foot">TRADIZIONE · QUALITÀ · TERRITORIO</div>
-    <div style="text-align:center;font-size:13px;color:#666;letter-spacing:3px;margin-top:10px;font-family:'Cinzel',serif">v40</div>
+    <div style="text-align:center;font-size:11px;color:var(--white4,#444);letter-spacing:2px;margin-top:8px;font-family:'Cinzel',serif">v39</div>
   </div>
 </div>
 
@@ -2799,7 +2799,6 @@ function esportaMenuJPG(key){
   const btn=document.getElementById('jpgs-btn');
   btn.textContent='📸 Genera e Salva'; btn.disabled=false;
   btn.onclick=confermaSalvaMenuJPG;
-  closeOv('ov-mv'); // chiude "Vedi menù" prima di aprire il modal JPG
   openOv('ov-jpg-singolo');
 }
 
