@@ -1301,6 +1301,13 @@
       "portata": "primo",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mokc6n6i3gp",
+      "nome": "Tortino di pappa al pomodoro con stracciatella",
+      "portata": "antipasto",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -2213,6 +2220,20 @@
       },
       "testoLibero": "",
       "prezzo": 37,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-04-30_cena_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mokc6n6i3gp"
+        ],
+        "primo": [],
+        "secondo": [],
+        "contorno": [],
+        "dolce": []
+      },
+      "testoLibero": "",
+      "prezzo": null,
       "nomeSpecifico": "Menù del Sito"
     }
   },
