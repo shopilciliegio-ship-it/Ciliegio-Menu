@@ -177,8 +177,8 @@
     },
     {
       "id": "mnsq9hynf4r",
+      "nome": "Crostone con fagioli e cotiche",
       "portata": "antipasto",
-      "nome": "Crostone fagioli e cotiche",
       "extra": 0,
       "note": ""
     },
@@ -2225,7 +2225,9 @@
     "2026-04-30_cena_Menù del Sito": {
       "piatti": {
         "antipasto": [
-          "mokc6n6i3gp"
+          "mokc6n6i3gp",
+          "mnsq9hynqk0",
+          "mnsq9hynf4r"
         ],
         "primo": [],
         "secondo": [],
