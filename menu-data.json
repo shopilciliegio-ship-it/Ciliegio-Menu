@@ -1308,6 +1308,13 @@
       "portata": "antipasto",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mokc8ptmc8k",
+      "nome": "Polenta ripiena con cavolo nero e pecorino",
+      "portata": "antipasto",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -2227,7 +2234,9 @@
         "antipasto": [
           "mokc6n6i3gp",
           "mnsq9hynqk0",
-          "mnsq9hynf4r"
+          "mnsq9hynf4r",
+          "mnsq9hymfot",
+          "mokc8ptmc8k"
         ],
         "primo": [],
         "secondo": [],
