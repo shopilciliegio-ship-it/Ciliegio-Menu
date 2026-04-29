@@ -1315,6 +1315,13 @@
       "portata": "antipasto",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mokc9g0hwz1",
+      "nome": "Ravioli ripieni con stracotto e burro al timo",
+      "portata": "primo",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -2238,7 +2245,9 @@
           "mnsq9hymfot",
           "mokc8ptmc8k"
         ],
-        "primo": [],
+        "primo": [
+          "mokc9g0hwz1"
+        ],
         "secondo": [],
         "contorno": [],
         "dolce": []
