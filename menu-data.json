@@ -1378,6 +1378,13 @@
       "portata": "antipasto",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mor14tr4sik",
+      "nome": "Patè di fegatini e fighi secchi su granella di pane agli aromi",
+      "portata": "antipasto",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -2548,7 +2555,8 @@
           "mnsq9hynxni",
           "mnsq9hynsn7",
           "mor13kgqgpi",
-          "mor141006ha"
+          "mor141006ha",
+          "mor14tr4sik"
         ],
         "primo": [],
         "secondo": [],
