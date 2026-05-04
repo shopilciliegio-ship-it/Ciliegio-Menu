@@ -2544,18 +2544,6 @@
       "prezzo": 34,
       "nomeSpecifico": "Menù del Sito"
     },
-    "2026-05-09_cena_Menù del Sito": {
-      "piatti": {
-        "antipasto": [],
-        "primo": [],
-        "secondo": [],
-        "contorno": [],
-        "dolce": []
-      },
-      "testoLibero": "",
-      "prezzo": null,
-      "nomeSpecifico": "Menù del Sito"
-    },
     "2026-05-08_cena_Menù del Sito": {
       "piatti": {
         "antipasto": [
