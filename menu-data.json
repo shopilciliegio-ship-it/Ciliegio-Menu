@@ -1357,6 +1357,13 @@
       "portata": "antipasto",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mor11g73cdo",
+      "nome": "Arrosto con salsiccia, stinco, scamerita e pollo",
+      "portata": "secondo",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -2492,8 +2499,12 @@
           "mo687di42u2",
           "mor10ihk6oq"
         ],
-        "primo": [],
-        "secondo": [],
+        "primo": [
+          "mnsq9hynnla"
+        ],
+        "secondo": [
+          "mor11g73cdo"
+        ],
         "contorno": [],
         "dolce": []
       },
