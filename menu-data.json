@@ -1329,6 +1329,13 @@
       "portata": "contorno",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mor0p83svqy",
+      "nome": "Lasagne al ragù sudicio",
+      "portata": "primo",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -2312,6 +2319,22 @@
         "dolce": [
           "mnsq9hynccl"
         ]
+      },
+      "testoLibero": "",
+      "prezzo": null,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-05-04_cena_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo1xei4h6yo"
+        ],
+        "primo": [
+          "mor0p83svqy"
+        ],
+        "secondo": [],
+        "contorno": [],
+        "dolce": []
       },
       "testoLibero": "",
       "prezzo": null,
