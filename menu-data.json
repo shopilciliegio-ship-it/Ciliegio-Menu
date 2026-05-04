@@ -1336,6 +1336,13 @@
       "portata": "primo",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mor0q868kfb",
+      "nome": "Arrosto con stinco, fegatello, pollo e tagliata di manzo",
+      "portata": "secondo",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -2332,7 +2339,9 @@
         "primo": [
           "mor0p83svqy"
         ],
-        "secondo": [],
+        "secondo": [
+          "mor0q868kfb"
+        ],
         "contorno": [],
         "dolce": []
       },
