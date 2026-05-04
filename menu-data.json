@@ -2505,11 +2505,15 @@
         "secondo": [
           "mor11g73cdo"
         ],
-        "contorno": [],
-        "dolce": []
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
       },
       "testoLibero": "",
-      "prezzo": null,
+      "prezzo": 34,
       "nomeSpecifico": "Menù del Sito"
     }
   },
