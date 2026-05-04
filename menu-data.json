@@ -1350,6 +1350,13 @@
       "portata": "primo",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mor10ihk6oq",
+      "nome": "Insalatina con noci, pecorino e miele",
+      "portata": "antipasto",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -2475,6 +2482,24 @@
       "testoLibero": "",
       "prezzo": 35,
       "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-05-09_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hynkaz",
+          "mnsq9hymfot",
+          "mnsq9hynmjr",
+          "mo687di42u2",
+          "mor10ihk6oq"
+        ],
+        "primo": [],
+        "secondo": [],
+        "contorno": [],
+        "dolce": []
+      },
+      "testoLibero": "",
+      "prezzo": null,
+      "nomeSpecifico": "Menù del Sito"
     }
   },
   "prenotazioni": {
@@ -3102,6 +3127,12 @@
       "gruppi": []
     },
     "2026-05-08_cena": {
+      "gruppi": []
+    },
+    "2026-05-09_pranzo": {
+      "gruppi": []
+    },
+    "2026-05-09_cena": {
       "gruppi": []
     }
   },
