@@ -1371,6 +1371,13 @@
       "portata": "antipasto",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mor141006ha",
+      "nome": "Crostino con verdure miste",
+      "portata": "antipasto",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -2540,7 +2547,8 @@
         "antipasto": [
           "mnsq9hynxni",
           "mnsq9hynsn7",
-          "mor13kgqgpi"
+          "mor13kgqgpi",
+          "mor141006ha"
         ],
         "primo": [],
         "secondo": [],
