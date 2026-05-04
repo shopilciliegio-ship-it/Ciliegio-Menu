@@ -373,7 +373,7 @@ textarea{resize:vertical;min-height:72px}
       </div>
     </div>
     <div class="home-foot">TRADIZIONE · QUALITÀ · TERRITORIO</div>
-    <div style="text-align:center;font-size:11px;color:var(--white4,#444);letter-spacing:2px;margin-top:8px;font-family:'Cinzel',serif">v39</div>
+    <div style="text-align:center;font-size:13px;color:#666;letter-spacing:3px;margin-top:10px;font-family:'Cinzel',serif">v41</div>
   </div>
 </div>
 
@@ -590,6 +590,24 @@ textarea{resize:vertical;min-height:72px}
     <div class="flex">
       <button class="btn btn-gold" id="jpgs-btn" onclick="confermaSalvaMenuJPG()">📸 Genera e Salva</button>
       <button class="btn btn-ghost" onclick="closeOv('ov-jpg-singolo')">Annulla</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══ MODAL ERRORE SYNC ══ -->
+<div id="ov-sync-error" class="overlay hidden" style="z-index:9999">
+  <div class="modal" style="max-width:480px;text-align:center;border:2px solid #c0392b;background:#1a0a0a">
+    <div style="font-size:52px;margin-bottom:8px">⚠️</div>
+    <div style="font-family:'Cinzel',serif;font-size:20px;letter-spacing:2px;color:#e06060;margin-bottom:14px">ERRORE SINCRONIZZAZIONE</div>
+    <div style="font-size:16px;color:var(--white2);line-height:1.7;margin-bottom:20px">
+      Impossibile sincronizzare con GitHub.<br>
+      <strong style="color:#e06060">Le modifiche vengono salvate solo localmente</strong><br>
+      e potrebbero andare perse se chiudi la pagina.
+    </div>
+    <div style="font-size:14px;color:var(--white3);margin-bottom:22px">Controlla la connessione internet e le impostazioni GitHub nella topbar.</div>
+    <div style="display:flex;gap:12px;justify-content:center">
+      <button class="btn btn-gold" onclick="retrySyncFromError()">🔄 Riprova ora</button>
+      <button class="btn btn-ghost" onclick="closeOv('ov-sync-error')">Continua comunque</button>
     </div>
   </div>
 </div>
@@ -887,10 +905,11 @@ function getGhCfg(){
   return JSON.parse(localStorage.getItem('ghcfg')||'{}');
 }
 
+let _syncErrTimer=null;
 function setSyncStatus(state){
-  const el = document.getElementById('sync-status');
+  const el=document.getElementById('sync-status');
   if(!el) return;
-  const states = {
+  const states={
     ok:      {text:'✓ Sincronizzato',  color:'#6abc8a'},
     pending: {text:'… Salvataggio',    color:'#c9a84c'},
     saving:  {text:'⬆ GitHub…',        color:'#6a9fbc'},
@@ -898,9 +917,26 @@ function setSyncStatus(state){
     error:   {text:'✕ Errore sync',    color:'#e06060'},
     offline: {text:'● Locale',         color:'#888070'},
   };
-  const s = states[state] || states.offline;
-  el.textContent = s.text;
-  el.style.color = s.color;
+  const s=states[state]||states.offline;
+  el.textContent=s.text;
+  el.style.color=s.color;
+
+  // popup errore: mostra dopo 1.5s di errore persistente, nascondi su ok/loading
+  clearTimeout(_syncErrTimer);
+  if(state==='error'){
+    _syncErrTimer=setTimeout(()=>{
+      const ov=document.getElementById('ov-sync-error');
+      if(ov) ov.classList.remove('hidden');
+    }, 1500);
+  } else if(state==='ok'||state==='saving'||state==='loading'){
+    const ov=document.getElementById('ov-sync-error');
+    if(ov) ov.classList.add('hidden');
+  }
+}
+
+function retrySyncFromError(){
+  closeOv('ov-sync-error');
+  if(isGhConfigured()) autoSync();
 }
 
 async function autoSync(){
@@ -2799,6 +2835,7 @@ function esportaMenuJPG(key){
   const btn=document.getElementById('jpgs-btn');
   btn.textContent='📸 Genera e Salva'; btn.disabled=false;
   btn.onclick=confermaSalvaMenuJPG;
+  closeOv('ov-mv'); // chiude "Vedi menù" prima di aprire il modal JPG
   openOv('ov-jpg-singolo');
 }
 

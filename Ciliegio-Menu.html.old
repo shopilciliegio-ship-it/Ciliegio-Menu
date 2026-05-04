@@ -373,6 +373,7 @@ textarea{resize:vertical;min-height:72px}
       </div>
     </div>
     <div class="home-foot">TRADIZIONE · QUALITÀ · TERRITORIO</div>
+    <div style="text-align:center;font-size:13px;color:#666;letter-spacing:3px;margin-top:10px;font-family:'Cinzel',serif">v40</div>
   </div>
 </div>
 
@@ -568,6 +569,27 @@ textarea{resize:vertical;min-height:72px}
     <div class="flex">
       <button class="btn btn-gold" id="jpg-start-btn" onclick="avviaGeneraJPG()">✦ Genera immagini</button>
       <button class="btn btn-ghost" onclick="closeOv('ov-jpg')">Annulla</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══ MODAL ESPORTA JPG SINGOLO MENÙ ══ -->
+<div id="ov-jpg-singolo" class="overlay hidden">
+  <div class="modal" style="max-width:400px">
+    <button class="modal-close" onclick="closeOv('ov-jpg-singolo')">✕</button>
+    <div class="modal-title">📸 Salva JPG Menù</div>
+    <div id="jpgs-nome" style="color:var(--gold);font-size:15px;margin-bottom:18px;font-style:italic"></div>
+    <div class="form-group mb-16">
+      <label class="lbl">Salva su</label>
+      <select id="jpgs-mode">
+        <option value="download">💾 Download sul dispositivo</option>
+        <option value="github">☁ Carica su GitHub (immagini-sito/)</option>
+      </select>
+    </div>
+    <div id="jpgs-status" style="display:none;color:var(--white3);font-size:14px;margin-bottom:12px"></div>
+    <div class="flex">
+      <button class="btn btn-gold" id="jpgs-btn" onclick="confermaSalvaMenuJPG()">📸 Genera e Salva</button>
+      <button class="btn btn-ghost" onclick="closeOv('ov-jpg-singolo')">Annulla</button>
     </div>
   </div>
 </div>
@@ -1632,7 +1654,7 @@ function viewMenu(key){
   let html=`<div class="modal-title">Menù ${pk.nome||'del Sito'} — ${dt.giornoLungo} — ${cap(pk.serv)}</div>`;
   html+=`<div class="flex mb-16">
     <button class="btn btn-gold btn-sm" onclick="editMenuFromCal('${pk.data}','${pk.serv}','${pk.nome}');closeOv('ov-mv')">✏ Modifica</button>
-    <button class="btn btn-dark btn-sm" onclick="apriStampaConKey('${key}');closeOv('ov-mv')">🖨 Stampa</button>
+    <button class="btn btn-dark btn-sm" onclick="esportaMenuJPG('${key}')">📸 Salva JPG</button>
     <button class="btn btn-teal btn-sm" onclick="openAccoda('${dsFromKey(key)}','${key}');closeOv('ov-mv')">+ Accoda prenotazione</button>
     <button class="btn btn-danger btn-sm" onclick="if(confirm('Eliminare?')){delete DB.menu['${key}'];saveDB();closeOv('ov-mv');renderCal()}">Elimina</button>
   </div>`;
@@ -2753,6 +2775,64 @@ async function renderMenuJPGEN(mKey){
   ct(`AVAILABLE ON REQUEST  ·  CHILDREN'S MENU  ·  € ${pBimbi.toFixed(2).replace('.',',')}`,bY+48,`11px 'Nunito',Candara,sans-serif`,accent,W-80);
 
   return cv;
+}
+
+// ── Esporta JPG singolo menù da "Vedi" ──
+let _jpgSingoloKey=null;
+
+function getJPGFileNameSingolo(dateStr, serv){
+  // formato: 2026.04.23.giovedì.cena.jpg
+  const dt=parseDate(dateStr);
+  const d=String(dt.d).padStart(2,'0');
+  const m=String(dt.m).padStart(2,'0');
+  const giorno=dt.dayOfWeek.toLowerCase();
+  return `${dt.y}.${m}.${d}.${giorno}.${serv}.jpg`;
+}
+
+function esportaMenuJPG(key){
+  _jpgSingoloKey=key;
+  const pk=parseKey(key);
+  const dt=parseDate(pk.data);
+  document.getElementById('jpgs-nome').textContent=
+    `${pk.nome||'Menù del Sito'} — ${dt.giornoLungo} — ${cap(pk.serv)}`;
+  document.getElementById('jpgs-status').style.display='none';
+  const btn=document.getElementById('jpgs-btn');
+  btn.textContent='📸 Genera e Salva'; btn.disabled=false;
+  btn.onclick=confermaSalvaMenuJPG;
+  closeOv('ov-mv'); // chiude "Vedi menù" prima di aprire il modal JPG
+  openOv('ov-jpg-singolo');
+}
+
+async function confermaSalvaMenuJPG(){
+  if(!_jpgSingoloKey) return;
+  const mode=document.getElementById('jpgs-mode').value;
+  const btn=document.getElementById('jpgs-btn');
+  const status=document.getElementById('jpgs-status');
+  btn.disabled=true; btn.textContent='Generazione…';
+  status.style.display='block'; status.textContent='Rendering JPG…';
+  try{
+    const canvas=await renderMenuJPG(_jpgSingoloKey);
+    if(!canvas){status.textContent='Errore: menù vuoto.';btn.disabled=false;return;}
+    const b64=setJPEGDPI(canvas.toDataURL('image/jpeg',0.92).split(',')[1],300);
+    const pk=parseKey(_jpgSingoloKey);
+    const fname=getJPGFileNameSingolo(pk.data,pk.serv);
+    if(mode==='github'){
+      status.textContent='Caricamento su GitHub…';
+      await uploadJPGGitHub(b64,fname);
+      status.textContent=`✓ Caricato: ${fname}`;
+    } else {
+      const el=document.createElement('a');
+      el.href='data:image/jpeg;base64,'+b64;
+      el.download=fname; el.click();
+      status.textContent=`✓ Download: ${fname}`;
+    }
+    btn.textContent='✓ Fatto!';
+    btn.onclick=()=>closeOv('ov-jpg-singolo');
+    btn.disabled=false;
+  }catch(e){
+    status.textContent='Errore durante la generazione.';
+    console.error(e); btn.disabled=false; btn.textContent='📸 Riprova';
+  }
 }
 
 init();
