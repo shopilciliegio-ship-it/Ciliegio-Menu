@@ -1385,6 +1385,13 @@
       "portata": "antipasto",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mor15m5spw4",
+      "nome": "Pappardelle con crema di zucchine, briciole di pane e guanciale",
+      "portata": "primo",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -2558,7 +2565,9 @@
           "mor141006ha",
           "mor14tr4sik"
         ],
-        "primo": [],
+        "primo": [
+          "mor15m5spw4"
+        ],
         "secondo": [],
         "contorno": [],
         "dolce": []
