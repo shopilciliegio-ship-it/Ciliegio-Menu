@@ -1343,6 +1343,13 @@
       "portata": "secondo",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mor0xlkqoe0",
+      "nome": "Tagliatelle al ragù di cinghiale",
+      "portata": "primo",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -2444,6 +2451,23 @@
       },
       "testoLibero": "",
       "prezzo": 30,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-05-05_cena_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo68jqekj3x"
+        ],
+        "primo": [
+          "mnsq9hynhyk",
+          "mor0xlkqoe0"
+        ],
+        "secondo": [],
+        "contorno": [],
+        "dolce": []
+      },
+      "testoLibero": "",
+      "prezzo": null,
       "nomeSpecifico": "Menù del Sito"
     }
   },
