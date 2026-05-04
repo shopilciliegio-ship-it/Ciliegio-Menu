@@ -1364,6 +1364,13 @@
       "portata": "secondo",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mor13kgqgpi",
+      "nome": "Tortino di stagione",
+      "portata": "antipasto",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -2514,6 +2521,34 @@
       },
       "testoLibero": "",
       "prezzo": 34,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-05-09_cena_Menù del Sito": {
+      "piatti": {
+        "antipasto": [],
+        "primo": [],
+        "secondo": [],
+        "contorno": [],
+        "dolce": []
+      },
+      "testoLibero": "",
+      "prezzo": null,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-05-08_cena_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hynxni",
+          "mnsq9hynsn7",
+          "mor13kgqgpi"
+        ],
+        "primo": [],
+        "secondo": [],
+        "contorno": [],
+        "dolce": []
+      },
+      "testoLibero": "",
+      "prezzo": null,
       "nomeSpecifico": "Menù del Sito"
     }
   },
