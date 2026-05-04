@@ -2342,11 +2342,16 @@
         "secondo": [
           "mor0q868kfb"
         ],
-        "contorno": [],
-        "dolce": []
+        "contorno": [
+          "mnsq9hynayz",
+          "mnsq9hynkgr"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
       },
       "testoLibero": "",
-      "prezzo": null,
+      "prezzo": 35,
       "nomeSpecifico": "Menù del Sito"
     }
   },
