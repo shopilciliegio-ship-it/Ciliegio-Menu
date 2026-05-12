@@ -2710,14 +2710,21 @@
           "mnsq9hyneqw"
         ],
         "primo": [
-          "mp33amhtkmk"
+          "mp33amhtkmk",
+          "mo1waims7of"
         ],
-        "secondo": [],
-        "contorno": [],
-        "dolce": []
+        "secondo": [
+          "mnsq9hyn0ay"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
       },
       "testoLibero": "",
-      "prezzo": null,
+      "prezzo": 36,
       "nomeSpecifico": "Menù del Sito"
     }
   },
