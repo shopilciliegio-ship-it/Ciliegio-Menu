@@ -1399,6 +1399,13 @@
       "portata": "primo",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mp33amhtkmk",
+      "nome": "Risotto salsiccia e verdure",
+      "portata": "primo",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -2691,6 +2698,26 @@
       },
       "testoLibero": "",
       "prezzo": 36,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-05-16_cena_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hynqk0",
+          "mnsq9hymmle",
+          "mnsq9hyno6u",
+          "mnsq9hynuwh",
+          "mnsq9hyneqw"
+        ],
+        "primo": [
+          "mp33amhtkmk"
+        ],
+        "secondo": [],
+        "contorno": [],
+        "dolce": []
+      },
+      "testoLibero": "",
+      "prezzo": null,
       "nomeSpecifico": "Menù del Sito"
     }
   },
