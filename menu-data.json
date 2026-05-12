@@ -2652,12 +2652,18 @@
         "primo": [
           "mp336q0pxa8"
         ],
-        "secondo": [],
-        "contorno": [],
-        "dolce": []
+        "secondo": [
+          "mnsq9hyn4sj"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mnsq9hyntti"
+        ]
       },
       "testoLibero": "",
-      "prezzo": null,
+      "prezzo": 25,
       "nomeSpecifico": "Menù del Sito"
     }
   },
