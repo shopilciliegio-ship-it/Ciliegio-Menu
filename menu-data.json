@@ -2570,6 +2570,28 @@
       "testoLibero": "",
       "prezzo": 35,
       "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-05-12_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo68jqekj3x"
+        ],
+        "primo": [
+          "mo76cwvebr1"
+        ],
+        "secondo": [
+          "mnsq9hyncpy"
+        ],
+        "contorno": [
+          "mnsq9hync5b"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 30,
+      "nomeSpecifico": "Menù del Sito"
     }
   },
   "prenotazioni": {
@@ -3203,6 +3225,18 @@
       "gruppi": []
     },
     "2026-05-09_cena": {
+      "gruppi": []
+    },
+    "2026-05-11_pranzo": {
+      "gruppi": []
+    },
+    "2026-05-11_cena": {
+      "gruppi": []
+    },
+    "2026-05-12_pranzo": {
+      "gruppi": []
+    },
+    "2026-05-12_cena": {
       "gruppi": []
     }
   },
