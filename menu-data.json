@@ -2745,15 +2745,18 @@
         ],
         "primo": [
           "mnsq9hynlob",
-          "mnsq9hyn45j",
           "mp33ctnko72"
         ],
-        "secondo": [],
-        "contorno": [],
+        "secondo": [
+          "mnsq9hyncpy"
+        ],
+        "contorno": [
+          "mnsq9hynelb"
+        ],
         "dolce": []
       },
       "testoLibero": "",
-      "prezzo": null,
+      "prezzo": 35,
       "nomeSpecifico": "Menù del Sito"
     }
   },
