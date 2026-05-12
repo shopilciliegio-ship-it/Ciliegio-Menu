@@ -1406,6 +1406,13 @@
       "portata": "primo",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mp33ctnko72",
+      "nome": "Pappardelle con pesto e pomodorini",
+      "portata": "primo",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -2726,6 +2733,28 @@
       "testoLibero": "",
       "prezzo": 36,
       "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-05-17_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hynmjr",
+          "mnsq9hyneqw",
+          "mnsq9hynqk0",
+          "mo1w8xtm5r2",
+          "mnsq9hynf3u"
+        ],
+        "primo": [
+          "mnsq9hynlob",
+          "mnsq9hyn45j",
+          "mp33ctnko72"
+        ],
+        "secondo": [],
+        "contorno": [],
+        "dolce": []
+      },
+      "testoLibero": "",
+      "prezzo": null,
+      "nomeSpecifico": "Menù del Sito"
     }
   },
   "prenotazioni": {
@@ -3389,6 +3418,12 @@
       "gruppi": []
     },
     "2026-05-16_cena": {
+      "gruppi": []
+    },
+    "2026-05-17_pranzo": {
+      "gruppi": []
+    },
+    "2026-05-17_cena": {
       "gruppi": []
     }
   },
