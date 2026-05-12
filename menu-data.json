@@ -1413,6 +1413,13 @@
       "portata": "primo",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mp33p0xskfv",
+      "nome": "Pici al ragù di cortile",
+      "portata": "primo",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -2943,6 +2950,22 @@
       "testoLibero": "",
       "prezzo": 30,
       "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-05-23_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo68jqekj3x"
+        ],
+        "primo": [
+          "mp33p0xskfv"
+        ],
+        "secondo": [],
+        "contorno": [],
+        "dolce": []
+      },
+      "testoLibero": "",
+      "prezzo": null,
+      "nomeSpecifico": "Menù del Sito"
     }
   },
   "prenotazioni": {
@@ -3648,6 +3671,12 @@
       "gruppi": []
     },
     "2026-05-22_cena": {
+      "gruppi": []
+    },
+    "2026-05-23_pranzo": {
+      "gruppi": []
+    },
+    "2026-05-23_cena": {
       "gruppi": []
     }
   },
