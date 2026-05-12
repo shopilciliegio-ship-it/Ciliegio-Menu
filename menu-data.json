@@ -1392,6 +1392,13 @@
       "portata": "primo",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mp336q0pxa8",
+      "nome": "Pici alla carbonara",
+      "portata": "primo",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -2635,6 +2642,22 @@
       },
       "testoLibero": "",
       "prezzo": 32,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-05-14_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo68jqekj3x"
+        ],
+        "primo": [
+          "mp336q0pxa8"
+        ],
+        "secondo": [],
+        "contorno": [],
+        "dolce": []
+      },
+      "testoLibero": "",
+      "prezzo": null,
       "nomeSpecifico": "Menù del Sito"
     }
   },
