@@ -2626,11 +2626,15 @@
         "secondo": [
           "mnsq9hynvd0"
         ],
-        "contorno": [],
-        "dolce": []
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
       },
       "testoLibero": "",
-      "prezzo": null,
+      "prezzo": 32,
       "nomeSpecifico": "Menù del Sito"
     }
   },
