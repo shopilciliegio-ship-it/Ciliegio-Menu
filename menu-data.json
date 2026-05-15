@@ -3040,6 +3040,28 @@
       "testoLibero": "",
       "prezzo": 38,
       "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-05-31_pranzo_VIAGGI IN COMPAGNIA": {
+      "piatti": {
+        "antipasto": [
+          "mo1xei4h6yo"
+        ],
+        "primo": [
+          "mo68pp64giu"
+        ],
+        "secondo": [
+          "mnsq9hynxpi"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 22,
+      "nomeSpecifico": "VIAGGI IN COMPAGNIA"
     }
   },
   "prenotazioni": {
