@@ -3894,6 +3894,28 @@
           "caparraStato": "attesa",
           "caparraImporto": 120,
           "caparraNota": null
+        },
+        {
+          "nome": "TOMEI SARA",
+          "orario": "13:00",
+          "sala": "",
+          "pax": 25,
+          "gratuiti": 0,
+          "bambini": 0,
+          "seggiolini": 0,
+          "contattoNome": "",
+          "contattoTel": "3397981288",
+          "note": "",
+          "intolleranze": null,
+          "modifiche": "NO CONIGLIO -> CINGHIALE",
+          "menuKey": "2026-05-31_pranzo_Menù del Sito",
+          "prezzoSpeciale": null,
+          "dolce": false,
+          "daConfermare": false,
+          "caparraNecessaria": false,
+          "caparraStato": null,
+          "caparraImporto": null,
+          "caparraNota": null
         }
       ]
     },
