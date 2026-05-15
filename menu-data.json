@@ -3756,14 +3756,14 @@
     "2026-05-31_pranzo": {
       "gruppi": [
         {
-          "nome": "TANIA MASCAGNI",
+          "nome": "TANIA",
           "orario": "13:00",
-          "sala": "piccola",
+          "sala": "",
           "pax": 14,
           "gratuiti": 0,
           "bambini": 0,
           "seggiolini": 0,
-          "contattoNome": "TANIA",
+          "contattoNome": "",
           "contattoTel": "3494548249",
           "note": "TAVOLO PER BOMBONIERE",
           "intolleranze": {
