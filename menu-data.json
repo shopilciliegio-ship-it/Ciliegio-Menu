@@ -3872,6 +3872,28 @@
           "caparraStato": "pagata",
           "caparraImporto": 280,
           "caparraNota": "PAGATA CONTANTI 15/05"
+        },
+        {
+          "nome": "FRANCESCA TORSOLI",
+          "orario": "13:00",
+          "sala": "",
+          "pax": 12,
+          "gratuiti": 0,
+          "bambini": 0,
+          "seggiolini": 0,
+          "contattoNome": "",
+          "contattoTel": "",
+          "note": "",
+          "intolleranze": null,
+          "modifiche": "",
+          "menuKey": "2026-05-31_pranzo_Menù del Sito",
+          "prezzoSpeciale": null,
+          "dolce": false,
+          "daConfermare": true,
+          "caparraNecessaria": true,
+          "caparraStato": "attesa",
+          "caparraImporto": 120,
+          "caparraNota": null
         }
       ]
     },
