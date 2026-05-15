@@ -3825,6 +3825,28 @@
           "caparraStato": "pagata",
           "caparraImporto": 200,
           "caparraNota": "PAGATA POS 15/05"
+        },
+        {
+          "nome": "ACETO ANNARITA",
+          "orario": "13:00",
+          "sala": "",
+          "pax": 12,
+          "gratuiti": 0,
+          "bambini": 2,
+          "seggiolini": 2,
+          "contattoNome": "",
+          "contattoTel": "",
+          "note": "",
+          "intolleranze": null,
+          "modifiche": "",
+          "menuKey": "2026-05-31_pranzo_Menù del Sito",
+          "prezzoSpeciale": null,
+          "dolce": false,
+          "daConfermare": false,
+          "caparraNecessaria": true,
+          "caparraStato": "pagata",
+          "caparraImporto": 100,
+          "caparraNota": "PAGATA CONTANTI 15/05"
         }
       ]
     },
