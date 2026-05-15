@@ -3779,6 +3779,28 @@
           "caparraStato": "pagata",
           "caparraImporto": 150,
           "caparraNota": "PAGATA IL 12/05"
+        },
+        {
+          "nome": "MARCECA",
+          "orario": "13:00",
+          "sala": "grande",
+          "pax": 60,
+          "gratuiti": 0,
+          "bambini": 0,
+          "seggiolini": 0,
+          "contattoNome": "",
+          "contattoTel": "",
+          "note": "",
+          "intolleranze": null,
+          "modifiche": "NO FEGATINI -> BRUSCHETTA POMODORINI E BASILICO\nNO LAMPREDOTTO -> TORTINO PAPPA AL POMODORO\nNO RISOTTO -> PAPPARDELLE AL RAGù DI CINGHIALE",
+          "menuKey": "2026-05-31_pranzo_Menù del Sito",
+          "prezzoSpeciale": 30,
+          "dolce": false,
+          "daConfermare": false,
+          "caparraNecessaria": true,
+          "caparraStato": "pagata",
+          "caparraImporto": 400,
+          "caparraNota": "PAGATA IL 15/05  IN CONTANTI"
         }
       ]
     },
