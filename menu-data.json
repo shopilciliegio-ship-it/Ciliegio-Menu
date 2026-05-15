@@ -3801,6 +3801,30 @@
           "caparraStato": "pagata",
           "caparraImporto": 400,
           "caparraNota": "PAGATA IL 15/05  IN CONTANTI"
+        },
+        {
+          "nome": "CARLO DEMMA",
+          "orario": "13:00",
+          "sala": "veranda",
+          "pax": 25,
+          "gratuiti": 0,
+          "bambini": 0,
+          "seggiolini": 0,
+          "contattoNome": "",
+          "contattoTel": "3451743843",
+          "note": "1 TAVOLO BOMBONIERE +PALLONCINI E COLONNE A TERRA",
+          "intolleranze": {
+            "vegetariano": 3
+          },
+          "modifiche": "NO STRACOTTO -> TAGLIATA",
+          "menuKey": "2026-05-31_pranzo_Menù del Sito",
+          "prezzoSpeciale": null,
+          "dolce": false,
+          "daConfermare": false,
+          "caparraNecessaria": true,
+          "caparraStato": "pagata",
+          "caparraImporto": 200,
+          "caparraNota": "PAGATA POS 15/05"
         }
       ]
     },
