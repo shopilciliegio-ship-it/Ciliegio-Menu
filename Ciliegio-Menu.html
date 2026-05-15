@@ -43,6 +43,20 @@ html,body{height:100%;background:var(--bg);color:var(--white);font-family:'Nunit
 
 /* ── PWA / MOBILE SAFE AREA ── */
 body{padding-top:env(safe-area-inset-top,0px)}
+/* ── OPERATORE ── */
+.op-day-hd{background:var(--bg3);border-radius:var(--r);padding:14px 18px;margin-bottom:18px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.op-day-title{font-family:'Cinzel',serif;font-size:20px;letter-spacing:1px;color:var(--gold);flex:1}
+.op-tab-bar{display:flex;gap:0;border-bottom:2px solid var(--border);margin-bottom:18px}
+.op-tab{padding:10px 28px;font-family:'Cinzel',serif;font-size:13px;letter-spacing:1.5px;cursor:pointer;color:var(--white3);border-bottom:3px solid transparent;margin-bottom:-2px;background:none;border-top:none;border-left:none;border-right:none;transition:all .15s}
+.op-tab.active{color:var(--gold);border-bottom-color:var(--gold)}
+.carta-chip{display:inline-flex;align-items:center;gap:6px;background:var(--bg3);border:1px solid var(--border2);border-radius:20px;padding:5px 12px;font-size:15px;color:var(--white2)}
+.carta-chip.sel{background:#1a2e0a;border-color:var(--green2);color:var(--green2)}
+.op-ordine-card{background:var(--bg3);border:1px solid var(--border);border-radius:var(--r);padding:12px 16px;margin-bottom:10px;display:flex;align-items:flex-start;gap:12px}
+.op-ordine-nome{font-family:'Cinzel',serif;font-size:16px;color:var(--gold);margin-bottom:4px}
+.op-ordine-det{font-size:14px;color:var(--white3)}
+.qty-ctrl{display:flex;align-items:center;gap:8px}
+.qty-btn{width:30px;height:30px;border-radius:50%;border:1px solid var(--border2);background:var(--bg3);color:var(--white);font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1}
+.qty-val{font-size:16px;font-weight:700;min-width:24px;text-align:center;color:var(--white)}
 /* ─── TOPBAR ─── */
 .topbar{
   background:var(--bg2);border-bottom:1px solid var(--border);
@@ -387,6 +401,13 @@ textarea{resize:vertical;min-height:72px}
           <span class="hcd">Crea le immagini dei menù del giorno da pubblicare online — 650×919 px, 300 dpi</span>
         </div>
       </div>
+      <div class="hcard-wide" onclick="navTo('operatore')" style="border-color:#6a2a10;background:linear-gradient(135deg,var(--bg2),#1a0a05)">
+        <span class="hci">🧑‍🍳</span>
+        <div class="hw-text">
+          <span class="hcl" style="color:#e07040">Operatore</span>
+          <span class="hcd">Gestione tavoli, ordini e comande — modalità servizio</span>
+        </div>
+      </div>
     </div>
     <div class="home-foot">TRADIZIONE · QUALITÀ · TERRITORIO</div>
 
@@ -397,7 +418,7 @@ textarea{resize:vertical;min-height:72px}
       <button class="btn btn-ghost btn-sm" onclick="document.getElementById('imp').click()" style="padding:6px 16px">📂 Importa backup</button>
     </div>
 
-    <div style="text-align:center;font-size:13px;color:#666;letter-spacing:3px;margin-top:12px;font-family:'Cinzel',serif">v50</div>
+    <div style="text-align:center;font-size:13px;color:#666;letter-spacing:3px;margin-top:12px;font-family:'Cinzel',serif">v51</div>
   </div>
 </div>
 
@@ -547,7 +568,87 @@ textarea{resize:vertical;min-height:72px}
   </div>
 </div>
 
+<!-- ══ PAGE OPERATORE — CALENDARIO ══ -->
+<div id="page-operatore" class="page">
+  <div class="content">
+    <div class="sec-title" style="margin-bottom:16px">🧑‍🍳 Operatore — Scegli il giorno</div>
+    <div class="cal-nav">
+      <button class="btn btn-ghost btn-sm" onclick="opCalPrev()">‹</button>
+      <span id="op-cal-title" style="font-family:'Cinzel',serif;font-size:16px;color:var(--gold);margin:0 12px"></span>
+      <button class="btn btn-ghost btn-sm" onclick="opCalNext()">›</button>
+    </div>
+    <div id="op-cal-grid" class="cal-grid" style="margin-top:14px"></div>
+  </div>
+</div>
+
+<!-- ══ PAGE OPERATORE — GIORNO ══ -->
+<div id="page-op-giorno" class="page">
+  <div class="content">
+    <div class="op-day-hd">
+      <button class="btn btn-ghost btn-sm" onclick="navTo('operatore');renderCalOp()">← Calendario</button>
+      <span class="op-day-title" id="op-giorno-title"></span>
+      <button class="btn btn-gold btn-sm" onclick="apriNuovoTavolo()">+ Nuovo Tavolo</button>
+    </div>
+    <div class="op-tab-bar">
+      <button class="op-tab active" id="op-tab-pranzo" onclick="setOpServ('pranzo')">🌿 Pranzo</button>
+      <button class="op-tab" id="op-tab-cena" onclick="setOpServ('cena')">🌙 Cena</button>
+    </div>
+    <div id="op-giorno-body"></div>
+  </div>
+</div>
+
 </div><!-- /app -->
+
+<!-- ══ MODAL NUOVO TAVOLO ══ -->
+<div id="ov-op-tavolo" class="overlay hidden">
+  <div class="modal" style="max-width:560px">
+    <button class="modal-close" onclick="closeOv('ov-op-tavolo')">✕</button>
+    <div class="modal-title">🍽 Ordine Tavolo</div>
+    <input type="hidden" id="op-dskey">
+    <div class="form-row">
+      <div class="form-group">
+        <label class="lbl">Nome tavolo</label>
+        <input type="text" id="op-nome-tavolo" autocomplete="off" placeholder="es: Tavolo 3, Terrazza, Rossi…">
+      </div>
+      <div class="form-group" style="max-width:120px">
+        <label class="lbl">Orario</label>
+        <input type="time" id="op-orario-tavolo">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group"><label class="lbl">Adulti</label><input type="number" id="op-adulti" min="0" placeholder="0" oninput="aggiornaRiepilogoOrdine()"></div>
+      <div class="form-group"><label class="lbl">Bambini</label><input type="number" id="op-bambini" min="0" placeholder="0" oninput="aggiornaRiepilogoOrdine()"></div>
+      <div class="form-group">
+        <label class="lbl">Menù completi</label>
+        <input type="number" id="op-menu-completi" min="0" placeholder="0" oninput="aggiornaRiepilogoOrdine()">
+      </div>
+    </div>
+    <div style="margin-bottom:14px">
+      <label class="lbl" style="margin-bottom:8px;display:block">Piatti alla carta</label>
+      <div id="op-carta-ordine" style="max-height:240px;overflow-y:auto;border:1px solid var(--border);border-radius:var(--r);padding:8px"></div>
+    </div>
+    <div id="op-riepilogo" style="background:var(--bg3);border:1px solid var(--border2);border-radius:var(--r);padding:10px 14px;margin-bottom:16px;font-size:15px;color:var(--white2)">—</div>
+    <div class="flex">
+      <button class="btn btn-gold" onclick="stampaComanda()">🖨 Stampa Comanda</button>
+      <button class="btn btn-ghost" onclick="salvaOrdine(false)">💾 Solo salva</button>
+      <button class="btn btn-ghost" onclick="closeOv('ov-op-tavolo')">Annulla</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══ MODAL CARTA DEL GIORNO ══ -->
+<div id="ov-op-carta" class="overlay hidden">
+  <div class="modal" style="max-width:560px">
+    <button class="modal-close" onclick="closeOv('ov-op-carta')">✕</button>
+    <div class="modal-title">🍽 Carta del Giorno</div>
+    <p class="text-muted mb-12">Seleziona i piatti disponibili alla carta per questo giorno. Puoi modificarli in qualsiasi momento.</p>
+    <div id="op-carta-sel" style="max-height:400px;overflow-y:auto"></div>
+    <div class="flex" style="margin-top:16px">
+      <button class="btn btn-gold" onclick="salvaCarta()">✓ Salva</button>
+      <button class="btn btn-ghost" onclick="closeOv('ov-op-carta')">Chiudi</button>
+    </div>
+  </div>
+</div>
 
 <!-- ══ MODAL JPG SITO ══ -->
 <div id="ov-jpg" class="overlay hidden">
@@ -883,9 +984,9 @@ textarea{resize:vertical;min-height:72px}
 //   - Accoda prenotazione: aggiunge un gruppo a DB.prenotazioni["data_serv"]
 //     collegato a un menuKey esistente (può usare il menù generale o uno specifico)
 
-let DB = { piatti:[], menu:{}, prenotazioni:{}, noteGiorno:{}, traduzioni:{} };
-// noteGiorno["YYYY-MM-DD"] = "testo nota"
-// traduzioni[piattoId] = "english name"
+let DB = { piatti:[], menu:{}, prenotazioni:{}, noteGiorno:{}, traduzioni:{}, cartaDelGiorno:{}, tavoli:{} };
+// cartaDelGiorno["YYYY-MM-DD"] = [piattoId, ...]
+// tavoli["YYYY-MM-DD_serv"] = [{nome,adulti,bambini,menuCompleti,piatti:[{id,qty}],orario,ts}]
 let calYear, calMonth;
 let editingPiattoId = null;
 let currentMenuKey = null;
@@ -1142,6 +1243,8 @@ function navTo(name, btn){
   if(name==='piatti'){ renderPiatti(); aggiornaBadgeTraduzione(); }
   if(name==='cal') renderCal();
   if(name==='stampa'){ document.getElementById('s-data').value=new Date().toISOString().split('T')[0]; }
+  if(name==='operatore') renderCalOp();
+  if(name==='op-giorno') renderGiornoOp();
 }
 
 function openOv(id){ document.getElementById(id).classList.remove('hidden'); }
@@ -3089,6 +3192,371 @@ async function confermaSalvaMenuJPG(){
     status.textContent='Errore durante la generazione.';
     console.error(e); btn.disabled=false; btn.textContent='📸 Riprova';
   }
+}
+
+// ══════════════════════════════════════════════════════
+// MODULO OPERATORE
+// ══════════════════════════════════════════════════════
+
+let opYear=new Date().getFullYear(), opMonth=new Date().getMonth();
+let opDateStr='', opServ='pranzo';
+let opOrdineCorrente={}; // {id?, nome, adulti, bambini, menuCompleti, piatti:[{id,qty}], orario}
+
+// ── CALENDARIO OPERATORE ──
+function opCalPrev(){ opMonth--; if(opMonth<0){opMonth=11;opYear--;} renderCalOp(); }
+function opCalNext(){ opMonth++; if(opMonth>11){opMonth=0;opYear++;} renderCalOp(); }
+
+function renderCalOp(){
+  document.getElementById('op-cal-title').textContent=`${MESI_L[opMonth]} ${opYear}`;
+  const wrap=document.getElementById('op-cal-grid');
+  wrap.innerHTML='';
+  ['Lun','Mar','Mer','Gio','Ven','Sab','Dom'].forEach(d=>{
+    const el=document.createElement('div'); el.className='cal-dow'; el.textContent=d; wrap.appendChild(el);
+  });
+  const first=new Date(opYear,opMonth,1);
+  const startDow=(first.getDay()+6)%7;
+  const daysInMonth=new Date(opYear,opMonth+1,0).getDate();
+  const today=new Date().toISOString().split('T')[0];
+  const prevDays=new Date(opYear,opMonth,0).getDate();
+
+  function buildOpCell(dateObj, isOther){
+    const y=dateObj.getFullYear(),m=dateObj.getMonth(),d=dateObj.getDate();
+    const ds=`${y}-${String(m+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+    const el=document.createElement('div');
+    el.className='cal-day'+(isOther?' other-month':'')+(ds===today?' today':'');
+    const nTavoli=['pranzo','cena'].reduce((s,sv)=>s+((DB.tavoli[ds+'_'+sv]||[]).length),0);
+    const nCarta=(DB.cartaDelGiorno[ds]||[]).length;
+    let html=`<div class="cal-dn">${d}</div>`;
+    if(nTavoli>0) html+=`<div style="font-size:11px;color:var(--gold);text-align:center;margin-top:2px">${nTavoli} tavol${nTavoli===1?'o':'i'}</div>`;
+    if(nCarta>0) html+=`<div style="font-size:10px;color:var(--white3);text-align:center">${nCarta} alla carta</div>`;
+    el.innerHTML=html;
+    el.addEventListener('click',()=>apriGiornoOp(ds));
+    wrap.appendChild(el);
+  }
+
+  for(let i=startDow-1;i>=0;i--) buildOpCell(new Date(opYear,opMonth-1,prevDays-i),true);
+  for(let d=1;d<=daysInMonth;d++) buildOpCell(new Date(opYear,opMonth,d),false);
+  const rem=(startDow+daysInMonth)%7; if(rem>0) for(let i=1;i<=7-rem;i++) buildOpCell(new Date(opYear,opMonth+1,i),true);
+}
+
+function apriGiornoOp(dateStr){
+  opDateStr=dateStr;
+  const dt=parseDate(dateStr);
+  document.getElementById('op-giorno-title').textContent=`${dt.giornoLungo}`;
+  setOpServ('pranzo');
+  navTo('op-giorno');
+}
+
+function setOpServ(serv){
+  opServ=serv;
+  document.getElementById('op-tab-pranzo').classList.toggle('active',serv==='pranzo');
+  document.getElementById('op-tab-cena').classList.toggle('active',serv==='cena');
+  renderGiornoOp();
+}
+
+function renderGiornoOp(){
+  if(!opDateStr) return;
+  const dsKey=`${opDateStr}_${opServ}`;
+  const box=document.getElementById('op-giorno-body');
+  const menu=Object.values(DB.menu).find(m=>{
+    const k=Object.keys(DB.menu).find(kk=>DB.menu[kk]===m);
+    return k&&k.startsWith(dsKey);
+  });
+  const menuKey=Object.keys(DB.menu).find(k=>k.startsWith(dsKey));
+  const carta=DB.cartaDelGiorno[opDateStr]||[];
+  const tavoli=DB.tavoli[dsKey]||[];
+
+  let html='';
+
+  // MENU DEL GIORNO
+  html+=`<div style="margin-bottom:20px">
+    <div style="font-family:'Cinzel',serif;font-size:13px;letter-spacing:2px;color:var(--gold);border-bottom:1px solid var(--border);padding-bottom:6px;margin-bottom:10px">MENÙ DEL GIORNO</div>`;
+  if(menuKey){
+    const pk=parseKey(menuKey);
+    const m=DB.menu[menuKey];
+    html+=`<div style="background:var(--bg3);border-radius:var(--r);padding:12px 16px;margin-bottom:8px">
+      <div style="font-family:'Cinzel',serif;font-size:15px;color:var(--white)">${pk.nome||'Menù del Sito'}${m.prezzo!=null?` — <span style="color:var(--gold)">€${m.prezzo}</span>`:''}</div>`;
+    PORTATE.forEach(p=>{
+      const ids=m.piatti[p.id]||[];
+      if(!ids.length)return;
+      const nomi=ids.map(id=>{const pi=DB.piatti.find(x=>x.id===id);return pi?pi.nome:'?';}).join(', ');
+      html+=`<div style="font-size:13px;color:var(--white3);margin-top:4px"><span style="color:var(--gold-dim);font-size:11px;letter-spacing:1px;font-family:'Cinzel',serif">${p.label} </span>${nomi}</div>`;
+    });
+    html+=`</div>`;
+  } else {
+    html+=`<div class="empty">Nessun menù del giorno per questo servizio.</div>`;
+  }
+  html+=`</div>`;
+
+  // CARTA DEL GIORNO
+  html+=`<div style="margin-bottom:20px">
+    <div style="display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--border);padding-bottom:6px;margin-bottom:10px">
+      <span style="font-family:'Cinzel',serif;font-size:13px;letter-spacing:2px;color:var(--gold);flex:1">CARTA DEL GIORNO</span>
+      <button class="btn btn-ghost btn-sm" onclick="apriGestioneCarta()">✏ Modifica</button>
+    </div>`;
+  if(carta.length){
+    PORTATE.forEach(portata=>{
+      const piatti=carta.map(id=>DB.piatti.find(p=>p.id===id)).filter(p=>p&&p.portata===portata.id);
+      if(!piatti.length)return;
+      html+=`<div style="margin-bottom:6px"><span style="font-size:11px;letter-spacing:1px;font-family:'Cinzel',serif;color:var(--gold-dim)">${portata.label} </span>`;
+      html+=piatti.map(p=>`<span style="font-size:14px;color:var(--white2)">${p.nome}${p.extra?` <span style="color:var(--gold);font-size:12px">+€${p.extra}</span>`:''}</span>`).join('  ·  ');
+      html+=`</div>`;
+    });
+  } else {
+    html+=`<div class="empty" style="padding:8px">Nessun piatto alla carta impostato per oggi. <button class="btn btn-ghost btn-xs" onclick="apriGestioneCarta()">Aggiungi</button></div>`;
+  }
+  html+=`</div>`;
+
+  // ORDINI TAVOLI
+  html+=`<div>
+    <div style="font-family:'Cinzel',serif;font-size:13px;letter-spacing:2px;color:var(--gold);border-bottom:1px solid var(--border);padding-bottom:6px;margin-bottom:10px">
+      TAVOLI (${tavoli.length})
+    </div>`;
+  if(tavoli.length){
+    tavoli.forEach((t,i)=>{
+      const piattiStr=t.piatti&&t.piatti.length?t.piatti.map(({id,qty})=>{const p=DB.piatti.find(x=>x.id===id);return p?`${qty}× ${p.nome}`:''}).filter(Boolean).join(', '):'';
+      html+=`<div class="op-ordine-card">
+        <div style="flex:1">
+          <div class="op-ordine-nome">${t.nome}${t.orario?` <span style="font-size:13px;color:var(--white3)">ore ${t.orario}</span>`:''}</div>
+          <div class="op-ordine-det">
+            ${t.adulti?`${t.adulti} adulti`:''}${t.bambini?` + ${t.bambini} bambini`:''}
+            ${t.menuCompleti?` · <span style="color:var(--gold)">${t.menuCompleti}× Menù completo</span>`:''}
+            ${piattiStr?` · ${piattiStr}`:''}
+          </div>
+        </div>
+        <div style="display:flex;gap:8px;flex-shrink:0">
+          <button class="btn btn-ghost btn-xs" onclick="ristampaComanda(${i})">🖨</button>
+          <button class="btn btn-danger btn-xs" onclick="eliminaTavolo(${i})">✕</button>
+        </div>
+      </div>`;
+    });
+  } else {
+    html+=`<div class="empty">Nessun tavolo registrato. Clicca "+ Nuovo Tavolo" per iniziare.</div>`;
+  }
+  html+=`</div>`;
+  box.innerHTML=html;
+}
+
+// ── GESTIONE CARTA DEL GIORNO ──
+let _cartaTmp=[];
+function apriGestioneCarta(){
+  if(!opDateStr) return;
+  _cartaTmp=[...(DB.cartaDelGiorno[opDateStr]||[])];
+  const box=document.getElementById('op-carta-sel');
+  let html='';
+  PORTATE.forEach(portata=>{
+    const piatti=DB.piatti.filter(p=>p.portata===portata.id).sort((a,b)=>a.nome.localeCompare(b.nome));
+    if(!piatti.length)return;
+    html+=`<div style="margin-bottom:16px">
+      <div style="font-family:'Cinzel',serif;font-size:11px;letter-spacing:1.5px;color:var(--gold);margin-bottom:8px">${portata.label.toUpperCase()}</div>`;
+    piatti.forEach(p=>{
+      const sel=_cartaTmp.includes(p.id);
+      html+=`<label style="display:flex;align-items:center;gap:10px;padding:6px 10px;border-radius:var(--r);cursor:pointer;${sel?'background:var(--bg3)':''}margin-bottom:4px">
+        <input type="checkbox" ${sel?'checked':''} style="accent-color:var(--gold)" onchange="toggleCarta('${p.id}',this.checked)">
+        <span style="font-size:15px;color:var(--white2)">${p.nome}${p.extra?` <span style="color:var(--gold);font-size:13px">+€${p.extra}</span>`:''}</span>
+      </label>`;
+    });
+    html+=`</div>`;
+  });
+  box.innerHTML=html;
+  openOv('ov-op-carta');
+}
+
+function toggleCarta(id, checked){
+  if(checked&&!_cartaTmp.includes(id)) _cartaTmp.push(id);
+  else if(!checked) _cartaTmp=_cartaTmp.filter(x=>x!==id);
+}
+
+function salvaCarta(){
+  if(!DB.cartaDelGiorno) DB.cartaDelGiorno={};
+  DB.cartaDelGiorno[opDateStr]=_cartaTmp;
+  saveDB(); closeOv('ov-op-carta'); renderGiornoOp(); renderCalOp();
+}
+
+// ── ORDINE TAVOLO ──
+let _opPiattiQty={}; // {piattoId: qty}
+
+function apriNuovoTavolo(){
+  if(!opDateStr){alert('Apri prima un giorno dal calendario.');return;}
+  const dsKey=`${opDateStr}_${opServ}`;
+  document.getElementById('op-dskey').value=dsKey;
+  document.getElementById('op-nome-tavolo').value='';
+  document.getElementById('op-adulti').value='';
+  document.getElementById('op-bambini').value='';
+  document.getElementById('op-menu-completi').value='';
+  const serv=opServ;
+  document.getElementById('op-orario-tavolo').value=serv==='pranzo'?'13:00':'20:00';
+  _opPiattiQty={};
+  popolaCartaOrdine(dsKey);
+  aggiornaRiepilogoOrdine();
+  openOv('ov-op-tavolo');
+  setTimeout(()=>document.getElementById('op-nome-tavolo').focus(),80);
+}
+
+function popolaCartaOrdine(dsKey){
+  const carta=DB.cartaDelGiorno[opDateStr]||[];
+  const box=document.getElementById('op-carta-ordine');
+  if(!carta.length){
+    box.innerHTML=`<div style="padding:12px;color:var(--white3);font-style:italic;font-size:14px">Nessun piatto alla carta impostato per oggi.<br><button class="btn btn-ghost btn-xs" onclick="closeOv('ov-op-tavolo');apriGestioneCarta()">Aggiungi piatti alla carta</button></div>`;
+    return;
+  }
+  box.innerHTML=carta.map(id=>{
+    const p=DB.piatti.find(x=>x.id===id); if(!p)return'';
+    const portata=PORTATE.find(pt=>pt.id===p.portata);
+    return `<div style="display:flex;align-items:center;gap:10px;padding:7px 8px;border-bottom:1px solid var(--border)">
+      <div style="flex:1">
+        <span style="font-size:14px;color:var(--white2)">${p.nome}</span>
+        ${p.extra?`<span style="color:var(--gold);font-size:12px;margin-left:6px">+€${p.extra}</span>`:''}
+        <span style="font-size:11px;color:var(--white3);margin-left:6px">${portata?portata.label:''}</span>
+      </div>
+      <div class="qty-ctrl">
+        <button class="qty-btn" onclick="cambiaQtyOrdine('${id}',-1)">−</button>
+        <span class="qty-val" id="qty-${id}">0</span>
+        <button class="qty-btn" onclick="cambiaQtyOrdine('${id}',+1)">+</button>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function cambiaQtyOrdine(id, delta){
+  _opPiattiQty[id]=Math.max(0,(_opPiattiQty[id]||0)+delta);
+  const el=document.getElementById(`qty-${id}`);
+  if(el) el.textContent=_opPiattiQty[id];
+  aggiornaRiepilogoOrdine();
+}
+
+function aggiornaRiepilogoOrdine(){
+  const adulti=parseInt(document.getElementById('op-adulti').value)||0;
+  const bambini=parseInt(document.getElementById('op-bambini').value)||0;
+  const menuCompleti=parseInt(document.getElementById('op-menu-completi').value)||0;
+  const dsKey=document.getElementById('op-dskey').value;
+  const menuKey=Object.keys(DB.menu).find(k=>k.startsWith(dsKey));
+  const prezzoMenu=menuKey&&DB.menu[menuKey]?.prezzo!=null?DB.menu[menuKey].prezzo:0;
+
+  let totMenu=menuCompleti*prezzoMenu;
+  let totCarta=0;
+  const cartaParts=[];
+  Object.entries(_opPiattiQty).filter(([,q])=>q>0).forEach(([id,qty])=>{
+    const p=DB.piatti.find(x=>x.id===id); if(!p)return;
+    const prezzo=p.extra||0;
+    totCarta+=qty*prezzo;
+    cartaParts.push(`${qty}× ${p.nome}`);
+  });
+
+  const box=document.getElementById('op-riepilogo');
+  box.innerHTML=`
+    <div style="display:flex;justify-content:space-between;margin-bottom:4px">
+      <span>Coperti: ${adulti} adulti${bambini?` + ${bambini} bambini`:''}</span>
+    </div>
+    ${menuCompleti>0?`<div style="display:flex;justify-content:space-between;margin-bottom:2px"><span>${menuCompleti}× Menù completo${prezzoMenu?` @€${prezzoMenu}`:'?'}</span><span style="color:var(--gold)">€${totMenu.toFixed(2)}</span></div>`:''}
+    ${cartaParts.length?`<div style="font-size:13px;color:var(--white3);margin-bottom:2px">${cartaParts.join(' · ')}</div>`:''}
+    ${totCarta>0?`<div style="display:flex;justify-content:space-between;margin-bottom:2px"><span>Piatti alla carta</span><span style="color:var(--gold)">€${totCarta.toFixed(2)}</span></div>`:''}
+    ${prezzoMenu||totCarta?`<div style="display:flex;justify-content:space-between;border-top:1px solid var(--border);padding-top:6px;margin-top:6px;font-weight:700;font-size:16px"><span>Totale stimato</span><span style="color:var(--gold)">€${(totMenu+totCarta).toFixed(2)}</span></div>`:''}
+  `;
+}
+
+function raccogliOrdine(){
+  const dsKey=document.getElementById('op-dskey').value;
+  const piatti=Object.entries(_opPiattiQty).filter(([,q])=>q>0).map(([id,qty])=>({id,qty}));
+  return {
+    nome: document.getElementById('op-nome-tavolo').value.trim()||'Tavolo',
+    orario: document.getElementById('op-orario-tavolo').value,
+    adulti: parseInt(document.getElementById('op-adulti').value)||0,
+    bambini: parseInt(document.getElementById('op-bambini').value)||0,
+    menuCompleti: parseInt(document.getElementById('op-menu-completi').value)||0,
+    piatti,
+    dsKey,
+    ts: Date.now()
+  };
+}
+
+function salvaOrdine(andStampa=false){
+  const ordine=raccogliOrdine();
+  if(!ordine.nome){alert('Inserisci il nome del tavolo.');return;}
+  if(!DB.tavoli) DB.tavoli={};
+  if(!DB.tavoli[ordine.dsKey]) DB.tavoli[ordine.dsKey]=[];
+  DB.tavoli[ordine.dsKey].push(ordine);
+  saveDB();
+  if(andStampa) _stampaComandaOrdine(ordine);
+  closeOv('ov-op-tavolo');
+  renderGiornoOp(); renderCalOp();
+}
+
+function stampaComanda(){
+  const ordine=raccogliOrdine();
+  if(!ordine.nome){alert('Inserisci il nome del tavolo.');return;}
+  salvaOrdine(false); // salva prima
+  _stampaComandaOrdine(ordine);
+}
+
+function ristampaComanda(i){
+  const ordine=(DB.tavoli[`${opDateStr}_${opServ}`]||[])[i];
+  if(ordine) _stampaComandaOrdine(ordine);
+}
+
+function eliminaTavolo(i){
+  if(!confirm('Eliminare questo ordine?'))return;
+  (DB.tavoli[`${opDateStr}_${opServ}`]||[]).splice(i,1);
+  saveDB(); renderGiornoOp(); renderCalOp();
+}
+
+function _stampaComandaOrdine(ordine){
+  const dt=parseDate(ordine.dsKey.split('_')[0]);
+  const serv=ordine.dsKey.split('_')[1];
+  const menuKey=Object.keys(DB.menu).find(k=>k.startsWith(ordine.dsKey));
+  const menuNome=menuKey?parseKey(menuKey).nome||'Menù del Sito':'';
+  const prezzoMenu=menuKey&&DB.menu[menuKey]?.prezzo!=null?DB.menu[menuKey].prezzo:null;
+
+  let totale=0;
+  let righeMenu='';
+  if(ordine.menuCompleti>0){
+    const pm=prezzoMenu||0;
+    const t=ordine.menuCompleti*pm;
+    totale+=t;
+    righeMenu=`<tr><td>${ordine.menuCompleti}×</td><td>MENÙ COMPLETO${menuNome?' — '+menuNome:''}</td><td class="price">${pm?'€'+pm.toFixed(2):''}</td><td class="price">${pm?'€'+t.toFixed(2):''}</td></tr>`;
+  }
+  let righeCarta='';
+  (ordine.piatti||[]).forEach(({id,qty})=>{
+    const p=DB.piatti.find(x=>x.id===id); if(!p)return;
+    const pm=p.extra||0;
+    const t=qty*pm;
+    totale+=t;
+    righeCarta+=`<tr><td>${qty}×</td><td>${p.nome}</td><td class="price">${pm?'€'+pm.toFixed(2):''}</td><td class="price">${pm?'€'+t.toFixed(2):''}</td></tr>`;
+  });
+
+  const html=`<!DOCTYPE html><html><head><meta charset="UTF-8">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Courier New',monospace;font-size:14px;background:#fff;color:#000;padding:8mm}
+h1{font-size:20px;font-weight:700;text-align:center;border-bottom:2px solid #000;padding-bottom:6px;margin-bottom:10px}
+.sub{text-align:center;font-size:13px;margin-bottom:14px;color:#333}
+.info{background:#f5f5f5;border:1px solid #ccc;padding:8px 12px;margin-bottom:14px;font-size:13px}
+.info b{font-size:15px;font-weight:700}
+table{width:100%;border-collapse:collapse;margin-bottom:14px}
+td{padding:4px 6px;border-bottom:1px solid #eee;font-size:14px}
+td:first-child{width:40px;text-align:center;font-weight:700}
+.price{text-align:right;width:70px}
+.totale{border-top:2px solid #000;padding-top:8px;display:flex;justify-content:space-between;font-size:17px;font-weight:700}
+@media print{@page{size:80mm auto;margin:4mm}}
+</style></head><body>
+<h1>IL CILIEGIO</h1>
+<div class="sub">Cucina Toscana Tradizionale</div>
+<div class="info">
+  <b>${ordine.nome}</b><br>
+  ${dt.giornoLungo}, ${dt.d} ${MESI_S[dt.m-1]} ${dt.y} — ${cap(serv)}${ordine.orario?' — ore '+ordine.orario:''}
+  <br>${ordine.adulti} adulti${ordine.bambini?' + '+ordine.bambini+' bambini':''}
+</div>
+<table>
+  ${righeMenu}
+  ${righeCarta||`<tr><td colspan="4" style="font-style:italic;color:#888;text-align:center">nessun piatto alla carta</td></tr>`}
+</table>
+${totale>0?`<div class="totale"><span>TOTALE</span><span>€${totale.toFixed(2)}</span></div>`:''}
+</body></html>`;
+
+  const w=window.open('','_blank','width=500,height=600');
+  w.document.write(html);
+  w.document.close();
+  w.onload=()=>{ w.focus(); w.print(); };
 }
 
 init();
