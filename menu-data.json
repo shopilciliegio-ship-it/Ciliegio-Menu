@@ -4280,6 +4280,59 @@
     ]
   },
   "tavoli": {
-    "2026-05-31_pranzo": []
+    "2026-05-31_pranzo": [
+      {
+        "nome": "Beppe",
+        "orario": "13:00",
+        "adulti": 4,
+        "bambini": 0,
+        "menuVoci": [
+          {
+            "qty": 1,
+            "note": ""
+          },
+          {
+            "qty": 1,
+            "note": "No Stracotto no dolce"
+          }
+        ],
+        "piatti": [
+          {
+            "id": "mo1xei4h6yo",
+            "qty": 2
+          },
+          {
+            "id": "mo67h4xg40w",
+            "qty": 1
+          },
+          {
+            "id": "mo68pp64giu",
+            "qty": 1
+          },
+          {
+            "id": "mnsq9hynlgw",
+            "qty": 1
+          },
+          {
+            "id": "mnsq9hynkgr",
+            "qty": 2
+          },
+          {
+            "id": "mnsq9hyngxs",
+            "qty": 1
+          }
+        ],
+        "bevande": [
+          {
+            "id": "vino-casa",
+            "nome": "Vino della casa",
+            "prezzo": 10,
+            "qty": 1
+          }
+        ],
+        "dsKey": "2026-05-31_pranzo",
+        "ts": 1778881858830
+      }
+    ]
   }
 }
