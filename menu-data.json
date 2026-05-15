@@ -3040,6 +3040,50 @@
       "testoLibero": "",
       "prezzo": 38,
       "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-05-31_pranzo_VIAGGI IN COMPAGNIA": {
+      "piatti": {
+        "antipasto": [
+          "mo1xei4h6yo"
+        ],
+        "primo": [
+          "mo68pp64giu"
+        ],
+        "secondo": [
+          "mnsq9hynxpi"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 22,
+      "nomeSpecifico": "VIAGGI IN COMPAGNIA"
+    },
+    "2026-05-31_pranzo_MICHELANGELO": {
+      "piatti": {
+        "antipasto": [
+          "mo68jqekj3x"
+        ],
+        "primo": [
+          "mnsq9hyn18u"
+        ],
+        "secondo": [
+          "mnsq9hyns9r"
+        ],
+        "contorno": [
+          "mnsq9hynkgr"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 22,
+      "nomeSpecifico": "MICHELANGELO"
     }
   },
   "prenotazioni": {
@@ -3754,7 +3798,236 @@
       "gruppi": []
     },
     "2026-05-31_pranzo": {
-      "gruppi": []
+      "gruppi": [
+        {
+          "nome": "TANIA",
+          "orario": "13:00",
+          "sala": "",
+          "pax": 14,
+          "gratuiti": 0,
+          "bambini": 0,
+          "seggiolini": 0,
+          "contattoNome": "",
+          "contattoTel": "3494548249",
+          "note": "TAVOLO PER BOMBONIERE",
+          "intolleranze": {
+            "celiaco": 1,
+            "altro": "LA CELIACA E' LA FESTEGGIATA"
+          },
+          "modifiche": "NO PAPPARDELLE",
+          "menuKey": "2026-05-31_pranzo_Menù del Sito",
+          "prezzoSpeciale": 28,
+          "dolce": false,
+          "daConfermare": false,
+          "caparraNecessaria": true,
+          "caparraStato": "pagata",
+          "caparraImporto": 150,
+          "caparraNota": "PAGATA IL 12/05"
+        },
+        {
+          "nome": "MARCECA",
+          "orario": "13:00",
+          "sala": "grande",
+          "pax": 60,
+          "gratuiti": 0,
+          "bambini": 0,
+          "seggiolini": 0,
+          "contattoNome": "",
+          "contattoTel": "",
+          "note": "",
+          "intolleranze": null,
+          "modifiche": "NO FEGATINI -> BRUSCHETTA POMODORINI E BASILICO\nNO LAMPREDOTTO -> TORTINO PAPPA AL POMODORO\nNO RISOTTO -> PAPPARDELLE AL RAGù DI CINGHIALE",
+          "menuKey": "2026-05-31_pranzo_Menù del Sito",
+          "prezzoSpeciale": 30,
+          "dolce": false,
+          "daConfermare": false,
+          "caparraNecessaria": true,
+          "caparraStato": "pagata",
+          "caparraImporto": 400,
+          "caparraNota": "PAGATA IL 15/05  IN CONTANTI"
+        },
+        {
+          "nome": "CARLO DEMMA",
+          "orario": "13:00",
+          "sala": "veranda",
+          "pax": 25,
+          "gratuiti": 0,
+          "bambini": 0,
+          "seggiolini": 0,
+          "contattoNome": "",
+          "contattoTel": "3451743843",
+          "note": "1 TAVOLO BOMBONIERE +PALLONCINI E COLONNE A TERRA",
+          "intolleranze": {
+            "vegetariano": 3
+          },
+          "modifiche": "NO STRACOTTO -> TAGLIATA",
+          "menuKey": "2026-05-31_pranzo_Menù del Sito",
+          "prezzoSpeciale": null,
+          "dolce": false,
+          "daConfermare": false,
+          "caparraNecessaria": true,
+          "caparraStato": "pagata",
+          "caparraImporto": 200,
+          "caparraNota": "PAGATA POS 15/05"
+        },
+        {
+          "nome": "ACETO ANNARITA",
+          "orario": "13:00",
+          "sala": "",
+          "pax": 12,
+          "gratuiti": 0,
+          "bambini": 2,
+          "seggiolini": 2,
+          "contattoNome": "",
+          "contattoTel": "",
+          "note": "",
+          "intolleranze": null,
+          "modifiche": "",
+          "menuKey": "2026-05-31_pranzo_Menù del Sito",
+          "prezzoSpeciale": null,
+          "dolce": false,
+          "daConfermare": false,
+          "caparraNecessaria": true,
+          "caparraStato": "pagata",
+          "caparraImporto": 100,
+          "caparraNota": "PAGATA CONTANTI 15/05"
+        },
+        {
+          "nome": "DE MATTIA",
+          "orario": "13:00",
+          "sala": "veranda",
+          "pax": 28,
+          "gratuiti": 0,
+          "bambini": 0,
+          "seggiolini": 0,
+          "contattoNome": "",
+          "contattoTel": "",
+          "note": "TAVOLO PER APPOGGIO",
+          "intolleranze": {
+            "celiaco": 1,
+            "lattosio": 2
+          },
+          "modifiche": "NO STRACOTTO -> ARROSTO CON SALSICCIA, COSTOLECCIO, CONIGLIO E SCAMERITA",
+          "menuKey": "2026-05-31_pranzo_Menù del Sito",
+          "prezzoSpeciale": 39,
+          "dolce": false,
+          "daConfermare": false,
+          "caparraNecessaria": true,
+          "caparraStato": "pagata",
+          "caparraImporto": 280,
+          "caparraNota": "PAGATA CONTANTI 15/05"
+        },
+        {
+          "nome": "FRANCESCA TORSOLI",
+          "orario": "13:00",
+          "sala": "",
+          "pax": 12,
+          "gratuiti": 0,
+          "bambini": 0,
+          "seggiolini": 0,
+          "contattoNome": "",
+          "contattoTel": "",
+          "note": "",
+          "intolleranze": null,
+          "modifiche": "",
+          "menuKey": "2026-05-31_pranzo_Menù del Sito",
+          "prezzoSpeciale": null,
+          "dolce": false,
+          "daConfermare": true,
+          "caparraNecessaria": true,
+          "caparraStato": "attesa",
+          "caparraImporto": 120,
+          "caparraNota": null
+        },
+        {
+          "nome": "TOMEI SARA",
+          "orario": "13:00",
+          "sala": "",
+          "pax": 25,
+          "gratuiti": 0,
+          "bambini": 0,
+          "seggiolini": 0,
+          "contattoNome": "",
+          "contattoTel": "3397981288",
+          "note": "",
+          "intolleranze": null,
+          "modifiche": "NO CONIGLIO -> CINGHIALE",
+          "menuKey": "2026-05-31_pranzo_Menù del Sito",
+          "prezzoSpeciale": null,
+          "dolce": false,
+          "daConfermare": false,
+          "caparraNecessaria": false,
+          "caparraStato": null,
+          "caparraImporto": null,
+          "caparraNota": null
+        },
+        {
+          "nome": "GUGLIELMUCCI",
+          "orario": "13:00",
+          "sala": "",
+          "pax": 15,
+          "gratuiti": 0,
+          "bambini": 0,
+          "seggiolini": 0,
+          "contattoNome": "",
+          "contattoTel": "3287158100",
+          "note": "",
+          "intolleranze": null,
+          "modifiche": "NO RISOTTO -> PAPPARDELLE AL CINGHIALE",
+          "menuKey": "2026-05-31_pranzo_Menù del Sito",
+          "prezzoSpeciale": 32,
+          "dolce": false,
+          "daConfermare": false,
+          "caparraNecessaria": false,
+          "caparraStato": null,
+          "caparraImporto": null,
+          "caparraNota": null
+        },
+        {
+          "nome": "VIAGGI IN COMPAGNIA",
+          "orario": "12:30",
+          "sala": "",
+          "pax": 55,
+          "gratuiti": 2,
+          "bambini": 0,
+          "seggiolini": 0,
+          "contattoNome": "",
+          "contattoTel": "3494548249",
+          "note": "",
+          "intolleranze": null,
+          "modifiche": "",
+          "menuKey": "2026-05-31_pranzo_VIAGGI IN COMPAGNIA",
+          "prezzoSpeciale": null,
+          "dolce": true,
+          "daConfermare": false,
+          "caparraNecessaria": false,
+          "caparraStato": null,
+          "caparraImporto": null,
+          "caparraNota": null
+        },
+        {
+          "nome": "MICHELANGELO",
+          "orario": "14:30",
+          "sala": "",
+          "pax": 33,
+          "gratuiti": 2,
+          "bambini": 0,
+          "seggiolini": 0,
+          "contattoNome": "RIF 00236265",
+          "contattoTel": "",
+          "note": "",
+          "intolleranze": null,
+          "modifiche": "",
+          "menuKey": "2026-05-31_pranzo_MICHELANGELO",
+          "prezzoSpeciale": null,
+          "dolce": false,
+          "daConfermare": false,
+          "caparraNecessaria": false,
+          "caparraStato": null,
+          "caparraImporto": null,
+          "caparraNota": null
+        }
+      ]
     },
     "2026-05-31_cena": {
       "gruppi": []
@@ -3779,7 +4052,8 @@
     "2026-04-20": "Dare Sistola",
     "2026-04-22": "No Fiore",
     "2026-04-23": "No Giulia a pranzo",
-    "2026-04-26": "No monne a pranzo"
+    "2026-04-26": "No monne a pranzo",
+    "2026-05-31": "COMPLETO"
   },
   "traduzioni": {
     "mnsq9hymnei": "Bruschetta with cherry tomatoes and basil",
