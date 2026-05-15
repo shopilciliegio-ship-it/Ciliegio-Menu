@@ -3062,6 +3062,26 @@
       "testoLibero": "",
       "prezzo": 22,
       "nomeSpecifico": "VIAGGI IN COMPAGNIA"
+    },
+    "2026-05-31_pranzo_MICHELANGELO": {
+      "piatti": {
+        "antipasto": [
+          "mo68jqekj3x"
+        ],
+        "primo": [
+          "mnsq9hyn18u"
+        ],
+        "secondo": [
+          "mnsq9hyns9r"
+        ],
+        "contorno": [
+          "mnsq9hynkgr"
+        ],
+        "dolce": []
+      },
+      "testoLibero": "",
+      "prezzo": 22,
+      "nomeSpecifico": "MICHELANGELO"
     }
   },
   "prenotazioni": {
