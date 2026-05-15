@@ -3960,6 +3960,28 @@
           "caparraStato": null,
           "caparraImporto": null,
           "caparraNota": null
+        },
+        {
+          "nome": "VIAGGI IN COMPAGNIA",
+          "orario": "12:30",
+          "sala": "",
+          "pax": 55,
+          "gratuiti": 2,
+          "bambini": 0,
+          "seggiolini": 0,
+          "contattoNome": "",
+          "contattoTel": "3494548249",
+          "note": "",
+          "intolleranze": null,
+          "modifiche": "",
+          "menuKey": "2026-05-31_pranzo_VIAGGI IN COMPAGNIA",
+          "prezzoSpeciale": null,
+          "dolce": true,
+          "daConfermare": false,
+          "caparraNecessaria": false,
+          "caparraStato": null,
+          "caparraImporto": null,
+          "caparraNota": null
         }
       ]
     },
