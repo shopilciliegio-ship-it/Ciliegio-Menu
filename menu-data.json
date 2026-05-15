@@ -3916,6 +3916,28 @@
           "caparraStato": null,
           "caparraImporto": null,
           "caparraNota": null
+        },
+        {
+          "nome": "GUGLIELMUCCI",
+          "orario": "",
+          "sala": "",
+          "pax": 15,
+          "gratuiti": 0,
+          "bambini": 0,
+          "seggiolini": 0,
+          "contattoNome": "",
+          "contattoTel": "3287158100",
+          "note": "",
+          "intolleranze": null,
+          "modifiche": "NO RISOTTO -> PAPPARDELLE AL CINGHIALE",
+          "menuKey": "2026-05-31_pranzo_Menù del Sito",
+          "prezzoSpeciale": 32,
+          "dolce": false,
+          "daConfermare": false,
+          "caparraNecessaria": false,
+          "caparraStato": null,
+          "caparraImporto": null,
+          "caparraNota": null
         }
       ]
     },
