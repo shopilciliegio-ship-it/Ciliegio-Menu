@@ -3754,7 +3754,33 @@
       "gruppi": []
     },
     "2026-05-31_pranzo": {
-      "gruppi": []
+      "gruppi": [
+        {
+          "nome": "TANIA MASCAGNI",
+          "orario": "13:00",
+          "sala": "piccola",
+          "pax": 14,
+          "gratuiti": 0,
+          "bambini": 0,
+          "seggiolini": 0,
+          "contattoNome": "TANIA",
+          "contattoTel": "3494548249",
+          "note": "TAVOLO PER BOMBONIERE",
+          "intolleranze": {
+            "celiaco": 1,
+            "altro": "LA CELIACA E' LA FESTEGGIATA"
+          },
+          "modifiche": "NO PAPPARDELLE",
+          "menuKey": "2026-05-31_pranzo_Menù del Sito",
+          "prezzoSpeciale": 28,
+          "dolce": false,
+          "daConfermare": false,
+          "caparraNecessaria": true,
+          "caparraStato": "pagata",
+          "caparraImporto": 150,
+          "caparraNota": "PAGATA IL 12/05"
+        }
+      ]
     },
     "2026-05-31_cena": {
       "gruppi": []
