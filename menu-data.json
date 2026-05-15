@@ -1427,6 +1427,13 @@
       "portata": "antipasto",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mp6qq1hc6f9",
+      "nome": "Pappardelle al ragù di cortile",
+      "portata": "primo",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -3010,9 +3017,16 @@
     "2026-05-31_pranzo_Menù del Sito": {
       "piatti": {
         "antipasto": [
-          "mnsq9hynh2h"
+          "mnsq9hynyoo",
+          "mnsq9hynxni",
+          "mohaxdaa2wx",
+          "mnsq9hynqk0",
+          "mo687di42u2"
         ],
-        "primo": [],
+        "primo": [
+          "mnsq9hyndew",
+          "mp6qq1hc6f9"
+        ],
         "secondo": [],
         "contorno": [],
         "dolce": []
