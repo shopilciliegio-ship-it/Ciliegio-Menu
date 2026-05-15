@@ -1427,6 +1427,13 @@
       "portata": "antipasto",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mp6qq1hc6f9",
+      "nome": "Pappardelle al ragù di cortile",
+      "portata": "primo",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -3010,15 +3017,28 @@
     "2026-05-31_pranzo_Menù del Sito": {
       "piatti": {
         "antipasto": [
-          "mnsq9hynh2h"
+          "mnsq9hynyoo",
+          "mnsq9hynxni",
+          "mohaxdaa2wx",
+          "mnsq9hynqk0",
+          "mo687di42u2"
         ],
-        "primo": [],
-        "secondo": [],
-        "contorno": [],
-        "dolce": []
+        "primo": [
+          "mnsq9hyndew",
+          "mp6qq1hc6f9"
+        ],
+        "secondo": [
+          "mnsq9hynlgw"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
       },
       "testoLibero": "",
-      "prezzo": null,
+      "prezzo": 38,
       "nomeSpecifico": "Menù del Sito"
     }
   },
@@ -3965,6 +3985,7 @@
     "mp33ctnko72": "Pappardelle with pesto and cherry tomatoes",
     "mp33p0xskfv": "Pici with farmyard poultry ragù",
     "mp336q0pxa8": "Pici with Carbonara Sauce",
-    "mp33amhtkmk": "Risotto with Sausage and Vegetables"
+    "mp33amhtkmk": "Risotto with Sausage and Vegetables",
+    "mp6qq1hc6f9": "Pappardelle with Farmyard Meat Sauce"
   }
 }
