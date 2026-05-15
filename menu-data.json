@@ -3847,6 +3847,31 @@
           "caparraStato": "pagata",
           "caparraImporto": 100,
           "caparraNota": "PAGATA CONTANTI 15/05"
+        },
+        {
+          "nome": "DE MATTIA",
+          "orario": "13:00",
+          "sala": "veranda",
+          "pax": 28,
+          "gratuiti": 0,
+          "bambini": 0,
+          "seggiolini": 0,
+          "contattoNome": "",
+          "contattoTel": "",
+          "note": "TAVOLO PER APPOGGIO",
+          "intolleranze": {
+            "celiaco": 1,
+            "lattosio": 2
+          },
+          "modifiche": "NO STRACOTTO -> ARROSTO CON SALSICCIA, COSTOLECCIO, CONIGLIO E SCAMERITA",
+          "menuKey": "2026-05-31_pranzo_Menù del Sito",
+          "prezzoSpeciale": 39,
+          "dolce": false,
+          "daConfermare": false,
+          "caparraNecessaria": true,
+          "caparraStato": "pagata",
+          "caparraImporto": 280,
+          "caparraNota": "PAGATA CONTANTI 15/05"
         }
       ]
     },
