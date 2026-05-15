@@ -4002,6 +4002,28 @@
           "caparraStato": null,
           "caparraImporto": null,
           "caparraNota": null
+        },
+        {
+          "nome": "MICHELANGELO",
+          "orario": "14:30",
+          "sala": "",
+          "pax": 33,
+          "gratuiti": 2,
+          "bambini": 0,
+          "seggiolini": 0,
+          "contattoNome": "RIF 00236265",
+          "contattoTel": "",
+          "note": "",
+          "intolleranze": null,
+          "modifiche": "",
+          "menuKey": "2026-05-31_pranzo_MICHELANGELO",
+          "prezzoSpeciale": null,
+          "dolce": false,
+          "daConfermare": false,
+          "caparraNecessaria": false,
+          "caparraStato": null,
+          "caparraImporto": null,
+          "caparraNota": null
         }
       ]
     },
