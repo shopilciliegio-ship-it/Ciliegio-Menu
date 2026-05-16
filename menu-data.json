@@ -4378,6 +4378,108 @@
         ],
         "dsKey": "2026-05-31_pranzo",
         "ts": 1778934394624
+      },
+      {
+        "nome": "Franco",
+        "orario": "13:00",
+        "adulti": 5,
+        "bambini": 0,
+        "piatti": [
+          {
+            "id": "mnsq9hynyoo",
+            "qty": 2,
+            "fonte": "menu"
+          },
+          {
+            "id": "mnsq9hynxni",
+            "qty": 2,
+            "fonte": "menu"
+          },
+          {
+            "id": "mohaxdaa2wx",
+            "qty": 1,
+            "fonte": "menu"
+          },
+          {
+            "id": "mnsq9hynqk0",
+            "qty": 2,
+            "fonte": "menu"
+          },
+          {
+            "id": "mo687di42u2",
+            "qty": 1,
+            "fonte": "menu"
+          },
+          {
+            "id": "mnsq9hyndew",
+            "qty": 2,
+            "fonte": "menu"
+          },
+          {
+            "id": "mp6qq1hc6f9",
+            "qty": 2,
+            "fonte": "menu"
+          },
+          {
+            "id": "mnsq9hynlgw",
+            "qty": 2,
+            "fonte": "menu"
+          },
+          {
+            "id": "mnsq9hynayz",
+            "qty": 2,
+            "fonte": "menu"
+          },
+          {
+            "id": "mo67hzucqmt",
+            "qty": 2,
+            "fonte": "menu"
+          },
+          {
+            "id": "mo1xei4h6yo",
+            "qty": 3,
+            "fonte": "carta"
+          },
+          {
+            "id": "mo68pp64giu",
+            "qty": 1,
+            "fonte": "carta"
+          },
+          {
+            "id": "mo67h4xg40w",
+            "qty": 1,
+            "fonte": "carta"
+          },
+          {
+            "id": "mohapamzsdf",
+            "qty": 1,
+            "fonte": "carta"
+          },
+          {
+            "id": "mo69j5b1uwp",
+            "qty": 2,
+            "fonte": "carta"
+          },
+          {
+            "id": "mnsq9hyn4sj",
+            "qty": 1,
+            "fonte": "carta"
+          },
+          {
+            "id": "mo67hzucqmt",
+            "qty": 3,
+            "fonte": "carta"
+          }
+        ],
+        "bevande": [
+          {
+            "id": "vino-spec",
+            "nome": "Vino bottiglia speciale",
+            "qty": 1
+          }
+        ],
+        "dsKey": "2026-05-31_pranzo",
+        "ts": 1778935997337
       }
     ]
   }
