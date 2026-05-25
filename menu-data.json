@@ -3114,15 +3114,27 @@
     "2026-05-26_cena_Menù del Sito": {
       "piatti": {
         "antipasto": [
-          "mnsq9hymfrx"
+          "mnsq9hymnei",
+          "mo1zvr87ez2",
+          "mnsq9hynqk0",
+          "mnsq9hynyjk",
+          "mnsq9hynf3u"
         ],
-        "primo": [],
-        "secondo": [],
-        "contorno": [],
-        "dolce": []
+        "primo": [
+          "mnsq9hyn18u"
+        ],
+        "secondo": [
+          "mnsq9hynlgw"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mnsq9hynj2g"
+        ]
       },
       "testoLibero": "",
-      "prezzo": null,
+      "prezzo": 30,
       "nomeSpecifico": "Menù del Sito"
     }
   },
