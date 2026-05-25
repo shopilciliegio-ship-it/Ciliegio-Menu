@@ -1441,6 +1441,13 @@
       "portata": "primo",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mpl7xb8z619",
+      "nome": "Tagliatelle al ragù di anatra",
+      "portata": "primo",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -3230,6 +3237,23 @@
       },
       "testoLibero": "",
       "prezzo": 30,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-05-30_cena_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo68jqekj3x"
+        ],
+        "primo": [
+          "mnsq9hyn9ag",
+          "mpl7xb8z619"
+        ],
+        "secondo": [],
+        "contorno": [],
+        "dolce": []
+      },
+      "testoLibero": "",
+      "prezzo": null,
       "nomeSpecifico": "Menù del Sito"
     }
   },
