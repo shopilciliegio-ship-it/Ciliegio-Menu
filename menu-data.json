@@ -3101,7 +3101,9 @@
           "mnsq9hyncpy",
           "mnsq9hynvd0"
         ],
-        "contorno": [],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
         "dolce": []
       },
       "testoLibero": "",
