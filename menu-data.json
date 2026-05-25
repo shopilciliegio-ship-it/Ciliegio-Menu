@@ -3098,16 +3098,17 @@
           "mnsq9hyn9ag"
         ],
         "secondo": [
-          "mnsq9hyncpy",
-          "mnsq9hynvd0"
+          "mnsq9hyncpy"
         ],
         "contorno": [
           "mnsq9hynayz"
         ],
-        "dolce": []
+        "dolce": [
+          "mnsq9hynj2g"
+        ]
       },
       "testoLibero": "",
-      "prezzo": null,
+      "prezzo": 30,
       "nomeSpecifico": "Menù del Sito"
     }
   },
