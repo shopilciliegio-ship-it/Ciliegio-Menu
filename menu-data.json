@@ -3084,6 +3084,20 @@
       "testoLibero": "",
       "prezzo": 22,
       "nomeSpecifico": "MICHELANGELO"
+    },
+    "2026-05-30_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hyno6u"
+        ],
+        "primo": [],
+        "secondo": [],
+        "contorno": [],
+        "dolce": []
+      },
+      "testoLibero": "",
+      "prezzo": null,
+      "nomeSpecifico": "Menù del Sito"
     }
   },
   "prenotazioni": {
