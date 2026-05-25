@@ -1434,6 +1434,20 @@
       "portata": "primo",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mpl7tkvwn32",
+      "nome": "Pasta fresca al pesto e pomodorini",
+      "portata": "primo",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mpl7xb8z619",
+      "nome": "Tagliatelle al ragù di anatra",
+      "portata": "primo",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -3084,6 +3098,191 @@
       "testoLibero": "",
       "prezzo": 22,
       "nomeSpecifico": "MICHELANGELO"
+    },
+    "2026-05-30_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hyno6u",
+          "mnsq9hynqk0",
+          "mnsq9hynmjr",
+          "mnsq9hynyoo",
+          "mnsq9hyn5zs"
+        ],
+        "primo": [
+          "mnsq9hyn9ag"
+        ],
+        "secondo": [
+          "mnsq9hyncpy"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mnsq9hynj2g"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 30,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-05-26_cena_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hymnei",
+          "mo1zvr87ez2",
+          "mnsq9hynqk0",
+          "mnsq9hynyjk",
+          "mnsq9hynf3u"
+        ],
+        "primo": [
+          "mnsq9hyn18u"
+        ],
+        "secondo": [
+          "mnsq9hynlgw"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mnsq9hynj2g"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 30,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-05-26_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo68jqekj3x"
+        ],
+        "primo": [
+          "mo67h4xg40w"
+        ],
+        "secondo": [
+          "mnsq9hyn4sj"
+        ],
+        "contorno": [
+          "mnsq9hync5b"
+        ],
+        "dolce": [
+          "mohatliymxm"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 30,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-05-28_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo1xei4h6yo"
+        ],
+        "primo": [
+          "mo67h4xg40w"
+        ],
+        "secondo": [
+          "mnsq9hyn4sj"
+        ],
+        "contorno": [
+          "mnsq9hync5b"
+        ],
+        "dolce": [
+          "mohatliymxm"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 30,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-05-27_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo1xei4h6yo"
+        ],
+        "primo": [
+          "mpl7tkvwn32"
+        ],
+        "secondo": [
+          "mo69j5b1uwp"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 30,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-05-29_cena_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo1xei4h6yo"
+        ],
+        "primo": [
+          "mo699pdh68y"
+        ],
+        "secondo": [
+          "mnsq9hyncpy"
+        ],
+        "contorno": [
+          "mnsq9hynelb"
+        ],
+        "dolce": [
+          "mnsq9hyn0dv"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 30,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-05-30_cena_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo68jqekj3x"
+        ],
+        "primo": [
+          "mnsq9hyn9ag",
+          "mpl7xb8z619"
+        ],
+        "secondo": [
+          "mohavjo1cxl"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mnsq9hyncdc"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 39,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-05-29_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo6acrp1vak"
+        ],
+        "primo": [
+          "mo68pp64giu"
+        ],
+        "secondo": [
+          "mnsq9hyn4sj"
+        ],
+        "contorno": [
+          "mnsq9hync5b"
+        ],
+        "dolce": [
+          "mnsq9hynzar"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 30,
+      "nomeSpecifico": "Menù del Sito"
     }
   },
   "prenotazioni": {
@@ -4043,6 +4242,24 @@
     },
     "2026-05-29_cena": {
       "gruppi": []
+    },
+    "2026-05-26_pranzo": {
+      "gruppi": []
+    },
+    "2026-05-26_cena": {
+      "gruppi": []
+    },
+    "2026-05-28_pranzo": {
+      "gruppi": []
+    },
+    "2026-05-28_cena": {
+      "gruppi": []
+    },
+    "2026-05-27_pranzo": {
+      "gruppi": []
+    },
+    "2026-05-27_cena": {
+      "gruppi": []
     }
   },
   "noteGiorno": {
@@ -4260,7 +4477,9 @@
     "mp33p0xskfv": "Pici with farmyard poultry ragù",
     "mp336q0pxa8": "Pici with Carbonara Sauce",
     "mp33amhtkmk": "Risotto with Sausage and Vegetables",
-    "mp6qq1hc6f9": "Pappardelle with Farmyard Meat Sauce"
+    "mp6qq1hc6f9": "Pappardelle with Farmyard Meat Sauce",
+    "mpl7xb8z619": "Tagliatelle with duck sauce",
+    "mpl7tkvwn32": "Fresh pasta with pesto and cherry tomatoes"
   },
   "cartaDelGiorno": {
     "2026-05-31": [
