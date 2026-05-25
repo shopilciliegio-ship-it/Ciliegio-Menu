@@ -3248,12 +3248,18 @@
           "mnsq9hyn9ag",
           "mpl7xb8z619"
         ],
-        "secondo": [],
-        "contorno": [],
-        "dolce": []
+        "secondo": [
+          "mohavjo1cxl"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mnsq9hyncdc"
+        ]
       },
       "testoLibero": "",
-      "prezzo": null,
+      "prezzo": 39,
       "nomeSpecifico": "Menù del Sito"
     }
   },
