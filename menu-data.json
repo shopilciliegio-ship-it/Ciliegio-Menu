@@ -3580,12 +3580,18 @@
         "primo": [
           "mpv0uwpjzyu"
         ],
-        "secondo": [],
-        "contorno": [],
-        "dolce": []
+        "secondo": [
+          "mnsq9hynxxp"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
       },
       "testoLibero": "",
-      "prezzo": null,
+      "prezzo": 30,
       "nomeSpecifico": "Menù del Sito"
     }
   },
