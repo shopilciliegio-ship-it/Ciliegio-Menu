@@ -1462,6 +1462,13 @@
       "portata": "antipasto",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mpv0k3ti2w3",
+      "nome": "Tortelli ripieni con stracotto e burro al timo",
+      "portata": "primo",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -3371,9 +3378,13 @@
         "antipasto": [
           "mpv0fexktr1",
           "mor14tr4sik",
-          "mpv0gkq6uho"
+          "mpv0gkq6uho",
+          "mo1yfczjr82",
+          "mnsq9hyn3m5"
         ],
-        "primo": [],
+        "primo": [
+          "mpv0k3ti2w3"
+        ],
         "secondo": [],
         "contorno": [],
         "dolce": []
