@@ -1476,6 +1476,13 @@
       "portata": "dolce",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mpv0t66f8bi",
+      "nome": "Patate al forno",
+      "portata": "contorno",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -3527,6 +3534,30 @@
       "testoLibero": "",
       "prezzo": 32,
       "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-06-06_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hymnei",
+          "mnsq9hynqk0",
+          "mo1zvr87ez2",
+          "mo1w8xtm5r2",
+          "mnsq9hyneqw"
+        ],
+        "primo": [
+          "mnsq9hynfdo"
+        ],
+        "secondo": [
+          "mnsq9hynul2"
+        ],
+        "contorno": [
+          "mpv0t66f8bi"
+        ],
+        "dolce": []
+      },
+      "testoLibero": "",
+      "prezzo": null,
+      "nomeSpecifico": "Menù del Sito"
     }
   },
   "prenotazioni": {
@@ -4533,6 +4564,12 @@
       "gruppi": []
     },
     "2026-06-05_cena": {
+      "gruppi": []
+    },
+    "2026-06-06_pranzo": {
+      "gruppi": []
+    },
+    "2026-06-06_cena": {
       "gruppi": []
     }
   },
