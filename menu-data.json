@@ -1483,6 +1483,13 @@
       "portata": "contorno",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mpv0uwpjzyu",
+      "nome": "Pici al ragù di anatra",
+      "portata": "primo",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -3559,6 +3566,26 @@
       },
       "testoLibero": "",
       "prezzo": 30,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-06-06_cena_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hynqk0",
+          "mnsq9hyn8jt",
+          "mo1w8xtm5r2",
+          "mnsq9hymfot",
+          "mnsq9hynmjr"
+        ],
+        "primo": [
+          "mpv0uwpjzyu"
+        ],
+        "secondo": [],
+        "contorno": [],
+        "dolce": []
+      },
+      "testoLibero": "",
+      "prezzo": null,
       "nomeSpecifico": "Menù del Sito"
     }
   },
