@@ -1455,6 +1455,13 @@
       "portata": "antipasto",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mpv0gkq6uho",
+      "nome": "Crostino con trippa e fromaggio",
+      "portata": "antipasto",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -3340,7 +3347,9 @@
       "piatti": {
         "antipasto": [
           "mo1xei4h6yo",
-          "mpv0fexktr1"
+          "mpv0fexktr1",
+          "mor14tr4sik",
+          "mpv0gkq6uho"
         ],
         "primo": [
           "mnsq9hynhyk",
