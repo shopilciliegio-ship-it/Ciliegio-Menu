@@ -1458,7 +1458,7 @@
     },
     {
       "id": "mpv0gkq6uho",
-      "nome": "Crostino con trippa e fromaggio",
+      "nome": "Crostino con trippa e formaggio",
       "portata": "antipasto",
       "extra": 0,
       "note": ""
@@ -3364,6 +3364,22 @@
       },
       "testoLibero": "",
       "prezzo": 35,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-06-02_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mpv0fexktr1",
+          "mor14tr4sik",
+          "mpv0gkq6uho"
+        ],
+        "primo": [],
+        "secondo": [],
+        "contorno": [],
+        "dolce": []
+      },
+      "testoLibero": "",
+      "prezzo": null,
       "nomeSpecifico": "Menù del Sito"
     }
   },
