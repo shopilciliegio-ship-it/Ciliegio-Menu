@@ -1448,6 +1448,13 @@
       "portata": "primo",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mpv0fexktr1",
+      "nome": "Dadolata di pecorino e miele su misticanza",
+      "portata": "antipasto",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -3332,7 +3339,8 @@
     "2026-06-02_cena_Menù del Sito": {
       "piatti": {
         "antipasto": [
-          "mo1xei4h6yo"
+          "mo1xei4h6yo",
+          "mpv0fexktr1"
         ],
         "primo": [
           "mnsq9hynhyk",
