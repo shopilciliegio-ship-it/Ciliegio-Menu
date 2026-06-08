@@ -1497,6 +1497,13 @@
       "portata": "antipasto",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mq55n4fyfry",
+      "nome": "Tortino di stagione con crema al pecorino",
+      "portata": "antipasto",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -3670,6 +3677,23 @@
       },
       "testoLibero": "",
       "prezzo": 36,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-06-11_cena_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hynqk0",
+          "mnsq9hynsn7",
+          "mnsq9hynmjr",
+          "mq55n4fyfry"
+        ],
+        "primo": [],
+        "secondo": [],
+        "contorno": [],
+        "dolce": []
+      },
+      "testoLibero": "",
+      "prezzo": null,
       "nomeSpecifico": "Menù del Sito"
     }
   },
