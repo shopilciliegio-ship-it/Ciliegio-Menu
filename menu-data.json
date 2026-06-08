@@ -1504,6 +1504,13 @@
       "portata": "antipasto",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mq55rnu6dtj",
+      "nome": "Pici con crema di zucchine, briciole di pane e guanciale croccante",
+      "portata": "primo",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -3726,6 +3733,26 @@
       "testoLibero": "",
       "prezzo": 32,
       "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-06-09_cena_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hymnei",
+          "mnsq9hyn5zs",
+          "mnsq9hyneqw",
+          "mnsq9hynqk0",
+          "mnsq9hyno6u"
+        ],
+        "primo": [
+          "mq55rnu6dtj"
+        ],
+        "secondo": [],
+        "contorno": [],
+        "dolce": []
+      },
+      "testoLibero": "",
+      "prezzo": null,
+      "nomeSpecifico": "Menù del Sito"
     }
   },
   "prenotazioni": {
@@ -4762,6 +4789,12 @@
       "gruppi": []
     },
     "2026-06-12_cena": {
+      "gruppi": []
+    },
+    "2026-06-09_pranzo": {
+      "gruppi": []
+    },
+    "2026-06-09_cena": {
       "gruppi": []
     }
   },
