@@ -3746,12 +3746,18 @@
         "primo": [
           "mq55rnu6dtj"
         ],
-        "secondo": [],
-        "contorno": [],
-        "dolce": []
+        "secondo": [
+          "mnsq9hyn4sj"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mnsq9hyn0dv"
+        ]
       },
       "testoLibero": "",
-      "prezzo": null,
+      "prezzo": 31,
       "nomeSpecifico": "Menù del Sito"
     }
   },
