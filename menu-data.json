@@ -1518,6 +1518,13 @@
       "portata": "secondo",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mq55yhd26mx",
+      "nome": "Crostino con noci e miele",
+      "portata": "antipasto",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -3787,6 +3794,21 @@
       },
       "testoLibero": "",
       "prezzo": 34,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-06-13_cena_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hynh2h",
+          "mq55yhd26mx"
+        ],
+        "primo": [],
+        "secondo": [],
+        "contorno": [],
+        "dolce": []
+      },
+      "testoLibero": "",
+      "prezzo": null,
       "nomeSpecifico": "Menù del Sito"
     }
   },
