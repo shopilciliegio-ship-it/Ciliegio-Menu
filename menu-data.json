@@ -3813,14 +3813,21 @@
           "mo1w8xtm5r2"
         ],
         "primo": [
-          "mq55zxi6xm4"
+          "mq55zxi6xm4",
+          "mnsq9hynlob"
         ],
-        "secondo": [],
-        "contorno": [],
-        "dolce": []
+        "secondo": [
+          "mnsq9hyns9r"
+        ],
+        "contorno": [
+          "mnsq9hyn657"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
       },
       "testoLibero": "",
-      "prezzo": null,
+      "prezzo": 35,
       "nomeSpecifico": "Menù del Sito"
     }
   },
