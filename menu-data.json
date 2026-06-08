@@ -3778,11 +3778,15 @@
         "secondo": [
           "mq55vk26zzt"
         ],
-        "contorno": [],
-        "dolce": []
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mnsq9hynlyh"
+        ]
       },
       "testoLibero": "",
-      "prezzo": null,
+      "prezzo": 34,
       "nomeSpecifico": "Menù del Sito"
     }
   },
