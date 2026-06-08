@@ -1490,6 +1490,13 @@
       "portata": "primo",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mq55kwtztho",
+      "nome": "Pancetta croccante",
+      "portata": "antipasto",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -3636,6 +3643,23 @@
       },
       "testoLibero": "",
       "prezzo": 32,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-06-11_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo1zvr87ez2",
+          "mnsq9hynh2h",
+          "mnsq9hyn5zs",
+          "mq55kwtztho"
+        ],
+        "primo": [],
+        "secondo": [],
+        "contorno": [],
+        "dolce": []
+      },
+      "testoLibero": "",
+      "prezzo": null,
       "nomeSpecifico": "Menù del Sito"
     }
   },
