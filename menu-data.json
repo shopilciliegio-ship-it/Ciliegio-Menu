@@ -1532,6 +1532,13 @@
       "portata": "primo",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mq56433rcm2",
+      "nome": "Cheesecake al cioccolato",
+      "portata": "dolce",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -3829,6 +3836,31 @@
       "testoLibero": "",
       "prezzo": 35,
       "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-06-14_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo1xei4h6yo"
+        ],
+        "primo": [
+          "mp33amhtkmk",
+          "mnsq9hynfn6"
+        ],
+        "secondo": [
+          "mnsq9hyncpy",
+          "mnsq9hynxxp"
+        ],
+        "contorno": [
+          "mnsq9hynayz",
+          "mnsq9hynkgr"
+        ],
+        "dolce": [
+          "mq56433rcm2"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": null,
+      "nomeSpecifico": "Menù del Sito"
     }
   },
   "prenotazioni": {
@@ -4877,6 +4909,12 @@
       "gruppi": []
     },
     "2026-06-13_cena": {
+      "gruppi": []
+    },
+    "2026-06-14_pranzo": {
+      "gruppi": []
+    },
+    "2026-06-14_cena": {
       "gruppi": []
     }
   },
