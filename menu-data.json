@@ -1525,6 +1525,13 @@
       "portata": "antipasto",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mq55zxi6xm4",
+      "nome": "Straccetti al pesto e pomodorini",
+      "portata": "primo",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -3800,9 +3807,14 @@
       "piatti": {
         "antipasto": [
           "mnsq9hynh2h",
-          "mq55yhd26mx"
+          "mq55yhd26mx",
+          "mnsq9hyngse",
+          "mnsq9hyno6u",
+          "mo1w8xtm5r2"
         ],
-        "primo": [],
+        "primo": [
+          "mq55zxi6xm4"
+        ],
         "secondo": [],
         "contorno": [],
         "dolce": []
