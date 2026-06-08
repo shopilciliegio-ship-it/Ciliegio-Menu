@@ -1511,6 +1511,13 @@
       "portata": "primo",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mq55vk26zzt",
+      "nome": "Arrosto misto con pollo, salsiccia, costole e scamerita",
+      "portata": "secondo",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -3759,6 +3766,24 @@
       "testoLibero": "",
       "prezzo": 31,
       "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-06-13_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo1xei4h6yo"
+        ],
+        "primo": [
+          "mnsq9hyn18u"
+        ],
+        "secondo": [
+          "mq55vk26zzt"
+        ],
+        "contorno": [],
+        "dolce": []
+      },
+      "testoLibero": "",
+      "prezzo": null,
+      "nomeSpecifico": "Menù del Sito"
     }
   },
   "prenotazioni": {
@@ -4801,6 +4826,12 @@
       "gruppi": []
     },
     "2026-06-09_cena": {
+      "gruppi": []
+    },
+    "2026-06-13_pranzo": {
+      "gruppi": []
+    },
+    "2026-06-13_cena": {
       "gruppi": []
     }
   },
