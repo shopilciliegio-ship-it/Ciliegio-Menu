@@ -3651,15 +3651,25 @@
           "mo1zvr87ez2",
           "mnsq9hynh2h",
           "mnsq9hyn5zs",
-          "mq55kwtztho"
+          "mq55kwtztho",
+          "mnsq9hynuwh"
         ],
-        "primo": [],
-        "secondo": [],
-        "contorno": [],
-        "dolce": []
+        "primo": [
+          "mnsq9hyngl1",
+          "mnsq9hyns1x"
+        ],
+        "secondo": [
+          "mnsq9hynlwj"
+        ],
+        "contorno": [
+          "mnsq9hync5b"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
       },
       "testoLibero": "",
-      "prezzo": null,
+      "prezzo": 36,
       "nomeSpecifico": "Menù del Sito"
     }
   },
