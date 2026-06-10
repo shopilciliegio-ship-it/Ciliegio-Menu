@@ -5461,6 +5461,29 @@
         "dsKey": "2026-05-31_pranzo",
         "ts": 1778935997337
       }
+    ],
+    "2026-06-11_pranzo": [
+      {
+        "nome": "verrina",
+        "orario": "13:00",
+        "adulti": 10,
+        "bambini": 2,
+        "menuInteri": 5,
+        "bevande": [
+          {
+            "id": "vino-casa",
+            "nome": "Vino della casa",
+            "qty": 2
+          },
+          {
+            "id": "vino-spec",
+            "nome": "Vino bottiglia speciale",
+            "qty": 1
+          }
+        ],
+        "dsKey": "2026-06-11_pranzo",
+        "ts": 1781087382485
+      }
     ]
   }
 }
