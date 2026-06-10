@@ -4971,7 +4971,33 @@
       "gruppi": []
     },
     "2026-06-15_pranzo": {
-      "gruppi": []
+      "gruppi": [
+        {
+          "nome": "verrina",
+          "orario": "13:30",
+          "sala": "piccola",
+          "pax": 10,
+          "gratuiti": 0,
+          "bambini": 2,
+          "seggiolini": 1,
+          "contattoNome": "gianpaolo",
+          "contattoTel": "2525645",
+          "note": "un tavolo er le bomboniere",
+          "intolleranze": {
+            "celiaco": 1,
+            "lattosio": 1
+          },
+          "modifiche": "",
+          "menuKey": "2026-06-15_pranzo_Menù del Sito",
+          "prezzoSpeciale": null,
+          "dolce": true,
+          "daConfermare": true,
+          "caparraNecessaria": true,
+          "caparraStato": "attesa",
+          "caparraImporto": 100,
+          "caparraNota": null
+        }
+      ]
     },
     "2026-06-15_cena": {
       "gruppi": []
