@@ -1539,6 +1539,13 @@
       "portata": "dolce",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mqe7d7w0p28",
+      "nome": "Pici con crema di pecorino, guanciale e pancetta croccante",
+      "portata": "primo",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -3910,6 +3917,26 @@
       "testoLibero": "",
       "prezzo": 36,
       "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-06-16_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hynxni",
+          "mnsq9hynyoo",
+          "mq55kwtztho",
+          "mnsq9hynyjk",
+          "mnsq9hyngse"
+        ],
+        "primo": [
+          "mqe7d7w0p28"
+        ],
+        "secondo": [],
+        "contorno": [],
+        "dolce": []
+      },
+      "testoLibero": "",
+      "prezzo": null,
+      "nomeSpecifico": "Menù del Sito"
     }
   },
   "prenotazioni": {
@@ -4976,6 +5003,12 @@
       "gruppi": []
     },
     "2026-06-15_cena": {
+      "gruppi": []
+    },
+    "2026-06-16_pranzo": {
+      "gruppi": []
+    },
+    "2026-06-16_cena": {
       "gruppi": []
     }
   },
