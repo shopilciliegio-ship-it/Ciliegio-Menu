@@ -3930,12 +3930,18 @@
         "primo": [
           "mqe7d7w0p28"
         ],
-        "secondo": [],
-        "contorno": [],
-        "dolce": []
+        "secondo": [
+          "mnsq9hyncpy"
+        ],
+        "contorno": [
+          "mnsq9hyni20"
+        ],
+        "dolce": [
+          "mnsq9hyn8ay"
+        ]
       },
       "testoLibero": "",
-      "prezzo": null,
+      "prezzo": 30,
       "nomeSpecifico": "Menù del Sito"
     }
   },
