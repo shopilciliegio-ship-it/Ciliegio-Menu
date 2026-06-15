@@ -5779,20 +5779,26 @@
         "adulti": 4,
         "bambini": 0,
         "menuInteri": 4,
+        "piatti": [],
         "bevande": [
           {
             "id": "vino-casa",
             "nome": "Vino della casa",
-            "qty": 1
+            "qty": 2
           },
           {
             "id": "vino-spec",
             "nome": "Vino bottiglia speciale",
             "qty": 1
+          },
+          {
+            "id": "birra",
+            "nome": "Birra",
+            "qty": 1
           }
         ],
         "dsKey": "2026-06-20_pranzo",
-        "ts": 1781514088294
+        "ts": 1781516011701
       }
     ]
   }
