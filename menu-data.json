@@ -5771,6 +5771,29 @@
         "dsKey": "2026-06-11_pranzo",
         "ts": 1781087382485
       }
+    ],
+    "2026-06-20_pranzo": [
+      {
+        "nome": "pippo",
+        "orario": "13:00",
+        "adulti": 4,
+        "bambini": 0,
+        "menuInteri": 4,
+        "bevande": [
+          {
+            "id": "vino-casa",
+            "nome": "Vino della casa",
+            "qty": 1
+          },
+          {
+            "id": "vino-spec",
+            "nome": "Vino bottiglia speciale",
+            "qty": 1
+          }
+        ],
+        "dsKey": "2026-06-20_pranzo",
+        "ts": 1781514088294
+      }
     ]
   }
 }
