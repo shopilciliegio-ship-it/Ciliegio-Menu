@@ -607,7 +607,7 @@ textarea{resize:vertical;min-height:72px}
 <div id="ov-op-tavolo" class="overlay hidden">
   <div class="modal" style="max-width:600px">
     <button class="modal-close" onclick="closeOv('ov-op-tavolo')">✕</button>
-    <div class="modal-title">🍽 Ordine Tavolo</div>
+    <div class="modal-title" id="op-tavolo-modal-title">🍽 Ordine Tavolo</div>
     <input type="hidden" id="op-dskey">
 
     <div class="form-row">
@@ -3372,11 +3372,12 @@ function renderGiornoOp(){
           <div class="op-ordine-nome">${t.nome}${t.orario?` <span style="font-size:13px;color:var(--white3)">ore ${t.orario}</span>`:''}</div>
           <div class="op-ordine-det">
             ${t.adulti?`${t.adulti} adulti`:''}${t.bambini?` + ${t.bambini} bambini`:''}
-            ${t.menuCompleti?` · <span style="color:var(--gold)">${t.menuCompleti}× Menù completo</span>`:''}
+            ${t.menuInteri?` · <span style="color:var(--gold)">${t.menuInteri}× Menù completo</span>`:''}
             ${piattiStr?` · ${piattiStr}`:''}
           </div>
         </div>
         <div style="display:flex;gap:8px;flex-shrink:0">
+          <button class="btn btn-ghost btn-xs" onclick="apriModificaTavolo(${i})">✏</button>
           <button class="btn btn-ghost btn-xs" onclick="ristampaComanda(${i})">🖨</button>
           <button class="btn btn-danger btn-xs" onclick="eliminaTavolo(${i})">✕</button>
         </div>
@@ -3442,6 +3443,7 @@ let _opMenuPiatti={};  // {piattoId: qty} — piatti dal menù del giorno
 let _opCartaPiatti={}; // {piattoId: qty} — piatti alla carta
 let _opBevandeQty={};  // {bevandaId: qty}
 let _opMenuInteriN=0;  // numero menù interi quick-set
+let _opEditIndex=null; // indice del tavolo in modifica (null = nuovo tavolo)
 
 const PORTATA_COLORS={antipasto:'#c9a84c',primo:'#5a9ad8',secondo:'#c06060',contorno:'#6abc8a',dolce:'#b07ad8'};
 
@@ -3469,6 +3471,8 @@ function impostaMenuInteri(){
 function apriNuovoTavolo(){
   if(!opDateStr){alert('Apri prima un giorno dal calendario.');return;}
   const dsKey=`${opDateStr}_${opServ}`;
+  _opEditIndex=null;
+  document.getElementById('op-tavolo-modal-title').textContent='🍽 Ordine Tavolo';
   document.getElementById('op-dskey').value=dsKey;
   document.getElementById('op-nome-tavolo').value='';
   document.getElementById('op-adulti').value='';
@@ -3484,6 +3488,49 @@ function apriNuovoTavolo(){
   popolaBevande();
   openOv('ov-op-tavolo');
   setTimeout(()=>document.getElementById('op-nome-tavolo').focus(),80);
+}
+
+// ── MODIFICA TAVOLO ESISTENTE ──
+function apriModificaTavolo(i){
+  if(!opDateStr)return;
+  const dsKey=`${opDateStr}_${opServ}`;
+  const ordine=(DB.tavoli[dsKey]||[])[i];
+  if(!ordine)return;
+  _opEditIndex=i;
+  document.getElementById('op-tavolo-modal-title').textContent='✏ Modifica Ordine Tavolo';
+  document.getElementById('op-dskey').value=dsKey;
+  document.getElementById('op-nome-tavolo').value=ordine.nome||'';
+  document.getElementById('op-adulti').value=ordine.adulti||'';
+  document.getElementById('op-bambini').value=ordine.bambini||'';
+  document.getElementById('op-orario-tavolo').value=ordine.orario||(opServ==='pranzo'?'13:00':'20:00');
+
+  _opMenuPiatti={};
+  _opCartaPiatti={};
+  _opBevandeQty={};
+  _opMenuInteriN=ordine.menuInteri||0;
+  document.getElementById('op-menu-interi-val').textContent=_opMenuInteriN;
+
+  (ordine.piatti||[]).forEach(({id,qty,fonte})=>{
+    if(fonte==='carta') _opCartaPiatti[id]=qty;
+    else _opMenuPiatti[id]=qty;
+  });
+  (ordine.bevande||[]).forEach(({id,qty})=>{ _opBevandeQty[id]=qty; });
+
+  popolaMenuPiatti(dsKey);
+  popolaCartaOrdine(dsKey);
+  popolaBevande();
+
+  Object.entries(_opMenuPiatti).forEach(([id,qty])=>{
+    const el=document.getElementById(`mp-qty-${id}`); if(el) el.textContent=qty;
+  });
+  Object.entries(_opCartaPiatti).forEach(([id,qty])=>{
+    const el=document.getElementById(`cp-qty-${id}`); if(el) el.textContent=qty;
+  });
+  Object.entries(_opBevandeQty).forEach(([id,qty])=>{
+    const el=document.getElementById(`bev-${id}`); if(el) el.textContent=qty;
+  });
+
+  openOv('ov-op-tavolo');
 }
 
 // ── PIATTI DAL MENU DEL GIORNO ──
@@ -3607,6 +3654,7 @@ function raccogliOrdine(){
     adulti:  parseInt(document.getElementById('op-adulti').value)||0,
     bambini: parseInt(document.getElementById('op-bambini').value)||0,
     menuInteri: _opMenuInteriN,
+    piatti: [...piattiMenu, ...piattiCarta],
     bevande: Object.entries(_opBevandeQty).filter(([,q])=>q>0).map(([id,qty])=>{
       const b=bevande.find(x=>x.id===id)||{id,nome:id};
       return {id, nome:b.nome, qty};
@@ -3621,10 +3669,15 @@ function salvaOrdine(andStampa=false){
   if(!ordine.nome){alert('Inserisci il nome del tavolo.');return;}
   if(!DB.tavoli) DB.tavoli={};
   if(!DB.tavoli[ordine.dsKey]) DB.tavoli[ordine.dsKey]=[];
-  DB.tavoli[ordine.dsKey].push(ordine);
+  if(_opEditIndex!=null && DB.tavoli[ordine.dsKey][_opEditIndex]){
+    DB.tavoli[ordine.dsKey][_opEditIndex]=ordine;
+  } else {
+    DB.tavoli[ordine.dsKey].push(ordine);
+  }
   saveDB();
   if(andStampa) _stampaComandaOrdine(ordine);
   closeOv('ov-op-tavolo');
+  _opEditIndex=null;
   renderGiornoOp(); renderCalOp();
 }
 
