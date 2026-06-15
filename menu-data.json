@@ -5234,7 +5234,30 @@
       "gruppi": []
     },
     "2026-06-20_pranzo": {
-      "gruppi": []
+      "gruppi": [
+        {
+          "nome": "eqwr",
+          "orario": "13:00",
+          "sala": "",
+          "pax": 20,
+          "gratuiti": 0,
+          "bambini": 0,
+          "seggiolini": 0,
+          "contattoNome": "",
+          "contattoTel": "",
+          "note": "",
+          "intolleranze": null,
+          "modifiche": "",
+          "menuKey": "2026-06-20_pranzo_Menù del Sito",
+          "prezzoSpeciale": null,
+          "dolce": true,
+          "daConfermare": false,
+          "caparraNecessaria": false,
+          "caparraStato": null,
+          "caparraImporto": null,
+          "caparraNota": null
+        }
+      ]
     },
     "2026-06-20_cena": {
       "gruppi": []
