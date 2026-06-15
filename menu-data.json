@@ -1227,7 +1227,7 @@
     },
     {
       "id": "mo6a8gotq38",
-      "nome": "Arrosto con salsiccia, stinco, scamerita e coniglio",
+      "nome": "Arrosto misto con salsiccia, stinco, scamerita e coniglio",
       "portata": "secondo",
       "extra": 0,
       "note": ""
@@ -1283,7 +1283,7 @@
     },
     {
       "id": "mohavjo1cxl",
-      "nome": "Arrosto con maiale, pollo e tagliata di manzo",
+      "nome": "Arrosto misto con maiale, pollo e tagliata di manzo",
       "portata": "secondo",
       "extra": 0,
       "note": ""
@@ -1339,7 +1339,7 @@
     },
     {
       "id": "mor0q868kfb",
-      "nome": "Arrosto con stinco, fegatello, pollo e tagliata di manzo",
+      "nome": "Arrosto misto con stinco, fegatello, pollo e tagliata di manzo",
       "portata": "secondo",
       "extra": 0,
       "note": ""
@@ -1360,7 +1360,7 @@
     },
     {
       "id": "mor11g73cdo",
-      "nome": "Arrosto con salsiccia, stinco, scamerita e pollo",
+      "nome": "Arrosto misto con salsiccia, stinco, scamerita e pollo",
       "portata": "secondo",
       "extra": 0,
       "note": ""
@@ -1487,6 +1487,62 @@
     {
       "id": "mpv0uwpjzyu",
       "nome": "Pici al ragù di anatra",
+      "portata": "primo",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mq55kwtztho",
+      "nome": "Pancetta croccante",
+      "portata": "antipasto",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mq55n4fyfry",
+      "nome": "Tortino di stagione con crema al pecorino",
+      "portata": "antipasto",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mq55rnu6dtj",
+      "nome": "Pici con crema di zucchine, briciole di pane e guanciale croccante",
+      "portata": "primo",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mq55vk26zzt",
+      "nome": "Arrosto misto con pollo, salsiccia, costole e scamerita",
+      "portata": "secondo",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mq55yhd26mx",
+      "nome": "Crostino con noci e miele",
+      "portata": "antipasto",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mq55zxi6xm4",
+      "nome": "Straccetti al pesto e pomodorini",
+      "portata": "primo",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mq56433rcm2",
+      "nome": "Cheesecake al cioccolato",
+      "portata": "dolce",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mqe7d7w0p28",
+      "nome": "Pici con crema di pecorino, guanciale e pancetta croccante",
       "portata": "primo",
       "extra": 0,
       "note": ""
@@ -3615,6 +3671,482 @@
       "testoLibero": "",
       "prezzo": 30,
       "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-06-10_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo1xei4h6yo"
+        ],
+        "primo": [
+          "mo67h4xg40w"
+        ],
+        "secondo": [
+          "mnsq9hyn4sj"
+        ],
+        "contorno": [
+          "mnsq9hync5b"
+        ],
+        "dolce": [
+          "mohatliymxm"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 32,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-06-11_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo1zvr87ez2",
+          "mnsq9hynh2h",
+          "mnsq9hyn5zs",
+          "mq55kwtztho",
+          "mnsq9hynuwh"
+        ],
+        "primo": [
+          "mnsq9hyngl1",
+          "mnsq9hyns1x"
+        ],
+        "secondo": [
+          "mnsq9hynlwj"
+        ],
+        "contorno": [
+          "mnsq9hync5b"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 36,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-06-11_cena_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hynqk0",
+          "mnsq9hynsn7",
+          "mnsq9hynmjr",
+          "mq55n4fyfry",
+          "mnsq9hynyjk"
+        ],
+        "primo": [
+          "mnsq9hynval"
+        ],
+        "secondo": [
+          "mnsq9hynuo1"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mnsq9hyn0dv"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 30,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-06-12_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo1xei4h6yo"
+        ],
+        "primo": [
+          "mo68pp64giu"
+        ],
+        "secondo": [
+          "mnsq9hyn4sj"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mnsq9hynzar"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 32,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-06-09_cena_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hymnei",
+          "mnsq9hyn5zs",
+          "mnsq9hyneqw",
+          "mnsq9hynqk0",
+          "mnsq9hyno6u"
+        ],
+        "primo": [
+          "mq55rnu6dtj"
+        ],
+        "secondo": [
+          "mnsq9hyn4sj"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mnsq9hyn0dv"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 31,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-06-13_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo1xei4h6yo"
+        ],
+        "primo": [
+          "mnsq9hyn18u"
+        ],
+        "secondo": [
+          "mq55vk26zzt"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mnsq9hynlyh"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 34,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-06-13_cena_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hynh2h",
+          "mq55yhd26mx",
+          "mnsq9hyngse",
+          "mnsq9hyno6u",
+          "mo1w8xtm5r2"
+        ],
+        "primo": [
+          "mq55zxi6xm4",
+          "mnsq9hynlob"
+        ],
+        "secondo": [
+          "mnsq9hyns9r"
+        ],
+        "contorno": [
+          "mnsq9hyn657"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 35,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-06-14_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo1xei4h6yo"
+        ],
+        "primo": [
+          "mp33amhtkmk",
+          "mnsq9hynfn6"
+        ],
+        "secondo": [
+          "mnsq9hyncpy",
+          "mnsq9hynxxp"
+        ],
+        "contorno": [
+          "mnsq9hynayz",
+          "mnsq9hynkgr"
+        ],
+        "dolce": [
+          "mq56433rcm2"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 42,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-06-08_cena_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo1xei4h6yo"
+        ],
+        "primo": [
+          "mo67h4xg40w"
+        ],
+        "secondo": [
+          "mnsq9hyn4sj"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 32,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-06-15_cena_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hymnei",
+          "mnsq9hynqk0",
+          "mo1w8xtm5r2",
+          "mnsq9hymfot",
+          "mnsq9hynkaz"
+        ],
+        "primo": [
+          "mnsq9hyngl1",
+          "mnsq9hyn18u"
+        ],
+        "secondo": [
+          "mnsq9hyn4sj"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 36,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-06-16_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hynxni",
+          "mnsq9hynyoo",
+          "mq55kwtztho",
+          "mnsq9hynyjk",
+          "mnsq9hyngse"
+        ],
+        "primo": [
+          "mqe7d7w0p28"
+        ],
+        "secondo": [
+          "mnsq9hyncpy"
+        ],
+        "contorno": [
+          "mnsq9hyni20"
+        ],
+        "dolce": [
+          "mnsq9hyn8ay"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 30,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-06-16_cena_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo1xei4h6yo"
+        ],
+        "primo": [
+          "mo67h4xg40w"
+        ],
+        "secondo": [
+          "mnsq9hyn4sj"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 32,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-06-17_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo68jqekj3x"
+        ],
+        "primo": [
+          "mo67h4xg40w"
+        ],
+        "secondo": [
+          "mnsq9hyn4sj"
+        ],
+        "contorno": [
+          "mnsq9hync5b"
+        ],
+        "dolce": [
+          "mohatliymxm"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 32,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-06-15_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo1xei4h6yo"
+        ],
+        "primo": [
+          "mnsq9hyns1x"
+        ],
+        "secondo": [
+          "mnsq9hyn4sj"
+        ],
+        "contorno": [
+          "mnsq9hync5b"
+        ],
+        "dolce": [
+          "mohatliymxm"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 32,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-06-19_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo1xei4h6yo"
+        ],
+        "primo": [
+          "mnsq9hyns1x"
+        ],
+        "secondo": [
+          "mnsq9hyn4sj"
+        ],
+        "contorno": [
+          "mnsq9hync5b"
+        ],
+        "dolce": [
+          "mohatliymxm"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 32,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-06-19_cena_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo6acrp1vak"
+        ],
+        "primo": [
+          "mnsq9hyns1x"
+        ],
+        "secondo": [
+          "mohavjo1cxl"
+        ],
+        "contorno": [
+          "mnsq9hynayz",
+          "mnsq9hyni20"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 32,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-06-20_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hynkaz",
+          "mnsq9hymfot",
+          "mnsq9hynmjr",
+          "mnsq9hynf3u",
+          "mnsq9hymqzy"
+        ],
+        "primo": [
+          "mpl7xb8z619"
+        ],
+        "secondo": [
+          "mnsq9hynm2d"
+        ],
+        "contorno": [
+          "mpv0t66f8bi"
+        ],
+        "dolce": [
+          "mnsq9hyn8ay"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 30,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-06-20_cena_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo1xei4h6yo"
+        ],
+        "primo": [
+          "mo699pdh68y"
+        ],
+        "secondo": [
+          "mnsq9hyn4sj"
+        ],
+        "contorno": [
+          "mnsq9hyni20"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 32,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-06-21_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hynqk0"
+        ],
+        "primo": [
+          "mnsq9hyn9ag",
+          "mq55zxi6xm4"
+        ],
+        "secondo": [
+          "mnsq9hyn4sj"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mnsq9hynzar"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 36,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-06-18_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo1xei4h6yo"
+        ],
+        "primo": [
+          "mo67h4xg40w"
+        ],
+        "secondo": [
+          "mnsq9hyn4sj"
+        ],
+        "contorno": [
+          "mnsq9hync5b"
+        ],
+        "dolce": [
+          "mohatliymxm"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 32,
+      "nomeSpecifico": "Menù del Sito"
     }
   },
   "prenotazioni": {
@@ -4634,6 +5166,113 @@
     },
     "2026-06-07_cena": {
       "gruppi": []
+    },
+    "2026-06-10_pranzo": {
+      "gruppi": []
+    },
+    "2026-06-10_cena": {
+      "gruppi": []
+    },
+    "2026-06-11_pranzo": {
+      "gruppi": []
+    },
+    "2026-06-11_cena": {
+      "gruppi": []
+    },
+    "2026-06-12_pranzo": {
+      "gruppi": []
+    },
+    "2026-06-12_cena": {
+      "gruppi": []
+    },
+    "2026-06-09_pranzo": {
+      "gruppi": []
+    },
+    "2026-06-09_cena": {
+      "gruppi": []
+    },
+    "2026-06-13_pranzo": {
+      "gruppi": []
+    },
+    "2026-06-13_cena": {
+      "gruppi": []
+    },
+    "2026-06-14_pranzo": {
+      "gruppi": []
+    },
+    "2026-06-14_cena": {
+      "gruppi": []
+    },
+    "2026-06-08_pranzo": {
+      "gruppi": []
+    },
+    "2026-06-08_cena": {
+      "gruppi": []
+    },
+    "2026-06-15_pranzo": {
+      "gruppi": []
+    },
+    "2026-06-15_cena": {
+      "gruppi": []
+    },
+    "2026-06-16_pranzo": {
+      "gruppi": []
+    },
+    "2026-06-16_cena": {
+      "gruppi": []
+    },
+    "2026-06-17_pranzo": {
+      "gruppi": []
+    },
+    "2026-06-17_cena": {
+      "gruppi": []
+    },
+    "2026-06-19_pranzo": {
+      "gruppi": []
+    },
+    "2026-06-19_cena": {
+      "gruppi": []
+    },
+    "2026-06-20_pranzo": {
+      "gruppi": [
+        {
+          "nome": "eqwr",
+          "orario": "13:00",
+          "sala": "",
+          "pax": 20,
+          "gratuiti": 0,
+          "bambini": 0,
+          "seggiolini": 0,
+          "contattoNome": "",
+          "contattoTel": "",
+          "note": "",
+          "intolleranze": null,
+          "modifiche": "",
+          "menuKey": "2026-06-20_pranzo_Menù del Sito",
+          "prezzoSpeciale": null,
+          "dolce": true,
+          "daConfermare": false,
+          "caparraNecessaria": false,
+          "caparraStato": null,
+          "caparraImporto": null,
+          "caparraNota": null
+        }
+      ]
+    },
+    "2026-06-20_cena": {
+      "gruppi": []
+    },
+    "2026-06-21_pranzo": {
+      "gruppi": []
+    },
+    "2026-06-21_cena": {
+      "gruppi": []
+    },
+    "2026-06-18_pranzo": {
+      "gruppi": []
+    },
+    "2026-06-18_cena": {
+      "gruppi": []
     }
   },
   "noteGiorno": {
@@ -4859,7 +5498,15 @@
     "mpv0uwpjzyu": "Pici with duck sauce",
     "mpv0k3ti2w3": "Stuffed tortelli with braised beef and thyme butter",
     "mpv0t66f8bi": "Baked potatoes",
-    "mpv0nouuems": "Strawberry and cream Tart"
+    "mpv0nouuems": "Strawberry and cream Tart",
+    "mq55yhd26mx": "Crostini with walnuts and honey",
+    "mq55kwtztho": "Crispy bacon",
+    "mq55n4fyfry": "Seasonal pie with pecorino cream",
+    "mq55rnu6dtj": "Pici with zucchini cream, breadcrumbs, and crispy bacon",
+    "mq55zxi6xm4": "Straccetti pasta with pesto and cherry tomatoes",
+    "mq55vk26zzt": "Mixed roast with chicken, sausage, ribs, and pork neck",
+    "mq56433rcm2": "Chocolate Cheesecake",
+    "mqe7d7w0p28": "Pici with pecorino cream, pork cheek, and crispy bacon"
   },
   "cartaDelGiorno": {
     "2026-05-31": [
@@ -4887,6 +5534,27 @@
       "mnsq9hyn4sj",
       "mnsq9hynayz",
       "mo67hzucqmt"
+    ],
+    "2026-06-11_pranzo": [
+      "mnsq9hymnei",
+      "mpv0uwpjzyu",
+      "mo1zx4sfwtk",
+      "mnsq9hynxpi",
+      "mnsq9hyncf7"
+    ],
+    "2026-06-20_pranzo": [
+      "mnsq9hymoq1",
+      "mnsq9hynyoo",
+      "mnsq9hymnw1",
+      "mnsq9hynqm1",
+      "mo6a6s6d607",
+      "mo1waims7of",
+      "mnsq9hyn885",
+      "mnsq9hynalq",
+      "mnsq9hync5b",
+      "mnsq9hyn657",
+      "mnsq9hyntti",
+      "mnsq9hynuou"
     ]
   },
   "tavoli": {
@@ -5079,6 +5747,52 @@
         ],
         "dsKey": "2026-05-31_pranzo",
         "ts": 1778935997337
+      }
+    ],
+    "2026-06-11_pranzo": [
+      {
+        "nome": "verrina",
+        "orario": "13:00",
+        "adulti": 10,
+        "bambini": 2,
+        "menuInteri": 5,
+        "bevande": [
+          {
+            "id": "vino-casa",
+            "nome": "Vino della casa",
+            "qty": 2
+          },
+          {
+            "id": "vino-spec",
+            "nome": "Vino bottiglia speciale",
+            "qty": 1
+          }
+        ],
+        "dsKey": "2026-06-11_pranzo",
+        "ts": 1781087382485
+      }
+    ],
+    "2026-06-20_pranzo": [
+      {
+        "nome": "pippo",
+        "orario": "13:00",
+        "adulti": 4,
+        "bambini": 0,
+        "menuInteri": 4,
+        "bevande": [
+          {
+            "id": "vino-casa",
+            "nome": "Vino della casa",
+            "qty": 1
+          },
+          {
+            "id": "vino-spec",
+            "nome": "Vino bottiglia speciale",
+            "qty": 1
+          }
+        ],
+        "dsKey": "2026-06-20_pranzo",
+        "ts": 1781514088294
       }
     ]
   }
