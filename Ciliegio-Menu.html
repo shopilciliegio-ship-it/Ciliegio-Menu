@@ -1059,13 +1059,22 @@ function scheduleSync(){
   syncTimer = setTimeout(()=>autoSync(), 1500);
 }
 
+// Migra la config GitHub dalla vecchia chiave condivisa 'ghcfg' (usata anche
+// da altre app sullo stesso dominio github.io, causando sovrascritture)
+// alla chiave dedicata 'ghcfg_ciliegio-menu'.
+function migraGhCfg(){
+  if(!localStorage.getItem('ghcfg_ciliegio-menu') && localStorage.getItem('ghcfg')){
+    localStorage.setItem('ghcfg_ciliegio-menu', localStorage.getItem('ghcfg'));
+  }
+}
+
 function isGhConfigured(){
-  const c = JSON.parse(localStorage.getItem('ghcfg')||'{}');
+  const c = JSON.parse(localStorage.getItem('ghcfg_ciliegio-menu')||'{}');
   return !!(c.tok && c.own && c.rep && c.pth);
 }
 
 function getGhCfg(){
-  return JSON.parse(localStorage.getItem('ghcfg')||'{}');
+  return JSON.parse(localStorage.getItem('ghcfg_ciliegio-menu')||'{}');
 }
 
 let _syncErrTimer=null;
@@ -1227,6 +1236,7 @@ function paxLabel(g){
 // INIT
 // ══════════════════════════════════════════════════════
 function init(){
+  migraGhCfg();
   // Carica prima i dati locali (visualizzazione immediata)
   const raw = localStorage.getItem('rdb3') || localStorage.getItem('rdb');
   if(raw){ try{ DB=JSON.parse(raw); }catch(e){} }
@@ -2503,7 +2513,7 @@ function toggleTok(){
   }
 }
 function loadGhCfg(){
-  const c=JSON.parse(localStorage.getItem('ghcfg')||'{}');
+  const c=JSON.parse(localStorage.getItem('ghcfg_ciliegio-menu')||'{}');
   ['tok','own','rep','pth'].forEach(k=>{const el=document.getElementById('gh-'+k);if(el&&c[k])el.value=c[k];});
 }
 function ghSaveCfg(){
@@ -2513,7 +2523,7 @@ function ghSaveCfg(){
     rep:document.getElementById('gh-rep').value.trim(),
     pth:document.getElementById('gh-pth').value.trim()
   };
-  localStorage.setItem('ghcfg',JSON.stringify(cfg));
+  localStorage.setItem('ghcfg_ciliegio-menu',JSON.stringify(cfg));
   ghSt('✓ Config salvata. Carico i dati da GitHub…','info');
   setTimeout(()=>{ closeOv('ov-gh'); autoLoad(); }, 800);
 }
@@ -2730,7 +2740,7 @@ async function avviaGeneraJPG(){
 
 // Elenca e cancella tutti i file JPG nella cartella immagini-sito/ su GitHub
 async function svuotaCartellaImmaginiGitHub(){
-  const cfg=JSON.parse(localStorage.getItem('ghcfg')||'{}');
+  const cfg=JSON.parse(localStorage.getItem('ghcfg_ciliegio-menu')||'{}');
   if(!cfg.tok||!cfg.own||!cfg.rep) return;
   const headers={Authorization:`token ${cfg.tok}`,Accept:'application/vnd.github.v3+json'};
   try{
@@ -2753,7 +2763,7 @@ async function svuotaCartellaImmaginiGitHub(){
 }
 
 async function uploadJPGGitHub(b64, filename){
-  const cfg=JSON.parse(localStorage.getItem('ghcfg')||'{}');
+  const cfg=JSON.parse(localStorage.getItem('ghcfg_ciliegio-menu')||'{}');
   if(!cfg.tok||!cfg.own||!cfg.rep) return;
   const path=`immagini-sito/${filename}`;
   let sha=null;
