@@ -5799,6 +5799,83 @@
         ],
         "dsKey": "2026-06-20_pranzo",
         "ts": 1781516011701
+      },
+      {
+        "nome": "PEPPO",
+        "orario": "13:00",
+        "adulti": 4,
+        "bambini": 0,
+        "menuInteri": 4,
+        "piatti": [
+          {
+            "id": "mnsq9hynkaz",
+            "qty": 4,
+            "fonte": "menu"
+          },
+          {
+            "id": "mnsq9hymfot",
+            "qty": 4,
+            "fonte": "menu"
+          },
+          {
+            "id": "mnsq9hynmjr",
+            "qty": 4,
+            "fonte": "menu"
+          },
+          {
+            "id": "mnsq9hynf3u",
+            "qty": 3,
+            "fonte": "menu"
+          },
+          {
+            "id": "mnsq9hymqzy",
+            "qty": 3,
+            "fonte": "menu"
+          },
+          {
+            "id": "mpl7xb8z619",
+            "qty": 2,
+            "fonte": "menu"
+          },
+          {
+            "id": "mnsq9hynm2d",
+            "qty": 2,
+            "fonte": "menu"
+          },
+          {
+            "id": "mpv0t66f8bi",
+            "qty": 4,
+            "fonte": "menu"
+          },
+          {
+            "id": "mnsq9hyn8ay",
+            "qty": 4,
+            "fonte": "menu"
+          },
+          {
+            "id": "mnsq9hyn885",
+            "qty": 1,
+            "fonte": "carta"
+          },
+          {
+            "id": "mnsq9hynalq",
+            "qty": 1,
+            "fonte": "carta"
+          },
+          {
+            "id": "mo6a6s6d607",
+            "qty": 1,
+            "fonte": "carta"
+          },
+          {
+            "id": "mo1waims7of",
+            "qty": 1,
+            "fonte": "carta"
+          }
+        ],
+        "bevande": [],
+        "dsKey": "2026-06-20_pranzo",
+        "ts": 1781517700845
       }
     ]
   }
