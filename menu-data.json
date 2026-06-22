@@ -1546,6 +1546,13 @@
       "portata": "primo",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mqps763025p",
+      "nome": "Capocollo alla grigia",
+      "portata": "secondo",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -4174,6 +4181,24 @@
       "testoLibero": "",
       "prezzo": 36,
       "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-06-23_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo1xei4h6yo"
+        ],
+        "primo": [
+          "mo67h4xg40w"
+        ],
+        "secondo": [
+          "mqps763025p"
+        ],
+        "contorno": [],
+        "dolce": []
+      },
+      "testoLibero": "",
+      "prezzo": null,
+      "nomeSpecifico": "Menù del Sito"
     }
   },
   "prenotazioni": {
@@ -5305,6 +5330,12 @@
       "gruppi": []
     },
     "2026-06-22_cena": {
+      "gruppi": []
+    },
+    "2026-06-23_pranzo": {
+      "gruppi": []
+    },
+    "2026-06-23_cena": {
       "gruppi": []
     }
   },
