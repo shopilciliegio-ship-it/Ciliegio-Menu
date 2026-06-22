@@ -1567,6 +1567,13 @@
       "portata": "primo",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mqpsj7ikbvz",
+      "nome": "Tagliatelle al ragù bianco",
+      "portata": "primo",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -4264,6 +4271,26 @@
       },
       "testoLibero": "",
       "prezzo": 35,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-06-23_cena_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hymnei",
+          "mnsq9hynqk0",
+          "mnsq9hyno6u",
+          "mnsq9hynf3u",
+          "mohaxdaa2wx"
+        ],
+        "primo": [
+          "mqpsj7ikbvz"
+        ],
+        "secondo": [],
+        "contorno": [],
+        "dolce": []
+      },
+      "testoLibero": "",
+      "prezzo": null,
       "nomeSpecifico": "Menù del Sito"
     }
   },
