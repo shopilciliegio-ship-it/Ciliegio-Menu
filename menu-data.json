@@ -1560,6 +1560,13 @@
       "portata": "primo",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mqpsful0wfd",
+      "nome": "Pasta fresca con crema di zucchine, pancetta croccante e briciole di pane",
+      "portata": "primo",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -4231,6 +4238,26 @@
       },
       "testoLibero": "",
       "prezzo": 32,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-06-24_cena_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hynf3u",
+          "mnsq9hynfoi",
+          "mnsq9hyno6u",
+          "mnsq9hynqk0",
+          "mnsq9hymnei"
+        ],
+        "primo": [
+          "mqpsful0wfd"
+        ],
+        "secondo": [],
+        "contorno": [],
+        "dolce": []
+      },
+      "testoLibero": "",
+      "prezzo": null,
       "nomeSpecifico": "Menù del Sito"
     }
   },
