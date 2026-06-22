@@ -1553,6 +1553,13 @@
       "portata": "secondo",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mqps9i0c302",
+      "nome": "Pasta fresca al ragù di anatra",
+      "portata": "primo",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -4203,6 +4210,22 @@
       "testoLibero": "",
       "prezzo": 30,
       "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-06-24_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo68jqekj3x"
+        ],
+        "primo": [
+          "mqps9i0c302"
+        ],
+        "secondo": [],
+        "contorno": [],
+        "dolce": []
+      },
+      "testoLibero": "",
+      "prezzo": null,
+      "nomeSpecifico": "Menù del Sito"
     }
   },
   "prenotazioni": {
@@ -5340,6 +5363,12 @@
       "gruppi": []
     },
     "2026-06-23_cena": {
+      "gruppi": []
+    },
+    "2026-06-24_pranzo": {
+      "gruppi": []
+    },
+    "2026-06-24_cena": {
       "gruppi": []
     }
   },
