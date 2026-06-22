@@ -1574,6 +1574,13 @@
       "portata": "primo",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mqpsmhlgi9d",
+      "nome": "Pasta fresca con pesto e pomodorini",
+      "portata": "primo",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -4324,6 +4331,22 @@
       "testoLibero": "",
       "prezzo": 30,
       "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-06-26_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo68jqekj3x"
+        ],
+        "primo": [
+          "mqpsmhlgi9d"
+        ],
+        "secondo": [],
+        "contorno": [],
+        "dolce": []
+      },
+      "testoLibero": "",
+      "prezzo": null,
+      "nomeSpecifico": "Menù del Sito"
     }
   },
   "prenotazioni": {
@@ -5473,6 +5496,12 @@
       "gruppi": []
     },
     "2026-06-25_cena": {
+      "gruppi": []
+    },
+    "2026-06-26_pranzo": {
+      "gruppi": []
+    },
+    "2026-06-26_cena": {
       "gruppi": []
     }
   },
