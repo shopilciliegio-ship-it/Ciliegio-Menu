@@ -4366,15 +4366,25 @@
         "antipasto": [
           "mnsq9hymfot",
           "mo1w9vxeqnt",
-          "mqpso3us6k2"
+          "mqpso3us6k2",
+          "mnsq9hymnei",
+          "mnsq9hymqzy"
         ],
-        "primo": [],
-        "secondo": [],
-        "contorno": [],
-        "dolce": []
+        "primo": [
+          "mnsq9hyns1x"
+        ],
+        "secondo": [
+          "mnsq9hyn38r"
+        ],
+        "contorno": [
+          "mnsq9hync5b"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
       },
       "testoLibero": "",
-      "prezzo": null,
+      "prezzo": 30,
       "nomeSpecifico": "Menù del Sito"
     }
   },
