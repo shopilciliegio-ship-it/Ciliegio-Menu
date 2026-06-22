@@ -4252,12 +4252,18 @@
         "primo": [
           "mqpsful0wfd"
         ],
-        "secondo": [],
-        "contorno": [],
-        "dolce": []
+        "secondo": [
+          "mnsq9hynvqs"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
       },
       "testoLibero": "",
-      "prezzo": null,
+      "prezzo": 35,
       "nomeSpecifico": "Menù del Sito"
     }
   },
