@@ -4657,6 +4657,28 @@
       "testoLibero": "",
       "prezzo": 32,
       "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-06-29_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo1xei4h6yo"
+        ],
+        "primo": [
+          "mor0xlkqoe0"
+        ],
+        "secondo": [
+          "mnsq9hyns9r"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mnsq9hyn8ay"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 32,
+      "nomeSpecifico": "Menù del Sito"
     }
   },
   "prenotazioni": {
