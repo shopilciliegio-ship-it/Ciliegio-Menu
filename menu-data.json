@@ -4591,6 +4591,28 @@
       "testoLibero": "",
       "prezzo": 33,
       "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-07-03_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo1xei4h6yo"
+        ],
+        "primo": [
+          "mpl7tkvwn32"
+        ],
+        "secondo": [
+          "mqps763025p"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 32,
+      "nomeSpecifico": "Menù del Sito"
     }
   },
   "prenotazioni": {
