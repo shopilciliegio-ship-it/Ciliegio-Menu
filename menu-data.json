@@ -1588,6 +1588,13 @@
       "portata": "antipasto",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mqywznh6pfj",
+      "nome": "Tortiglioni al pesto e pomodorini",
+      "portata": "primo",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -4488,6 +4495,22 @@
       "testoLibero": "",
       "prezzo": 35,
       "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-07-05_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo1xei4h6yo"
+        ],
+        "primo": [
+          "mqywznh6pfj"
+        ],
+        "secondo": [],
+        "contorno": [],
+        "dolce": []
+      },
+      "testoLibero": "",
+      "prezzo": null,
+      "nomeSpecifico": "Menù del Sito"
     }
   },
   "prenotazioni": {
@@ -5667,6 +5690,12 @@
       "gruppi": []
     },
     "2026-07-01_cena": {
+      "gruppi": []
+    },
+    "2026-07-05_pranzo": {
+      "gruppi": []
+    },
+    "2026-07-05_cena": {
       "gruppi": []
     }
   },
