@@ -1049,14 +1049,15 @@ function saveDB(){
   scheduleSync();
 }
 
-// Salva subito nel localStorage ma aspetta 1.5s prima di mandare su GitHub
-// (per non fare una chiamata API ad ogni checkbox cliccata)
+// Salva subito nel localStorage ma aspetta 60s prima di mandare su GitHub
+// (il deploy di GitHub Pages dura ~40-50s: push troppo ravvicinate si accavallano
+// e fanno fallire il deploy precedente con "Run failed")
 function scheduleSync(){
   if(!isGhConfigured()) return;
   syncPending = true;
   setSyncStatus('pending');
   clearTimeout(syncTimer);
-  syncTimer = setTimeout(()=>autoSync(), 1500);
+  syncTimer = setTimeout(()=>autoSync(), 60000);
 }
 
 // Migra la config GitHub dalla vecchia chiave condivisa 'ghcfg' (usata anche
