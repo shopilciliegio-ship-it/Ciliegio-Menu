@@ -1609,6 +1609,13 @@
       "portata": "secondo",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mr86h40t8yx",
+      "nome": "Pici alla Amatriciana",
+      "portata": "primo",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -5005,6 +5012,22 @@
       },
       "testoLibero": "",
       "prezzo": 32,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-07-11_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo6acrp1vak"
+        ],
+        "primo": [
+          "mr86h40t8yx"
+        ],
+        "secondo": [],
+        "contorno": [],
+        "dolce": []
+      },
+      "testoLibero": "",
+      "prezzo": null,
       "nomeSpecifico": "Menù del Sito"
     }
   },
