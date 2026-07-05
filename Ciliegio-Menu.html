@@ -422,7 +422,7 @@ textarea{resize:vertical;min-height:72px}
       <button class="btn btn-ghost btn-sm" onclick="document.getElementById('imp').click()" style="padding:6px 16px">📂 Importa backup</button>
     </div>
 
-    <div style="text-align:center;font-size:13px;color:#666;letter-spacing:3px;margin-top:12px;font-family:'Cinzel',serif">v61</div>
+    <div style="text-align:center;font-size:13px;color:#666;letter-spacing:3px;margin-top:12px;font-family:'Cinzel',serif">v62</div>
   </div>
 </div>
 
@@ -1314,7 +1314,7 @@ function loadLogo(){
   // Prima prova dal localStorage (upload manuale o precedente)
   const l=localStorage.getItem('logo'); if(l){applyLogo(l);return;}
   // Poi prova a caricare dal repository GitHub (URL raw pubblico)
-  const logoUrl='https://raw.githubusercontent.com/shopilciliegio-ship-it/Ciliegio-Menu/main/ciliegio_nero_trasparente.png';
+  const logoUrl='https://raw.githubusercontent.com/shopilciliegio-ship-it/Ciliegio-Menu/main/ciliegio_trasparente.png';
   const img=document.getElementById('logo-img');
   img.onload=()=>{
     img.style.display='block';
