@@ -4900,11 +4900,15 @@
         "secondo": [
           "mr86agr9v5h"
         ],
-        "contorno": [],
-        "dolce": []
+        "contorno": [
+          "mnsq9hyn657"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
       },
       "testoLibero": "",
-      "prezzo": null,
+      "prezzo": 39,
       "nomeSpecifico": "Menù del Sito"
     }
   },
