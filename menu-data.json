@@ -5022,12 +5022,18 @@
         "primo": [
           "mr86h40t8yx"
         ],
-        "secondo": [],
-        "contorno": [],
-        "dolce": []
+        "secondo": [
+          "mnsq9hyn4sj"
+        ],
+        "contorno": [
+          "mnsq9hyni20"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
       },
       "testoLibero": "",
-      "prezzo": null,
+      "prezzo": 32,
       "nomeSpecifico": "Menù del Sito"
     }
   },
