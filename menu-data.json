@@ -1602,6 +1602,13 @@
       "portata": "primo",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mr86agr9v5h",
+      "nome": "Arrosto misto con costole, pollo, coniglio e tagliata di manzo",
+      "portata": "secondo",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -4890,7 +4897,9 @@
           "mo1waims7of",
           "mr868jetd4x"
         ],
-        "secondo": [],
+        "secondo": [
+          "mr86agr9v5h"
+        ],
         "contorno": [],
         "dolce": []
       },
