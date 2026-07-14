@@ -5316,13 +5316,23 @@
           "mnsq9hynyjk",
           "mnsq9hynf3u"
         ],
-        "primo": [],
-        "secondo": [],
-        "contorno": [],
-        "dolce": []
+        "primo": [
+          "mnsq9hyngl1",
+          "mnsq9hyns1x"
+        ],
+        "secondo": [
+          "mnsq9hynalq",
+          "mnsq9hyn0ay"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mnsq9hyn0dv"
+        ]
       },
       "testoLibero": "",
-      "prezzo": null,
+      "prezzo": 42,
       "nomeSpecifico": "Menù del Sito"
     }
   },
