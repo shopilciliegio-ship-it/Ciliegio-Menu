@@ -1630,6 +1630,20 @@
       "portata": "primo",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mrkp9ioyuoc",
+      "nome": "Risotto con zucchine e fiori di zucca",
+      "portata": "primo",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mrkpand632n",
+      "nome": "Crostata ai frutti rossi",
+      "portata": "dolce",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -5274,6 +5288,33 @@
           "mnsq9hynyoo",
           "mnsq9hymmle",
           "mnsq9hynmjr"
+        ],
+        "primo": [
+          "mrkp9ioyuoc",
+          "mpv0k3ti2w3"
+        ],
+        "secondo": [
+          "mnsq9hyn4sj"
+        ],
+        "contorno": [
+          "mnsq9hynelb"
+        ],
+        "dolce": [
+          "mrkpand632n"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 40,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-07-17_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hyneqw",
+          "mnsq9hynqk0",
+          "mohaxdaa2wx",
+          "mnsq9hynyjk",
+          "mnsq9hynf3u"
         ],
         "primo": [],
         "secondo": [],
