@@ -5133,7 +5133,79 @@
           "mnsq9hynfpv",
           "mnsq9hyns1x"
         ],
-        "secondo": [],
+        "secondo": [
+          "mnsq9hyn4sj"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mnsq9hyn0dv"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 35,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-07-15_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo68jqekj3x"
+        ],
+        "primo": [
+          "mnsq9hyn18u"
+        ],
+        "secondo": [
+          "mnsq9hyn4sj"
+        ],
+        "contorno": [
+          "mnsq9hync5b"
+        ],
+        "dolce": [
+          "mnsq9hynzar"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 32,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-07-17_cena_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo6acrp1vak"
+        ],
+        "primo": [
+          "mnsq9hyns1x"
+        ],
+        "secondo": [
+          "mnsq9hyn0ay"
+        ],
+        "contorno": [
+          "mnsq9hynelb"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 32,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-07-18_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hynyoo",
+          "mnsq9hymnei",
+          "mnsq9hynqk0",
+          "mo1w8xtm5r2",
+          "mnsq9hymfot"
+        ],
+        "primo": [
+          "mnsq9hyngl1"
+        ],
+        "secondo": [
+          "mo69j5b1uwp"
+        ],
         "contorno": [],
         "dolce": []
       },
@@ -6397,6 +6469,24 @@
       "gruppi": []
     },
     "2026-07-16_cena": {
+      "gruppi": []
+    },
+    "2026-07-15_pranzo": {
+      "gruppi": []
+    },
+    "2026-07-15_cena": {
+      "gruppi": []
+    },
+    "2026-07-17_pranzo": {
+      "gruppi": []
+    },
+    "2026-07-17_cena": {
+      "gruppi": []
+    },
+    "2026-07-18_pranzo": {
+      "gruppi": []
+    },
+    "2026-07-18_cena": {
       "gruppi": []
     }
   },
