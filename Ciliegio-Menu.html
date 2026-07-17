@@ -227,6 +227,15 @@ textarea{resize:vertical;min-height:72px}
   .gd-hd,.gd-body{padding:12px 14px}
   .overlay{padding:8px}
   .modal{padding:16px}
+
+  /* Calendario Operatore: fino a 4 badge di testo impilati (Pranzo/Cena/
+     tavoli/carta) non ci stanno in ~50px di colonna — via i meno essenziali,
+     gli altri diventano pallini colorati. Il tap sulla cella apre comunque
+     il dettaglio completo del giorno. */
+  .op-cal-cell{min-height:54px;padding:4px 2px}
+  .op-cal-daynum{font-size:13px}
+  .op-cal-badge,.op-cal-badge-tavoli{width:8px;height:8px;padding:0;margin:2px auto 0;border-radius:50%;font-size:0;display:block}
+  .op-cal-badge-carta{display:none}
 }
 
 .menu-sidebar{position:sticky;top:66px}
@@ -272,6 +281,17 @@ textarea{resize:vertical;min-height:72px}
 .cal-day.selected{border:2.5px solid var(--gold)!important;box-shadow:0 0 0 1px var(--gold-dim),inset 0 0 12px rgba(201,168,76,.08);background:rgba(201,168,76,.07)!important;}
 .cal-note-dot{position:absolute;top:5px;right:5px;width:8px;height:8px;background:#c0392b;border-radius:50%;}
 .cal-dn{font-size:15px;font-weight:500;color:var(--white2);margin-bottom:5px;width:26px;text-align:center}
+
+/* Celle del calendario Operatore (renderCalOp) — prima erano inline via JS
+   con style.cssText, che ha priorità più alta di qualsiasi regola CSS e
+   rendeva impossibile ridimensionarle da media query. */
+.op-cal-cell{min-height:70px;padding:10px 4px;text-align:center}
+.op-cal-daynum{font-size:20px;font-weight:700;color:var(--white)}
+.op-cal-badge{border-radius:10px;padding:1px 8px;font-size:11px;font-family:'Cinzel',serif;letter-spacing:.5px;margin-top:3px;display:inline-block}
+.op-cal-badge-pranzo{background:#0f2e18;color:#7ad89a;border:1px solid #1a5c2a}
+.op-cal-badge-cena{background:#0f182e;color:#7a9ad8;border:1px solid #1a2a5c}
+.op-cal-badge-tavoli{background:var(--gold);color:#000;font-weight:700}
+.op-cal-badge-carta{font-size:11px;color:var(--white3);margin-top:2px}
 
 /* pillole calendario - verde per pranzo, blu per cena */
 .cpill{font-size:12px;padding:3px 7px;border-radius:3px;margin-bottom:3px;display:flex;align-items:center;gap:5px;cursor:pointer;line-height:1.3}
@@ -443,7 +463,7 @@ textarea{resize:vertical;min-height:72px}
       <button class="btn btn-ghost btn-sm" onclick="document.getElementById('imp').click()" style="padding:6px 16px">📂 Importa backup</button>
     </div>
 
-    <div style="text-align:center;font-size:13px;color:#666;letter-spacing:3px;margin-top:12px;font-family:'Cinzel',serif">v63</div>
+    <div style="text-align:center;font-size:13px;color:#666;letter-spacing:3px;margin-top:12px;font-family:'Cinzel',serif">v64</div>
   </div>
 </div>
 
@@ -3310,17 +3330,16 @@ function renderCalOp(){
     const ds=`${y}-${String(m+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
     const el=document.createElement('div');
     el.className='cal-day op-cal-cell'+(isOther?' other-month':'')+(ds===today?' today':'');
-    el.style.cssText='min-height:70px;cursor:pointer;text-align:center;padding:10px 4px;position:relative';
     const nTavoli=['pranzo','cena'].reduce((s,sv)=>s+((_tavoli[ds+'_'+sv]||[]).length),0);
     const nCarta=['pranzo','cena'].reduce((s,sv)=>s+((_carta[ds+'_'+sv]||[]).length),0);
     // verifica se esistono menù nel DB per pranzo/cena
     const hasMenuPranzo=Object.keys(DB.menu||{}).some(k=>k.startsWith(ds+'_pranzo'));
     const hasMenuCena=Object.keys(DB.menu||{}).some(k=>k.startsWith(ds+'_cena'));
-    let html=`<div style="font-size:20px;font-weight:700;color:var(--white)">${d}</div>`;
-    if(hasMenuPranzo) html+=`<div style="background:#0f2e18;color:#7ad89a;border:1px solid #1a5c2a;border-radius:10px;padding:1px 8px;font-size:11px;font-family:'Cinzel',serif;letter-spacing:.5px;margin-top:3px;display:inline-block">Pranzo</div>`;
-    if(hasMenuCena)  html+=`<div style="background:#0f182e;color:#7a9ad8;border:1px solid #1a2a5c;border-radius:10px;padding:1px 8px;font-size:11px;font-family:'Cinzel',serif;letter-spacing:.5px;margin-top:3px;display:inline-block">Cena</div>`;
-    if(nTavoli>0) html+=`<div style="background:var(--gold);color:#000;border-radius:10px;padding:1px 8px;font-size:12px;font-weight:700;margin-top:3px;display:inline-block">${nTavoli} 🍽</div>`;
-    if(nCarta>0) html+=`<div style="font-size:11px;color:var(--white3);margin-top:2px">${nCarta} carta</div>`;
+    let html=`<div class="op-cal-daynum">${d}</div>`;
+    if(hasMenuPranzo) html+=`<div class="op-cal-badge op-cal-badge-pranzo">Pranzo</div>`;
+    if(hasMenuCena)  html+=`<div class="op-cal-badge op-cal-badge-cena">Cena</div>`;
+    if(nTavoli>0) html+=`<div class="op-cal-badge op-cal-badge-tavoli">${nTavoli} 🍽</div>`;
+    if(nCarta>0) html+=`<div class="op-cal-badge-carta">${nCarta} carta</div>`;
     el.innerHTML=html;
     el.addEventListener('click',()=>apriGiornoOp(ds));
     wrap.appendChild(el);
