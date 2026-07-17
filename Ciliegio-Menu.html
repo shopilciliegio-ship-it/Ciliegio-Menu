@@ -443,7 +443,7 @@ textarea{resize:vertical;min-height:72px}
       <button class="btn btn-ghost btn-sm" onclick="document.getElementById('imp').click()" style="padding:6px 16px">📂 Importa backup</button>
     </div>
 
-    <div style="text-align:center;font-size:13px;color:#666;letter-spacing:3px;margin-top:12px;font-family:'Cinzel',serif">v65</div>
+    <div style="text-align:center;font-size:13px;color:#666;letter-spacing:3px;margin-top:12px;font-family:'Cinzel',serif">v66</div>
   </div>
 </div>
 
@@ -3477,7 +3477,19 @@ function salvaCarta(){
   if(!DB.cartaDelGiorno) DB.cartaDelGiorno={};
   const _sKey=`${opDateStr}_${opServ}`;
   DB.cartaDelGiorno[_sKey]=_cartaTmp;
-  saveDB(); closeOv('ov-op-carta'); renderGiornoOp(); renderCalOp();
+  saveDB(); closeOv('ov-op-carta');
+  // Se veniamo dal modale "Nuovo Tavolo"/"Modifica Tavolo" (rimasto aperto
+  // sotto, non più chiuso — vedi popolaCartaOrdine), aggiorna la sua lista
+  // carta coi piatti appena aggiunti senza perdere l'ordine in corso.
+  const ovTavolo=document.getElementById('ov-op-tavolo');
+  if(ovTavolo&&!ovTavolo.classList.contains('hidden')){
+    const dsKey=document.getElementById('op-dskey').value;
+    popolaCartaOrdine(dsKey);
+    Object.entries(_opCartaPiatti).forEach(([id,qty])=>{
+      const el=document.getElementById(`cp-qty-${id}`); if(el) el.textContent=qty;
+    });
+  }
+  renderGiornoOp(); renderCalOp();
 }
 
 // ── ORDINE TAVOLO ──
@@ -3607,7 +3619,7 @@ function popolaCartaOrdine(dsKey){
   const carta=(DB.cartaDelGiorno||{})[cartaKeyOrd]||[];
   const box=document.getElementById('op-carta-ordine');
   if(!carta.length){
-    box.innerHTML=`<div style="padding:12px;color:var(--white3);font-style:italic;font-size:14px">Nessun piatto alla carta per oggi.<br><button class="btn btn-ghost btn-xs" style="margin-top:8px" onclick="closeOv('ov-op-tavolo');setTimeout(apriGestioneCarta,150)">✏ Imposta carta del giorno</button></div>`;
+    box.innerHTML=`<div style="padding:12px;color:var(--white3);font-style:italic;font-size:14px">Nessun piatto alla carta per oggi.<br><button class="btn btn-ghost btn-xs" style="margin-top:8px" onclick="apriGestioneCarta()">✏ Imposta carta del giorno</button></div>`;
     return;
   }
   let html='';
