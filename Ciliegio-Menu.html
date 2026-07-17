@@ -443,7 +443,7 @@ textarea{resize:vertical;min-height:72px}
       <button class="btn btn-ghost btn-sm" onclick="document.getElementById('imp').click()" style="padding:6px 16px">📂 Importa backup</button>
     </div>
 
-    <div style="text-align:center;font-size:13px;color:#666;letter-spacing:3px;margin-top:12px;font-family:'Cinzel',serif">v66</div>
+    <div style="text-align:center;font-size:13px;color:#666;letter-spacing:3px;margin-top:12px;font-family:'Cinzel',serif">v67</div>
   </div>
 </div>
 
@@ -691,6 +691,18 @@ textarea{resize:vertical;min-height:72px}
     <button class="modal-close" onclick="closeOv('ov-op-carta')">✕</button>
     <div class="modal-title" id="op-carta-modal-title">🍽 Carta del Giorno</div>
     <p class="text-muted mb-12" id="op-carta-modal-sub">Seleziona i piatti disponibili alla carta per questo servizio.</p>
+    <div style="display:flex;gap:8px;margin-bottom:14px">
+      <input type="text" id="op-carta-nuovo-nome" autocomplete="off" placeholder="Nuovo piatto…"
+        style="flex:1" onkeydown="if(event.key==='Enter')quickAddOpCarta()">
+      <select id="op-carta-nuovo-portata" style="max-width:150px">
+        <option value="antipasto">Antipasti</option>
+        <option value="primo">Primi Piatti</option>
+        <option value="secondo">Secondi</option>
+        <option value="contorno">Contorni</option>
+        <option value="dolce">Dolci</option>
+      </select>
+      <button class="btn btn-gold btn-sm" onclick="quickAddOpCarta()">+ Aggiungi</button>
+    </div>
     <div id="op-carta-sel" style="max-height:400px;overflow-y:auto"></div>
     <div class="flex" style="margin-top:16px">
       <button class="btn btn-gold" onclick="salvaCarta()">✓ Salva</button>
@@ -3445,6 +3457,14 @@ function apriGestioneCarta(){
   if(titEl) titEl.textContent=`🍽 Carta del Giorno — ${opServ==='pranzo'?'🌿 Pranzo':'🌙 Cena'}`;
   if(subEl) subEl.textContent=`${dt.giornoLungo} — piatti disponibili per ${opServ}. Separati da pranzo e cena.`;
   _cartaTmp=[...(DB.cartaDelGiorno[_cartaKey]||[])];
+  renderOpCartaSel();
+  openOv('ov-op-carta');
+}
+
+// Ridisegna solo la lista checkbox a partire dallo stato attuale di _cartaTmp
+// (senza ricaricarlo da DB) — usata anche da quickAddOpCarta() per non perdere
+// le selezioni non ancora salvate quando si aggiunge un piatto al volo.
+function renderOpCartaSel(){
   const box=document.getElementById('op-carta-sel');
   let html='';
   let totPiatti=0;
@@ -3463,14 +3483,36 @@ function apriGestioneCarta(){
     });
     html+=`</div>`;
   });
-  if(!totPiatti) html='<div class="empty">Nessun piatto nel database. Aggiungili prima dalla sezione Piatti.</div>';
+  if(!totPiatti) html='<div class="empty">Nessun piatto nel database. Aggiungilo con il campo qui sopra.</div>';
   box.innerHTML=html;
-  openOv('ov-op-carta');
 }
 
 function toggleCarta(id, checked){
   if(checked&&!_cartaTmp.includes(id)) _cartaTmp.push(id);
   else if(!checked) _cartaTmp=_cartaTmp.filter(x=>x!==id);
+}
+
+// Crea un piatto nuovo (non ancora nel catalogo) senza uscire dalla gestione
+// carta — utile mentre si sta compilando un ordine tavolo, per non dover
+// andare nella sezione Piatti perdendo l'ordine in corso.
+function quickAddOpCarta(){
+  const inp=document.getElementById('op-carta-nuovo-nome');
+  const sel=document.getElementById('op-carta-nuovo-portata');
+  const nome=inp.value.trim();
+  if(!nome){inp.focus();return;}
+  const portata=sel.value;
+  const dup=DB.piatti.find(p=>p.portata===portata&&p.nome.toLowerCase()===nome.toLowerCase());
+  if(dup){
+    if(!_cartaTmp.includes(dup.id)) _cartaTmp.push(dup.id);
+  } else {
+    const nuovo={id:uid(),nome,portata,extra:0,note:''};
+    DB.piatti.push(nuovo);
+    _cartaTmp.push(nuovo.id);
+    saveDB();
+  }
+  inp.value='';
+  renderOpCartaSel(); // ridisegna la lista senza toccare le selezioni già fatte
+  setTimeout(()=>document.getElementById('op-carta-nuovo-nome').focus(),80);
 }
 
 function salvaCarta(){
@@ -3618,8 +3660,11 @@ function popolaCartaOrdine(dsKey){
   const cartaKeyOrd=`${opDateStr}_${opServ}`;
   const carta=(DB.cartaDelGiorno||{})[cartaKeyOrd]||[];
   const box=document.getElementById('op-carta-ordine');
+  // Link sempre visibile (non solo a carta vuota) per poter aggiungere altri
+  // piatti anche a metà comanda, senza dover chiudere l'ordine in corso.
+  const editLink=`<div style="text-align:right;margin-bottom:6px"><button class="btn btn-ghost btn-xs" onclick="apriGestioneCarta()">✏ Modifica carta del giorno</button></div>`;
   if(!carta.length){
-    box.innerHTML=`<div style="padding:12px;color:var(--white3);font-style:italic;font-size:14px">Nessun piatto alla carta per oggi.<br><button class="btn btn-ghost btn-xs" style="margin-top:8px" onclick="apriGestioneCarta()">✏ Imposta carta del giorno</button></div>`;
+    box.innerHTML=editLink+`<div style="padding:12px;color:var(--white3);font-style:italic;font-size:14px">Nessun piatto alla carta per oggi.</div>`;
     return;
   }
   let html='';
@@ -3632,8 +3677,8 @@ function popolaCartaOrdine(dsKey){
     piatti.forEach(p=>{ html+=rigaPiatto(p,'cp'); });
     html+=`</div>`;
   });
-  if(!html) box.innerHTML=`<div style="padding:12px;color:var(--white3);font-size:14px;font-style:italic">—</div>`;
-  else box.innerHTML=html;
+  if(!html) box.innerHTML=editLink+`<div style="padding:12px;color:var(--white3);font-size:14px;font-style:italic">—</div>`;
+  else box.innerHTML=editLink+html;
 }
 
 function rigaPiatto(p, prefix){
