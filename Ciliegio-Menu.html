@@ -957,9 +957,9 @@ textarea{resize:vertical;min-height:72px}
     <div class="form-group mb-12">
       <label class="lbl">Personal Access Token Classic (inizia con ghp_)</label>
       <div style="display:flex;gap:8px;align-items:center">
-        <input type="password" id="gh-tok" placeholder="ghp_xxxxxxxxxxxxxxxx"
+        <input type="text" id="gh-tok" placeholder="ghp_xxxxxxxxxxxxxxxx"
           autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
-          style="flex:1;font-family:monospace;font-size:15px;letter-spacing:1px">
+          style="flex:1;font-family:monospace;font-size:15px;letter-spacing:1px;-webkit-text-security:disc;text-security:disc">
         <button type="button" onclick="toggleTok()" id="tok-eye"
           style="background:var(--bg3);border:1px solid var(--border2);border-radius:var(--r);
           padding:10px 14px;cursor:pointer;font-size:18px;color:var(--white3);flex-shrink:0;
@@ -2501,18 +2501,22 @@ function importaJson(inp){
   r.readAsText(f);inp.value='';
 }
 function toggleTok(){
+  // Campo sempre type="text" (mascherato via CSS -webkit-text-security) invece
+  // di type="password", altrimenti Brave/Chrome ignorano autocomplete="off" e
+  // propongono comunque di salvarlo come password di login.
   const inp = document.getElementById('gh-tok');
   const preview = document.getElementById('tok-preview');
   const btn = document.getElementById('tok-eye');
-  if(inp.type === 'password'){
-    inp.type = 'text';
+  const masked = inp.style.webkitTextSecurity === 'disc';
+  if(masked){
+    inp.style.webkitTextSecurity = 'none';
     btn.textContent = '🙈';
     btn.style.color = 'var(--gold)';
     // mostra anche sotto per verifica su mobile
     preview.textContent = inp.value || '(vuoto)';
     preview.style.display = 'block';
   } else {
-    inp.type = 'password';
+    inp.style.webkitTextSecurity = 'disc';
     btn.textContent = '👁';
     btn.style.color = 'var(--white3)';
     preview.style.display = 'none';
