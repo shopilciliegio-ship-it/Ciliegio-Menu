@@ -208,6 +208,27 @@ textarea{resize:vertical;min-height:72px}
 .menu-layout{display:grid;grid-template-columns:1fr 330px;gap:18px;align-items:start}
 @media(max-width:860px){.menu-layout{grid-template-columns:1fr}}
 
+/* Calendario 7 colonne (menù settimanale + calendario Operatore, entrambi
+   usano .cal-grid) su telefono in verticale: a 7 colonne fisse le pillole
+   pranzo/cena non ci stanno e i giorni di ven/sab/dom risultano illeggibili
+   o tagliati — qui le riduciamo a un pallino colorato (il tap sull'intera
+   cella apre comunque il dettaglio completo del giorno) invece di provare a
+   far stare il testo in ~45px di colonna. */
+@media(max-width:600px){
+  .cal-grid{gap:2px}
+  .cal-dow{padding:6px 1px;font-size:9px;letter-spacing:.5px}
+  .cal-day{min-height:58px;padding:3px 2px}
+  .cal-dn{font-size:11px;width:18px;margin-bottom:2px}
+  .cal-note-dot{width:6px;height:6px;top:2px;right:2px}
+  .cpill{padding:0;margin:0 auto 3px;width:14px;height:14px;border-radius:50%;justify-content:center}
+  .cpill .cp-label,.cpill .cp-info{display:none}
+
+  /* Pannello dettaglio/modifica giorno e modali: meno padding per più spazio utile */
+  .gd-hd,.gd-body{padding:12px 14px}
+  .overlay{padding:8px}
+  .modal{padding:16px}
+}
+
 .menu-sidebar{position:sticky;top:66px}
 .preview-box{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r2);overflow:hidden}
 .preview-hd{padding:13px 18px;background:var(--bg3);border-bottom:1px solid var(--border);font-family:'Cinzel',serif;font-size:15px;letter-spacing:2px;color:var(--gold)}
@@ -422,7 +443,7 @@ textarea{resize:vertical;min-height:72px}
       <button class="btn btn-ghost btn-sm" onclick="document.getElementById('imp').click()" style="padding:6px 16px">📂 Importa backup</button>
     </div>
 
-    <div style="text-align:center;font-size:13px;color:#666;letter-spacing:3px;margin-top:12px;font-family:'Cinzel',serif">v62</div>
+    <div style="text-align:center;font-size:13px;color:#666;letter-spacing:3px;margin-top:12px;font-family:'Cinzel',serif">v63</div>
   </div>
 </div>
 
