@@ -1665,6 +1665,13 @@
       "portata": "secondo",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mrthblv975c",
+      "nome": "Pici alle briciole",
+      "portata": "primo",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -5538,6 +5545,54 @@
         "primo": [
           "mqe7d7w0p28"
         ],
+        "secondo": [
+          "mnsq9hyn38r"
+        ],
+        "contorno": [
+          "mnsq9hynq3b"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 30,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-07-24_cena_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hynqk0",
+          "mo1w8xtm5r2",
+          "mnsq9hynkaz",
+          "mnsq9hymnei",
+          "mnsq9hynlhy"
+        ],
+        "primo": [
+          "mrthblv975c"
+        ],
+        "secondo": [
+          "mnsq9hyncpy",
+          "mnsq9hyndep"
+        ],
+        "contorno": [
+          "mnsq9hyni20"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 37,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-07-25_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hynkaz",
+          "mpv0gkq6uho"
+        ],
+        "primo": [],
         "secondo": [],
         "contorno": [],
         "dolce": []
@@ -6856,6 +6911,12 @@
       "gruppi": []
     },
     "2026-07-24_cena": {
+      "gruppi": []
+    },
+    "2026-07-25_pranzo": {
+      "gruppi": []
+    },
+    "2026-07-25_cena": {
       "gruppi": []
     }
   },
