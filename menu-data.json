@@ -1658,6 +1658,13 @@
       "portata": "dolce",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mrth6apornh",
+      "nome": "Arrosto misto con costole, pollo, salsiccia e coniglio",
+      "portata": "secondo",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -5479,6 +5486,31 @@
         ],
         "primo": [
           "mo1waims7of"
+        ],
+        "secondo": [
+          "mrth6apornh"
+        ],
+        "contorno": [
+          "mnsq9hynkgr"
+        ],
+        "dolce": [
+          "mnsq9hyn0dv"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 34,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-07-23_cena_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hynqk0",
+          "mo1w8xtm5r2",
+          "mnsq9hyneqw",
+          "mnsq9hynfoi"
+        ],
+        "primo": [
+          "mo68pp64giu"
         ],
         "secondo": [],
         "contorno": [],
