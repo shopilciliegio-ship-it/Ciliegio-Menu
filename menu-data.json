@@ -1644,6 +1644,13 @@
       "portata": "dolce",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mrth11r189u",
+      "nome": "Straccetti all'Amatriciana",
+      "portata": "primo",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -5393,9 +5400,59 @@
           "mnsq9hynqk0",
           "mohaxdaa2wx"
         ],
-        "primo": [],
-        "secondo": [],
-        "contorno": [],
+        "primo": [
+          "mrth11r189u"
+        ],
+        "secondo": [
+          "mnsq9hyn4sj"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mnsq9hyn0dv"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 31,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-07-22_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo68jqekj3x"
+        ],
+        "primo": [
+          "mo67h4xg40w"
+        ],
+        "secondo": [
+          "mo69j5b1uwp"
+        ],
+        "contorno": [
+          "mnsq9hync5b"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 32,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-07-21_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo68jqekj3x"
+        ],
+        "primo": [
+          "mpl7tkvwn32"
+        ],
+        "secondo": [
+          "mnsq9hyn4sj"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
         "dolce": []
       },
       "testoLibero": "",
@@ -6694,6 +6751,12 @@
       "gruppi": []
     },
     "2026-07-21_cena": {
+      "gruppi": []
+    },
+    "2026-07-22_pranzo": {
+      "gruppi": []
+    },
+    "2026-07-22_cena": {
       "gruppi": []
     }
   },
