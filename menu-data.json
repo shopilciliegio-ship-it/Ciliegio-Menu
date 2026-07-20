@@ -1672,6 +1672,13 @@
       "portata": "primo",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mrthe5dozii",
+      "nome": "Crostino nero con sale grosso e miele",
+      "portata": "antipasto",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -5590,7 +5597,8 @@
       "piatti": {
         "antipasto": [
           "mnsq9hynkaz",
-          "mpv0gkq6uho"
+          "mpv0gkq6uho",
+          "mrthe5dozii"
         ],
         "primo": [],
         "secondo": [],
