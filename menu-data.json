@@ -5598,10 +5598,40 @@
         "antipasto": [
           "mnsq9hynkaz",
           "mpv0gkq6uho",
-          "mrthe5dozii"
+          "mrthe5dozii",
+          "mnsq9hynyjk",
+          "mnsq9hynak8"
         ],
-        "primo": [],
+        "primo": [
+          "mp33p0xskfv"
+        ],
         "secondo": [],
+        "contorno": [
+          "mnsq9hynelb"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 35,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-07-25_cena_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hyneqw",
+          "mnsq9hynh2h",
+          "mnsq9hymnei",
+          "mnsq9hynqk0",
+          "mohaxdaa2wx"
+        ],
+        "primo": [
+          "mqe7d7w0p28"
+        ],
+        "secondo": [
+          "mnsq9hyncpy"
+        ],
         "contorno": [],
         "dolce": []
       },
