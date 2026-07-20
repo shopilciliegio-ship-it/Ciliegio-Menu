@@ -1651,6 +1651,13 @@
       "portata": "primo",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mrth3nq5nk3",
+      "nome": "Cocomero e cantucci",
+      "portata": "dolce",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -5453,6 +5460,28 @@
         "contorno": [
           "mnsq9hynayz"
         ],
+        "dolce": [
+          "mrth3nq5nk3"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 32,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-07-23_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hyneqw",
+          "mnsq9hynqk0",
+          "mnsq9hynxrp",
+          "mohaxdaa2wx",
+          "mnsq9hynxni"
+        ],
+        "primo": [
+          "mo1waims7of"
+        ],
+        "secondo": [],
+        "contorno": [],
         "dolce": []
       },
       "testoLibero": "",
@@ -6757,6 +6786,12 @@
       "gruppi": []
     },
     "2026-07-22_cena": {
+      "gruppi": []
+    },
+    "2026-07-23_pranzo": {
+      "gruppi": []
+    },
+    "2026-07-23_cena": {
       "gruppi": []
     }
   },
