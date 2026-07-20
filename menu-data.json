@@ -1679,6 +1679,13 @@
       "portata": "antipasto",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mrtiii0d81q",
+      "nome": "Filetto di maiale su crostone di pane tostato con pancetta e alloro",
+      "portata": "secondo",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -5605,7 +5612,9 @@
         "primo": [
           "mp33p0xskfv"
         ],
-        "secondo": [],
+        "secondo": [
+          "mrtiii0d81q"
+        ],
         "contorno": [
           "mnsq9hynelb"
         ],
@@ -5632,11 +5641,42 @@
         "secondo": [
           "mnsq9hyncpy"
         ],
-        "contorno": [],
-        "dolce": []
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
       },
       "testoLibero": "",
-      "prezzo": null,
+      "prezzo": 30,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-07-26_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hynqk0",
+          "mnsq9hymnei",
+          "mohaxdaa2wx",
+          "mnsq9hynf3u",
+          "mnsq9hynuwh"
+        ],
+        "primo": [
+          "mrkoxuy1xx0",
+          "mnsq9hyn9ag"
+        ],
+        "secondo": [
+          "mnsq9hyn4sj"
+        ],
+        "contorno": [
+          "mnsq9hyni20"
+        ],
+        "dolce": [
+          "mnsq9hynyyk"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 36,
       "nomeSpecifico": "Menù del Sito"
     }
   },
@@ -6955,6 +6995,12 @@
       "gruppi": []
     },
     "2026-07-25_cena": {
+      "gruppi": []
+    },
+    "2026-07-26_pranzo": {
+      "gruppi": []
+    },
+    "2026-07-26_cena": {
       "gruppi": []
     }
   },
