@@ -5722,6 +5722,92 @@
       "testoLibero": "",
       "prezzo": 32,
       "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-07-29_cena_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hynh2h",
+          "mnsq9hyno6u",
+          "mnsq9hyneqw",
+          "mnsq9hynn6x",
+          "mnsq9hymnei"
+        ],
+        "primo": [
+          "mnsq9hynn7v"
+        ],
+        "secondo": [
+          "mnsq9hyn4sj"
+        ],
+        "contorno": [
+          "mnsq9hyni20",
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 34,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-07-30_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo6acrp1vak"
+        ],
+        "primo": [
+          "mor0xlkqoe0"
+        ],
+        "secondo": [
+          "mo69j5b1uwp"
+        ],
+        "contorno": [
+          "mnsq9hync5b"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 32,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-07-31_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo1xei4h6yo"
+        ],
+        "primo": [
+          "mqpsmhlgi9d"
+        ],
+        "secondo": [
+          "mnsq9hyn0ay"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 32,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-07-29_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hymfot",
+          "mnsq9hynmjr"
+        ],
+        "primo": [],
+        "secondo": [],
+        "contorno": [],
+        "dolce": []
+      },
+      "testoLibero": "",
+      "prezzo": null,
+      "nomeSpecifico": "Menù del Sito"
     }
   },
   "prenotazioni": {
@@ -7057,6 +7143,24 @@
       "gruppi": []
     },
     "2026-07-28_cena": {
+      "gruppi": []
+    },
+    "2026-07-29_pranzo": {
+      "gruppi": []
+    },
+    "2026-07-29_cena": {
+      "gruppi": []
+    },
+    "2026-07-30_pranzo": {
+      "gruppi": []
+    },
+    "2026-07-30_cena": {
+      "gruppi": []
+    },
+    "2026-07-31_pranzo": {
+      "gruppi": []
+    },
+    "2026-07-31_cena": {
       "gruppi": []
     }
   },
