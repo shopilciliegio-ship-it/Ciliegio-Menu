@@ -1693,6 +1693,13 @@
       "portata": "antipasto",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "ms1xnro3v3k",
+      "nome": "Mousse di ricotta alla menta con scaglie di cioccolato su granella di cantuccini",
+      "portata": "dolce",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -5924,10 +5931,12 @@
         "contorno": [
           "mnsq9hyni20"
         ],
-        "dolce": []
+        "dolce": [
+          "ms1xnro3v3k"
+        ]
       },
       "testoLibero": "",
-      "prezzo": null,
+      "prezzo": 35,
       "nomeSpecifico": "Menù del Sito"
     }
   },
