@@ -1686,6 +1686,13 @@
       "portata": "secondo",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "ms1xl8pwl6z",
+      "nome": "Prosciutto e melone",
+      "portata": "antipasto",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -5885,8 +5892,38 @@
           "mq55zxi6xm4",
           "mnsq9hyn9ag"
         ],
-        "secondo": [],
-        "contorno": [],
+        "secondo": [
+          "mnsq9hyns9r"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 35,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-07-31_cena_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mokc6n6i3gp",
+          "mq55kwtztho",
+          "ms1xl8pwl6z",
+          "mo1w8xtm5r2",
+          "mnsq9hymfot"
+        ],
+        "primo": [
+          "mrthblv975c"
+        ],
+        "secondo": [
+          "mnsq9hyn0ay"
+        ],
+        "contorno": [
+          "mnsq9hyni20"
+        ],
         "dolce": []
       },
       "testoLibero": "",
