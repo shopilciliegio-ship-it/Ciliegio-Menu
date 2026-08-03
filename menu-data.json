@@ -6191,11 +6191,37 @@
         "secondo": [
           "mnsq9hyns9r"
         ],
-        "contorno": [],
-        "dolce": []
+        "contorno": [
+          "mnsq9hyni20"
+        ],
+        "dolce": [
+          "mrth3nq5nk3"
+        ]
       },
       "testoLibero": "",
-      "prezzo": null,
+      "prezzo": 30,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-08-05_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo68jqekj3x"
+        ],
+        "primo": [
+          "msd0fbuar2v"
+        ],
+        "secondo": [
+          "mnsq9hyn0ay"
+        ],
+        "contorno": [
+          "mnsq9hync5b"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 32,
       "nomeSpecifico": "Menù del Sito"
     }
   },
@@ -7599,6 +7625,12 @@
     },
     "2026-08-03_cena": {
       "gruppi": []
+    },
+    "2026-08-05_pranzo": {
+      "gruppi": []
+    },
+    "2026-08-05_cena": {
+      "gruppi": []
     }
   },
   "noteGiorno": {
@@ -7854,7 +7886,10 @@
     "mrth6apornh": "Mixed roast with ribs, chicken, sausage, and rabbit",
     "mrtiii0d81q": "Pork tenderloin on a slice of toasted bread with pancetta and bay leaves",
     "mrth3nq5nk3": "Watermelon and Cantucci",
-    "ms1xnro3v3k": "Mint ricotta mousse with chocolate shavings on crumbled cantuccini"
+    "ms1xnro3v3k": "Mint ricotta mousse with chocolate shavings on crumbled cantuccini",
+    "msczp5pc0b8": "Crostini with zucchini, carrots, mint, lemon, and pepper",
+    "msd0fbuar2v": "Straccetti with Pesto, Toasted Almonds, and Cherry Tomatoes",
+    "msd0ftk05fe": "Salad and Tomatoes"
   },
   "cartaDelGiorno": {
     "2026-05-31": [
