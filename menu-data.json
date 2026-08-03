@@ -6070,7 +6070,82 @@
           "mnsq9hynhyk",
           "mo69nj18fdk"
         ],
-        "secondo": [],
+        "secondo": [
+          "mnsq9hyncpy"
+        ],
+        "contorno": [
+          "mnsq9hynelb"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 35,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-08-06_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo1xei4h6yo"
+        ],
+        "primo": [
+          "mo69nj18fdk"
+        ],
+        "secondo": [
+          "mo69j5b1uwp"
+        ],
+        "contorno": [
+          "mnsq9hync5b"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 32,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-08-08_cena_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hyneqw",
+          "mnsq9hynn6x",
+          "mnsq9hyn6l4",
+          "mnsq9hynqk0"
+        ],
+        "primo": [
+          "mqpsj7ikbvz"
+        ],
+        "secondo": [
+          "mnsq9hyn4sj"
+        ],
+        "contorno": [
+          "mnsq9hynelb"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 31,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-08-04_cena_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "msczp5pc0b8",
+          "mor13kgqgpi",
+          "mnsq9hymnei",
+          "mo1w8xtm5r2",
+          "ms1xl8pwl6z"
+        ],
+        "primo": [
+          "mo76cwvebr1"
+        ],
+        "secondo": [
+          "mnsq9hyncpy"
+        ],
         "contorno": [],
         "dolce": []
       },
@@ -7466,6 +7541,12 @@
       "gruppi": []
     },
     "2026-08-06_cena": {
+      "gruppi": []
+    },
+    "2026-08-04_pranzo": {
+      "gruppi": []
+    },
+    "2026-08-04_cena": {
       "gruppi": []
     }
   },
