@@ -1700,6 +1700,13 @@
       "portata": "dolce",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "msczp5pc0b8",
+      "nome": "Crostino con zucchine, carote, menta, limone e pepe",
+      "portata": "antipasto",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -5938,6 +5945,66 @@
       "testoLibero": "",
       "prezzo": 35,
       "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-08-09_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hymfot",
+          "msczp5pc0b8",
+          "mnsq9hymnei",
+          "mnsq9hyn6l4",
+          "mnsq9hynqk0"
+        ],
+        "primo": [
+          "mnsq9hyn6e6"
+        ],
+        "secondo": [
+          "mnsq9hyn0ay"
+        ],
+        "contorno": [
+          "mnsq9hync5b"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 32,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-08-08_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo6acrp1vak"
+        ],
+        "primo": [
+          "mor0xlkqoe0"
+        ],
+        "secondo": [
+          "mnsq9hyn0ay"
+        ],
+        "contorno": [
+          "mnsq9hyni20"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 32,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-08-07_cena_Menù del Sito": {
+      "piatti": {
+        "antipasto": [],
+        "primo": [],
+        "secondo": [],
+        "contorno": [],
+        "dolce": []
+      },
+      "testoLibero": "",
+      "prezzo": null,
+      "nomeSpecifico": "Menù del Sito"
     }
   },
   "prenotazioni": {
@@ -7303,6 +7370,24 @@
       "gruppi": []
     },
     "2026-08-02_cena": {
+      "gruppi": []
+    },
+    "2026-08-09_pranzo": {
+      "gruppi": []
+    },
+    "2026-08-09_cena": {
+      "gruppi": []
+    },
+    "2026-08-08_pranzo": {
+      "gruppi": []
+    },
+    "2026-08-08_cena": {
+      "gruppi": []
+    },
+    "2026-08-07_pranzo": {
+      "gruppi": []
+    },
+    "2026-08-07_cena": {
       "gruppi": []
     }
   },
