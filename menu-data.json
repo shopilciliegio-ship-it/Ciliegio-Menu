@@ -6311,6 +6311,26 @@
         ]
       },
       "testoLibero": "",
+      "prezzo": 32,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-08-13_cena_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hymfot",
+          "mnsq9hynkaz",
+          "msczp5pc0b8",
+          "mo1w8xtm5r2",
+          "ms1xl8pwl6z"
+        ],
+        "primo": [
+          "mo76cwvebr1"
+        ],
+        "secondo": [],
+        "contorno": [],
+        "dolce": []
+      },
+      "testoLibero": "",
       "prezzo": null,
       "nomeSpecifico": "Menù del Sito"
     }
