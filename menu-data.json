@@ -6223,6 +6223,96 @@
       "testoLibero": "",
       "prezzo": 32,
       "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-08-16_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo6acrp1vak"
+        ],
+        "primo": [
+          "mnsq9hyns1x"
+        ],
+        "secondo": [
+          "mnsq9hyn4sj"
+        ],
+        "contorno": [
+          "mokcau21bzk"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 32,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-08-15_cena_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo68jqekj3x"
+        ],
+        "primo": [
+          "mo699pdh68y"
+        ],
+        "secondo": [
+          "mnsq9hyn4sj"
+        ],
+        "contorno": [
+          "mnsq9hync5b"
+        ],
+        "dolce": [
+          "mnsq9hyn5co"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 28,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-08-14_cena_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo68jqekj3x"
+        ],
+        "primo": [
+          "mo69nj18fdk"
+        ],
+        "secondo": [
+          "mnsq9hyn4sj"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 32,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-08-13_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo1yfczjr82",
+          "mnsq9hymuqe",
+          "mnsq9hynkaz"
+        ],
+        "primo": [
+          "mo76cwvebr1"
+        ],
+        "secondo": [
+          "mnsq9hyn4sj"
+        ],
+        "contorno": [
+          "mnsq9hync5b"
+        ],
+        "dolce": [
+          "mnsq9hyngxs"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": null,
+      "nomeSpecifico": "Menù del Sito"
     }
   },
   "prenotazioni": {
@@ -7630,6 +7720,30 @@
       "gruppi": []
     },
     "2026-08-05_cena": {
+      "gruppi": []
+    },
+    "2026-08-16_pranzo": {
+      "gruppi": []
+    },
+    "2026-08-16_cena": {
+      "gruppi": []
+    },
+    "2026-08-15_pranzo": {
+      "gruppi": []
+    },
+    "2026-08-15_cena": {
+      "gruppi": []
+    },
+    "2026-08-14_pranzo": {
+      "gruppi": []
+    },
+    "2026-08-14_cena": {
+      "gruppi": []
+    },
+    "2026-08-13_pranzo": {
+      "gruppi": []
+    },
+    "2026-08-13_cena": {
       "gruppi": []
     }
   },
