@@ -1742,6 +1742,13 @@
       "portata": "primo",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mswyn9v3pza",
+      "nome": "Tagliatelle con crema di zucchine, briciole di pane e guanciale croccante",
+      "portata": "primo",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -6604,13 +6611,65 @@
         "antipasto": [
           "mo6acrp1vak"
         ],
-        "primo": [],
-        "secondo": [],
-        "contorno": [],
-        "dolce": []
+        "primo": [
+          "mswyn9v3pza"
+        ],
+        "secondo": [
+          "mnsq9hyn0ay"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
       },
       "testoLibero": "",
-      "prezzo": null,
+      "prezzo": 32,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-08-20_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo68jqekj3x"
+        ],
+        "primo": [
+          "mo68pp64giu"
+        ],
+        "secondo": [
+          "mo69j5b1uwp"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 32,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-08-22_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo1xei4h6yo"
+        ],
+        "primo": [
+          "mo699pdh68y"
+        ],
+        "secondo": [
+          "mo69j5b1uwp"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 32,
       "nomeSpecifico": "Menù del Sito"
     }
   },
@@ -8344,7 +8403,11 @@
     "ms1xnro3v3k": "Mint ricotta mousse with chocolate shavings on crumbled cantuccini",
     "msczp5pc0b8": "Crostini with zucchini, carrots, mint, lemon, and pepper",
     "msd0fbuar2v": "Straccetti with Pesto, Toasted Almonds, and Cherry Tomatoes",
-    "msd0ftk05fe": "Salad and Tomatoes"
+    "msd0ftk05fe": "Salad and Tomatoes",
+    "mswyn9v3pza": "Tagliatelle with zucchini cream, breadcrumbs, and crispy bacon",
+    "mswyjf1bkgw": "Tortiglioni with with zucchini cream, breadcrumbs, and crispy bacon",
+    "mswy440mmrx": "Baked pork neck",
+    "mswy7tt2ik4": "Sliced beef with dragoncello herb"
   },
   "cartaDelGiorno": {
     "2026-05-31": [
