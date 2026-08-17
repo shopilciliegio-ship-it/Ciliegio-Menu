@@ -1735,6 +1735,13 @@
       "portata": "secondo",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mswyjf1bkgw",
+      "nome": "Tortiglioni con crema di zucchine, briciole di pane e guanciale croccante",
+      "portata": "primo",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -6548,7 +6555,35 @@
           "mnsq9hyno6u",
           "mnsq9hynf3u"
         ],
-        "primo": [],
+        "primo": [
+          "mswyjf1bkgw"
+        ],
+        "secondo": [
+          "mnsq9hynuo1"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 32,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-08-23_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hynqk0",
+          "mohaxdaa2wx",
+          "mnsq9hynxrp",
+          "mnsq9hyneqw",
+          "mnsq9hynkaz"
+        ],
+        "primo": [
+          "mp33amhtkmk"
+        ],
         "secondo": [],
         "contorno": [],
         "dolce": []
@@ -8023,6 +8058,12 @@
       "gruppi": []
     },
     "2026-08-22_cena": {
+      "gruppi": []
+    },
+    "2026-08-23_pranzo": {
+      "gruppi": []
+    },
+    "2026-08-23_cena": {
       "gruppi": []
     }
   },
