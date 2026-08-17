@@ -1721,6 +1721,13 @@
       "portata": "contorno",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mswy440mmrx",
+      "nome": "Scamerita al Forno",
+      "portata": "secondo",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -6364,6 +6371,29 @@
         "primo": [
           "mo69nj18fdk"
         ],
+        "secondo": [
+          "mswy440mmrx"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mrth3nq5nk3"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 32,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-08-18_cena_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hymoq1",
+          "mnsq9hyn6l4",
+          "mokc6n6i3gp",
+          "msczp5pc0b8"
+        ],
+        "primo": [],
         "secondo": [],
         "contorno": [],
         "dolce": []
