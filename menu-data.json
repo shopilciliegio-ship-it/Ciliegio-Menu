@@ -6693,6 +6693,46 @@
       "testoLibero": "",
       "prezzo": 32,
       "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-08-30_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hyn5zs",
+          "mohaxdaa2wx",
+          "mnsq9hynqk0",
+          "mnsq9hyneqw",
+          "mnsq9hymnei"
+        ],
+        "primo": [
+          "mo699pdh68y"
+        ],
+        "secondo": [
+          "mnsq9hyn0ay"
+        ],
+        "contorno": [
+          "mnsq9hyni20"
+        ],
+        "dolce": [
+          "mnsq9hynlyh"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 32,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-08-29_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hyneqw"
+        ],
+        "primo": [],
+        "secondo": [],
+        "contorno": [],
+        "dolce": []
+      },
+      "testoLibero": "",
+      "prezzo": null,
+      "nomeSpecifico": "Menù del Sito"
     }
   },
   "prenotazioni": {
@@ -8178,6 +8218,12 @@
       "gruppi": []
     },
     "2026-08-30_cena": {
+      "gruppi": []
+    },
+    "2026-08-29_pranzo": {
+      "gruppi": []
+    },
+    "2026-08-29_cena": {
       "gruppi": []
     }
   },
