@@ -1763,6 +1763,13 @@
       "portata": "primo",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mtgzuvpwctu",
+      "nome": "Crostino con zucchine, carote e pepe",
+      "portata": "antipasto",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -7119,15 +7126,26 @@
       "piatti": {
         "antipasto": [
           "mnsq9hymoq1",
-          "mnsq9hyn6l4"
+          "mnsq9hyn6l4",
+          "mtgzuvpwctu",
+          "mnsq9hynqk0",
+          "mo1w8xtm5r2"
         ],
-        "primo": [],
-        "secondo": [],
-        "contorno": [],
-        "dolce": []
+        "primo": [
+          "mnsq9hyngl1"
+        ],
+        "secondo": [
+          "mo69j5b1uwp"
+        ],
+        "contorno": [
+          "mnsq9hync5b"
+        ],
+        "dolce": [
+          "ms1xnro3v3k"
+        ]
       },
       "testoLibero": "",
-      "prezzo": null,
+      "prezzo": 32,
       "nomeSpecifico": "Menù del Sito"
     }
   },
