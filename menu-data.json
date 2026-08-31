@@ -7027,7 +7027,35 @@
         "primo": [
           "mor0xlkqoe0"
         ],
-        "secondo": [],
+        "secondo": [
+          "mnsq9hyn4sj"
+        ],
+        "contorno": [
+          "mnsq9hync5b"
+        ],
+        "dolce": [
+          "mohatliymxm"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 32,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-09-03_cena_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hyneqw",
+          "mnsq9hymnei",
+          "mnsq9hynqk0",
+          "mnsq9hynmjr",
+          "mor13kgqgpi"
+        ],
+        "primo": [
+          "mqpsj7ikbvz"
+        ],
+        "secondo": [
+          "mnsq9hynxg3"
+        ],
         "contorno": [],
         "dolce": []
       },
