@@ -7056,6 +7056,24 @@
         "secondo": [
           "mnsq9hynxg3"
         ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 30,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-09-04_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo68jqekj3x"
+        ],
+        "primo": [],
+        "secondo": [],
         "contorno": [],
         "dolce": []
       },
@@ -8601,6 +8619,12 @@
       "gruppi": []
     },
     "2026-09-03_cena": {
+      "gruppi": []
+    },
+    "2026-09-04_pranzo": {
+      "gruppi": []
+    },
+    "2026-09-04_cena": {
       "gruppi": []
     }
   },
