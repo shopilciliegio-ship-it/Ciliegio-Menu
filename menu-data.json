@@ -1770,6 +1770,13 @@
       "portata": "antipasto",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mth0acf0ims",
+      "nome": "Arrosto misto con salsiccia, costoleccio, fegatelli e tagliata di manzo",
+      "portata": "secondo",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -7180,10 +7187,35 @@
           "mnsq9hynlhy"
         ],
         "primo": [
-          "mnsq9hynlob"
+          "mnsq9hynlob",
+          "mr868jetd4x"
         ],
-        "secondo": [],
-        "contorno": [],
+        "secondo": [
+          "mth0acf0ims"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 40,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-09-04_cena_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo6acrp1vak"
+        ],
+        "primo": [],
+        "secondo": [
+          "mnsq9hyn0ay"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
         "dolce": []
       },
       "testoLibero": "",
