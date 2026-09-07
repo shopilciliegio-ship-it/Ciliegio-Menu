@@ -451,7 +451,7 @@ textarea{resize:vertical;min-height:72px}
       <button class="btn btn-ghost btn-sm" onclick="document.getElementById('imp').click()" style="padding:6px 16px">📂 Importa backup</button>
     </div>
 
-    <div style="text-align:center;font-size:13px;color:#666;letter-spacing:3px;margin-top:12px;font-family:'Cinzel',serif">v69</div>
+    <div style="text-align:center;font-size:13px;color:#666;letter-spacing:3px;margin-top:12px;font-family:'Cinzel',serif">v70</div>
   </div>
 </div>
 
@@ -1565,7 +1565,9 @@ function renderImportList(){
         <select id="imp-add-portata-${i}" style="width:110px" onchange="impRefreshAddOptions(${i})">
           ${PORTATE.map(p=>`<option value="${p.id}">${p.label}</option>`).join('')}
         </select>
-        <select id="imp-add-piatto-${i}" style="min-width:260px;flex:1"></select>
+        <select id="imp-add-piatto-${i}" style="min-width:220px" onchange="impToggleNewFields(${i})"></select>
+        <input type="text" id="imp-add-nome-${i}" placeholder="Nome nuovo piatto" style="flex:1;min-width:200px">
+        <input type="text" id="imp-add-trad-${i}" placeholder="Traduzione EN" style="width:200px">
         <button class="btn btn-ghost btn-xs" onclick="impAggiungiPiatto(${i})">+ Aggiungi piatto</button>
       </div>
     </div>`;
@@ -1579,6 +1581,16 @@ function impRefreshAddOptions(i){
   if(!portataSel||!piattoSel) return;
   const esistenti=DB.piatti.filter(p=>p.portata===portataSel.value).sort((a,b)=>a.nome.localeCompare(b.nome,'it'));
   piattoSel.innerHTML='<option value="">➕ Piatto nuovo…</option>'+esistenti.map(p=>`<option value="${p.id}">${p.nome}</option>`).join('');
+  impToggleNewFields(i);
+}
+function impToggleNewFields(i){
+  const piattoSel=document.getElementById('imp-add-piatto-'+i);
+  const nomeInp=document.getElementById('imp-add-nome-'+i);
+  const tradInp=document.getElementById('imp-add-trad-'+i);
+  if(!piattoSel||!nomeInp||!tradInp) return;
+  const isNuovo=!piattoSel.value;
+  nomeInp.style.display=isNuovo?'':'none';
+  tradInp.style.display=isNuovo?'':'none';
 }
 
 function impSetField(i,j,field,val){
@@ -1602,9 +1614,10 @@ function impRimuoviPiatto(i,j){
 function impAggiungiPiatto(i){
   const portataSel=document.getElementById('imp-add-portata-'+i);
   const piattoSel=document.getElementById('imp-add-piatto-'+i);
+  const nomeInp=document.getElementById('imp-add-nome-'+i);
+  const tradInp=document.getElementById('imp-add-trad-'+i);
   const portata=portataSel?portataSel.value:'antipasto';
   const existingId=piattoSel?piattoSel.value:'';
-  const j=DB.importPending[i].piatti.length;
   if(existingId){
     if(DB.importPending[i].piatti.some(p=>p.matchId===existingId)){
       alert('Questo piatto è già presente in questo giorno.'); return;
@@ -1612,13 +1625,12 @@ function impAggiungiPiatto(i){
     const d=DB.piatti.find(p=>p.id===existingId);
     DB.importPending[i].piatti.push({portata,nome:d.nome,stato:'match',matchId:d.id});
   } else {
-    DB.importPending[i].piatti.push({portata,nome:'',stato:'nuovo',traduzione:''});
+    const nome=(nomeInp?nomeInp.value:'').trim();
+    if(!nome){ alert('Scrivi il nome del piatto nuovo prima di aggiungerlo.'); return; }
+    const traduzione=(tradInp?tradInp.value:'').trim();
+    DB.importPending[i].piatti.push({portata,nome,stato:'nuovo',traduzione});
   }
   saveDB(); renderImportList();
-  if(!existingId){
-    const inp=document.getElementById(`imp-nome-${i}-${j}`);
-    if(inp) inp.focus();
-  }
 }
 
 function confermaImportGiorno(i){
