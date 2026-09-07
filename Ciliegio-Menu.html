@@ -1544,7 +1544,7 @@ function renderImportList(){
         <select style="width:110px" onchange="impSetField(${i},${j},'portata',this.value)">
           ${PORTATE.map(p=>`<option value="${p.id}" ${p.id===pt.portata?'selected':''}>${p.label}</option>`).join('')}
         </select>
-        <input type="text" style="flex:1;min-width:220px" value="${pt.nome.replace(/"/g,'&quot;')}" oninput="impSetField(${i},${j},'nome',this.value)">
+        <input type="text" id="imp-nome-${i}-${j}" style="flex:1;min-width:220px" value="${pt.nome.replace(/"/g,'&quot;')}" oninput="impSetField(${i},${j},'nome',this.value)">
         <span title="${STATO_LABEL[pt.stato]||''}">${STATO_BADGE[pt.stato]||''}</span>
         ${pt.stato!=='match'?`<input type="text" placeholder="Traduzione EN" style="width:220px" value="${(pt.traduzione||'').replace(/"/g,'&quot;')}" oninput="impSetField(${i},${j},'traduzione',this.value)">`:''}
         ${sugg?`<button class="btn btn-ghost btn-xs" onclick="impUsaSuggerito(${i},${j})">↳ usa "${sugg.nome}"</button>`:''}
@@ -1561,6 +1561,12 @@ function renderImportList(){
         <button class="btn btn-ghost btn-xs" onclick="scartaImportGiorno(${i})">Scarta</button>
       </div>
       ${piattiHtml}
+      <div style="padding-top:8px">
+        <select id="imp-add-portata-${i}" style="width:110px">
+          ${PORTATE.map(p=>`<option value="${p.id}">${p.label}</option>`).join('')}
+        </select>
+        <button class="btn btn-ghost btn-xs" onclick="impAggiungiPiatto(${i})">+ Aggiungi piatto</button>
+      </div>
     </div>`;
   }).join('');
 }
@@ -1583,6 +1589,15 @@ function impRimuoviPiatto(i,j){
   DB.importPending[i].piatti.splice(j,1);
   saveDB(); renderImportList();
 }
+function impAggiungiPiatto(i){
+  const sel=document.getElementById('imp-add-portata-'+i);
+  const portata=sel?sel.value:'antipasto';
+  const j=DB.importPending[i].piatti.length;
+  DB.importPending[i].piatti.push({portata,nome:'',stato:'nuovo',traduzione:''});
+  saveDB(); renderImportList();
+  const inp=document.getElementById(`imp-nome-${i}-${j}`);
+  if(inp) inp.focus();
+}
 
 function confermaImportGiorno(i){
   const day=DB.importPending[i]; if(!day)return;
@@ -1590,6 +1605,7 @@ function confermaImportGiorno(i){
   const menu=getMenu(key);
   PORTATE.forEach(p=>{ if(!menu.piatti[p.id]) menu.piatti[p.id]=[]; });
   day.piatti.forEach(pt=>{
+    if(!pt.nome || !pt.nome.trim()) return;
     let id=pt.matchId;
     if(!id){
       const dup=DB.piatti.find(x=>x.portata===pt.portata && x.nome.trim().toLowerCase()===pt.nome.trim().toLowerCase());
