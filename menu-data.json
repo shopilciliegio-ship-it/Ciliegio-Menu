@@ -9452,5 +9452,159 @@
         "ts": 1781517700845
       }
     ]
-  }
+  },
+  "importPending": [
+    {
+      "data": "2026-09-07", "servizio": "pranzo", "prezzo": 32,
+      "piatti": [
+        {"portata":"antipasto","nome":"Selezione di salumi","stato":"incerto","suggestedMatchId":"mnsq9hynqk0"},
+        {"portata":"antipasto","nome":"Crostino con gota, pecorino e miele","stato":"match","matchId":"mnsq9hynkaz"},
+        {"portata":"antipasto","nome":"Cecina","stato":"match","matchId":"mnsq9hymuqe"},
+        {"portata":"antipasto","nome":"Polenta al forno con crema di lardo e formaggio","stato":"match","matchId":"mnsq9hynfoi"},
+        {"portata":"primo","nome":"Straccetti con crema di zucchine, briciole di pane e guanciale croccante","stato":"match","matchId":"mr868jetd4x"},
+        {"portata":"secondo","nome":"Tagliata di manzo agli aromi","stato":"match","matchId":"mnsq9hyn4sj"},
+        {"portata":"contorno","nome":"Verdure al forno","stato":"match","matchId":"mnsq9hync5b"},
+        {"portata":"dolce","nome":"Dolce della casa","stato":"match","matchId":"mo67hzucqmt"}
+      ]
+    },
+    {
+      "data": "2026-09-07", "servizio": "cena", "prezzo": 32,
+      "piatti": [
+        {"portata":"primo","nome":"Straccetti al ragù di cinghiale","stato":"match","matchId":"mo76cwvebr1","nota":"marinata"},
+        {"portata":"secondo","nome":"Scamerita alla griglia","stato":"match","matchId":"mo69j5b1uwp"},
+        {"portata":"contorno","nome":"Patate arrosto","stato":"match","matchId":"mnsq9hynayz"},
+        {"portata":"dolce","nome":"Dolce della casa","stato":"match","matchId":"mo67hzucqmt"}
+      ]
+    },
+    {
+      "data": "2026-09-08", "servizio": "pranzo", "prezzo": 32,
+      "piatti": [
+        {"portata":"antipasto","nome":"Tonno del Chianti","stato":"match","matchId":"mnsq9hynmjr"},
+        {"portata":"antipasto","nome":"Tortino di stagione","stato":"match","matchId":"mor13kgqgpi"},
+        {"portata":"antipasto","nome":"Selezione affettati locali","stato":"incerto","suggestedMatchId":"mnsq9hynqk0"},
+        {"portata":"antipasto","nome":"Panzanella croccante","stato":"match","matchId":"mnsq9hynf3u"},
+        {"portata":"antipasto","nome":"Polpette della tradizione","stato":"match","matchId":"mnsq9hynyjk"},
+        {"portata":"primo","nome":"Risotto con verdure di stagione","stato":"match","matchId":"mnsq9hynn7v"},
+        {"portata":"secondo","nome":"Cinghiale in umido","stato":"incerto","suggestedMatchId":"mnsq9hyn885"},
+        {"portata":"contorno","nome":"Verdure alla griglia","stato":"match","matchId":"mnsq9hyni20"},
+        {"portata":"dolce","nome":"Macedonia","stato":"match","matchId":"mnsq9hynlyh"}
+      ]
+    },
+    {
+      "data": "2026-09-08", "servizio": "cena", "prezzo": 32,
+      "piatti": [
+        {"portata":"primo","nome":"Straccetti al ragù bianco toscano","stato":"nuovo","traduzione":"Straccetti pasta with white Tuscan-style ragù"},
+        {"portata":"secondo","nome":"Tagliata di manzo al pepe rosa","stato":"match","matchId":"mnsq9hyn0ay"},
+        {"portata":"contorno","nome":"Patate arrosto","stato":"match","matchId":"mnsq9hynayz"},
+        {"portata":"dolce","nome":"Dolce della casa","stato":"match","matchId":"mo67hzucqmt"}
+      ]
+    },
+    {
+      "data": "2026-09-09", "servizio": "pranzo", "prezzo": 32,
+      "piatti": [
+        {"portata":"antipasto","nome":"Antipasto misto toscano","stato":"match","matchId":"mo68jqekj3x"},
+        {"portata":"primo","nome":"Straccetti al ragù toscano","stato":"incerto","suggestedMatchId":"mo69nj18fdk"},
+        {"portata":"secondo","nome":"Scamerita alla griglia","stato":"match","matchId":"mo69j5b1uwp"},
+        {"portata":"contorno","nome":"Patate arrosto","stato":"match","matchId":"mnsq9hynayz"},
+        {"portata":"dolce","nome":"Dolce della casa","stato":"match","matchId":"mo67hzucqmt"}
+      ]
+    },
+    {
+      "data": "2026-09-09", "servizio": "cena", "prezzo": 32,
+      "piatti": [
+        {"portata":"antipasto","nome":"Antipasto del Ciliegio","stato":"match","matchId":"mo1xei4h6yo"},
+        {"portata":"primo","nome":"Straccetti con crema di zucchine, briciole di pane e guanciale croccante","stato":"match","matchId":"mr868jetd4x"},
+        {"portata":"secondo","nome":"Tagliata di manzo agli aromi","stato":"match","matchId":"mnsq9hyn4sj"},
+        {"portata":"contorno","nome":"Verdure arrosto","stato":"match","matchId":"mokcau21bzk"},
+        {"portata":"dolce","nome":"Dolce della casa","stato":"match","matchId":"mo67hzucqmt"}
+      ]
+    },
+    {
+      "data": "2026-09-10", "servizio": "pranzo", "prezzo": 32,
+      "piatti": [
+        {"portata":"antipasto","nome":"Polenta al forno con crema di lardo e formaggio","stato":"match","matchId":"mnsq9hynfoi"},
+        {"portata":"antipasto","nome":"Selezione di salumi locali","stato":"incerto","suggestedMatchId":"mnsq9hynqk0"},
+        {"portata":"antipasto","nome":"Formaggi misti con marmellata","stato":"incerto","suggestedMatchId":"mo1w8xtm5r2"},
+        {"portata":"antipasto","nome":"Cecina","stato":"match","matchId":"mnsq9hymuqe"},
+        {"portata":"antipasto","nome":"Crostino con gota, pecorino e miele","stato":"match","matchId":"mnsq9hynkaz"},
+        {"portata":"primo","nome":"Straccetti al ragù di cinghiale","stato":"match","matchId":"mo76cwvebr1"},
+        {"portata":"secondo","nome":"Tagliata di manzo agli aromi","stato":"match","matchId":"mnsq9hyn4sj"},
+        {"portata":"contorno","nome":"Verdure al forno","stato":"match","matchId":"mnsq9hync5b"},
+        {"portata":"dolce","nome":"Torta con ricotta, pinoli e uvetta","stato":"match","matchId":"mohatliymxm"}
+      ]
+    },
+    {
+      "data": "2026-09-11", "servizio": "pranzo", "prezzo": 32,
+      "piatti": [
+        {"portata":"antipasto","nome":"Antipasto misto toscano","stato":"match","matchId":"mo68jqekj3x"},
+        {"portata":"primo","nome":"Pasta fresca al ragù toscano","stato":"match","matchId":"mo68pp64giu"},
+        {"portata":"secondo","nome":"Tagliata di manzo agli aromi","stato":"match","matchId":"mnsq9hyn4sj"},
+        {"portata":"contorno","nome":"Patate arrosto","stato":"match","matchId":"mnsq9hynayz"},
+        {"portata":"dolce","nome":"Dolce della casa","stato":"match","matchId":"mo67hzucqmt"}
+      ]
+    },
+    {
+      "data": "2026-09-11", "servizio": "cena", "prezzo": 32,
+      "piatti": [
+        {"portata":"antipasto","nome":"Selezione salumi locali","stato":"incerto","suggestedMatchId":"mnsq9hynqk0"},
+        {"portata":"antipasto","nome":"Crostino con fegatini di pollo, sale grosso e miele","stato":"match","matchId":"mnsq9hynyoo"},
+        {"portata":"antipasto","nome":"Crostino con miele, pecorino, pere e noci","stato":"incerto","suggestedMatchId":"mnsq9hynsn7"},
+        {"portata":"antipasto","nome":"Bruschetta con finocchiella e finocchiona","stato":"match","matchId":"mnsq9hymqzy"},
+        {"portata":"antipasto","nome":"Crostino con ricotta, salsiccia ed erbette","stato":"incerto","suggestedMatchId":"mnsq9hynxni"},
+        {"portata":"primo","nome":"Pici o Tortiglioni con crema di pecorino, gota e pancetta croccante","stato":"nuovo","traduzione":"Pici or tortiglioni with pecorino cream, pork cheek and crispy pancetta"},
+        {"portata":"secondo","nome":"Capocollo ripieno con salsiccia, pere e crema di pecorino","stato":"incerto","suggestedMatchId":"mnsq9hyn38r"},
+        {"portata":"contorno","nome":"Patate sabbiate","stato":"match","matchId":"mnsq9hynelb"},
+        {"portata":"dolce","nome":"Dolce della casa","stato":"match","matchId":"mo67hzucqmt"}
+      ]
+    },
+    {
+      "data": "2026-09-12", "servizio": "pranzo", "prezzo": 36,
+      "piatti": [
+        {"portata":"antipasto","nome":"Panzanella croccante","stato":"match","matchId":"mnsq9hynf3u"},
+        {"portata":"antipasto","nome":"Tortino di pappa al pomodoro con stracciatella","stato":"match","matchId":"mokc6n6i3gp"},
+        {"portata":"antipasto","nome":"Crostone con verdure di stagione e carota","stato":"nuovo","traduzione":"","nota":"testo parzialmente illeggibile in foto, verificare con Marco/Luca"},
+        {"portata":"antipasto","nome":"Crostino con cipolla e miele","stato":"match","matchId":"mnsq9hymnw1"},
+        {"portata":"antipasto","nome":"Tonno del Chianti","stato":"match","matchId":"mnsq9hynmjr"},
+        {"portata":"primo","nome":"Risotto con salsiccia e Chianti","stato":"match","matchId":"mnsq9hyndew"},
+        {"portata":"primo","nome":"Pici con crema di pecorino, guanciale e pancetta croccante","stato":"match","matchId":"mqe7d7w0p28"},
+        {"portata":"secondo","nome":"Filetto di maiale in crosta di pane","stato":"match","matchId":"mnsq9hyncpy"},
+        {"portata":"contorno","nome":"Patate sabbiate","stato":"match","matchId":"mnsq9hynelb"},
+        {"portata":"dolce","nome":"Dolce della casa","stato":"match","matchId":"mo67hzucqmt"}
+      ]
+    },
+    {
+      "data": "2026-09-12", "servizio": "cena", "prezzo": 36,
+      "piatti": [
+        {"portata":"antipasto","nome":"Crostino con noci e miele","stato":"incerto","suggestedMatchId":"mq55yhd26mx"},
+        {"portata":"antipasto","nome":"Bruschetta con pomodorini e basilico","stato":"match","matchId":"mnsq9hymnei"},
+        {"portata":"antipasto","nome":"Flan di patate e rosmarino","stato":"incerto","suggestedMatchId":"mnsq9hynxrp"},
+        {"portata":"antipasto","nome":"Polpette della tradizione","stato":"match","matchId":"mnsq9hynyjk"},
+        {"portata":"antipasto","nome":"Insalatina aromatica con legumi e verdure di stagione","stato":"match","matchId":"mnsq9hynqm1"},
+        {"portata":"primo","nome":"Risotto con verdure di stagione","stato":"match","matchId":"mnsq9hynn7v"},
+        {"portata":"primo","nome":"Pici all'Amatriciana","stato":"match","matchId":"mr86h40t8yx"},
+        {"portata":"secondo","nome":"Tagliata di manzo agli aromi","stato":"match","matchId":"mnsq9hyn4sj","nota":"sul menù privato Amenite c'era Arista di maiale arrosto — sostituita per il sito"},
+        {"portata":"contorno","nome":"Insalata mista","stato":"match","matchId":"mnsq9hynkgr"},
+        {"portata":"dolce","nome":"Zuppa inglese","stato":"match","matchId":"mnsq9hyn9xv"}
+      ]
+    },
+    {
+      "data": "2026-09-13", "servizio": "pranzo", "prezzo": 32,
+      "piatti": [
+        {"portata":"antipasto","nome":"Antipasto misto del Ciliegio","stato":"incerto","suggestedMatchId":"mo1xei4h6yo"},
+        {"portata":"primo","nome":"Pappardelle al ragù di cinghiale","stato":"match","matchId":"mnsq9hyns1x"},
+        {"portata":"secondo","nome":"Tagliata di manzo agli aromi","stato":"match","matchId":"mnsq9hyn4sj"},
+        {"portata":"contorno","nome":"Patate arrosto","stato":"match","matchId":"mnsq9hynayz"},
+        {"portata":"dolce","nome":"Dolce della casa","stato":"match","matchId":"mo67hzucqmt"}
+      ]
+    },
+    {
+      "data": "2026-09-13", "servizio": "cena", "prezzo": 32,
+      "piatti": [
+        {"portata":"primo","nome":"Pasta al ragù di cinghiale","stato":"incerto","suggestedMatchId":"mo67h4xg40w"},
+        {"portata":"secondo","nome":"Tagliata di manzo agli aromi","stato":"match","matchId":"mnsq9hyn4sj"},
+        {"portata":"contorno","nome":"Patate arrosto","stato":"match","matchId":"mnsq9hynayz"},
+        {"portata":"dolce","nome":"Crostata con crema e frutta fresca","stato":"nuovo","traduzione":"Fresh fruit and pastry cream tart","nota":"prezzo non scritto in foto, presunto standard 32€"}
+      ]
+    }
+  ]
 }

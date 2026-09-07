@@ -426,6 +426,14 @@ textarea{resize:vertical;min-height:72px}
           <span class="hcd">Crea le immagini dei menù del giorno da pubblicare online — 650×919 px, 300 dpi</span>
         </div>
       </div>
+      <div class="hcard-wide" onclick="apriImportModal()">
+        <span class="hci">📥</span>
+        <div class="hw-text">
+          <span class="hcl">Importa Menù Settimana</span>
+          <span class="hcd">Rivedi e conferma i menù letti dalle foto dell'agenda prima di inserirli</span>
+        </div>
+        <span id="home-badge-import" style="display:none;margin-left:auto;background:#8b3a10;color:#fff;border-radius:20px;padding:2px 10px;font-size:12px;letter-spacing:.5px"></span>
+      </div>
       <div class="hcard-wide" onclick="navTo('operatore')" style="border-color:#6a2a10;background:linear-gradient(135deg,var(--bg2),#1a0a05)">
         <span class="hci">🧑‍🍳</span>
         <div class="hw-text">
@@ -759,6 +767,20 @@ textarea{resize:vertical;min-height:72px}
   </div>
 </div>
 
+<!-- ══ MODAL IMPORTA MENÙ SETTIMANA ══ -->
+<div id="ov-import" class="overlay hidden">
+  <div class="modal modal-lg" style="max-width:820px;max-height:88vh;overflow-y:auto">
+    <button class="modal-close" onclick="closeOv('ov-import')">✕</button>
+    <div class="modal-title">📥 Importa Menù Settimana</div>
+    <p class="text-muted mb-12">Bozza letta dalle foto dell'agenda. ✅ piatto già in lista, ❓ probabile corrispondenza da confermare, 🆕 piatto nuovo da aggiungere. Correggi nome/portata/traduzione se serve, poi conferma giorno per giorno (o tutti insieme).</p>
+    <div id="import-list"></div>
+    <div class="flex" style="margin-top:16px">
+      <button class="btn btn-gold" onclick="confermaImportTutto()">✔ Conferma tutti i giorni</button>
+      <button class="btn btn-ghost" onclick="closeOv('ov-import')">Chiudi</button>
+    </div>
+  </div>
+</div>
+
 <!-- ══ MODAL ESPORTA JPG SINGOLO MENÙ ══ -->
 <div id="ov-jpg-singolo" class="overlay hidden">
   <div class="modal" style="max-width:400px">
@@ -1045,7 +1067,7 @@ textarea{resize:vertical;min-height:72px}
 //   - Accoda prenotazione: aggiunge un gruppo a DB.prenotazioni["data_serv"]
 //     collegato a un menuKey esistente (può usare il menù generale o uno specifico)
 
-let DB = { piatti:[], menu:{}, prenotazioni:{}, noteGiorno:{}, traduzioni:{}, cartaDelGiorno:{}, tavoli:{}, bevande:[] };
+let DB = { piatti:[], menu:{}, prenotazioni:{}, noteGiorno:{}, traduzioni:{}, cartaDelGiorno:{}, tavoli:{}, bevande:[], importPending:[] };
 // cartaDelGiorno["YYYY-MM-DD"] = [piattoId, ...]
 // tavoli["YYYY-MM-DD_serv"] = [{nome,adulti,bambini,menuVoci:[{qty,note}],piatti:[{id,qty}],bevande:[{id,qty}],orario,ts}]
 
@@ -1243,8 +1265,9 @@ async function autoLoad(){
     const j = await r.json();
     const remoteDB = JSON.parse(decodeURIComponent(escape(atob(j.content))));
     DB = remoteDB;
+    if(!DB.importPending) DB.importPending=[];
     localStorage.setItem('rdb3', JSON.stringify(DB));
-    renderPiatti(); renderCal();
+    renderPiatti(); renderCal(); refreshImportBadge();
     setSyncStatus('ok');
   }catch(e){ setSyncStatus('error'); console.warn('Load error:',e); }
 }
@@ -1295,6 +1318,8 @@ function init(){
   if(!DB.traduzioni) DB.traduzioni={};
   if(!DB.cartaDelGiorno) DB.cartaDelGiorno={};
   if(!DB.tavoli) DB.tavoli={};
+  if(!DB.importPending) DB.importPending=[];
+  refreshImportBadge();
   if('serviceWorker' in navigator){
     navigator.serviceWorker.register('./sw.js').catch(()=>{});
   }
@@ -1487,6 +1512,111 @@ function countPiattiMenu(key){
 }
 function portataColor(id){
   return {antipasto:'#c9a84c',primo:'#6a9fbc',secondo:'#bc6a7a',contorno:'#6abc8a',dolce:'#9a7abc'}[id]||'#888';
+}
+
+// ══════════════════════════════════════════════════════
+// IMPORTA MENÙ SETTIMANA (da bozza letta dalle foto dell'agenda)
+// ══════════════════════════════════════════════════════
+function refreshImportBadge(){
+  const b=document.getElementById('home-badge-import'); if(!b)return;
+  const n=(DB.importPending||[]).length;
+  if(n){ b.style.display='inline-block'; b.textContent=`${n} da rivedere`; }
+  else b.style.display='none';
+}
+
+function apriImportModal(){ renderImportList(); openOv('ov-import'); }
+
+const STATO_BADGE={match:'✅',incerto:'❓',nuovo:'🆕'};
+const STATO_LABEL={match:'già in lista',incerto:'forse esiste già',nuovo:'piatto nuovo'};
+
+function renderImportList(){
+  const wrap=document.getElementById('import-list');
+  refreshImportBadge();
+  if(!DB.importPending || !DB.importPending.length){
+    wrap.innerHTML='<div class="empty" style="padding:16px">Nessuna bozza in attesa.</div>';
+    return;
+  }
+  wrap.innerHTML=DB.importPending.map((day,i)=>{
+    const dt=parseDate(day.data);
+    const piattiHtml=day.piatti.map((pt,j)=>{
+      const sugg=pt.suggestedMatchId?DB.piatti.find(p=>p.id===pt.suggestedMatchId):null;
+      return `<div style="display:flex;align-items:center;gap:8px;padding:6px 0;border-bottom:1px solid var(--border);flex-wrap:wrap">
+        <select style="width:110px" onchange="impSetField(${i},${j},'portata',this.value)">
+          ${PORTATE.map(p=>`<option value="${p.id}" ${p.id===pt.portata?'selected':''}>${p.label}</option>`).join('')}
+        </select>
+        <input type="text" style="flex:1;min-width:220px" value="${pt.nome.replace(/"/g,'&quot;')}" oninput="impSetField(${i},${j},'nome',this.value)">
+        <span title="${STATO_LABEL[pt.stato]||''}">${STATO_BADGE[pt.stato]||''}</span>
+        ${pt.stato!=='match'?`<input type="text" placeholder="Traduzione EN" style="width:220px" value="${(pt.traduzione||'').replace(/"/g,'&quot;')}" oninput="impSetField(${i},${j},'traduzione',this.value)">`:''}
+        ${sugg?`<button class="btn btn-ghost btn-xs" onclick="impUsaSuggerito(${i},${j})">↳ usa "${sugg.nome}"</button>`:''}
+        <button class="btn btn-ghost btn-xs" onclick="impRimuoviPiatto(${i},${j})">✕</button>
+      </div>${pt.nota?`<div style="font-size:12px;color:var(--white3);padding:2px 0 4px">⚠ ${pt.nota}</div>`:''}`;
+    }).join('');
+    return `<div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--r2);padding:14px 16px;margin-bottom:14px">
+      <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:8px">
+        <strong style="font-family:'Cinzel',serif;color:var(--gold)">${dt.giornoLungo} — ${cap(day.servizio)}</strong>
+        <span style="color:var(--white3)">prezzo €</span>
+        <input type="number" style="width:70px" value="${day.prezzo}" oninput="impSetPrezzo(${i},this.value)">
+        <div style="flex:1"></div>
+        <button class="btn btn-gold btn-xs" onclick="confermaImportGiorno(${i})">✔ Conferma questo giorno</button>
+        <button class="btn btn-ghost btn-xs" onclick="scartaImportGiorno(${i})">Scarta</button>
+      </div>
+      ${piattiHtml}
+    </div>`;
+  }).join('');
+}
+
+function impSetField(i,j,field,val){
+  const pt=DB.importPending[i].piatti[j];
+  pt[field]=val;
+  if(field==='nome'){ pt.matchId=null; if(pt.stato==='match') pt.stato='incerto'; }
+  saveDB();
+}
+function impSetPrezzo(i,val){ DB.importPending[i].prezzo=parseFloat(val)||0; saveDB(); }
+function impUsaSuggerito(i,j){
+  const pt=DB.importPending[i].piatti[j];
+  const d=DB.piatti.find(p=>p.id===pt.suggestedMatchId);
+  if(!d)return;
+  pt.nome=d.nome; pt.matchId=d.id; pt.stato='match';
+  saveDB(); renderImportList();
+}
+function impRimuoviPiatto(i,j){
+  DB.importPending[i].piatti.splice(j,1);
+  saveDB(); renderImportList();
+}
+
+function confermaImportGiorno(i){
+  const day=DB.importPending[i]; if(!day)return;
+  const key=mkKey(day.data,day.servizio,'Menù del Sito');
+  const menu=getMenu(key);
+  PORTATE.forEach(p=>{ if(!menu.piatti[p.id]) menu.piatti[p.id]=[]; });
+  day.piatti.forEach(pt=>{
+    let id=pt.matchId;
+    if(!id){
+      const dup=DB.piatti.find(x=>x.portata===pt.portata && x.nome.trim().toLowerCase()===pt.nome.trim().toLowerCase());
+      if(dup) id=dup.id;
+      else{
+        id=uid();
+        DB.piatti.push({id,nome:pt.nome.trim(),portata:pt.portata,extra:0,note:pt.nota&&pt.stato==='match'?pt.nota:''});
+        if(pt.traduzione && pt.traduzione.trim()) DB.traduzioni[id]=pt.traduzione.trim();
+      }
+    }
+    if(!menu.piatti[pt.portata].includes(id)) menu.piatti[pt.portata].push(id);
+  });
+  menu.prezzo=day.prezzo;
+  DB.importPending.splice(i,1);
+  saveDB(); renderImportList(); renderPiatti();
+}
+
+function scartaImportGiorno(i){
+  if(!confirm('Scartare questo giorno senza importarlo nel menù?'))return;
+  DB.importPending.splice(i,1);
+  saveDB(); renderImportList();
+}
+
+function confermaImportTutto(){
+  if(!confirm(`Confermare tutti i ${DB.importPending.length} giorni con i dati attuali?`))return;
+  while(DB.importPending.length) confermaImportGiorno(0);
+  alert('Importazione completata.');
 }
 
 // ══════════════════════════════════════════════════════
