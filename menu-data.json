@@ -1812,6 +1812,20 @@
       "portata": "antipasto",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mtsfdqpkwbk",
+      "nome": "Crostata con crema e frutta fresca",
+      "portata": "dolce",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mtsfdqpkyh9",
+      "nome": "Pasta al ragù di cortile",
+      "portata": "primo",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -7550,6 +7564,50 @@
       "testoLibero": "",
       "prezzo": 36,
       "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-09-13_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo1xei4h6yo"
+        ],
+        "primo": [
+          "mnsq9hyns1x"
+        ],
+        "secondo": [
+          "mnsq9hyn4sj"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 32,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-09-13_cena_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo6acrp1vak"
+        ],
+        "primo": [
+          "mtsfdqpkyh9"
+        ],
+        "secondo": [
+          "mnsq9hyn4sj"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mtsfdqpkwbk"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 32,
+      "nomeSpecifico": "Menù del Sito"
     }
   },
   "prenotazioni": {
@@ -9108,6 +9166,18 @@
     },
     "2026-09-06_cena": {
       "gruppi": []
+    },
+    "2026-09-07_pranzo": {
+      "gruppi": []
+    },
+    "2026-09-07_cena": {
+      "gruppi": []
+    },
+    "2026-09-13_pranzo": {
+      "gruppi": []
+    },
+    "2026-09-13_cena": {
+      "gruppi": []
     }
   },
   "noteGiorno": {
@@ -9376,7 +9446,8 @@
     "mtgzuvpwctu": "Crostini with zucchini, carrots and pepper",
     "mtsf39qhpou": "Straccetti pasta with white Tuscan-style ragù",
     "mtsf6egw0at": "Pici or tortiglioni with pecorino cream, pork cheek and crispy pancetta",
-    "mtsf7ff4ggj": "Stewed wild boar meat"
+    "mtsf7ff4ggj": "Stewed wild boar meat",
+    "mtsfdqpkwbk": "Fresh fruit and pastry cream tart"
   },
   "cartaDelGiorno": {
     "2026-05-31": [
@@ -9759,76 +9830,5 @@
       }
     ]
   },
-  "importPending": [
-    {
-      "data": "2026-09-13",
-      "servizio": "pranzo",
-      "prezzo": 32,
-      "piatti": [
-        {
-          "portata": "antipasto",
-          "nome": "Antipasto del Ciliegio",
-          "stato": "match",
-          "suggestedMatchId": "mo1xei4h6yo",
-          "matchId": "mo1xei4h6yo"
-        },
-        {
-          "portata": "primo",
-          "nome": "Pappardelle al ragù di cinghiale",
-          "stato": "match",
-          "matchId": "mnsq9hyns1x"
-        },
-        {
-          "portata": "secondo",
-          "nome": "Tagliata di manzo agli aromi",
-          "stato": "match",
-          "matchId": "mnsq9hyn4sj"
-        },
-        {
-          "portata": "contorno",
-          "nome": "Patate arrosto",
-          "stato": "match",
-          "matchId": "mnsq9hynayz"
-        },
-        {
-          "portata": "dolce",
-          "nome": "Dolce della casa",
-          "stato": "match",
-          "matchId": "mo67hzucqmt"
-        }
-      ]
-    },
-    {
-      "data": "2026-09-13",
-      "servizio": "cena",
-      "prezzo": 32,
-      "piatti": [
-        {
-          "portata": "primo",
-          "nome": "Pasta al ragù di cinghiale",
-          "stato": "incerto",
-          "suggestedMatchId": "mo67h4xg40w"
-        },
-        {
-          "portata": "secondo",
-          "nome": "Tagliata di manzo agli aromi",
-          "stato": "match",
-          "matchId": "mnsq9hyn4sj"
-        },
-        {
-          "portata": "contorno",
-          "nome": "Patate arrosto",
-          "stato": "match",
-          "matchId": "mnsq9hynayz"
-        },
-        {
-          "portata": "dolce",
-          "nome": "Crostata con crema e frutta fresca",
-          "stato": "nuovo",
-          "traduzione": "Fresh fruit and pastry cream tart",
-          "nota": "prezzo non scritto in foto, presunto standard 32€"
-        }
-      ]
-    }
-  ]
+  "importPending": []
 }
