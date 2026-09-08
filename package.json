@@ -1,0 +1,24 @@
+{
+  "name": "ciliegio-menu",
+  "version": "1.0.0",
+  "description": "Il menù del Ciliegio",
+  "main": "carica-menu-sito.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shopilciliegio-ship-it/Ciliegio-Menu.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/shopilciliegio-ship-it/Ciliegio-Menu/issues"
+  },
+  "homepage": "https://github.com/shopilciliegio-ship-it/Ciliegio-Menu#readme",
+  "dependencies": {
+    "playwright": "^1.63.0"
+  }
+}
