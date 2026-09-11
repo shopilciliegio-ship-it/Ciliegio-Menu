@@ -9868,6 +9868,71 @@
         "dsKey": "2026-06-20_pranzo",
         "ts": 1781517700845
       }
+    ],
+    "2026-09-11_pranzo": [
+      {
+        "nome": "MEZZANI",
+        "orario": "13:00",
+        "adulti": 5,
+        "bambini": 2,
+        "menuInteri": 3,
+        "piatti": [
+          {
+            "id": "mo68jqekj3x",
+            "qty": 3,
+            "fonte": "menu"
+          },
+          {
+            "id": "mo68pp64giu",
+            "qty": 3,
+            "fonte": "menu"
+          },
+          {
+            "id": "mnsq9hyn4sj",
+            "qty": 3,
+            "fonte": "menu"
+          },
+          {
+            "id": "mnsq9hynayz",
+            "qty": 3,
+            "fonte": "menu"
+          },
+          {
+            "id": "mo67hzucqmt",
+            "qty": 3,
+            "fonte": "menu"
+          },
+          {
+            "id": "mp6qq1hc6f9",
+            "qty": 1,
+            "fonte": "carta"
+          },
+          {
+            "id": "mrth11r189u",
+            "qty": 1,
+            "fonte": "carta"
+          },
+          {
+            "id": "mnsq9hynrci",
+            "qty": 2,
+            "fonte": "carta"
+          }
+        ],
+        "bevande": [
+          {
+            "id": "vino-casa",
+            "nome": "Vino della casa",
+            "qty": 1
+          },
+          {
+            "id": "vino-spec",
+            "nome": "Vino bottiglia speciale",
+            "qty": 1
+          }
+        ],
+        "dsKey": "2026-09-11_pranzo",
+        "ts": 1789134458804
+      }
     ]
   },
   "importPending": []
