@@ -9168,7 +9168,30 @@
       "gruppi": []
     },
     "2026-09-07_pranzo": {
-      "gruppi": []
+      "gruppi": [
+        {
+          "nome": "DORIRI",
+          "orario": "13:00",
+          "sala": "",
+          "pax": 4,
+          "gratuiti": 0,
+          "bambini": 2,
+          "seggiolini": 0,
+          "contattoNome": "",
+          "contattoTel": "",
+          "note": "",
+          "intolleranze": null,
+          "modifiche": "",
+          "menuKey": "2026-09-07_pranzo_Menù del Sito",
+          "prezzoSpeciale": 28,
+          "dolce": true,
+          "daConfermare": true,
+          "caparraNecessaria": false,
+          "caparraStato": null,
+          "caparraImporto": null,
+          "caparraNota": null
+        }
+      ]
     },
     "2026-09-07_cena": {
       "gruppi": []
