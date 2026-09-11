@@ -9201,6 +9201,12 @@
     },
     "2026-09-13_cena": {
       "gruppi": []
+    },
+    "2026-09-14_pranzo": {
+      "gruppi": []
+    },
+    "2026-09-14_cena": {
+      "gruppi": []
     }
   },
   "noteGiorno": {
@@ -9533,6 +9539,13 @@
       "mqe7d7w0p28",
       "mokc9g0hwz1",
       "mnsq9hynwdm"
+    ],
+    "2026-09-11_pranzo": [
+      "mo1xei4h6yo",
+      "mp6qq1hc6f9",
+      "mrth11r189u",
+      "mnsq9hyncpy",
+      "mnsq9hynrci"
     ]
   },
   "tavoli": {
