@@ -7775,22 +7775,6 @@
       "testoLibero": "",
       "prezzo": 32.9,
       "nomeSpecifico": "Menù del Sito"
-    },
-    "2026-09-20_cena_Menù del Sito": {
-      "piatti": {
-        "antipasto": [
-          "mnsq9hymnei",
-          "mnsq9hynqm1",
-          "mnsq9hynyoo"
-        ],
-        "primo": [],
-        "secondo": [],
-        "contorno": [],
-        "dolce": []
-      },
-      "testoLibero": "",
-      "prezzo": null,
-      "nomeSpecifico": "Menù del Sito"
     }
   },
   "prenotazioni": {
