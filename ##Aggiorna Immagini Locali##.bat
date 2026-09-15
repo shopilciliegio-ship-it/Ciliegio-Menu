@@ -4,6 +4,16 @@ cd /d "D:\Società Agricola Il Ciliegio\Sito del Team - Documenti\Ciliegio CLOUD
 echo Aggiornamento cartella locale in corso...
 echo.
 git pull
+if errorlevel 1 (
+    echo.
+    echo ------------------------------------
+    echo ERRORE: git pull non e' andato a buon fine ^(vedi sopra^).
+    echo Mi fermo qui per sicurezza: proseguire adesso rischia di riempire
+    echo la cartella con le immagini generiche "al completo" al posto dei
+    echo menu veri, perche' localmente non sono aggiornati.
+    echo Risolvi il problema di pull ^(es. modifiche locali in conflitto^) e rilancia il bat.
+    goto fine2
+)
 echo.
 echo ------------------------------------
 echo Controllo giorni/servizi senza immagine...
