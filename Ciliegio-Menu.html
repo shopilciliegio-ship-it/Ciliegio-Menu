@@ -451,7 +451,7 @@ textarea{resize:vertical;min-height:72px}
       <button class="btn btn-ghost btn-sm" onclick="document.getElementById('imp').click()" style="padding:6px 16px">📂 Importa backup</button>
     </div>
 
-    <div style="text-align:center;font-size:13px;color:#666;letter-spacing:3px;margin-top:12px;font-family:'Cinzel',serif">v73</div>
+    <div style="text-align:center;font-size:13px;color:#666;letter-spacing:3px;margin-top:12px;font-family:'Cinzel',serif">v74</div>
   </div>
 </div>
 
@@ -2886,8 +2886,10 @@ function apriJPGModal(){
   document.getElementById('jpg-a').value=fmt(sun);
   aggiornaListaJPG();
   document.getElementById('jpg-progress').style.display='none';
-  document.getElementById('jpg-start-btn').disabled=false;
-  document.getElementById('jpg-start-btn').textContent='✦ Genera immagini';
+  const jsb=document.getElementById('jpg-start-btn');
+  jsb.disabled=false;
+  jsb.textContent='✦ Genera immagini';
+  jsb.onclick=avviaGeneraJPG;
   openOv('ov-jpg');
 }
 
