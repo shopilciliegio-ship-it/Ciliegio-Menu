@@ -7608,6 +7608,189 @@
       "testoLibero": "",
       "prezzo": 32,
       "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-09-15_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo68jqekj3x"
+        ],
+        "primo": [
+          "mo68pp64giu"
+        ],
+        "secondo": [
+          "mnsq9hyncpy"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 32,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-09-17_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo1xei4h6yo"
+        ],
+        "primo": [
+          "mo76cwvebr1"
+        ],
+        "secondo": [
+          "mnsq9hyn4sj"
+        ],
+        "contorno": [
+          "mnsq9hync5b"
+        ],
+        "dolce": [
+          "mohatliymxm"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 32,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-09-18_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo1xei4h6yo"
+        ],
+        "primo": [
+          "mnsq9hyndew",
+          "mnsq9hynkh2"
+        ],
+        "secondo": [
+          "mnsq9hyncpy"
+        ],
+        "contorno": [
+          "mnsq9hyni20"
+        ],
+        "dolce": [
+          "mnsq9hynnku"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 35,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-09-18_cena_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hyneqw",
+          "mnsq9hyn8jt",
+          "mnsq9hynf4r",
+          "mnsq9hynyoo",
+          "mnsq9hynqk0"
+        ],
+        "primo": [
+          "mnsq9hynlob"
+        ],
+        "secondo": [
+          "mnsq9hyncpy"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mnsq9hynzar"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 30,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-09-19_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hyneqw",
+          "mnsq9hymnei",
+          "mnsq9hynqk0",
+          "mo1w8xtm5r2"
+        ],
+        "primo": [
+          "mnsq9hyn9ag"
+        ],
+        "secondo": [
+          "mnsq9hyn4sj"
+        ],
+        "contorno": [
+          "mnsq9hynayz",
+          "mnsq9hynkgr"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 33,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-09-20_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hyneqw",
+          "mnsq9hynqk0",
+          "mo1w8xtm5r2",
+          "mnsq9hynyjk"
+        ],
+        "primo": [
+          "mq55rnu6dtj",
+          "mrkoxuy1xx0"
+        ],
+        "secondo": [
+          "mnsq9hyn4sj"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 35,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-09-16_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo68jqekj3x"
+        ],
+        "primo": [
+          "mo68pp64giu"
+        ],
+        "secondo": [
+          "mnsq9hyn4sj"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 32.9,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-09-20_cena_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hymnei",
+          "mnsq9hynqm1",
+          "mnsq9hynyoo"
+        ],
+        "primo": [],
+        "secondo": [],
+        "contorno": [],
+        "dolce": []
+      },
+      "testoLibero": "",
+      "prezzo": null,
+      "nomeSpecifico": "Menù del Sito"
     }
   },
   "prenotazioni": {
@@ -9207,6 +9390,12 @@
     },
     "2026-09-14_cena": {
       "gruppi": []
+    },
+    "2026-09-20_pranzo": {
+      "gruppi": []
+    },
+    "2026-09-20_cena": {
+      "gruppi": []
     }
   },
   "noteGiorno": {
@@ -9935,305 +10124,5 @@
       }
     ]
   },
-  "importPending": [
-    {
-      "data": "2026-09-15",
-      "servizio": "pranzo",
-      "prezzo": 32,
-      "piatti": [
-        {
-          "portata": "antipasto",
-          "nome": "Antipasto Toscano",
-          "stato": "incerto",
-          "suggestedMatchId": "mo68jqekj3x",
-          "nota": "Scritto 'Antipasto Toscano' sulla foto, presumo sia 'Antipasto misto toscano' già in lista."
-        },
-        {
-          "portata": "primo",
-          "nome": "Pasta Fresca al Ragù",
-          "stato": "incerto",
-          "suggestedMatchId": "mo68pp64giu",
-          "nota": "Scritto 'Pasta Fresca al Ragù' senza specificare, presumo sia 'Pasta fresca al ragù toscano' già in lista."
-        },
-        {
-          "portata": "secondo",
-          "nome": "Filetto di Maialino in Crosta",
-          "stato": "incerto",
-          "suggestedMatchId": "mnsq9hyncpy",
-          "nota": "Scritto 'maialino', in lista c'è 'Filetto di maiale in crosta di pane' — verifica se è lo stesso piatto o uno diverso."
-        },
-        {
-          "portata": "contorno",
-          "nome": "Patate arrosto",
-          "stato": "match",
-          "matchId": "mnsq9hynayz"
-        },
-        {
-          "portata": "dolce",
-          "nome": "Dolce della casa",
-          "stato": "match",
-          "matchId": "mo67hzucqmt"
-        }
-      ]
-    },
-    {
-      "data": "2026-09-16",
-      "servizio": "pranzo",
-      "prezzo": 32.9,
-      "piatti": [
-        {
-          "portata": "antipasto",
-          "nome": "Antipasto misto toscano",
-          "stato": "match",
-          "matchId": "mo68jqekj3x"
-        },
-        {
-          "portata": "primo",
-          "nome": "Pasta Fresca al Ragù Toscano",
-          "stato": "incerto",
-          "suggestedMatchId": "mo68pp64giu",
-          "nota": "La colonna SITO era tagliata dagli anelli del raccoglitore, alcune parole erano coperte — controlla che sia davvero 'Pasta fresca al ragù toscano'."
-        },
-        {
-          "portata": "secondo",
-          "nome": "Tagliata agli Aromi",
-          "stato": "incerto",
-          "suggestedMatchId": "mnsq9hyn4sj",
-          "nota": "Presumo sia 'Tagliata di manzo agli aromi' già in lista."
-        },
-        {
-          "portata": "contorno",
-          "nome": "Patate arrosto",
-          "stato": "match",
-          "matchId": "mnsq9hynayz"
-        },
-        {
-          "portata": "dolce",
-          "nome": "Dolce della casa",
-          "stato": "match",
-          "matchId": "mo67hzucqmt"
-        }
-      ]
-    },
-    {
-      "data": "2026-09-17",
-      "servizio": "pranzo",
-      "prezzo": 0,
-      "piatti": [
-        {
-          "portata": "antipasto",
-          "nome": "Antipasto del Ciliegio",
-          "stato": "match",
-          "matchId": "mo1xei4h6yo"
-        },
-        {
-          "portata": "primo",
-          "nome": "⚠ MANCA IL RESTO DEL MENU",
-          "stato": "incerto",
-          "suggestedMatchId": null,
-          "nota": "Sulla foto di giovedì 17/9 pranzo c'era scritto solo 'SITO con Antipasto del Ciliegio' — primo, secondo, contorno, dolce e prezzo non erano specificati. Chiedi a Marco o completa a mano prima di confermare questo giorno. Cancella questa riga segnaposto con la ✕ una volta sistemato."
-        }
-      ]
-    },
-    {
-      "data": "2026-09-18",
-      "servizio": "pranzo",
-      "prezzo": 35,
-      "piatti": [
-        {
-          "portata": "antipasto",
-          "nome": "Antipasto del Ciliegio",
-          "stato": "match",
-          "matchId": "mo1xei4h6yo"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Panzanella",
-          "stato": "incerto",
-          "suggestedMatchId": "mnsq9hynf3u",
-          "nota": "Scritta come seconda voce dopo l'antipasto — non è chiaro se vada come antipasto ('Panzanella croccante') o come primo ('Panzanella normale o croccante', già in lista). Verifica portata."
-        },
-        {
-          "portata": "primo",
-          "nome": "Risotto salsiccia e Chianti",
-          "stato": "match",
-          "matchId": "mnsq9hyndew"
-        },
-        {
-          "portata": "secondo",
-          "nome": "Filetto di Vitello in Crosta di Pane",
-          "stato": "nuovo",
-          "traduzione": "Veal fillet in bread crust",
-          "nota": "Piatto nuovo, non c'è nulla di simile in lista (solo la versione con maiale)."
-        },
-        {
-          "portata": "contorno",
-          "nome": "Verdure alla griglia",
-          "stato": "match",
-          "matchId": "mnsq9hyni20"
-        },
-        {
-          "portata": "dolce",
-          "nome": "Buccellato di mele e noci con crema di vin santo",
-          "stato": "match",
-          "matchId": "mnsq9hynnku"
-        }
-      ]
-    },
-    {
-      "data": "2026-09-18",
-      "servizio": "cena",
-      "prezzo": 30,
-      "piatti": [
-        {
-          "portata": "antipasto",
-          "nome": "Crostino nero",
-          "stato": "match",
-          "matchId": "mnsq9hyneqw"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Crostino con crema di ceci e soppressata",
-          "stato": "match",
-          "matchId": "mnsq9hyn8jt"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Crostone con fagioli e cotiche",
-          "stato": "match",
-          "matchId": "mnsq9hynf4r"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Selezione di Affettati",
-          "stato": "nuovo",
-          "traduzione": "Selection of cold cuts",
-          "nota": "Piatto nuovo, non c'è nulla di simile in lista."
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Crostino con fegatini di pollo, sale grosso e miele",
-          "stato": "match",
-          "matchId": "mnsq9hynyoo"
-        },
-        {
-          "portata": "primo",
-          "nome": "Lasagne al ragù",
-          "stato": "match",
-          "matchId": "mnsq9hynlob"
-        },
-        {
-          "portata": "secondo",
-          "nome": "Filetto di maiale in crosta di pane",
-          "stato": "match",
-          "matchId": "mnsq9hyncpy"
-        },
-        {
-          "portata": "contorno",
-          "nome": "Patate arrosto",
-          "stato": "match",
-          "matchId": "mnsq9hynayz"
-        },
-        {
-          "portata": "dolce",
-          "nome": "Cantuccini",
-          "stato": "incerto",
-          "suggestedMatchId": "mnsq9hynzar",
-          "nota": "Scritto solo 'Cantuccini' — in lista c'è 'Cantucci e vin santo', verifica se vanno serviti insieme o è una voce diversa."
-        }
-      ]
-    },
-    {
-      "data": "2026-09-19",
-      "servizio": "pranzo",
-      "prezzo": 33,
-      "piatti": [
-        {
-          "portata": "antipasto",
-          "nome": "Crostino nero",
-          "stato": "incerto",
-          "suggestedMatchId": "mnsq9hyneqw",
-          "nota": "L'antipasto non era specificato per il SITO in questa foto — preso dal blocco sopra che sembrava per un gruppo specifico ('2 x Biancardi'). Verifica se è corretto o va sostituito."
-        },
-        {
-          "portata": "primo",
-          "nome": "Pici all'aglione",
-          "stato": "match",
-          "matchId": "mnsq9hyn9ag"
-        },
-        {
-          "portata": "secondo",
-          "nome": "Tagliata agli Aromi",
-          "stato": "incerto",
-          "suggestedMatchId": "mnsq9hyn4sj",
-          "nota": "Presumo sia 'Tagliata di manzo agli aromi' già in lista."
-        },
-        {
-          "portata": "contorno",
-          "nome": "Patate arrosto",
-          "stato": "match",
-          "matchId": "mnsq9hynayz"
-        },
-        {
-          "portata": "contorno",
-          "nome": "Insalata mista",
-          "stato": "match",
-          "matchId": "mnsq9hynkgr"
-        },
-        {
-          "portata": "dolce",
-          "nome": "Dolce della casa",
-          "stato": "match",
-          "matchId": "mo67hzucqmt"
-        }
-      ]
-    },
-    {
-      "data": "2026-09-20",
-      "servizio": "pranzo",
-      "prezzo": 35,
-      "piatti": [
-        {
-          "portata": "antipasto",
-          "nome": "Crostino nero",
-          "stato": "incerto",
-          "suggestedMatchId": "mnsq9hyneqw",
-          "nota": "Sulla foto c'erano 5 possibili antipasti per la giornata (Selezione Salumi Cotti, Formaggi Misti con Miele, Polpette della Tradizione, Crostino Nero, Crostino Salsiccia Ricotta e Scalogno) senza indicare quale fosse quello del SITO — ho messo Crostino Nero come ipotesi, verifica e correggi."
-        },
-        {
-          "portata": "primo",
-          "nome": "Pici con crema di zucchine, briciole di pane e guanciale croccante",
-          "stato": "incerto",
-          "suggestedMatchId": "mq55rnu6dtj",
-          "nota": "Scritti entrambi come opzione primo sulla foto (questo e Pappardelle al ragù bianco sotto) — verifica se il sito ne mostra uno solo o tutti e due, cancella quello che non serve."
-        },
-        {
-          "portata": "primo",
-          "nome": "Pappardelle al ragù bianco",
-          "stato": "incerto",
-          "suggestedMatchId": "mrkoxuy1xx0",
-          "nota": "Vedi nota sull'altro primo — stessa incertezza, erano entrambi scritti sulla foto."
-        },
-        {
-          "portata": "secondo",
-          "nome": "Tagliata agli Aromi",
-          "stato": "incerto",
-          "suggestedMatchId": "mnsq9hyn4sj",
-          "nota": "Presumo sia 'Tagliata di manzo agli aromi' già in lista."
-        },
-        {
-          "portata": "contorno",
-          "nome": "Patate arrosto",
-          "stato": "match",
-          "matchId": "mnsq9hynayz"
-        },
-        {
-          "portata": "dolce",
-          "nome": "Dolce della casa",
-          "stato": "match",
-          "matchId": "mo67hzucqmt"
-        }
-      ]
-    }
-  ]
+  "importPending": []
 }
