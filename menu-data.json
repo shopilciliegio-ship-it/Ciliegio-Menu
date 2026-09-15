@@ -10189,6 +10189,7 @@
     {
       "data": "2026-09-17",
       "servizio": "pranzo",
+      "prezzo": 0,
       "piatti": [
         {
           "portata": "antipasto",
@@ -10197,11 +10198,50 @@
           "matchId": "mo1xei4h6yo"
         },
         {
+          "portata": "antipasto",
+          "nome": "Prosciutto Crudo",
+          "stato": "match",
+          "matchId": "mo1yfczjr82",
+          "nota": "Scritto nel menù OSPITI originale, prima della sostituzione indicata da \"SITO con Antipasto del Ciliegio\" — probabilmente da togliere, lasciato per sicurezza, verifica tu."
+        },
+        {
+          "portata": "antipasto",
+          "nome": "Cecina",
+          "stato": "match",
+          "matchId": "mnsq9hymuqe",
+          "nota": "Scritto nel menù OSPITI originale, prima della sostituzione indicata da \"SITO con Antipasto del Ciliegio\" — probabilmente da togliere, lasciato per sicurezza, verifica tu."
+        },
+        {
+          "portata": "antipasto",
+          "nome": "Crostino con gota, pecorino e miele",
+          "stato": "match",
+          "matchId": "mnsq9hynkaz",
+          "nota": "Scritto nel menù OSPITI originale, prima della sostituzione indicata da \"SITO con Antipasto del Ciliegio\" — probabilmente da togliere, lasciato per sicurezza, verifica tu."
+        },
+        {
           "portata": "primo",
-          "nome": "⚠ MANCA IL RESTO DEL MENU",
+          "nome": "Straccetti al ragù di cinghiale",
+          "stato": "match",
+          "matchId": "mo76cwvebr1"
+        },
+        {
+          "portata": "secondo",
+          "nome": "Tagliata agli Aromi",
           "stato": "incerto",
-          "suggestedMatchId": null,
-          "nota": "Nella foto del giovedì 17 settembre pranzo è scritto solo 'SITO con Antipasto del Ciliegio' ma non sono presenti primo, secondo, contorno, dolce né il prezzo"
+          "suggestedMatchId": "mnsq9hyn4sj",
+          "nota": "Presumo sia 'Tagliata di manzo agli aromi' già in lista."
+        },
+        {
+          "portata": "contorno",
+          "nome": "Verdure al forno",
+          "stato": "match",
+          "matchId": "mnsq9hync5b"
+        },
+        {
+          "portata": "dolce",
+          "nome": "Torta con ricotta, pinoli e uvetta",
+          "stato": "match",
+          "matchId": "mohatliymxm"
         }
       ]
     },
