@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/shopilciliegio-ship-it/Ciliegio-Menu#readme",
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.125.0",
     "playwright": "^1.63.0"
   }
 }

@@ -1,3 +1,6 @@
 passweb-credentials.json
 passweb-auth.json
+meta-credentials.json
+social-credentials.json
+claude-api-key.json
 node_modules/
