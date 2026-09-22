@@ -451,7 +451,7 @@ textarea{resize:vertical;min-height:72px}
       <button class="btn btn-ghost btn-sm" onclick="document.getElementById('imp').click()" style="padding:6px 16px">📂 Importa backup</button>
     </div>
 
-    <div style="text-align:center;font-size:13px;color:#666;letter-spacing:3px;margin-top:12px;font-family:'Cinzel',serif">v75</div>
+    <div style="text-align:center;font-size:13px;color:#666;letter-spacing:3px;margin-top:12px;font-family:'Cinzel',serif">v76</div>
   </div>
 </div>
 
@@ -1540,6 +1540,11 @@ function renderImportList(){
     const dt=parseDate(day.data);
     const piattiHtml=day.piatti.map((pt,j)=>{
       const sugg=pt.suggestedMatchId?DB.piatti.find(p=>p.id===pt.suggestedMatchId):null;
+      // Piatto fuori posto anche se arrivato già così dalla lettura della foto (non solo da un cambio
+      // manuale, vedi impSetField): un piatto abbinato al catalogo la cui portata "di casa" non coincide
+      // con quella scritta qui va segnalato comunque, prima che Luca clicchi "Conferma questo giorno".
+      const matched=pt.matchId?DB.piatti.find(p=>p.id===pt.matchId):null;
+      const fuoriPosto=matched && matched.portata && matched.portata!==pt.portata;
       return `<div style="display:flex;align-items:center;gap:8px;padding:6px 0;border-bottom:1px solid var(--border);flex-wrap:wrap">
         <select style="width:110px" onchange="impSetField(${i},${j},'portata',this.value)">
           ${PORTATE.map(p=>`<option value="${p.id}" ${p.id===pt.portata?'selected':''}>${p.label}</option>`).join('')}
@@ -1549,7 +1554,7 @@ function renderImportList(){
         ${pt.stato!=='match'?`<input type="text" placeholder="Traduzione EN" style="width:220px" value="${(pt.traduzione||'').replace(/"/g,'&quot;')}" oninput="impSetField(${i},${j},'traduzione',this.value)">`:''}
         ${sugg?`<button class="btn btn-ghost btn-xs" onclick="impUsaSuggerito(${i},${j})">↳ usa "${sugg.nome}"</button>`:''}
         <button class="btn btn-ghost btn-xs" onclick="impRimuoviPiatto(${i},${j})">✕</button>
-      </div>${pt.nota?`<div style="font-size:12px;color:var(--white3);padding:2px 0 4px">⚠ ${pt.nota}</div>`:''}`;
+      </div>${fuoriPosto?`<div style="font-size:12px;color:#ff8080;font-weight:600;padding:2px 0 4px">⚠ "${matched.nome}" è normalmente tra "${PORTATE.find(x=>x.id===matched.portata)?.label||matched.portata}" — controlla prima di confermare</div>`:''}${pt.nota?`<div style="font-size:12px;color:var(--white3);padding:2px 0 4px">⚠ ${pt.nota}</div>`:''}`;
     }).join('');
     return `<div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--r2);padding:14px 16px;margin-bottom:14px">
       <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:8px">
@@ -1597,6 +1602,19 @@ function impSetField(i,j,field,val){
   const pt=DB.importPending[i].piatti[j];
   pt[field]=val;
   if(field==='nome'){ pt.matchId=null; if(pt.stato==='match') pt.stato='incerto'; }
+  // Piatto fuori posto: se questa riga è abbinata a un piatto del catalogo e la portata scelta qui non
+  // coincide con quella "di casa" del piatto (es. 22-24/9/2026: un primo spostato a mano tra i dolci),
+  // non lasciarlo passare silenzioso — declassa a "incerto" con una nota, così va rivisto prima di confermare.
+  if(field==='portata' && pt.matchId){
+    const d=DB.piatti.find(p=>p.id===pt.matchId);
+    if(d && d.portata && d.portata!==val){
+      pt.stato='incerto';
+      pt.nota=`⚠ "${d.nome}" è normalmente tra "${PORTATE.find(x=>x.id===d.portata)?.label||d.portata}", non tra "${PORTATE.find(x=>x.id===val)?.label||val}" — controlla prima di confermare.`;
+      saveDB();
+      renderImportList();
+      return;
+    }
+  }
   saveDB();
 }
 function impSetPrezzo(i,val){ DB.importPending[i].prezzo=parseFloat(val)||0; saveDB(); }
@@ -2263,16 +2281,27 @@ function viewMenu(key){
     <button class="btn btn-teal btn-sm" onclick="openAccoda('${dsFromKey(key)}','${key}');closeOv('ov-mv')">+ Accoda prenotazione</button>
     <button class="btn btn-danger btn-sm" onclick="if(confirm('Eliminare?')){delete DB.menu['${key}'];saveDB();closeOv('ov-mv');renderCal()}">Elimina</button>
   </div>`;
-  let hasAny=false;
+  let hasAny=false, fuoriPosto=0;
   PORTATE.forEach(portata=>{
     const ids=menu.piatti[portata.id]||[];
     if(!ids.length)return;
     hasAny=true;
     html+=`<div class="pv-portata" style="margin-bottom:12px">
       <div class="pv-label" style="margin-bottom:5px">${portata.label}</div>
-      ${ids.map(id=>{const p=DB.piatti.find(x=>x.id===id);return p?`<div class="pv-item">${p.nome}${p.extra?` <span class="pve">+${p.extra}€</span>`:''}</div>`:'';}).join('')}
+      ${ids.map(id=>{
+        const p=DB.piatti.find(x=>x.id===id);
+        if(!p)return'';
+        // Controllo piatti fuori posto: ogni piatto ha una portata "di casa" nel catalogo (p.portata).
+        // Se è diverso dalla sezione dove compare qui, è quasi sempre un errore di battitura/selezione
+        // (vedi es. 22-24/9/2026: un primo finito tra i dolci) — lo segnaliamo invece di lasciarlo passare.
+        const fuori=p.portata && p.portata!==portata.id;
+        if(fuori)fuoriPosto++;
+        const warn=fuori?`<div style="color:#e05555;font-size:12px;font-weight:600;margin:2px 0 4px 8px">⚠ normalmente è tra "${PORTATE.find(x=>x.id===p.portata)?.label||p.portata}", non tra "${portata.label}" — controlla</div>`:'';
+        return `<div class="pv-item">${p.nome}${p.extra?` <span class="pve">+${p.extra}€</span>`:''}</div>${warn}`;
+      }).join('')}
     </div>`;
   });
+  if(fuoriPosto) html=`<div style="background:#4a2020;border:1px solid #e05555;border-radius:6px;padding:8px 12px;margin-bottom:12px;color:#ffb3b3;font-size:13px">⚠ ${fuoriPosto} piatto/i sembrano nella categoria sbagliata — vedi sotto</div>`+html;
   if(!hasAny) html+='<div class="empty">Nessun piatto nel menù.</div>';
   if(menu.testoLibero) html+=`<div class="text-muted mt-8">${menu.testoLibero}</div>`;
   if(menu.prezzo!=null) html+=`<div style="margin-top:14px;font-size:20px;color:var(--gold)">Prezzo: € ${menu.prezzo}</div>`;
