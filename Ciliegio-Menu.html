@@ -451,7 +451,7 @@ textarea{resize:vertical;min-height:72px}
       <button class="btn btn-ghost btn-sm" onclick="document.getElementById('imp').click()" style="padding:6px 16px">📂 Importa backup</button>
     </div>
 
-    <div style="text-align:center;font-size:13px;color:#666;letter-spacing:3px;margin-top:12px;font-family:'Cinzel',serif">v76</div>
+    <div style="text-align:center;font-size:13px;color:#666;letter-spacing:3px;margin-top:12px;font-family:'Cinzel',serif">v77</div>
   </div>
 </div>
 
@@ -737,6 +737,11 @@ textarea{resize:vertical;min-height:72px}
       </div>
     </div>
 
+    <div id="jpg-sel-bar" style="display:flex;gap:8px;align-items:center;margin-bottom:8px;font-size:14px;color:var(--white3)">
+      <span id="jpg-sel-count" style="flex:1"></span>
+      <button class="btn btn-ghost" style="padding:4px 10px;font-size:13px" onclick="selezionaTuttiJPG(true)">Tutti</button>
+      <button class="btn btn-ghost" style="padding:4px 10px;font-size:13px" onclick="selezionaTuttiJPG(false)">Nessuno</button>
+    </div>
     <div id="jpg-menu-list" style="margin-bottom:16px;max-height:220px;overflow-y:auto"></div>
 
     <div class="form-row mb-12">
@@ -2895,12 +2900,28 @@ function aggiornaListaJPG(){
     const pk=parseKey(k); const dt=parseDate(pk.data);
     const fn=getJPGFileName(pk.data,pk.serv);
     const nPiatti=countPiattiMenu(k);
-    return `<div style="display:flex;align-items:center;gap:10px;padding:7px 10px;border-radius:var(--r);background:var(--bg3);margin-bottom:6px;font-size:15px">
+    return `<label style="display:flex;align-items:center;gap:10px;padding:7px 10px;border-radius:var(--r);background:var(--bg3);margin-bottom:6px;font-size:15px;cursor:pointer">
+      <input type="checkbox" class="jpg-sel" value="${k}" checked onchange="aggiornaContaJPG()" style="width:18px;height:18px;accent-color:var(--gold)">
       <span style="color:var(--gold);font-family:'Cinzel',serif;font-size:13px;min-width:180px">${fn}</span>
       <span style="flex:1;color:var(--white2)">${dt.giornoLungo} — ${cap(pk.serv)}</span>
       <span style="color:var(--white3)">${nPiatti} piatti</span>
-    </div>`;
+    </label>`;
   }).join('');
+  aggiornaContaJPG();
+}
+
+// Menù spuntati nella lista del modal JPG
+function getJPGKeysSelezionati(){
+  return [...document.querySelectorAll('#jpg-menu-list .jpg-sel:checked')].map(cb=>cb.value);
+}
+function aggiornaContaJPG(){
+  const tot=document.querySelectorAll('#jpg-menu-list .jpg-sel').length;
+  const sel=getJPGKeysSelezionati().length;
+  document.getElementById('jpg-sel-count').textContent=tot?`${sel} di ${tot} selezionati`:'';
+}
+function selezionaTuttiJPG(on){
+  document.querySelectorAll('#jpg-menu-list .jpg-sel').forEach(cb=>cb.checked=on);
+  aggiornaContaJPG();
 }
 
 function apriJPGModal(){
@@ -2926,8 +2947,11 @@ function apriJPGModal(){
 async function avviaGeneraJPG(){
   const da=document.getElementById('jpg-da').value;
   const a=document.getElementById('jpg-a').value;
-  const keys=getJPGKeys(da,a);
-  if(!keys.length){alert('Nessun Menù del Sito nel periodo selezionato.');return;}
+  const tuttiKeys=getJPGKeys(da,a);
+  if(!tuttiKeys.length){alert('Nessun Menù del Sito nel periodo selezionato.');return;}
+  const keys=getJPGKeysSelezionati();
+  if(!keys.length){alert('Seleziona almeno un menù.');return;}
+  const tuttiSelezionati=keys.length===tuttiKeys.length;
 
   const pBar=document.getElementById('jpg-progress-bar');
   const pTxt=document.getElementById('jpg-progress-text');
@@ -2940,8 +2964,9 @@ async function avviaGeneraJPG(){
   const total=keys.length*2; // IT + EN
   let done=0;
 
-  // ── Se GitHub: elimina prima tutti i vecchi JPG nella cartella ──
-  if(mode==='github'){
+  // ── Se GitHub e sono selezionati TUTTI i menù: elimina prima tutti i vecchi JPG nella cartella ──
+  // (se ne rigeneri solo alcuni, sovrascrive solo quelli e lascia intatti gli altri)
+  if(mode==='github'&&tuttiSelezionati){
     pTxt.textContent='🗑 Pulizia vecchi file su GitHub…';
     await svuotaCartellaImmaginiGitHub();
   }
