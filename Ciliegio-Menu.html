@@ -451,7 +451,7 @@ textarea{resize:vertical;min-height:72px}
       <button class="btn btn-ghost btn-sm" onclick="document.getElementById('imp').click()" style="padding:6px 16px">📂 Importa backup</button>
     </div>
 
-    <div style="text-align:center;font-size:13px;color:#666;letter-spacing:3px;margin-top:12px;font-family:'Cinzel',serif">v79</div>
+    <div style="text-align:center;font-size:13px;color:#666;letter-spacing:3px;margin-top:12px;font-family:'Cinzel',serif">v80</div>
   </div>
 </div>
 
@@ -1562,7 +1562,7 @@ function renderImportList(){
         ${pt.stato!=='match'?`<input type="text" placeholder="Traduzione EN" style="width:220px" value="${(pt.traduzione||'').replace(/"/g,'&quot;')}" oninput="impSetField(${i},${j},'traduzione',this.value)">`:''}
         ${sugg?`<button class="btn btn-ghost btn-xs" onclick="impUsaSuggerito(${i},${j})">↳ usa "${sugg.nome}"</button>`:''}
         <button class="btn btn-ghost btn-xs" onclick="impRimuoviPiatto(${i},${j})">✕</button>
-      </div>${fuoriPosto?`<div style="font-size:12px;color:#ff8080;font-weight:600;padding:2px 0 4px">⚠ "${matched.nome}" è normalmente tra "${PORTATE.find(x=>x.id===matched.portata)?.label||matched.portata}" — controlla prima di confermare</div>`:''}${pt.nota?`<div style="font-size:12px;color:var(--white3);padding:2px 0 4px">⚠ ${pt.nota}</div>`:''}`;
+      </div>${fuoriPosto?`<div style="font-size:12px;color:#ff8080;font-weight:600;padding:2px 0 4px">⚠ Abbinamento sbagliato: questa riga punta al piatto del catalogo "${matched.nome}", che però è tra "${PORTATE.find(x=>x.id===matched.portata)?.label||matched.portata}" e non tra "${PORTATE.find(x=>x.id===pt.portata)?.label||pt.portata}" — alla conferma non verrà usato quello, verrà cercato/creato il piatto giusto</div>`:''}${pt.nota?`<div style="font-size:12px;color:var(--white3);padding:2px 0 4px">⚠ ${pt.nota}</div>`:''}`;
     }).join('');
     return `<div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--r2);padding:14px 16px;margin-bottom:14px">
       <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:8px">
@@ -1667,6 +1667,15 @@ function confermaImportGiorno(i){
   day.piatti.forEach(pt=>{
     if(!pt.nome || !pt.nome.trim()) return;
     let id=pt.matchId;
+    // Non fidarsi di un matchId la cui portata "di casa" nel catalogo non coincide con quella
+    // scritta qui (stesso controllo del segnale "fuori posto" in renderImportList, ma qui blocca
+    // davvero la scrittura invece di limitarsi ad avvisare — successo per errore 3 volte,
+    // 22/9, 24/9 e 28/9/2026, sempre "Dolce della casa" abbinato per sbaglio a un primo):
+    // trattalo come non abbinato invece di scrivere nel menù il piatto sbagliato.
+    if(id){
+      const matched=DB.piatti.find(p=>p.id===id);
+      if(matched && matched.portata && matched.portata!==pt.portata) id=null;
+    }
     if(!id){
       const dup=DB.piatti.find(x=>x.portata===pt.portata && x.nome.trim().toLowerCase()===pt.nome.trim().toLowerCase());
       if(dup) id=dup.id;
