@@ -8070,6 +8070,32 @@
       "testoLibero": "",
       "prezzo": 32,
       "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-09-28_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hyneqw",
+          "mnsq9hynsn7",
+          "mnsq9hymnei",
+          "mnsq9hynqk0",
+          "mo1w8xtm5r2"
+        ],
+        "primo": [
+          "mpv0uwpjzyu"
+        ],
+        "secondo": [
+          "mnsq9hyndcd"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mo67h4xg40w"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 32,
+      "nomeSpecifico": "Menù del Sito"
     }
   },
   "prenotazioni": {
@@ -10424,72 +10450,6 @@
     ]
   },
   "importPending": [
-    {
-      "data": "2026-09-28",
-      "servizio": "pranzo",
-      "prezzo": 32,
-      "piatti": [
-        {
-          "portata": "antipasto",
-          "nome": "Crostino nero",
-          "stato": "match",
-          "matchId": "mnsq9hyneqw"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Crostino con ricotta, miele, pecorino, pere e granella di noci",
-          "stato": "match",
-          "matchId": "mnsq9hynsn7",
-          "nota": "Scritto come 'Crostino miele, pecorino pere e gr noci'"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Bruschetta con pomodorini e basilico",
-          "stato": "match",
-          "matchId": "mnsq9hymnei"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Selezione di salumi toscani",
-          "stato": "match",
-          "matchId": "mnsq9hynqk0",
-          "nota": "Scritto 'Sel. Affettati locali'"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Formaggi Pecorini con Marmellata e/o Miele",
-          "stato": "incerto",
-          "suggestedMatchId": "mo1w8xtm5r2",
-          "nota": "Scritto 'Sel. Formaggi pecorini con miele'"
-        },
-        {
-          "portata": "primo",
-          "nome": "Pici al ragù di anatra",
-          "stato": "incerto",
-          "suggestedMatchId": "mpv0uwpjzyu",
-          "nota": "Scritto 'Pici ragù anatra', potrebbe corrispondere anche a Tagliatelle al ragù di anatra"
-        },
-        {
-          "portata": "secondo",
-          "nome": "Tagliata di manzo al lardo e scaglie di pecorino",
-          "stato": "match",
-          "matchId": "mnsq9hyndcd",
-          "nota": "Scritto 'Tagliata di manzo al lardo con sc. pecorino'"
-        },
-        {
-          "portata": "contorno",
-          "nome": "Patate arrosto",
-          "stato": "match",
-          "matchId": "mnsq9hynayz"
-        },
-        {
-          "portata": "dolce",
-          "nome": "Dolce della casa",
-          "stato": "match",
-          "matchId": "mo67h4xg40w"
-        }
-      ]
-    },
     {
       "data": "2026-09-30",
       "servizio": "cena",
