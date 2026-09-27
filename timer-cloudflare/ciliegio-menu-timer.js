@@ -10,9 +10,14 @@
 // workflow non fa nulla se Luca non ha segnato una bozza "pronta" nell'app — quindi
 // lanciarlo anche a vuoto (es. doppio trigger nella stessa finestra) è innocuo.
 //
-// Cron trigger da impostare nel pannello Cloudflare (Triggers): "0 19,20 * * 0"
+// Cron trigger da impostare nel pannello Cloudflare (Triggers): "0 19,20 * * 1"
 // (UTC, solo domenica). Copre sia l'ora legale (21:00 Roma = 19 UTC) sia l'ora
 // solare (21:00 Roma = 20 UTC) senza bisogno di aggiornarlo il giorno del cambio ora.
+// ATTENZIONE: il giorno-della-settimana di Cloudflare NON è lo standard Unix
+// (0=domenica...6=sabato) ma la numerazione Quartz (1=domenica...7=sabato) — verificato
+// il 27/9/2026: "0" dava errore di validazione, "7" validava ma sparava di SABATO.
+// "1" è quello giusto per domenica (controllare comunque la preview "Estimated
+// upcoming events" nel pannello prima di salvare: deve mostrare date di domenica).
 //
 // Segreti (Worker → Settings → Variables and Secrets, tipo "Secret"):
 //   GITHUB_TOKEN  token fine-grained GitHub, SOLO repo Ciliegio-Menu, permesso Actions: Read and write
