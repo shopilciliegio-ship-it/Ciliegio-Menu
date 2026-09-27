@@ -1840,6 +1840,20 @@
       "portata": "primo",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mujyqw4dohy",
+      "nome": "Straccetti con crema di porri, briciole di pane e guanciale croccante",
+      "portata": "primo",
+      "extra": 0,
+      "note": ""
+    },
+    {
+      "id": "mujyqw4dsg4",
+      "nome": "Arrosto misto con salsiccia, costole, scamerita e pollo",
+      "portata": "secondo",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -8122,6 +8136,60 @@
       "testoLibero": "",
       "prezzo": 30,
       "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-10-02_cena_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hynyoo",
+          "mnsq9hyn3m5",
+          "mnsq9hynqk0",
+          "mo1w8xtm5r2",
+          "mnsq9hyn6l4"
+        ],
+        "primo": [
+          "mnsq9hynwdm",
+          "mnsq9hyns1x"
+        ],
+        "secondo": [
+          "mnsq9hynxg3"
+        ],
+        "contorno": [
+          "mnsq9hynelb"
+        ],
+        "dolce": [
+          "mnsq9hynj2g"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 35,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-10-04_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hyneqw",
+          "mnsq9hynqk0",
+          "mo1w8xtm5r2",
+          "mnsq9hynuwh",
+          "mor13kgqgpi"
+        ],
+        "primo": [
+          "mnsq9hyns1x",
+          "mujyqw4dohy"
+        ],
+        "secondo": [
+          "mujyqw4dsg4"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 39,
+      "nomeSpecifico": "Menù del Sito"
     }
   },
   "prenotazioni": {
@@ -9763,6 +9831,18 @@
     },
     "2026-10-03_cena": {
       "gruppi": []
+    },
+    "2026-09-29_pranzo": {
+      "gruppi": []
+    },
+    "2026-09-29_cena": {
+      "gruppi": []
+    },
+    "2026-10-04_pranzo": {
+      "gruppi": []
+    },
+    "2026-10-04_cena": {
+      "gruppi": []
     }
   },
   "noteGiorno": {
@@ -10493,155 +10573,5 @@
       }
     ]
   },
-  "importPending": [
-    {
-      "data": "2026-10-02",
-      "servizio": "cena",
-      "prezzo": 35,
-      "piatti": [
-        {
-          "portata": "antipasto",
-          "nome": "Crostino con fegatini di pollo, sale grosso e miele",
-          "stato": "match",
-          "matchId": "mnsq9hynyoo",
-          "nota": "Scritto 'CROSTINO FEGATINI DI POLLO, SALE GROSSO E MIELE'"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Crostone con lenticchie e rigatino",
-          "stato": "match",
-          "matchId": "mnsq9hyn3m5",
-          "nota": "Scritto 'CROSTONE LENTICCHIE E RIGATINO'"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Selezione di salumi toscani",
-          "stato": "match",
-          "matchId": "mnsq9hynqk0",
-          "nota": "Scritto 'SELEZIONE DI SALUMI LOCALI'"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Formaggi Pecorini con Marmellata e/o Miele",
-          "stato": "match",
-          "matchId": "mo1w8xtm5r2",
-          "nota": "Scritto 'SEL. FORMAGGI CON MIELE O MARMELLATA'"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Polenta ripiena con scamorza e salsiccia",
-          "stato": "match",
-          "matchId": "mnsq9hyn6l4",
-          "nota": "Scritto 'POLENTA RIPIENA CON SCAMORZA E SALSICCIA'"
-        },
-        {
-          "portata": "primo",
-          "nome": "Ribollita",
-          "stato": "match",
-          "matchId": "mnsq9hynwdm"
-        },
-        {
-          "portata": "primo",
-          "nome": "Pappardelle al ragù di cinghiale",
-          "stato": "match",
-          "matchId": "mnsq9hyns1x",
-          "nota": "Scritto 'PAPPARDELLE AL CINGHIALE'"
-        },
-        {
-          "portata": "secondo",
-          "nome": "Capocollo ripieno con salsiccia e noci",
-          "stato": "match",
-          "matchId": "mnsq9hynxg3",
-          "nota": "Scritto 'CAPOCOLLO RIPIENO SALSICCIA E NOCI'"
-        },
-        {
-          "portata": "contorno",
-          "nome": "Patate sabbiate",
-          "stato": "match",
-          "matchId": "mnsq9hynelb"
-        },
-        {
-          "portata": "dolce",
-          "nome": "Mousse di ricotta al cioccolato su granella di cantucci",
-          "stato": "match",
-          "matchId": "mnsq9hynj2g",
-          "nota": "Scritto 'MOUSSE DI RICOTTA AL CIOCCOLATO SU GRANELLA DI CANTUCCI'"
-        }
-      ]
-    },
-    {
-      "data": "2026-10-04",
-      "servizio": "pranzo",
-      "prezzo": 39,
-      "piatti": [
-        {
-          "portata": "antipasto",
-          "nome": "Crostino nero",
-          "stato": "match",
-          "matchId": "mnsq9hyneqw"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Selezione di salumi toscani",
-          "stato": "match",
-          "matchId": "mnsq9hynqk0",
-          "nota": "Scritto 'SEL. AFFETTATI LOCALI'"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Formaggi Pecorini con Marmellata e/o Miele",
-          "stato": "match",
-          "matchId": "mo1w8xtm5r2",
-          "nota": "Scritto 'SEL. FORMAGGI CON MIELE'"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Torta salata salsiccia e cipolla",
-          "stato": "match",
-          "matchId": "mnsq9hynuwh",
-          "nota": "Scritto 'TORTA SALATA SALSICCIA E CIPOLLA'"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Tortino di stagione",
-          "stato": "match",
-          "matchId": "mor13kgqgpi",
-          "nota": "Scritto 'TORTINO DI STAGIONE'"
-        },
-        {
-          "portata": "primo",
-          "nome": "Straccetti con crema di zucchine, briciole di pane e guanciale croccante",
-          "stato": "incerto",
-          "suggestedMatchId": "mr868jetd4x",
-          "nota": "Scritto 'STRACCETTI CREMA DI PORRI, BRICIOLE E GUANCIALE' - la lista ha piatti simili ma con porri e zucchine separatamente; qui si tratta di crema di porri specificamente, verifica"
-        },
-        {
-          "portata": "primo",
-          "nome": "Pappardelle al ragù di cinghiale",
-          "stato": "match",
-          "matchId": "mnsq9hyns1x",
-          "nota": "Scritto 'PAPPARDELLE CINGHIALE'"
-        },
-        {
-          "portata": "secondo",
-          "nome": "Arrosto misto con salsiccia, costole, scamerita e pollo",
-          "stato": "incerto",
-          "suggestedMatchId": "mor11g73cdo",
-          "nota": "Scritto 'ARROSTO MISTO SALSICCIA, COSTOLE, SCA... E POLLO' - parola tra costole e pollo poco leggibile (forse 'scamerita'), verifica"
-        },
-        {
-          "portata": "contorno",
-          "nome": "Patate arrosto",
-          "stato": "match",
-          "matchId": "mnsq9hynayz"
-        },
-        {
-          "portata": "dolce",
-          "nome": "Dolce della casa",
-          "stato": "match",
-          "matchId": "mo67hzucqmt"
-        }
-      ]
-    }
-  ]
+  "importPending": []
 }
