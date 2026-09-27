@@ -12,6 +12,6 @@
     "2026-10-02_pranzo_Menù del Sito",
     "2026-10-04_pranzo_Menù del Sito"
   ],
-  "pronta": false,
-  "prontoIl": null
+  "pronta": true,
+  "prontoIl": "2026-09-27T20:30:00.000Z"
 }
