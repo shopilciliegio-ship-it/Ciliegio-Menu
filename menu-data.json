@@ -8070,6 +8070,58 @@
       "testoLibero": "",
       "prezzo": 32,
       "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-09-28_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hyneqw",
+          "mnsq9hynsn7",
+          "mnsq9hymnei",
+          "mnsq9hynqk0",
+          "mo1w8xtm5r2"
+        ],
+        "primo": [
+          "mpv0uwpjzyu"
+        ],
+        "secondo": [
+          "mnsq9hyndcd"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 32,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-09-29_cena_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hymnei",
+          "mo1zvr87ez2",
+          "mnsq9hynqk0",
+          "mnsq9hynf3u",
+          "mnsq9hynyjk"
+        ],
+        "primo": [
+          "mnsq9hynval"
+        ],
+        "secondo": [
+          "mnsq9hynlgw"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mnsq9hynj2g"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 30,
+      "nomeSpecifico": "Menù del Sito"
     }
   },
   "prenotazioni": {
@@ -10442,141 +10494,6 @@
     ]
   },
   "importPending": [
-    {
-      "data": "2026-09-28",
-      "servizio": "pranzo",
-      "prezzo": 32,
-      "piatti": [
-        {
-          "portata": "antipasto",
-          "nome": "Crostino nero",
-          "stato": "match",
-          "matchId": "mnsq9hyneqw"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Crostino con ricotta, miele, pecorino, pere e granella di noci",
-          "stato": "match",
-          "matchId": "mnsq9hynsn7",
-          "nota": "Scritto come 'CROSTINO MIELE, PECORINO, PERE E GR NOCI', abbinato al piatto più simile in lista"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Bruschetta con pomodorini e basilico",
-          "stato": "match",
-          "matchId": "mnsq9hymnei"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Selezione di salumi toscani",
-          "stato": "match",
-          "matchId": "mnsq9hynqk0",
-          "nota": "Scritto 'SEL. AFFETTATI LOCALI'"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Formaggi Pecorini con Marmellata e/o Miele",
-          "stato": "incerto",
-          "suggestedMatchId": "mo1w8xtm5r2",
-          "nota": "Scritto 'SEL. FORMAGGI PECORINI CON MIELE', possibile corrispondenza"
-        },
-        {
-          "portata": "primo",
-          "nome": "Pici al ragù di anatra",
-          "stato": "match",
-          "matchId": "mpv0uwpjzyu",
-          "nota": "Scritto 'PICI RAGÙ ANATRA'"
-        },
-        {
-          "portata": "secondo",
-          "nome": "Tagliata di manzo al lardo e scaglie di pecorino",
-          "stato": "match",
-          "matchId": "mnsq9hyndcd",
-          "nota": "Scritto 'TAGLIATA DI MANZO AL LARDO CON SC. PECORINO'"
-        },
-        {
-          "portata": "contorno",
-          "nome": "Patate arrosto",
-          "stato": "match",
-          "matchId": "mnsq9hynayz"
-        },
-        {
-          "portata": "dolce",
-          "nome": "Dolce della casa",
-          "stato": "match",
-          "matchId": "mo67hzucqmt"
-        }
-      ]
-    },
-    {
-      "data": "2026-09-29",
-      "servizio": "cena",
-      "prezzo": 30,
-      "piatti": [
-        {
-          "portata": "antipasto",
-          "nome": "Bruschetta con pomodorini e basilico",
-          "stato": "match",
-          "matchId": "mnsq9hymnei",
-          "nota": "Scritto 'BRUSCHETTA POMODORO E BASILICO'"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Crostino con ricotta, noci e miele",
-          "stato": "match",
-          "matchId": "mo1zvr87ez2",
-          "nota": "Scritto 'CROSTINO RICOTTA, NOCI E MIELE'"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Selezione di salumi toscani",
-          "stato": "match",
-          "matchId": "mnsq9hynqk0",
-          "nota": "Scritto 'AFFETTATI MISTI'"
-        },
-        {
-          "portata": "primo",
-          "nome": "Polenta",
-          "stato": "match",
-          "matchId": "mnsq9hyncjr",
-          "nota": "Scritto 'POLENTA'"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Panzanella croccante",
-          "stato": "match",
-          "matchId": "mnsq9hynf3u",
-          "nota": "Scritto 'PANZANELLA CROCCANTE', portata incerta tra antipasto e primo secondo la lista esistente"
-        },
-        {
-          "portata": "primo",
-          "nome": "Pappardelle al ragù",
-          "stato": "incerto",
-          "suggestedMatchId": "mnsq9hynval",
-          "nota": "Scritto 'PAPPARDELLE AL RAGÙ', non specifica il tipo di ragù, possibile match con Tagliatelle al ragù ma manca corrispondenza esatta per pappardelle"
-        },
-        {
-          "portata": "secondo",
-          "nome": "Stracotto toscano con salsa al Chianti",
-          "stato": "match",
-          "matchId": "mnsq9hynlgw",
-          "nota": "Scritto 'STRACOTTO'"
-        },
-        {
-          "portata": "contorno",
-          "nome": "Patate arrosto",
-          "stato": "match",
-          "matchId": "mnsq9hynayz"
-        },
-        {
-          "portata": "dolce",
-          "nome": "Mousse di ricotta al cioccolato su granella di cantucci",
-          "stato": "match",
-          "matchId": "mnsq9hynj2g",
-          "nota": "Scritto 'MOUSSE DI RICOTTA AL CIOCCOLATO SU GRANELLA DI CANTUCCI'"
-        }
-      ]
-    },
     {
       "data": "2026-10-02",
       "servizio": "cena",
