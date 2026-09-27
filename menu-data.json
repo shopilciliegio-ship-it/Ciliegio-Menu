@@ -8070,59 +8070,6 @@
       "testoLibero": "",
       "prezzo": 32,
       "nomeSpecifico": "Menù del Sito"
-    },
-    "2026-09-28_pranzo_Menù del Sito": {
-      "piatti": {
-        "antipasto": [
-          "mnsq9hyneqw",
-          "mnsq9hynsn7",
-          "mnsq9hymnei",
-          "mnsq9hynqk0",
-          "mo1w8xtm5r2"
-        ],
-        "primo": [
-          "mpv0uwpjzyu"
-        ],
-        "secondo": [
-          "mnsq9hyndcd"
-        ],
-        "contorno": [
-          "mnsq9hynayz"
-        ],
-        "dolce": [
-          "mo67hzucqmt"
-        ]
-      },
-      "testoLibero": "",
-      "prezzo": 32,
-      "nomeSpecifico": "Menù del Sito"
-    },
-    "2026-10-02_cena_Menù del Sito": {
-      "piatti": {
-        "antipasto": [
-          "mnsq9hynyoo",
-          "mnsq9hyn3m5",
-          "mnsq9hynqk0",
-          "mnsq9hyn6l4",
-          "mo1w8xtm5r2"
-        ],
-        "primo": [
-          "mnsq9hynwdm",
-          "mnsq9hyns1x"
-        ],
-        "secondo": [
-          "mnsq9hynxg3"
-        ],
-        "contorno": [
-          "mnsq9hynelb"
-        ],
-        "dolce": [
-          "mnsq9hynj2g"
-        ]
-      },
-      "testoLibero": "",
-      "prezzo": 35,
-      "nomeSpecifico": "Menù del Sito"
     }
   },
   "prenotazioni": {
@@ -9746,6 +9693,24 @@
     },
     "2026-09-26_cena": {
       "gruppi": []
+    },
+    "2026-09-28_pranzo": {
+      "gruppi": []
+    },
+    "2026-09-28_cena": {
+      "gruppi": []
+    },
+    "2026-10-02_pranzo": {
+      "gruppi": []
+    },
+    "2026-10-02_cena": {
+      "gruppi": []
+    },
+    "2026-10-03_pranzo": {
+      "gruppi": []
+    },
+    "2026-10-03_cena": {
+      "gruppi": []
     }
   },
   "noteGiorno": {
@@ -10476,79 +10441,5 @@
       }
     ]
   },
-  "importPending": [
-    {
-      "data": "2026-10-04",
-      "servizio": "pranzo",
-      "prezzo": 39,
-      "piatti": [
-        {
-          "portata": "antipasto",
-          "nome": "Crostino nero",
-          "stato": "match",
-          "matchId": "mnsq9hyneqw"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Selezione di salumi toscani",
-          "stato": "match",
-          "matchId": "mnsq9hynqk0",
-          "nota": "Scritto 'Sel. Affettati locali'"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Torta salata salsiccia e cipolla",
-          "stato": "match",
-          "matchId": "mnsq9hynuwh",
-          "nota": "Scritto 'Torta salata salsiccia e cipolla'"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Tortino di stagione",
-          "stato": "match",
-          "matchId": "mor13kgqgpi",
-          "nota": "Scritto 'Tortino di stagione'"
-        },
-        {
-          "portata": "primo",
-          "nome": "Pappardelle al ragù di cinghiale",
-          "stato": "match",
-          "matchId": "mnsq9hyns1x",
-          "nota": "Scritto 'Pappardelle Cinghiale'"
-        },
-        {
-          "portata": "secondo",
-          "nome": "Arrosto misto con salsiccia, costole, tagliata di manzo e pollo",
-          "stato": "incerto",
-          "suggestedMatchId": "mor0q868kfb",
-          "nota": "Scritto 'Arrosto misto salsiccia, costole, scam. e pollo' - lettura incerta su 'scam.', potrebbe essere scamerita"
-        },
-        {
-          "portata": "contorno",
-          "nome": "Patate arrosto",
-          "stato": "match",
-          "matchId": "mnsq9hynayz"
-        },
-        {
-          "portata": "dolce",
-          "nome": "Dolce della casa",
-          "stato": "match",
-          "matchId": "mo67hzucqmt"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Formaggi Pecorini con Marmellata e/o Miele",
-          "stato": "match",
-          "matchId": "mo1w8xtm5r2"
-        },
-        {
-          "portata": "primo",
-          "nome": "Straccetti con porri, briciole di pane e scamorza",
-          "stato": "nuovo",
-          "traduzione": "",
-          "matchId": null
-        }
-      ]
-    }
-  ]
+  "importPending": []
 }
