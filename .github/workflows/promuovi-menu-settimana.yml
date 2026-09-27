@@ -1,0 +1,34 @@
+name: Pubblica menù della settimana (automatico)
+
+on:
+  # Lanciato dal timer esterno (Cloudflare Worker, timer-cloudflare/ciliegio-menu-timer.js) la
+  # domenica sera Europe/Rome, o a mano da qui per un test. Non fa nulla se nessuna bozza è
+  # stata segnata "pronta" nell'app (vedi promuovi-settimana.js) — lanciarlo a vuoto è innocuo.
+  workflow_dispatch: {}
+
+concurrency:
+  group: promuovi-menu-settimana
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  promuovi:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Installa dipendenze (Playwright)
+        run: npm ci
+      - name: Installa Chromium per Playwright
+        run: npx playwright install --with-deps chromium
+      - name: Promuovi bozza pronta e pubblica (GitHub + sito live)
+        env:
+          PASSWEB_USER: ${{ secrets.PASSWEB_USER }}
+          PASSWEB_PASS: ${{ secrets.PASSWEB_PASS }}
+          PASSWEB_AUTH_JSON: ${{ secrets.PASSWEB_AUTH_JSON }}
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+        run: node promuovi-settimana.js

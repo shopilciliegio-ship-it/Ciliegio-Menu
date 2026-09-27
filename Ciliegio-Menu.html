@@ -451,7 +451,7 @@ textarea{resize:vertical;min-height:72px}
       <button class="btn btn-ghost btn-sm" onclick="document.getElementById('imp').click()" style="padding:6px 16px">📂 Importa backup</button>
     </div>
 
-    <div style="text-align:center;font-size:13px;color:#666;letter-spacing:3px;margin-top:12px;font-family:'Cinzel',serif">v77</div>
+    <div style="text-align:center;font-size:13px;color:#666;letter-spacing:3px;margin-top:12px;font-family:'Cinzel',serif">v78</div>
   </div>
 </div>
 
@@ -747,9 +747,10 @@ textarea{resize:vertical;min-height:72px}
     <div class="form-row mb-12">
       <div class="form-group">
         <label class="lbl">Salva su</label>
-        <select id="jpg-save-mode">
+        <select id="jpg-save-mode" onchange="aggiornaStatoBozzaProssima()">
           <option value="download">💾 Download sul dispositivo</option>
-          <option value="github">☁ Carica su GitHub (cartella immagini-sito/)</option>
+          <option value="github">☁ Carica su GitHub (LIVE — immagini-sito/)</option>
+          <option value="github-staging">🕓 Bozza prossima settimana (immagini-sito-prossima/)</option>
         </select>
       </div>
       <div class="form-group" style="max-width:130px">
@@ -757,6 +758,8 @@ textarea{resize:vertical;min-height:72px}
         <input type="number" id="jpg-prezzo-bimbi" value="13" min="0" step="0.5">
       </div>
     </div>
+
+    <div id="jpg-staging-status" style="display:none;margin-bottom:14px;padding:10px 12px;border-radius:var(--r);background:var(--bg3);font-size:14px;line-height:1.5"></div>
 
     <div id="jpg-progress" style="display:none;margin-bottom:14px">
       <div style="font-size:15px;color:var(--white3);margin-bottom:8px" id="jpg-progress-text">Generazione in corso…</div>
@@ -2940,7 +2943,76 @@ function apriJPGModal(){
   jsb.disabled=false;
   jsb.textContent='✦ Genera immagini';
   jsb.onclick=avviaGeneraJPG;
+  document.getElementById('jpg-save-mode').value='download';
+  aggiornaStatoBozzaProssima();
   openOv('ov-jpg');
+}
+
+// Lunedì (YYYY-MM-DD) della settimana della data data (o di oggi se omessa).
+function lunediDi(dateStr){
+  const d=dateStr?new Date(dateStr+'T12:00:00'):new Date();
+  const dow=d.getDay();
+  const diffToMon=dow===0?-6:1-dow;
+  const mon=new Date(d); mon.setDate(d.getDate()+diffToMon);
+  return mon.toISOString().split('T')[0];
+}
+
+// Legge/scrive immagini-sito-prossima/settimana.json (manifest della bozza in attesa
+// di pubblicazione automatica). null se la cartella/il file non esistono ancora.
+async function leggiManifestBozza(){
+  const cfg=getGhCfg();
+  if(!cfg.tok||!cfg.own||!cfg.rep) return null;
+  try{
+    const r=await fetch(`https://api.github.com/repos/${cfg.own}/${cfg.rep}/contents/immagini-sito-prossima/settimana.json`,
+      {headers:{Authorization:`token ${cfg.tok}`,Accept:'application/vnd.github.v3+json'}});
+    if(!r.ok) return null;
+    const j=await r.json();
+    return {sha:j.sha, data:JSON.parse(decodeURIComponent(escape(atob(j.content))))};
+  }catch(e){ return null; }
+}
+
+async function scriviManifestBozza(data, shaEsistente){
+  const cfg=getGhCfg();
+  if(!cfg.tok||!cfg.own||!cfg.rep) return;
+  const body={
+    message:`Bozza settimana ${data.settimana}: ${data.pronta?'segnata PRONTA':'aggiornata'}`,
+    content:btoa(unescape(encodeURIComponent(JSON.stringify(data,null,2))))
+  };
+  if(shaEsistente) body.sha=shaEsistente;
+  await fetch(`https://api.github.com/repos/${cfg.own}/${cfg.rep}/contents/immagini-sito-prossima/settimana.json`,{
+    method:'PUT',
+    headers:{Authorization:`token ${cfg.tok}`,Accept:'application/vnd.github.v3+json','Content-Type':'application/json'},
+    body:JSON.stringify(body)
+  });
+}
+
+async function aggiornaStatoBozzaProssima(){
+  const el=document.getElementById('jpg-staging-status');
+  const mode=document.getElementById('jpg-save-mode').value;
+  if(mode!=='github-staging'){ el.style.display='none'; return; }
+  el.style.display='block';
+  el.innerHTML='Controllo bozza esistente su GitHub…';
+  const m=await leggiManifestBozza();
+  if(!m){
+    el.innerHTML='Nessuna bozza in attesa. Genera qui sotto: i JPG vanno in <code>immagini-sito-prossima/</code>, il sito e le stories NON li vedono finché non la segni "pronta" — verranno pubblicati da soli domenica sera.';
+    return;
+  }
+  const d=m.data;
+  const dt=parseDate(d.settimana);
+  el.innerHTML=`Bozza per la settimana di <strong style="color:var(--gold)">${dt?dt.giornoLungo:d.settimana} ${d.settimana}</strong> (${(d.chiavi||[]).length} menù), generata il ${new Date(d.generatoIl).toLocaleString('it-IT')}.<br>
+    Stato: ${d.pronta?'<strong style="color:#6abc8a">✅ PRONTA — verrà pubblicata da sola domenica sera</strong>':'<strong style="color:#c9a84c">🕓 non ancora pronta</strong>'}
+    <div style="margin-top:8px">
+      <button class="btn ${d.pronta?'btn-ghost':'btn-gold'}" style="padding:5px 12px;font-size:13px" onclick="segnaBozzaPronta(${!d.pronta})">${d.pronta?'✕ Togli "pronta"':'✅ Segna come pronta'}</button>
+    </div>`;
+}
+
+async function segnaBozzaPronta(pronta){
+  const m=await leggiManifestBozza();
+  if(!m){ alert('Nessuna bozza trovata su GitHub.'); return; }
+  m.data.pronta=pronta;
+  m.data.prontoIl=pronta?new Date().toISOString():null;
+  await scriviManifestBozza(m.data, m.sha);
+  aggiornaStatoBozzaProssima();
 }
 
 // Avvia la generazione di tutti i JPG
@@ -2960,15 +3032,16 @@ async function avviaGeneraJPG(){
   startBtn.disabled=true; startBtn.textContent='Generazione…';
 
   const mode=document.getElementById('jpg-save-mode').value;
+  const cartellaGh=mode==='github-staging'?'immagini-sito-prossima':'immagini-sito';
   const zip=mode==='download'?new JSZip():null;
   const total=keys.length*2; // IT + EN
   let done=0;
 
   // ── Se GitHub e sono selezionati TUTTI i menù: elimina prima tutti i vecchi JPG nella cartella ──
   // (se ne rigeneri solo alcuni, sovrascrive solo quelli e lascia intatti gli altri)
-  if(mode==='github'&&tuttiSelezionati){
+  if((mode==='github'||mode==='github-staging')&&tuttiSelezionati){
     pTxt.textContent='🗑 Pulizia vecchi file su GitHub…';
-    await svuotaCartellaImmaginiGitHub();
+    await svuotaCartellaImmaginiGitHub(cartellaGh);
   }
 
   // ── 🇮🇹 ITALIANO ──
@@ -2980,7 +3053,7 @@ async function avviaGeneraJPG(){
       const canvas=await renderMenuJPG(mKey);
       if(canvas){
         const b64=setJPEGDPI(canvas.toDataURL('image/jpeg',0.92).split(',')[1],300);
-        if(mode==='github') await uploadJPGGitHub(b64,fname);
+        if(mode==='github'||mode==='github-staging') await uploadJPGGitHub(b64,fname,cartellaGh);
         else zip.file(fname,b64,{base64:true});
       }
     }catch(e){console.error('IT error',mKey,e);}
@@ -2996,7 +3069,7 @@ async function avviaGeneraJPG(){
       const canvas=await renderMenuJPGEN(mKey);
       if(canvas){
         const b64=setJPEGDPI(canvas.toDataURL('image/jpeg',0.92).split(',')[1],300);
-        if(mode==='github') await uploadJPGGitHub(b64,fname);
+        if(mode==='github'||mode==='github-staging') await uploadJPGGitHub(b64,fname,cartellaGh);
         else zip.file(fname,b64,{base64:true});
       }
     }catch(e){console.error('EN error',mKey,e);}
@@ -3011,26 +3084,55 @@ async function avviaGeneraJPG(){
     el.download=`menu-sito-${da}_${a}-IT+EN.zip`;
     el.click();
   }
-  pTxt.textContent=`✓ ${keys.length} IT + ${keys.length} EN ${mode==='github'?'caricati su GitHub':'nello ZIP'}.`;
-  startBtn.textContent='✓ Fatto! → Home';
-  startBtn.disabled=false;
-  startBtn.onclick=()=>{ closeOv('ov-jpg'); goHome(); };
+
+  // ── Bozza prossima settimana: scrivo/aggiorno il manifest (SEMPRE pronta:false qui — si
+  // segna "pronta" a parte, dopo revisione, con segnaBozzaPronta) ──
+  if(mode==='github-staging'){
+    pTxt.textContent='📝 Scrivo il manifest della bozza…';
+    const settimana=lunediDi(keys.map(k=>parseKey(k).data).sort()[0]);
+    const manifestEsistente=await leggiManifestBozza();
+    await scriviManifestBozza({
+      settimana,
+      generatoIl:new Date().toISOString(),
+      chiavi:keys,
+      pronta:false,
+      prontoIl:null
+    }, manifestEsistente?manifestEsistente.sha:null);
+  }
+
+  const modeLabel=mode==='github'?'caricati su GitHub (LIVE)':mode==='github-staging'?'salvati in bozza (immagini-sito-prossima/)':'nello ZIP';
+  pTxt.textContent=`✓ ${keys.length} IT + ${keys.length} EN ${modeLabel}.`;
+  if(mode==='github-staging'){
+    startBtn.textContent='✅ Segna come pronta…';
+    startBtn.disabled=false;
+    startBtn.onclick=async()=>{
+      if(confirm('Segnare questa bozza come PRONTA per la pubblicazione automatica di domenica sera?\n\nDa quel momento in poi il sistema, senza altri click, sposterà queste immagini in immagini-sito/ e le caricherà anche sul sito ilciliegio.com domenica sera.')){
+        await segnaBozzaPronta(true);
+      }
+      closeOv('ov-jpg'); goHome();
+    };
+  } else {
+    startBtn.textContent='✓ Fatto! → Home';
+    startBtn.disabled=false;
+    startBtn.onclick=()=>{ closeOv('ov-jpg'); goHome(); };
+  }
 }
 
-// Elenca e cancella tutti i file JPG nella cartella immagini-sito/ su GitHub
-async function svuotaCartellaImmaginiGitHub(){
+// Elenca e cancella tutti i file JPG nella cartella indicata (immagini-sito/ o immagini-sito-prossima/) su GitHub
+async function svuotaCartellaImmaginiGitHub(cartella){
+  cartella=cartella||'immagini-sito';
   const cfg=JSON.parse(localStorage.getItem('ghcfg_ciliegio-menu')||'{}');
   if(!cfg.tok||!cfg.own||!cfg.rep) return;
   const headers={Authorization:`token ${cfg.tok}`,Accept:'application/vnd.github.v3+json'};
   try{
-    const r=await fetch(`https://api.github.com/repos/${cfg.own}/${cfg.rep}/contents/immagini-sito`,{headers});
+    const r=await fetch(`https://api.github.com/repos/${cfg.own}/${cfg.rep}/contents/${cartella}`,{headers});
     if(!r.ok) return; // cartella vuota o non esiste ancora — ok
     const files=await r.json();
     if(!Array.isArray(files)) return;
     // filtra solo i JPG con pattern numerato (es. 02-lunedì-pranzo.jpg)
     const jpgFiles=files.filter(f=>f.type==='file'&&/^\d{2}-/.test(f.name)&&f.name.endsWith('.jpg'));
     for(const f of jpgFiles){
-      await fetch(`https://api.github.com/repos/${cfg.own}/${cfg.rep}/contents/immagini-sito/${f.name}`,{
+      await fetch(`https://api.github.com/repos/${cfg.own}/${cfg.rep}/contents/${cartella}/${f.name}`,{
         method:'DELETE',
         headers:{...headers,'Content-Type':'application/json'},
         body:JSON.stringify({message:`Rimozione vecchio menù: ${f.name}`,sha:f.sha})
@@ -3041,10 +3143,11 @@ async function svuotaCartellaImmaginiGitHub(){
   }catch(e){console.error('Errore pulizia GitHub:',e);}
 }
 
-async function uploadJPGGitHub(b64, filename){
+async function uploadJPGGitHub(b64, filename, cartella){
+  cartella=cartella||'immagini-sito';
   const cfg=JSON.parse(localStorage.getItem('ghcfg_ciliegio-menu')||'{}');
   if(!cfg.tok||!cfg.own||!cfg.rep) return;
-  const path=`immagini-sito/${filename}`;
+  const path=`${cartella}/${filename}`;
   let sha=null;
   try{
     const r=await fetch(`https://api.github.com/repos/${cfg.own}/${cfg.rep}/contents/${path}`,
