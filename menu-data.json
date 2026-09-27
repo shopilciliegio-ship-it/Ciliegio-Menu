@@ -1854,6 +1854,13 @@
       "portata": "secondo",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "muk8yt91r0q",
+      "nome": "Tagliatelle con pesto di cavolo nero e mandorle",
+      "portata": "primo",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -8175,10 +8182,12 @@
         ],
         "primo": [
           "mnsq9hyns1x",
-          "mujyqw4dohy"
+          "mujyqw4dohy",
+          "mo6ag8zh5dl"
         ],
         "secondo": [
-          "mujyqw4dsg4"
+          "mujyqw4dsg4",
+          "mq55vk26zzt"
         ],
         "contorno": [
           "mnsq9hynayz"
@@ -8189,6 +8198,126 @@
       },
       "testoLibero": "",
       "prezzo": 39,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-10-01_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hynqk0",
+          "mnsq9hymuqe",
+          "mnsq9hynkaz",
+          "mnsq9hyno6u",
+          "mo1w8xtm5r2"
+        ],
+        "primo": [
+          "mo67h4xg40w"
+        ],
+        "secondo": [
+          "mnsq9hyn4sj"
+        ],
+        "contorno": [
+          "mnsq9hync5b"
+        ],
+        "dolce": [
+          "mohatliymxm"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 32,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-09-30_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo1xei4h6yo"
+        ],
+        "primo": [
+          "mnsq9hynfpv",
+          "mo67h4xg40w"
+        ],
+        "secondo": [
+          "mnsq9hynxxp"
+        ],
+        "contorno": [
+          "mnsq9hynyb2"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 32,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-09-29_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo6acrp1vak"
+        ],
+        "primo": [
+          "mohazkpebcj"
+        ],
+        "secondo": [
+          "mnsq9hyn0ay"
+        ],
+        "contorno": [
+          "mnsq9hync5b"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 32,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-10-01_cena_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hynsn7",
+          "mnsq9hymmle",
+          "mnsq9hyneqw",
+          "mnsq9hyno6u",
+          "mnsq9hynqk0"
+        ],
+        "primo": [
+          "muk8yt91r0q",
+          "mtsf39qhpou"
+        ],
+        "secondo": [
+          "mnsq9hyn4sj"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mnsq9hyn5co"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 36,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-10-02_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo1xei4h6yo"
+        ],
+        "primo": [
+          "mp336q0pxa8"
+        ],
+        "secondo": [
+          "mnsq9hyn4sj"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mtsfdqpkwbk"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 32,
       "nomeSpecifico": "Menù del Sito"
     }
   },
@@ -10120,7 +10249,8 @@
     "muad7d99duy": "Filled tortelli with codfish, tomato sauce, capers and oregano",
     "muad8aecqly": "Ravioli with ricotta and spinach and a hint of truffle",
     "mujyqw4dohy": "Straccetti pasta with leek cream, breadcrumbs and crispy guanciale",
-    "mujyqw4dsg4": "Mixed roast with sausage, ribs, scamerita and chicken"
+    "mujyqw4dsg4": "Mixed roast with sausage, ribs, scamerita and chicken",
+    "muk8yt91r0q": "Tagliatelle with black cabbage pesto and almonds"
   },
   "cartaDelGiorno": {
     "2026-05-31": [
@@ -10575,482 +10705,5 @@
       }
     ]
   },
-  "importPending": [
-    {
-      "data": "2026-09-28",
-      "servizio": "pranzo",
-      "prezzo": 32,
-      "piatti": [
-        {
-          "portata": "antipasto",
-          "nome": "Crostino nero",
-          "stato": "match",
-          "matchId": "mnsq9hyneqw"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Crostino con ricotta, miele, pecorino, pere e granella di noci",
-          "stato": "match",
-          "matchId": "mnsq9hynsn7",
-          "nota": "Scritto come 'Crostino miele, pecorino, pere e gr. noci'"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Bruschetta con pomodorini e basilico",
-          "stato": "match",
-          "matchId": "mnsq9hymnei",
-          "nota": "Scritto come 'Bruschette pomodori e basilico'"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Selezione di salumi toscani",
-          "stato": "match",
-          "matchId": "mnsq9hynqk0",
-          "nota": "Scritto come 'Sel. Affettati locali'"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Formaggi Pecorini con Marmellata e/o Miele",
-          "stato": "incerto",
-          "suggestedMatchId": "mo1w8xtm5r2",
-          "nota": "Scritto 'Sel. Formaggi pecorini con miele'"
-        },
-        {
-          "portata": "primo",
-          "nome": "Pici al ragù di anatra",
-          "stato": "match",
-          "matchId": "mpv0uwpjzyu",
-          "nota": "Scritto 'Pici ragù anatra'"
-        },
-        {
-          "portata": "secondo",
-          "nome": "Tagliata di manzo al lardo e scaglie di pecorino",
-          "stato": "match",
-          "matchId": "mnsq9hyndcd"
-        },
-        {
-          "portata": "contorno",
-          "nome": "Patate arrosto",
-          "stato": "match",
-          "matchId": "mnsq9hynayz"
-        },
-        {
-          "portata": "dolce",
-          "nome": "Dolce della casa",
-          "stato": "match",
-          "matchId": "mo67hzucqmt"
-        }
-      ]
-    },
-    {
-      "data": "2026-09-29",
-      "servizio": "pranzo",
-      "prezzo": 32,
-      "piatti": [
-        {
-          "portata": "antipasto",
-          "nome": "Selezione di salumi toscani",
-          "stato": "incerto",
-          "suggestedMatchId": "mnsq9hynqk0",
-          "nota": "Blocco parzialmente illeggibile in alto pagina, 'SAWNI, PECORINI, BRUSCHETTA' — sembrano affettati, pecorini e bruschetta"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Bruschetta con pesto o pomodorini",
-          "stato": "incerto",
-          "suggestedMatchId": "mnsq9hymnei",
-          "nota": "Scritto parzialmente coperto 'PESTO o Pomodorini', dubbio su nome esatto"
-        },
-        {
-          "portata": "primo",
-          "nome": "Pici al ragù toscano",
-          "stato": "match",
-          "matchId": "mohazkpebcj"
-        },
-        {
-          "portata": "secondo",
-          "nome": "Tagliata di manzo al pepe rosa",
-          "stato": "match",
-          "matchId": "mnsq9hyn0ay"
-        },
-        {
-          "portata": "contorno",
-          "nome": "Verdure al forno",
-          "stato": "match",
-          "matchId": "mnsq9hync5b"
-        },
-        {
-          "portata": "dolce",
-          "nome": "Dolce della casa",
-          "stato": "match",
-          "matchId": "mo67hzucqmt"
-        }
-      ]
-    },
-    {
-      "data": "2026-09-30",
-      "servizio": "pranzo",
-      "prezzo": 32,
-      "piatti": [
-        {
-          "portata": "antipasto",
-          "nome": "Antipasto del Ciliegio",
-          "stato": "match",
-          "matchId": "mo1xei4h6yo"
-        },
-        {
-          "portata": "primo",
-          "nome": "Pappa al pomodoro",
-          "stato": "match",
-          "matchId": "mnsq9hynfpv"
-        },
-        {
-          "portata": "primo",
-          "nome": "Pasta fresca al cinghiale",
-          "stato": "incerto",
-          "suggestedMatchId": "mo67h4xg40w",
-          "nota": "Scritto 'Pasta fresca al cinghiale', probabilmente 'Pasta fresca al ragù di cinghiale'"
-        },
-        {
-          "portata": "secondo",
-          "nome": "Peposo",
-          "stato": "match",
-          "matchId": "mnsq9hynxxp"
-        },
-        {
-          "portata": "contorno",
-          "nome": "Fagioli all'uccelletta",
-          "stato": "match",
-          "matchId": "mnsq9hynyb2"
-        },
-        {
-          "portata": "dolce",
-          "nome": "Dolce della casa",
-          "stato": "match",
-          "matchId": "mo67hzucqmt"
-        }
-      ]
-    },
-    {
-      "data": "2026-10-01",
-      "servizio": "pranzo",
-      "prezzo": 32,
-      "piatti": [
-        {
-          "portata": "antipasto",
-          "nome": "Selezione di salumi toscani",
-          "stato": "match",
-          "matchId": "mnsq9hynqk0",
-          "nota": "Scritto 'Selezione di salumi'"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Cecina",
-          "stato": "match",
-          "matchId": "mnsq9hymuqe"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Crostino con gota, pecorino e miele",
-          "stato": "match",
-          "matchId": "mnsq9hynkaz",
-          "nota": "Scritto 'Crostino gota, pecorino, miele'"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Tortino di pappa al pomodoro",
-          "stato": "match",
-          "matchId": "mnsq9hyno6u",
-          "nota": "Scritto 'Tortino di pappa'"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Formaggi misti",
-          "stato": "incerto",
-          "suggestedMatchId": "mohaxdaa2wx",
-          "nota": "Scritto 'Formaggi con marmellata' non del tutto leggibile"
-        },
-        {
-          "portata": "primo",
-          "nome": "Pasta fresca al ragù di cinghiale",
-          "stato": "match",
-          "matchId": "mo67h4xg40w"
-        },
-        {
-          "portata": "secondo",
-          "nome": "Tagliata agli aromi",
-          "stato": "match",
-          "matchId": "mnsq9hyn4sj",
-          "nota": "Scritto 'Tagliata agli aromi'"
-        },
-        {
-          "portata": "contorno",
-          "nome": "Verdure al forno",
-          "stato": "match",
-          "matchId": "mnsq9hync5b"
-        },
-        {
-          "portata": "dolce",
-          "nome": "Torta con ricotta, pinoli e uvetta",
-          "stato": "match",
-          "matchId": "mohatliymxm"
-        }
-      ]
-    },
-    {
-      "data": "2026-10-01",
-      "servizio": "cena",
-      "prezzo": 36,
-      "piatti": [
-        {
-          "portata": "antipasto",
-          "nome": "Crostino con ricotta, miele, pecorino, pere e granella di noci",
-          "stato": "match",
-          "matchId": "mnsq9hynsn7",
-          "nota": "Scritto 'Crostino pere, pecorino e miele'"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Battuta di manzo con maionese alla senape",
-          "stato": "match",
-          "matchId": "mnsq9hymmle",
-          "nota": "Scritto 'Battuta di manzo con maio senape'"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Crostino nero",
-          "stato": "match",
-          "matchId": "mnsq9hyneqw"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Tortino di pappa al pomodoro",
-          "stato": "match",
-          "matchId": "mnsq9hyno6u"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Selezione di salumi toscani",
-          "stato": "incerto",
-          "suggestedMatchId": "mnsq9hynqk0",
-          "nota": "Scritto solo 'Affettati'"
-        },
-        {
-          "portata": "primo",
-          "nome": "Tagliatelle con pesto di cavolo nero e mandorle",
-          "stato": "nuovo",
-          "traduzione": "Tagliatelle with black cabbage pesto and almonds",
-          "nota": "Scritto 'Tagliatelle pesto di cavolo nero e mandorle', non presente in lista"
-        },
-        {
-          "portata": "primo",
-          "nome": "Straccetti al ragù bianco toscano",
-          "stato": "match",
-          "matchId": "mtsf39qhpou",
-          "nota": "Scritto 'Straccetti ragù bianco', due primi alternativi elencati per lo stesso giorno"
-        },
-        {
-          "portata": "secondo",
-          "nome": "Tagliata di manzo agli aromi",
-          "stato": "match",
-          "matchId": "mnsq9hyn4sj"
-        },
-        {
-          "portata": "contorno",
-          "nome": "Patate arrosto",
-          "stato": "match",
-          "matchId": "mnsq9hynayz"
-        },
-        {
-          "portata": "dolce",
-          "nome": "Torta di mele con crema di vin santo",
-          "stato": "match",
-          "matchId": "mnsq9hyn5co",
-          "nota": "Scritto 'Torta di mele con crema al vin santo'"
-        }
-      ]
-    },
-    {
-      "data": "2026-10-02",
-      "servizio": "cena",
-      "prezzo": 35,
-      "piatti": [
-        {
-          "portata": "antipasto",
-          "nome": "Crostino con fegatini di pollo, sale grosso e miele",
-          "stato": "match",
-          "matchId": "mnsq9hynyoo"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Crostone con lenticchie e rigatino",
-          "stato": "match",
-          "matchId": "mnsq9hyn3m5",
-          "nota": "Scritto 'Crostone lenticchie e rigatino'"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Selezione di salumi toscani",
-          "stato": "match",
-          "matchId": "mnsq9hynqk0"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Formaggi Pecorini con Marmellata e/o Miele",
-          "stato": "match",
-          "matchId": "mo1w8xtm5r2",
-          "nota": "Scritto 'Sel. formaggi con miele o marmellata'"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Polenta ripiena con scamorza e salsiccia",
-          "stato": "match",
-          "matchId": "mnsq9hyn6l4"
-        },
-        {
-          "portata": "primo",
-          "nome": "Ribollita",
-          "stato": "match",
-          "matchId": "mnsq9hynwdm"
-        },
-        {
-          "portata": "primo",
-          "nome": "Pappardelle al ragù di cinghiale",
-          "stato": "match",
-          "matchId": "mnsq9hyns1x"
-        },
-        {
-          "portata": "secondo",
-          "nome": "Capocollo ripieno con salsiccia e noci",
-          "stato": "match",
-          "matchId": "mnsq9hynxg3"
-        },
-        {
-          "portata": "contorno",
-          "nome": "Patate sabbiate",
-          "stato": "match",
-          "matchId": "mnsq9hynelb"
-        },
-        {
-          "portata": "dolce",
-          "nome": "Mousse di ricotta al cioccolato su granella di cantucci",
-          "stato": "match",
-          "matchId": "mnsq9hynj2g"
-        }
-      ]
-    },
-    {
-      "data": "2026-10-02",
-      "servizio": "pranzo",
-      "prezzo": 32,
-      "piatti": [
-        {
-          "portata": "antipasto",
-          "nome": "Antipasto del Ciliegio",
-          "stato": "match",
-          "matchId": "mo1xei4h6yo",
-          "nota": "Sostituzione indicata da 'SITO con Antipasto del Ciliegio' — sostituisce l'antipasto del menu Primo Piano"
-        },
-        {
-          "portata": "primo",
-          "nome": "Pici alla carbonara",
-          "stato": "match",
-          "matchId": "mp336q0pxa8",
-          "nota": "Scritto nel menu originale 'Pici carbonara', parte del menù Primo Piano prima della sostituzione"
-        },
-        {
-          "portata": "secondo",
-          "nome": "Tagliata di manzo agli aromi",
-          "stato": "match",
-          "matchId": "mnsq9hyn4sj",
-          "nota": "Scritto nel menu originale 'Tagliata aromi', parte del menù Primo Piano prima della sostituzione"
-        },
-        {
-          "portata": "contorno",
-          "nome": "Patate arrosto",
-          "stato": "match",
-          "matchId": "mnsq9hynayz",
-          "nota": "Scritto nel menu originale, parte del menù Primo Piano prima della sostituzione"
-        },
-        {
-          "portata": "dolce",
-          "nome": "Crostata con crema e frutta fresca",
-          "stato": "match",
-          "matchId": "mtsfdqpkwbk",
-          "nota": "Scritto 'Crostata crema e frutta fresca', parte del menù Primo Piano prima della sostituzione"
-        }
-      ]
-    },
-    {
-      "data": "2026-10-04",
-      "servizio": "pranzo",
-      "prezzo": 39,
-      "piatti": [
-        {
-          "portata": "antipasto",
-          "nome": "Crostino nero",
-          "stato": "match",
-          "matchId": "mnsq9hyneqw"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Selezione di salumi toscani",
-          "stato": "match",
-          "matchId": "mnsq9hynqk0",
-          "nota": "Scritto 'Sel. Affettati locali'"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Formaggi Pecorini con Marmellata e/o Miele",
-          "stato": "match",
-          "matchId": "mo1w8xtm5r2",
-          "nota": "Scritto 'Sel. Formaggi con miele'"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Torta salata salsiccia e cipolla",
-          "stato": "match",
-          "matchId": "mnsq9hynuwh"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Tortino di stagione",
-          "stato": "match",
-          "matchId": "mor13kgqgpi"
-        },
-        {
-          "portata": "primo",
-          "nome": "Tortiglioni con crema di porri, briciole di pane, pancetta e guanciale croccante",
-          "stato": "match",
-          "matchId": "mo6ag8zh5dl",
-          "nota": "Scritto 'Straccetti crema di porri, briciole e guanc.', abbinamento incerto sul formato pasta"
-        },
-        {
-          "portata": "primo",
-          "nome": "Pappardelle al ragù di cinghiale",
-          "stato": "match",
-          "matchId": "mnsq9hyns1x"
-        },
-        {
-          "portata": "secondo",
-          "nome": "Arrosto misto con salsiccia, costole, pollo e scamerita",
-          "stato": "incerto",
-          "suggestedMatchId": "mq55vk26zzt",
-          "nota": "Scritto 'Arrosto misto salsiccia, costole, pollo e scamerita', ordine ingredienti diverso dal match più simile"
-        },
-        {
-          "portata": "contorno",
-          "nome": "Patate arrosto",
-          "stato": "match",
-          "matchId": "mnsq9hynayz"
-        },
-        {
-          "portata": "dolce",
-          "nome": "Dolce della casa",
-          "stato": "match",
-          "matchId": "mo67hzucqmt"
-        }
-      ]
-    }
-  ]
+  "importPending": []
 }
