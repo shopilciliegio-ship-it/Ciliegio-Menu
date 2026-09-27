@@ -451,7 +451,7 @@ textarea{resize:vertical;min-height:72px}
       <button class="btn btn-ghost btn-sm" onclick="document.getElementById('imp').click()" style="padding:6px 16px">📂 Importa backup</button>
     </div>
 
-    <div style="text-align:center;font-size:13px;color:#666;letter-spacing:3px;margin-top:12px;font-family:'Cinzel',serif">v83</div>
+    <div style="text-align:center;font-size:13px;color:#666;letter-spacing:3px;margin-top:12px;font-family:'Cinzel',serif">v84</div>
   </div>
 </div>
 
@@ -2966,6 +2966,56 @@ function lunediDi(dateStr){
   return mon.toISOString().split('T')[0];
 }
 
+// Copia un file da fallback-al-completo/ (immagini generiche "AL COMPLETO", committate nel repo,
+// nessun dato di clienti) a una cartella destinazione nello stesso repo, via GitHub Contents API
+// (GET del contenuto base64 + PUT nella destinazione — non serve scaricare/ricaricare dal browser).
+async function copiaFallbackGitHub(fname, cartellaDest){
+  const cfg=getGhCfg();
+  if(!cfg.tok||!cfg.own||!cfg.rep) return false;
+  const headers={Authorization:`token ${cfg.tok}`,Accept:'application/vnd.github.v3+json'};
+  try{
+    const rSrc=await fetch(`https://api.github.com/repos/${cfg.own}/${cfg.rep}/contents/fallback-al-completo/${encodeURIComponent(fname)}`,{headers});
+    if(!rSrc.ok) return false;
+    const jSrc=await rSrc.json();
+    let sha=null;
+    try{
+      const rDest=await fetch(`https://api.github.com/repos/${cfg.own}/${cfg.rep}/contents/${cartellaDest}/${encodeURIComponent(fname)}`,{headers});
+      if(rDest.ok){ const jDest=await rDest.json(); sha=jDest.sha; }
+    }catch(e){}
+    const body={message:`Al completo: ${fname}`,content:jSrc.content};
+    if(sha) body.sha=sha;
+    await fetch(`https://api.github.com/repos/${cfg.own}/${cfg.rep}/contents/${cartellaDest}/${encodeURIComponent(fname)}`,{
+      method:'PUT',
+      headers:{...headers,'Content-Type':'application/json'},
+      body:JSON.stringify(body)
+    });
+    return true;
+  }catch(e){ console.error('Errore copia fallback',fname,e); return false; }
+}
+
+// Per ogni giorno/servizio della settimana di mondayStr SENZA un "Menù del Sito" confermato in
+// DB.menu, copia in cartellaDest l'immagine generica "al completo" (IT+EN) da fallback-al-completo/.
+// Non tocca i giorni/servizi che hanno un menù reale, anche se quel giorno non era tra i "keys"
+// appena generati (es. rigenerazione parziale di un solo giorno).
+async function riempiMancantiConFallback(mondayStr, cartellaDest){
+  const mon=new Date(mondayStr+'T12:00:00');
+  let aggiunti=0;
+  for(let i=0;i<7;i++){
+    const d=new Date(mon); d.setDate(mon.getDate()+i);
+    const dateStr=d.toISOString().slice(0,10);
+    for(const serv of ['pranzo','cena']){
+      const key=mkKey(dateStr,serv,'Menù del Sito');
+      if(DB.menu[key]) continue;
+      const fname=getJPGFileName(dateStr,serv);
+      const fnameEN=getJPGFileNameEN(dateStr,serv);
+      const okIt=await copiaFallbackGitHub(fname,cartellaDest);
+      const okEn=await copiaFallbackGitHub(fnameEN,cartellaDest);
+      if(okIt||okEn) aggiunti++;
+    }
+  }
+  return aggiunti;
+}
+
 // Legge/scrive immagini-sito-prossima/settimana.json (manifest della bozza in attesa
 // di pubblicazione automatica). null se la cartella/il file non esistono ancora.
 async function leggiManifestBozza(){
@@ -3092,6 +3142,17 @@ async function avviaGeneraJPG(){
     el.href=URL.createObjectURL(blob);
     el.download=`menu-sito-${da}_${a}-IT+EN.zip`;
     el.click();
+  }
+
+  // ── Bozza prossima settimana: riempi da solo i servizi SENZA menù confermato con l'immagine
+  // "al completo" (dal repo, fallback-al-completo/) — ogni settimana reale ne ha sempre qualcuno,
+  // non è un'eccezione da gestire a mano. Così la bozza è sempre completa (14 giorni/servizi,
+  // 28 file IT+EN) prima di poter essere segnata "pronta". ──
+  if(mode==='github-staging'){
+    pTxt.textContent='🪧 Completo i servizi senza menù con l\'immagine "al completo"…';
+    const settimanaMon=lunediDi(da);
+    const nAggiunti=await riempiMancantiConFallback(settimanaMon, cartellaGh);
+    if(nAggiunti) console.log(`Aggiunti ${nAggiunti} servizi "al completo" alla bozza.`);
   }
 
   // ── Bozza prossima settimana: scrivo/aggiorno il manifest (SEMPRE pronta:false qui — si
