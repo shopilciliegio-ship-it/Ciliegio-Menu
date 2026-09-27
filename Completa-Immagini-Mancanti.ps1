@@ -34,9 +34,15 @@ $encParams = New-Object System.Drawing.Imaging.EncoderParameters(1)
 $encParams.Param[0] = New-Object System.Drawing.Imaging.EncoderParameter([System.Drawing.Imaging.Encoder]::Quality, [int64]90)
 
 function Copia-Fallback($destName) {
-    $srcPng = Join-Path $fallbackDir ([System.IO.Path]::GetFileNameWithoutExtension($destName) + ".png")
-    if (-not (Test-Path $srcPng)) { return $false }
+    $baseName = [System.IO.Path]::GetFileNameWithoutExtension($destName)
     $destPath = Join-Path $targetDir $destName
+    # Preferisci il .jpg già pronto (cartella Ottimizzati Chiusi convertita una volta per tutte
+    # il 27/9/2026) — evita di riconvertire da PNG ogni settimana. Se manca (fallback vecchio non
+    # ancora convertito), converte comunque al volo dal PNG come prima.
+    $srcJpg = Join-Path $fallbackDir ($baseName + ".jpg")
+    if (Test-Path $srcJpg) { Copy-Item $srcJpg $destPath -Force; return $true }
+    $srcPng = Join-Path $fallbackDir ($baseName + ".png")
+    if (-not (Test-Path $srcPng)) { return $false }
     $img = [System.Drawing.Image]::FromFile($srcPng)
     try { $img.Save($destPath, $jpegCodec, $encParams) } finally { $img.Dispose() }
     return $true
