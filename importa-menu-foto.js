@@ -95,8 +95,15 @@ const imageBlocks = files.map(name => {
 async function main() {
   const anthropic = new Anthropic({ apiKey });
 
+  const riusa = process.argv.includes('--riusa');
+  let resp;
+  if (riusa) {
+    const savedRaw = fs.readFileSync(path.join(ROOT, 'ultima-risposta-import-raw.txt'), 'utf8');
+    console.log('\nModalità --riusa: uso l\'ultima risposta salvata, nessuna chiamata a Claude.');
+    resp = { content: [{ type: 'text', text: savedRaw }], stop_reason: 'riusata', usage: {} };
+  } else {
   console.log(`\nInvio ${files.length} foto a Claude (${MODEL}) per la trascrizione...`);
-  const resp = await anthropic.messages.create({
+  resp = await anthropic.messages.create({
     model: MODEL,
     max_tokens: 16000,
     thinking: { type: 'disabled' },
@@ -109,11 +116,20 @@ async function main() {
       ]
     }]
   });
+  }
 
   console.log(`stop_reason=${resp.stop_reason} content blocks=${resp.content.length} types=[${resp.content.map(b=>b.type).join(',')}] usage=${JSON.stringify(resp.usage)}`);
 
   const raw = resp.content.map(b => b.type === 'text' ? b.text : '').join('').trim();
-  let cleaned = raw.replace(/^```(?:json)?\s*/i, '').replace(/```\s*$/i, '').trim();
+  // Claude a volte premette ragionamenti/commenti prima del JSON: estraggo il blocco ```json
+  // se c'è, altrimenti tutto da primo '[' a ultimo ']'.
+  let cleaned = raw;
+  const fence = raw.match(/```(?:json)?\s*([\s\S]*?)```/i);
+  if (fence) cleaned = fence[1].trim();
+  else {
+    const a = raw.indexOf('['), b = raw.lastIndexOf(']');
+    if (a >= 0 && b > a) cleaned = raw.slice(a, b + 1);
+  }
 
   let days;
   try {
