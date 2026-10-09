@@ -5,14 +5,14 @@
 // repo (token/permessi separati), perché il cron `schedule` di GitHub Actions parte
 // con ore di ritardo (vedi memoria "github-actions-cron-unreliable-external-timer").
 //
-// Un solo job: la domenica sera guarda l'ora vera di Roma e, quando sono le 21:00,
+// Un solo job: la domenica sera guarda l'ora vera di Roma e, quando sono le 23:00,
 // lancia workflow_dispatch su promuovi-menu-settimana.yml (repo Ciliegio-Menu). Quel
 // workflow non fa nulla se Luca non ha segnato una bozza "pronta" nell'app — quindi
 // lanciarlo anche a vuoto (es. doppio trigger nella stessa finestra) è innocuo.
 //
-// Cron trigger da impostare nel pannello Cloudflare (Triggers): "0 19,20 * * 1"
-// (UTC, solo domenica). Copre sia l'ora legale (21:00 Roma = 19 UTC) sia l'ora
-// solare (21:00 Roma = 20 UTC) senza bisogno di aggiornarlo il giorno del cambio ora.
+// Cron trigger da impostare nel pannello Cloudflare (Triggers): "0 21,22 * * 1"
+// (UTC, solo domenica). Copre sia l'ora legale (23:00 Roma = 21 UTC) sia l'ora
+// solare (23:00 Roma = 22 UTC) senza bisogno di aggiornarlo il giorno del cambio ora.
 // ATTENZIONE: il giorno-della-settimana di Cloudflare NON è lo standard Unix
 // (0=domenica...6=sabato) ma la numerazione Quartz (1=domenica...7=sabato) — verificato
 // il 27/9/2026: "0" dava errore di validazione, "7" validava ma sparava di SABATO.
@@ -40,7 +40,7 @@ function romeNow(date) {
 }
 
 function daLanciare(r) {
-  return r.weekday === 'Sun' && r.hour === 21 && r.minute < 15;
+  return r.weekday === 'Sun' && r.hour === 23 && r.minute < 15;
 }
 
 async function dispatch(env) {
@@ -84,7 +84,7 @@ export default {
         `GITHUB_TOKEN: ${segreto(env.GITHUB_TOKEN) ? 'impostato' : 'MANCANTE'}`,
         `TEST_KEY: ${segreto(env.TEST_KEY) ? 'impostata' : 'MANCANTE'}`,
         `Ora a Roma: ${r.weekday} ${r.hour}:${String(r.minute).padStart(2, '0')}`,
-        'Lancia promuovi-menu-settimana.yml la domenica alle 21:00 Roma.'
+        'Lancia promuovi-menu-settimana.yml la domenica alle 23:00 Roma.'
       ].join('\n') + '\n');
     }
     if (sezione !== 'test' || !segreto(env.TEST_KEY) || chiave !== segreto(env.TEST_KEY)) return new Response('Not found', { status: 404 });
