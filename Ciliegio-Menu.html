@@ -451,7 +451,7 @@ textarea{resize:vertical;min-height:72px}
       <button class="btn btn-ghost btn-sm" onclick="document.getElementById('imp').click()" style="padding:6px 16px">📂 Importa backup</button>
     </div>
 
-    <div style="text-align:center;font-size:13px;color:#666;letter-spacing:3px;margin-top:12px;font-family:'Cinzel',serif">v88</div>
+    <div style="text-align:center;font-size:13px;color:#666;letter-spacing:3px;margin-top:12px;font-family:'Cinzel',serif">v89</div>
   </div>
 </div>
 
@@ -3095,6 +3095,7 @@ async function avviaGeneraJPG(){
   const zip=mode==='download'?new JSZip():null;
   const total=keys.length*2; // IT + EN
   let done=0;
+  const falliti=[];
 
   // ── Se GitHub e sono selezionati TUTTI i menù: elimina prima tutti i vecchi JPG nella cartella ──
   // (se ne rigeneri solo alcuni, sovrascrive solo quelli e lascia intatti gli altri)
@@ -3115,7 +3116,7 @@ async function avviaGeneraJPG(){
         if(mode==='github'||mode==='github-staging') await uploadJPGGitHub(b64,fname,cartellaGh);
         else zip.file(fname,b64,{base64:true});
       }
-    }catch(e){console.error('IT error',mKey,e);}
+    }catch(e){console.error('IT error',mKey,e); falliti.push(fname);}
     done++; pBar.style.width=Math.round(done/total*100)+'%';
   }
 
@@ -3131,7 +3132,7 @@ async function avviaGeneraJPG(){
         if(mode==='github'||mode==='github-staging') await uploadJPGGitHub(b64,fname,cartellaGh);
         else zip.file(fname,b64,{base64:true});
       }
-    }catch(e){console.error('EN error',mKey,e);}
+    }catch(e){console.error('EN error',mKey,e); falliti.push(fname);}
     done++; pBar.style.width=Math.round(done/total*100)+'%';
   }
 
@@ -3172,6 +3173,11 @@ async function avviaGeneraJPG(){
 
   const modeLabel=mode==='github'?'caricati su GitHub (LIVE)':mode==='github-staging'?'salvati in bozza (immagini-sito-prossima/)':'nello ZIP';
   pTxt.textContent=`✓ ${keys.length} IT + ${keys.length} EN ${modeLabel}.`;
+  if(falliti.length){
+    pTxt.textContent=`⚠️ ${falliti.length} file NON caricati: ${falliti.join(', ')} — rigenera prima di segnare la bozza come pronta.`;
+    pTxt.style.color='#b00020';
+    alert(`⚠️ ATTENZIONE: ${falliti.length} immagine/i NON caricate su GitHub:\n\n${falliti.join('\n')}\n\nRigenera la bozza (o solo quei menù) prima di segnarla come PRONTA, altrimenti la pubblicazione automatica di domenica sera si blocca.`);
+  }
   if(mode==='github-staging'){
     startBtn.textContent='✅ Segna come pronta…';
     startBtn.disabled=false;
@@ -3216,21 +3222,26 @@ async function svuotaCartellaImmaginiGitHub(cartella){
 async function uploadJPGGitHub(b64, filename, cartella){
   cartella=cartella||'immagini-sito';
   const cfg=JSON.parse(localStorage.getItem('ghcfg_ciliegio-menu')||'{}');
-  if(!cfg.tok||!cfg.own||!cfg.rep) return;
+  if(!cfg.tok||!cfg.own||!cfg.rep) throw new Error('GitHub non configurato (token mancante)');
   const path=`${cartella}/${filename}`;
-  let sha=null;
-  try{
-    const r=await fetch(`https://api.github.com/repos/${cfg.own}/${cfg.rep}/contents/${path}`,
-      {headers:{Authorization:`token ${cfg.tok}`,Accept:'application/vnd.github.v3+json'}});
-    if(r.ok){const j=await r.json();sha=j.sha;}
-  }catch(e){}
-  const body={message:`Immagine sito: ${filename}`,content:b64};
-  if(sha)body.sha=sha;
-  await fetch(`https://api.github.com/repos/${cfg.own}/${cfg.rep}/contents/${path}`,{
-    method:'PUT',
-    headers:{Authorization:`token ${cfg.tok}`,Accept:'application/vnd.github.v3+json','Content-Type':'application/json'},
-    body:JSON.stringify(body)
-  });
+  const url=`https://api.github.com/repos/${cfg.own}/${cfg.rep}/contents/${path}`;
+  const hdr={Authorization:`token ${cfg.tok}`,Accept:'application/vnd.github.v3+json'};
+  let ultimo='';
+  // Fino a 3 tentativi: un PUT che fallisce (409 sha vecchio, 5xx, limite di rete) non deve passare in silenzio.
+  for(let t=1;t<=3;t++){
+    try{
+      let sha=null;
+      const r=await fetch(url,{headers:hdr});
+      if(r.ok){const j=await r.json();sha=j.sha;}
+      const body={message:`Immagine sito: ${filename}`,content:b64};
+      if(sha)body.sha=sha;
+      const res=await fetch(url,{method:'PUT',headers:{...hdr,'Content-Type':'application/json'},body:JSON.stringify(body)});
+      if(res.ok) return;
+      ultimo=`HTTP ${res.status}`;
+    }catch(e){ ultimo=e.message; }
+    await new Promise(r=>setTimeout(r,1500*t));
+  }
+  throw new Error(`caricamento di ${filename} su GitHub fallito (${ultimo})`);
 }
 
 // Render del singolo JPG su canvas 650×919

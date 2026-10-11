@@ -43,7 +43,10 @@ function prossimoLunediRoma() {
   return new Date(oggi.getTime() + diffToNextMonday * 86400000).toISOString().slice(0, 10);
 }
 
+const AVVISO_STORIES = '\n\n⛔ ATTENZIONE: finché il menù non è pubblicato, lunedì mattina le stories del menù (9:30) NON partono — sono bloccate di proposito perché mostrerebbero i menù della settimana scorsa. Sistema e rilancia questo workflow da GitHub (Actions → Run workflow), poi rilancia le stories.';
+
 async function inviaEmail(oggetto, testo) {
+  if (oggetto.includes('NON eseguita')) testo += AVVISO_STORIES;
   const key = process.env.BREVO_API_KEY;
   if (!key) { log('(BREVO_API_KEY non impostata, salto email di notifica)'); return; }
   try {
