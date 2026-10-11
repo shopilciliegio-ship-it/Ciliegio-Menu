@@ -11101,10 +11101,11 @@
         },
         {
           "portata": "antipasto",
-          "nome": "Formaggi con marmellata mista",
-          "stato": "incerto",
+          "nome": "Formaggi Pecorini con Marmellata e/o Miele",
+          "stato": "match",
           "suggestedMatchId": "mo1w8xtm5r2",
-          "nota": "Scritto 'FORMAGGI CON MARMELLATA MISTA', simile a 'Formaggi Pecorini con Marmellata e/o Miele'"
+          "nota": "Scritto 'FORMAGGI CON MARMELLATA MISTA', simile a 'Formaggi Pecorini con Marmellata e/o Miele'",
+          "matchId": "mo1w8xtm5r2"
         },
         {
           "portata": "antipasto",
@@ -11121,16 +11122,10 @@
         {
           "portata": "antipasto",
           "nome": "Bruschetta con finocchiella e finocchiona",
-          "stato": "incerto",
+          "stato": "match",
           "suggestedMatchId": "mnsq9hymqzy",
-          "nota": "Scritto 'BRUSCHETTA CON FINOCCHIELLA E FINOCCHIONA', verifica se è bruschetta o crostone"
-        },
-        {
-          "portata": "primo",
-          "nome": "Straccetti con salsiccia, zucca gialla e pecorino",
-          "stato": "incerto",
-          "suggestedMatchId": "mo69nj18fdk",
-          "nota": "Scritto 'STRACCETTI CON SALSICCIA, ZUCCA GIALLA E PECORINO', non trovo match esatto con questo condimento specifico, suggerito piatto base Straccetti"
+          "nota": "Scritto 'BRUSCHETTA CON FINOCCHIELLA E FINOCCHIONA', verifica se è bruschetta o crostone",
+          "matchId": "mnsq9hymqzy"
         },
         {
           "portata": "secondo",
