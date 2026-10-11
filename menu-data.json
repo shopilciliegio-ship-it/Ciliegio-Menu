@@ -1882,6 +1882,13 @@
       "portata": "antipasto",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mv49iqr2bdf",
+      "nome": "Tortiglioni con crema di porri, briciole di pane e guanciale croccante",
+      "portata": "primo",
+      "extra": 0,
+      "note": "ATTENZIONE: id non corretto, verificare — il più simile è mnsq9hyn657 ma è un contorno, potrebbe essere mujyqw4dohy o mnsq9hyn657 errato. Controllare manualmente. Evento privato, probabilmente non per il sito."
     }
   ],
   "menu": {
@@ -8706,7 +8713,8 @@
           "mnsq9hynmjr",
           "mnsq9hync35",
           "mo1w8xtm5r2",
-          "mnsq9hyn5zs"
+          "mnsq9hyn5zs",
+          "mv48eas6ip4"
         ],
         "primo": [
           "mnsq9hyn7jq",
@@ -8762,7 +8770,8 @@
           "mnsq9hyneqw"
         ],
         "primo": [
-          "mnsq9hyn6ag8zh5dl"
+          "mnsq9hyn6ag8zh5dl",
+          "mv49iqr2bdf"
         ],
         "secondo": [
           "mnsq9hyn4sj",
@@ -8777,6 +8786,124 @@
       },
       "testoLibero": "",
       "prezzo": 35,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-10-12_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo68jqekj3x"
+        ],
+        "primo": [
+          "mnsq9hynlob"
+        ],
+        "secondo": [
+          "mnsq9hyn4sj"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mnsq9hyn5co"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 32,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-10-12_cena_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hyneqw",
+          "mnsq9hynqk0",
+          "mnsq9hynuwh",
+          "mnsq9hymnw1",
+          "mo1w9vxeqnt"
+        ],
+        "primo": [
+          "mo1zx4sfwtk"
+        ],
+        "secondo": [
+          "mnsq9hynxjy"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mnsq9hyntti"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 30,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-10-13_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo1xei4h6yo"
+        ],
+        "primo": [
+          "mnsq9hynfdo"
+        ],
+        "secondo": [
+          "mnsq9hyn0ay"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 32,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-10-13_cena_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hynqk0",
+          "mo1zvr87ez2",
+          "mnsq9hyn6l4",
+          "mnsq9hynlhy",
+          "mo1w8xtm5r2"
+        ],
+        "primo": [
+          "mnsq9hyns1x"
+        ],
+        "secondo": [
+          "mnsq9hyncpy"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mo6a9ojxhja"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 30,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-10-15_cena_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo1xei4h6yo"
+        ],
+        "primo": [
+          "mo1zx4sfwtk"
+        ],
+        "secondo": [
+          "mnsq9hyn4sj"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 32,
       "nomeSpecifico": "Menù del Sito"
     }
   },
@@ -10437,6 +10564,12 @@
     },
     "2026-10-15_cena": {
       "gruppi": []
+    },
+    "2026-10-17_pranzo": {
+      "gruppi": []
+    },
+    "2026-10-17_cena": {
+      "gruppi": []
     }
   },
   "noteGiorno": {
@@ -10718,7 +10851,8 @@
     "muk8yt91r0q": "Tagliatelle with black cabbage pesto and almonds",
     "mv485hjbymm": "Straccetti pasta with Sausage, Yellow Squash, and Pecorino Cheese",
     "mv48c4lb5ng": "Short pasta with sausages and vegetables sauce",
-    "mv48eas6ip4": "Polenta with black cabbage and pancetta"
+    "mv48eas6ip4": "Polenta with black cabbage and pancetta",
+    "mv49iqr2bdf": "Tortiglioni pasta with leek cream, breadcrumbs, and crispy pork shank"
   },
   "cartaDelGiorno": {
     "2026-05-31": [
@@ -11173,657 +11307,5 @@
       }
     ]
   },
-  "importPending": [
-    {
-      "data": "2026-10-12",
-      "servizio": "pranzo",
-      "prezzo": 32,
-      "piatti": [
-        {
-          "portata": "antipasto",
-          "nome": "Antipasto misto toscano",
-          "stato": "match",
-          "matchId": "mo68jqekj3x"
-        },
-        {
-          "portata": "primo",
-          "nome": "Lasagne al ragù",
-          "stato": "match",
-          "matchId": "mnsq9hynlob"
-        },
-        {
-          "portata": "secondo",
-          "nome": "Tagliata di manzo al dragoncello",
-          "stato": "incerto",
-          "suggestedMatchId": "mswy7tt2ik4",
-          "nota": "Scritto 'TAGLIATA AGLI AROTI' (illeggibile), potrebbe essere 'agli aromi' (mnsq9hyn4sj) invece che al dragoncello: verifica."
-        },
-        {
-          "portata": "contorno",
-          "nome": "Patate arrosto",
-          "stato": "match",
-          "matchId": "mnsq9hynayz"
-        },
-        {
-          "portata": "dolce",
-          "nome": "Torta di miele con gelatina di vin santo",
-          "stato": "nuovo",
-          "traduzione": "Honey cake with vin santo jelly",
-          "nota": "Scritto 'TORTA DI MIELE CON GELATA DI ...VIN SANTO', parola parzialmente illeggibile, verificare."
-        }
-      ]
-    },
-    {
-      "data": "2026-10-12",
-      "servizio": "cena",
-      "piatti": [
-        {
-          "portata": "antipasto",
-          "nome": "Crostino nero",
-          "stato": "match",
-          "matchId": "mnsq9hyneqw",
-          "nota": "Blocco MARGHERITA/compleanno con nome proprio: probabilmente privato, non sito. Incluso per sicurezza come da regola generale."
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Crostone cipolla e noci",
-          "stato": "incerto",
-          "suggestedMatchId": "mnsq9hynnw1",
-          "nota": "Letto 'CROSTONE CIPOLLA E NOCI', simile a 'Crostone con cipolla e miele' ma con noci al posto di miele: verifica. Blocco MARGHERITA, probabilmente privato."
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Selezione affettati",
-          "stato": "incerto",
-          "suggestedMatchId": "mnsq9hynqk0",
-          "nota": "Letto 'SELEZ. AFFETTATI', probabile selezione di salumi toscani. Blocco MARGHERITA, probabilmente privato."
-        },
-        {
-          "portata": "primo",
-          "nome": "Tortino patate e rosmarino con crema di pecorino",
-          "stato": "incerto",
-          "suggestedMatchId": "mnsq9hynxrp",
-          "nota": "Letto 'TORTINO PATATE E ROSMARINO CON CR. PECORINO', assomiglia a Tortino di patate al rosmarino. Blocco MARGHERITA, probabilmente privato."
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Torta salata salsiccia e cipolla",
-          "stato": "match",
-          "matchId": "mnsq9hynuwh",
-          "nota": "Blocco MARGHERITA, probabilmente privato."
-        },
-        {
-          "portata": "primo",
-          "nome": "Pici al ragù",
-          "stato": "match",
-          "matchId": "mo1zx4sfwtk",
-          "nota": "Blocco MARGHERITA, probabilmente privato."
-        },
-        {
-          "portata": "secondo",
-          "nome": "Capocollo ripieno con salsiccia e castagne",
-          "stato": "match",
-          "matchId": "mnsq9hynxjy",
-          "nota": "Blocco MARGHERITA, probabilmente privato."
-        },
-        {
-          "portata": "contorno",
-          "nome": "Patate arrosto",
-          "stato": "match",
-          "matchId": "mnsq9hynayz",
-          "nota": "Blocco MARGHERITA, probabilmente privato."
-        },
-        {
-          "portata": "dolce",
-          "nome": "Pinolata alla crema",
-          "stato": "match",
-          "matchId": "mnsq9hyntti",
-          "nota": "Blocco MARGHERITA, probabilmente privato."
-        }
-      ]
-    },
-    {
-      "data": "2026-10-13",
-      "servizio": "pranzo",
-      "prezzo": 32,
-      "piatti": [
-        {
-          "portata": "antipasto",
-          "nome": "Antipasto del Ciliegio",
-          "stato": "match",
-          "matchId": "mo1xei4h6yo"
-        },
-        {
-          "portata": "primo",
-          "nome": "Lasagne con verdure di stagione",
-          "stato": "incerto",
-          "suggestedMatchId": "mnsq9hynfdo",
-          "nota": "Letto 'LASAGNE CON VERDURE DI STAGIONE', simile a 'Lasagne con verdure miste'."
-        },
-        {
-          "portata": "secondo",
-          "nome": "Tagliata di manzo al pepe rosa",
-          "stato": "match",
-          "matchId": "mnsq9hyn0ay"
-        },
-        {
-          "portata": "contorno",
-          "nome": "Patate arrosto",
-          "stato": "match",
-          "matchId": "mnsq9hynayz"
-        },
-        {
-          "portata": "dolce",
-          "nome": "Dolce della casa",
-          "stato": "match",
-          "matchId": "mo67hzucqmt"
-        }
-      ]
-    },
-    {
-      "data": "2026-10-13",
-      "servizio": "cena",
-      "prezzo": 30,
-      "piatti": [
-        {
-          "portata": "antipasto",
-          "nome": "Affettati misti",
-          "stato": "incerto",
-          "suggestedMatchId": "mnsq9hynqk0",
-          "nota": "Letto 'ATTENTATI MISTI' (probabile errore di trascrizione per AFFETTATI MISTI). Blocco GLOBUS/RODANI, evento con musica e 'tutta una sala' ma non chiaramente esclusiva totale: incluso per sicurezza."
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Formaggi con miele a parte",
-          "stato": "match",
-          "matchId": "mo1w8xtm5r2",
-          "nota": "Blocco GLOBUS/RODANI, probabilmente privato."
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Crostino ricotta, noci e miele",
-          "stato": "match",
-          "matchId": "mo1zvr87ez2",
-          "nota": "Blocco GLOBUS/RODANI, probabilmente privato."
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Polenta ripiena con scamorza e salsiccia",
-          "stato": "match",
-          "matchId": "mnsq9hyn6l4",
-          "nota": "Blocco GLOBUS/RODANI, probabilmente privato."
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Crostone con trippa e formaggio",
-          "stato": "match",
-          "matchId": "mnsq9hynlhy",
-          "nota": "Blocco GLOBUS/RODANI, probabilmente privato."
-        },
-        {
-          "portata": "primo",
-          "nome": "Pappardelle al ragù di cinghiale",
-          "stato": "match",
-          "matchId": "mnsq9hyns1x",
-          "nota": "Blocco GLOBUS/RODANI, probabilmente privato."
-        },
-        {
-          "portata": "secondo",
-          "nome": "Fiocchetto di maiale in crosta",
-          "stato": "incerto",
-          "suggestedMatchId": "mnsq9hyncpy",
-          "nota": "Letto 'FIOCCO DI MAIALE IN CROSTA', simile a 'Filetto di maiale in crosta di pane'. Blocco GLOBUS/RODANI, probabilmente privato."
-        },
-        {
-          "portata": "contorno",
-          "nome": "Patate arrosto (no sabbiate)",
-          "stato": "match",
-          "matchId": "mnsq9hynayz",
-          "nota": "Blocco GLOBUS/RODANI, probabilmente privato."
-        },
-        {
-          "portata": "dolce",
-          "nome": "Mousse di ricotta al cioccolato con riduzione al limone",
-          "stato": "incerto",
-          "suggestedMatchId": "mnsq9hynj2g",
-          "nota": "Letto 'MOUSSE DI RICOTTA CON CIOCCOLATO CON RIDUZIONE DI LIMONE'. Blocco GLOBUS/RODANI, probabilmente privato."
-        }
-      ]
-    },
-    {
-      "data": "2026-10-14",
-      "servizio": "pranzo",
-      "prezzo": 32,
-      "piatti": [
-        {
-          "portata": "antipasto",
-          "nome": "Antipasto misto toscano",
-          "stato": "match",
-          "matchId": "mo68jqekj3x"
-        },
-        {
-          "portata": "primo",
-          "nome": "Pasta fresca al ragù di cinghiale",
-          "stato": "match",
-          "matchId": "mo67h4xg40w"
-        },
-        {
-          "portata": "secondo",
-          "nome": "Scamerita alla griglia",
-          "stato": "match",
-          "matchId": "mo69j5b1uwp"
-        },
-        {
-          "portata": "contorno",
-          "nome": "Patate arrosto",
-          "stato": "match",
-          "matchId": "mnsq9hynayz"
-        },
-        {
-          "portata": "dolce",
-          "nome": "Dolce della casa",
-          "stato": "match",
-          "matchId": "mo67hzucqmt"
-        }
-      ]
-    },
-    {
-      "data": "2026-10-14",
-      "servizio": "cena",
-      "prezzo": 32,
-      "piatti": [
-        {
-          "portata": "antipasto",
-          "nome": "Selezione di salumi toscani",
-          "stato": "match",
-          "matchId": "mnsq9hynqk0"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Formaggi con marmellata e/o miele",
-          "stato": "match",
-          "matchId": "mo1w8xtm5r2"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Crostone con lampredotto e salsa verde",
-          "stato": "match",
-          "matchId": "mnsq9hync35"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Crostino con gota, pecorino e miele",
-          "stato": "match",
-          "matchId": "mnsq9hynkaz"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Bruschetta con finocchiella e finocchiona",
-          "stato": "incerto",
-          "suggestedMatchId": "mnsq9hymqzy",
-          "nota": "Letto 'BRUSCHETTA CON FINOCCHIELLA E FINOCCHIONA', probabilmente lo stesso piatto."
-        },
-        {
-          "portata": "primo",
-          "nome": "Straccetti con salsiccia, zucca gialla e pecorino",
-          "stato": "match",
-          "matchId": "mv485hjbymm"
-        },
-        {
-          "portata": "secondo",
-          "nome": "Tagliata di manzo al pepe rosa",
-          "stato": "match",
-          "matchId": "mnsq9hyn0ay"
-        },
-        {
-          "portata": "contorno",
-          "nome": "Patate arrosto",
-          "stato": "match",
-          "matchId": "mnsq9hynayz"
-        },
-        {
-          "portata": "dolce",
-          "nome": "Dolce della casa",
-          "stato": "match",
-          "matchId": "mo67hzucqmt"
-        }
-      ]
-    },
-    {
-      "data": "2026-10-15",
-      "servizio": "pranzo",
-      "prezzo": 32,
-      "piatti": [
-        {
-          "portata": "antipasto",
-          "nome": "Antipasto misto toscano",
-          "stato": "match",
-          "matchId": "mo68jqekj3x"
-        },
-        {
-          "portata": "primo",
-          "nome": "Pici cacio e pepe",
-          "stato": "incerto",
-          "suggestedMatchId": "mnsq9hyngl1",
-          "nota": "Letto 'PICI CARBONARA' nella sezione 'PRIMO PIANO' — possibile riferimento a Pici alla Amatriciana/carbonara (mp336q0pxa8). Da verificare se è la stessa sezione del sito o altro blocco."
-        },
-        {
-          "portata": "secondo",
-          "nome": "Tagliata agli aromi",
-          "stato": "match",
-          "matchId": "mnsq9hyn4sj",
-          "nota": "Letto 'TAGLIATA AROMI'."
-        },
-        {
-          "portata": "contorno",
-          "nome": "Patate arrosto",
-          "stato": "match",
-          "matchId": "mnsq9hynayz"
-        },
-        {
-          "portata": "dolce",
-          "nome": "Crostata alla crema e frutta fresca",
-          "stato": "match",
-          "matchId": "mtsfdqpkwbk",
-          "nota": "Letto 'CROSTATA CREMA E FRUTTA FRESCA'."
-        }
-      ]
-    },
-    {
-      "data": "2026-10-15",
-      "servizio": "cena",
-      "prezzo": 32,
-      "piatti": [
-        {
-          "portata": "antipasto",
-          "nome": "Antipasto del Ciliegio",
-          "stato": "match",
-          "matchId": "mo1xei4h6yo",
-          "nota": "Blocco con gruppo svizzero/Salvatore, non etichettato SITO ma è l'unico menù finale della pagina: incluso per sicurezza."
-        },
-        {
-          "portata": "primo",
-          "nome": "Pici al ragù",
-          "stato": "match",
-          "matchId": "mo1zx4sfwtk",
-          "nota": "Stesso blocco, vedi nota sopra."
-        },
-        {
-          "portata": "secondo",
-          "nome": "Tagliata di manzo agli aromi",
-          "stato": "match",
-          "matchId": "mnsq9hyn4sj",
-          "nota": "Stesso blocco, vedi nota sopra."
-        },
-        {
-          "portata": "contorno",
-          "nome": "Patate arrosto",
-          "stato": "match",
-          "matchId": "mnsq9hynayz",
-          "nota": "Stesso blocco, vedi nota sopra."
-        },
-        {
-          "portata": "dolce",
-          "nome": "Dolce della casa",
-          "stato": "match",
-          "matchId": "mo67hzucqmt",
-          "nota": "Stesso blocco, vedi nota sopra."
-        }
-      ]
-    },
-    {
-      "data": "2026-10-16",
-      "servizio": "pranzo",
-      "prezzo": 32,
-      "piatti": [
-        {
-          "portata": "antipasto",
-          "nome": "Antipasto misto toscano",
-          "stato": "match",
-          "matchId": "mo68jqekj3x"
-        },
-        {
-          "portata": "primo",
-          "nome": "Pasta fresca al ragù toscano",
-          "stato": "match",
-          "matchId": "mo68pp64giu"
-        },
-        {
-          "portata": "secondo",
-          "nome": "Scamerita alla griglia",
-          "stato": "match",
-          "matchId": "mo69j5b1uwp"
-        },
-        {
-          "portata": "contorno",
-          "nome": "Patate arrosto",
-          "stato": "match",
-          "matchId": "mnsq9hynayz"
-        },
-        {
-          "portata": "dolce",
-          "nome": "Cantucci e vin santo",
-          "stato": "match",
-          "matchId": "mnsq9hynzar"
-        }
-      ]
-    },
-    {
-      "data": "2026-10-16",
-      "servizio": "cena",
-      "piatti": [
-        {
-          "portata": "antipasto",
-          "nome": "Tonno del Chianti",
-          "stato": "match",
-          "matchId": "mnsq9hynmjr",
-          "nota": "Evento privato (Valerio/Ferrandi Sauro, buffet con musica), con nome proprio: probabilmente non per il sito, incluso per sicurezza."
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Polenta con cavolo nero e pancetta",
-          "stato": "match",
-          "matchId": "mv48eas6ip4",
-          "nota": "Evento privato, probabilmente non per il sito."
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Crostone con lampredotto e salsa verde",
-          "stato": "match",
-          "matchId": "mnsq9hync35",
-          "nota": "Evento privato, probabilmente non per il sito."
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Pecorini con miele",
-          "stato": "incerto",
-          "suggestedMatchId": "mo69lwc5p4m",
-          "nota": "Letto 'PECORINI CON MIELE', simile a 'Formaggi pecorini con cipolle' ma con miele. Evento privato, probabilmente non per il sito."
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Crostino con prugna e guanciale",
-          "stato": "match",
-          "matchId": "mnsq9hyn5zs",
-          "nota": "Evento privato, probabilmente non per il sito."
-        },
-        {
-          "portata": "primo",
-          "nome": "Crespelle ricotta e spinaci",
-          "stato": "match",
-          "matchId": "mnsq9hyn7jq",
-          "nota": "Evento privato, probabilmente non per il sito."
-        },
-        {
-          "portata": "primo",
-          "nome": "Pasta corta con salsiccia e verdure",
-          "stato": "match",
-          "matchId": "mv48c4lb5ng",
-          "nota": "Evento privato, probabilmente non per il sito."
-        },
-        {
-          "portata": "secondo",
-          "nome": "Tagliata di manzo al lardo",
-          "stato": "match",
-          "matchId": "mnsq9hynfgf",
-          "nota": "Letto 'TAGLIATA CON LARDO'. Evento privato, probabilmente non per il sito."
-        },
-        {
-          "portata": "contorno",
-          "nome": "Patate sabbiate",
-          "stato": "match",
-          "matchId": "mnsq9hynelb",
-          "nota": "Evento privato, probabilmente non per il sito."
-        },
-        {
-          "portata": "dolce",
-          "nome": "⚠ MANCA IL RESTO DEL MENU",
-          "stato": "incerto",
-          "suggestedMatchId": null,
-          "nota": "Scritto solo 'DOLCE' senza specificare quale, nella foto del venerdì 16 ottobre cena (evento Valerio/Ferrandi Sauro)."
-        }
-      ]
-    },
-    {
-      "data": "2026-10-17",
-      "servizio": "pranzo",
-      "prezzo": 32,
-      "piatti": [
-        {
-          "portata": "antipasto",
-          "nome": "Crostino con gota, pecorino e miele",
-          "stato": "match",
-          "matchId": "mnsq9hynkaz"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Cecina",
-          "stato": "match",
-          "matchId": "mnsq9hymuqe"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Selezione di salumi toscani",
-          "stato": "match",
-          "matchId": "mnsq9hynqk0"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Pecorini con marmellata",
-          "stato": "incerto",
-          "suggestedMatchId": "mo1w8xtm5r2",
-          "nota": "Letto 'PECORINI CON MARMELLATA', simile a 'Formaggi Pecorini con Marmellata e/o Miele'."
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Polenta con cavolo nero e pancetta",
-          "stato": "match",
-          "matchId": "mv48eas6ip4"
-        },
-        {
-          "portata": "primo",
-          "nome": "Straccetti al ragù di cinghiale",
-          "stato": "match",
-          "matchId": "mo76cwvebr1"
-        },
-        {
-          "portata": "secondo",
-          "nome": "Tagliata di manzo agli aromi",
-          "stato": "match",
-          "matchId": "mnsq9hyn4sj"
-        },
-        {
-          "portata": "contorno",
-          "nome": "Verdure al forno",
-          "stato": "incerto",
-          "suggestedMatchId": "mnsq9hync5b",
-          "nota": "Scritto e poi parzialmente cancellato/riscritto 'VERDURE AL FORNO', testo confuso nella foto."
-        },
-        {
-          "portata": "dolce",
-          "nome": "Crostata con ricotta, pinoli e uvetta",
-          "stato": "match",
-          "matchId": "mnsq9hyngxs",
-          "nota": "Letto 'CROSTATA DI CON PINOLI UVETTA', probabile corrispondenza."
-        }
-      ]
-    },
-    {
-      "data": "2026-10-17",
-      "servizio": "cena",
-      "prezzo": 35,
-      "piatti": [
-        {
-          "portata": "antipasto",
-          "nome": "Selezione di salumi locali",
-          "stato": "incerto",
-          "suggestedMatchId": "mnsq9hynqk0",
-          "nota": "Letto 'SELEZIONE DI SALUMI LOCALI' invece di 'toscani'. Evento privato (Valerio/Simonetta), nome proprio: probabilmente non per il sito, incluso per sicurezza."
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Polenta, salsiccia e scamorza",
-          "stato": "incerto",
-          "suggestedMatchId": "mnsq9hyn6l4",
-          "nota": "Letto 'POLENTA SALSICCIA E SCAMORZA', simile a 'Polenta ripiena con scamorza e salsiccia'. Evento privato, probabilmente non per il sito."
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Formaggi misti con marmellata",
-          "stato": "match",
-          "matchId": "mohaxdaa2wx",
-          "nota": "Evento privato, probabilmente non per il sito."
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Crostino nero toscano",
-          "stato": "incerto",
-          "suggestedMatchId": "mnsq9hyneqw",
-          "nota": "Letto 'CROSTINO NERO TOSCANO'. Evento privato, probabilmente non per il sito."
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Frittini misti con verdure di stagione",
-          "stato": "match",
-          "matchId": "mnsq9hynak8",
-          "nota": "Evento privato, probabilmente non per il sito."
-        },
-        {
-          "portata": "primo",
-          "nome": "Tortiglioni con crema di porri, briciole di pane e guanciale croccante",
-          "stato": "match",
-          "matchId": "mnsq9hyn657",
-          "nota": "ATTENZIONE: id non corretto, verificare — il più simile è mnsq9hyn657 ma è un contorno, potrebbe essere mujyqw4dohy o mnsq9hyn657 errato. Controllare manualmente. Evento privato, probabilmente non per il sito."
-        },
-        {
-          "portata": "secondo",
-          "nome": "Tagliata di manzo agli aromi",
-          "stato": "match",
-          "matchId": "mnsq9hyn4sj",
-          "nota": "Evento privato, probabilmente non per il sito."
-        },
-        {
-          "portata": "secondo",
-          "nome": "Capocollo ripieno con salsiccia, pere e fonduta di gorgonzola",
-          "stato": "incerto",
-          "suggestedMatchId": "mnsq9hyn38r",
-          "nota": "Letto 'CAPOCOLLO RIPIENO CON SALSICCIA, PERE E FONDUTA DI GORGONZOLA', simile a 'Capocollo ripieno con salsiccia, pere e gorgonzola' ma con 'fonduta'. Evento privato, probabilmente non per il sito."
-        },
-        {
-          "portata": "contorno",
-          "nome": "Patate arrosto",
-          "stato": "match",
-          "matchId": "mnsq9hynayz",
-          "nota": "Evento privato, probabilmente non per il sito."
-        },
-        {
-          "portata": "dolce",
-          "nome": "Dolce della casa",
-          "stato": "match",
-          "matchId": "mo67hzucqmt",
-          "nota": "Evento privato, probabilmente non per il sito."
-        }
-      ]
-    }
-  ]
+  "importPending": []
 }
