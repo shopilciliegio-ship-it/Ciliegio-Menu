@@ -5,7 +5,9 @@
 // "📥 Importa Menù Settimana" per rivedere/confermare le bozze.
 
 const fs = require('fs');
+const os = require('os');
 const path = require('path');
+const { spawnSync } = require('child_process');
 const Anthropic = require('@anthropic-ai/sdk');
 
 const ROOT = __dirname;
@@ -84,8 +86,19 @@ FORMATO OUTPUT — rispondi SOLO con un array JSON valido, nessun testo prima o 
 
 Se una foto non contiene nessun menù SITO utilizzabile (es. solo prenotazioni/eventi privati), semplicemente non generare nessuna voce per quel giorno/servizio — non è un errore.`;
 
+// Raddrizza le foto (rotazione EXIF) in una cartella temporanea prima di mandarle a Claude.
+let LETTURA_DIR = FOTO_DIR;
+{
+  const tmp = path.join(os.tmpdir(), 'ciliegio-foto-raddrizzate');
+  fs.rmSync(tmp, { recursive: true, force: true });
+  console.log('\nRaddrizzo le foto...');
+  const r = spawnSync('python', [path.join(ROOT, 'raddrizza-foto.py'), FOTO_DIR, tmp], { encoding: 'utf8' });
+  if (r.status === 0) { console.log(r.stdout.trim()); LETTURA_DIR = tmp; }
+  else console.log('ATTENZIONE: raddrizzamento non riuscito, uso le foto originali. ' + (r.stderr || r.error || ''));
+}
+
 const imageBlocks = files.map(name => {
-  const data = fs.readFileSync(path.join(FOTO_DIR, name));
+  const data = fs.readFileSync(path.join(LETTURA_DIR, name));
   return {
     type: 'image',
     source: { type: 'base64', media_type: MIME[path.extname(name).toLowerCase()], data: data.toString('base64') }
