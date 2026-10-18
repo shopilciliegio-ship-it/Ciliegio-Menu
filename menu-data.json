@@ -9127,11 +9127,15 @@
         "secondo": [
           "mnsq9hyn0ay"
         ],
-        "contorno": [],
-        "dolce": []
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
       },
       "testoLibero": "",
-      "prezzo": null,
+      "prezzo": 32,
       "nomeSpecifico": "Menù del Sito"
     }
   },
@@ -10809,6 +10813,18 @@
       "gruppi": []
     },
     "2026-10-23_cena": {
+      "gruppi": []
+    },
+    "2026-10-25_pranzo": {
+      "gruppi": []
+    },
+    "2026-10-25_cena": {
+      "gruppi": []
+    },
+    "2026-10-30_pranzo": {
+      "gruppi": []
+    },
+    "2026-10-30_cena": {
       "gruppi": []
     }
   },
