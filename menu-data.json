@@ -11307,5 +11307,348 @@
       }
     ]
   },
-  "importPending": []
+  "importPending": [
+    {
+      "data": "2026-10-20",
+      "servizio": "pranzo",
+      "prezzo": 36,
+      "piatti": [
+        {
+          "portata": "antipasto",
+          "nome": "Crostino nero",
+          "stato": "match",
+          "matchId": "mnsq9hyneqw"
+        },
+        {
+          "portata": "antipasto",
+          "nome": "Crostino con gota, pecorino e miele",
+          "stato": "incerto",
+          "suggestedMatchId": "mnsq9hynkaz",
+          "nota": "Scritto 'sel. attenti vocazù' poco chiaro, probabile errore di lettura/trascrizione"
+        },
+        {
+          "portata": "primo",
+          "nome": "Tortino di pappa al pomodoro",
+          "stato": "incerto",
+          "suggestedMatchId": "mnsq9hyno6u",
+          "nota": "Scritto 'Tortino di pappa al rottoro', probabile refuso per 'pomodoro'"
+        },
+        {
+          "portata": "primo",
+          "nome": "Tortino salato sale e cipolla",
+          "stato": "incerto",
+          "suggestedMatchId": "mnsq9hynuwh",
+          "nota": "Scritto 'Tortino salata sale e cipolla', probabilmente intende Torta salata salsiccia e cipolla"
+        },
+        {
+          "portata": "primo",
+          "nome": "Pici al ragù bianco",
+          "stato": "match",
+          "matchId": "mo1waims7of"
+        },
+        {
+          "portata": "primo",
+          "nome": "Tagliata di salsiccia e santoreggia",
+          "stato": "incerto",
+          "suggestedMatchId": null,
+          "nota": "Scritto 'Tagliata di salsiccia' ma potrebbe riferirsi a un piatto diverso, non trovato corrispondente esatto"
+        },
+        {
+          "portata": "secondo",
+          "nome": "Patate arrosto",
+          "stato": "match",
+          "matchId": "mnsq9hynayz"
+        },
+        {
+          "portata": "dolce",
+          "nome": "Dolce della casa",
+          "stato": "match",
+          "matchId": "mo67hzucqmt"
+        }
+      ]
+    },
+    {
+      "data": "2026-10-21",
+      "servizio": "pranzo",
+      "prezzo": 35,
+      "piatti": [
+        {
+          "portata": "antipasto",
+          "nome": "Antipasto del Ciliegio",
+          "stato": "incerto",
+          "suggestedMatchId": "mo1xei4h6yo",
+          "nota": "Scritto 'Antipasto del Ciliegio', letto da blocco finale pagina Mercoledì 21 ottobre"
+        },
+        {
+          "portata": "antipasto",
+          "nome": "Crostino con fegatini di pollo, sale grosso e miele",
+          "stato": "incerto",
+          "suggestedMatchId": "mnsq9hynyoo",
+          "nota": "Scritto 'Crostino niele, pecorino, pepe e gr. noci' poco chiaro"
+        },
+        {
+          "portata": "primo",
+          "nome": "Crostini di gota al grigliate",
+          "stato": "incerto",
+          "suggestedMatchId": null,
+          "nota": "Testo poco chiaro, probabile piatto diverso non riconosciuto"
+        },
+        {
+          "portata": "secondo",
+          "nome": "Tortino di pappa al pomodoro",
+          "stato": "incerto",
+          "suggestedMatchId": "mnsq9hyno6u",
+          "nota": "Scritto 'Tortino di pappa al pomodoro', portata incerta"
+        },
+        {
+          "portata": "secondo",
+          "nome": "Crostone bianco - Tagliata di fagioli e cipolla",
+          "stato": "incerto",
+          "suggestedMatchId": null,
+          "nota": "Testo molto confuso e illeggibile in più punti, verifica con originale"
+        }
+      ]
+    },
+    {
+      "data": "2026-10-22",
+      "servizio": "pranzo",
+      "prezzo": 32,
+      "piatti": [
+        {
+          "portata": "antipasto",
+          "nome": "Prosciutto",
+          "stato": "incerto",
+          "suggestedMatchId": "mo1yfczjr82",
+          "nota": "Scritto 'Prosciutto', abbinato a Prosciutto Crudo"
+        },
+        {
+          "portata": "primo",
+          "nome": "Tagliatelle nane",
+          "stato": "incerto",
+          "suggestedMatchId": null,
+          "nota": "Scritto 'Tagliatelle nane', testo poco chiaro"
+        },
+        {
+          "portata": "primo",
+          "nome": "Straccetti con crema gialla",
+          "stato": "incerto",
+          "suggestedMatchId": null,
+          "nota": "Testo 'Stra cceti Alecorino gotta ruore' molto confuso, verifica con originale"
+        },
+        {
+          "portata": "secondo",
+          "nome": "⚠ MANCA IL RESTO DEL MENU",
+          "stato": "incerto",
+          "suggestedMatchId": null,
+          "nota": "Blocco SITO del Giovedì 22 ottobre pranzo appare incompleto/confuso, mancano secondo/contorno/dolce chiari"
+        }
+      ]
+    },
+    {
+      "data": "2026-10-23",
+      "servizio": "cena",
+      "prezzo": 32,
+      "piatti": [
+        {
+          "portata": "antipasto",
+          "nome": "Crostino nero",
+          "stato": "match",
+          "matchId": "mnsq9hyneqw"
+        },
+        {
+          "portata": "antipasto",
+          "nome": "Crostino con gota, pecorino e miele",
+          "stato": "match",
+          "matchId": "mnsq9hynkaz"
+        },
+        {
+          "portata": "antipasto",
+          "nome": "Battuta di manzo con maionese alla paprika",
+          "stato": "match",
+          "matchId": "mnsq9hymoq1"
+        },
+        {
+          "portata": "primo",
+          "nome": "Polenta con cavolo nero e pancetta",
+          "stato": "match",
+          "matchId": "mv48eas6ip4"
+        },
+        {
+          "portata": "primo",
+          "nome": "Crostino con lampredotto e salsa verde",
+          "stato": "match",
+          "matchId": "mo687di42u2"
+        },
+        {
+          "portata": "primo",
+          "nome": "Pici agli agrumi",
+          "stato": "incerto",
+          "suggestedMatchId": "mnsq9hyn9ag",
+          "nota": "Scritto 'Pici aguone', probabile refuso per 'Pici all'aglione'"
+        }
+      ]
+    },
+    {
+      "data": "2026-10-24",
+      "servizio": "pranzo",
+      "prezzo": 35,
+      "piatti": [
+        {
+          "portata": "antipasto",
+          "nome": "Crostino nero",
+          "stato": "match",
+          "matchId": "mnsq9hyneqw"
+        },
+        {
+          "portata": "primo",
+          "nome": "Crostino con salsa verde e noce",
+          "stato": "incerto",
+          "suggestedMatchId": "mnsq9hynn6x",
+          "nota": "Scritto 'Crostino con salsa verde', testo confuso con parola extra"
+        },
+        {
+          "portata": "primo",
+          "nome": "Crostino con cipolla e lardo e salsiccia",
+          "stato": "incerto",
+          "suggestedMatchId": null,
+          "nota": "Scritto 'Crostino con cipolla e lardo e Selezione di salumi', testo poco chiaro, verifica"
+        },
+        {
+          "portata": "primo",
+          "nome": "Pici al ragù di coniglio con cipolla e sopressata",
+          "stato": "incerto",
+          "suggestedMatchId": "mnsq9hynic3",
+          "nota": "Scritto 'Pici al ragù di conigli con cipolla e sopressata', dubbio su abbinamento esatto"
+        },
+        {
+          "portata": "secondo",
+          "nome": "Filetto di maiale al ragù di coniglio con brace",
+          "stato": "incerto",
+          "suggestedMatchId": null,
+          "nota": "Testo 'Filetto di maiale in crosta di pane con brace' confuso, verifica originale"
+        },
+        {
+          "portata": "dolce",
+          "nome": "Dolce della casa",
+          "stato": "match",
+          "matchId": "mo67hzucqmt"
+        }
+      ]
+    },
+    {
+      "data": "2026-10-19",
+      "servizio": "pranzo",
+      "prezzo": 35,
+      "piatti": [
+        {
+          "portata": "antipasto",
+          "nome": "Crostino nero con gota",
+          "stato": "incerto",
+          "suggestedMatchId": "mnsq9hynkaz",
+          "nota": "Scritto 'Crostino nero con gota', potrebbe riferirsi a Crostino con gota, pecorino e miele"
+        },
+        {
+          "portata": "primo",
+          "nome": "Straccetti con salsa al limone e pancetta",
+          "stato": "incerto",
+          "suggestedMatchId": null,
+          "nota": "Scritto confuso, testo di difficile lettura, verifica originale"
+        },
+        {
+          "portata": "primo",
+          "nome": "Lasagna con zucca gialla e scamorza",
+          "stato": "match",
+          "matchId": "mnsq9hynyof"
+        },
+        {
+          "portata": "primo",
+          "nome": "Pici con crosta di pecorino, pancetta e cannella",
+          "stato": "incerto",
+          "suggestedMatchId": "mqe7d7w0p28",
+          "nota": "Scritto 'Pici con crosta di pecorino, pancetta e cannella', assomiglia a Pici con crema di pecorino, guanciale e pancetta croccante"
+        },
+        {
+          "portata": "contorno",
+          "nome": "Patate arrosto",
+          "stato": "match",
+          "matchId": "mnsq9hynayz"
+        },
+        {
+          "portata": "dolce",
+          "nome": "Dolce della casa",
+          "stato": "match",
+          "matchId": "mo67hzucqmt"
+        }
+      ]
+    },
+    {
+      "data": "2026-10-25",
+      "servizio": "pranzo",
+      "prezzo": 36,
+      "piatti": [
+        {
+          "portata": "antipasto",
+          "nome": "Selezione di sapori locali",
+          "stato": "incerto",
+          "suggestedMatchId": "mnsq9hynqk0",
+          "nota": "Scritto 'Sel. Sapori locali', potrebbe riferirsi a una selezione generica"
+        },
+        {
+          "portata": "antipasto",
+          "nome": "Crostone con cavolo nero e pancetta",
+          "stato": "match",
+          "matchId": "mnsq9hymtkv"
+        },
+        {
+          "portata": "antipasto",
+          "nome": "Tonno del Chianti",
+          "stato": "match",
+          "matchId": "mnsq9hynmjr"
+        },
+        {
+          "portata": "antipasto",
+          "nome": "Selezione di pecorini con miele o marmellata",
+          "stato": "incerto",
+          "suggestedMatchId": "mo1w8xtm5r2",
+          "nota": "Scritto 'Sel. Pecorini con miele o marmellata'"
+        },
+        {
+          "portata": "antipasto",
+          "nome": "Crostino con crema di ceci e scorza di limone",
+          "stato": "match",
+          "matchId": "mnsq9hynh2h"
+        },
+        {
+          "portata": "primo",
+          "nome": "Ribollita",
+          "stato": "match",
+          "matchId": "mnsq9hynwdm"
+        },
+        {
+          "portata": "primo",
+          "nome": "Pappardelle al ragù bianco",
+          "stato": "match",
+          "matchId": "mrkoxuy1xx0"
+        },
+        {
+          "portata": "secondo",
+          "nome": "Tagliata di manzo al pepe rosa",
+          "stato": "match",
+          "matchId": "mnsq9hyn0ay"
+        },
+        {
+          "portata": "contorno",
+          "nome": "Patate arrosto",
+          "stato": "match",
+          "matchId": "mnsq9hynayz"
+        },
+        {
+          "portata": "dolce",
+          "nome": "Dolce della casa",
+          "stato": "match",
+          "matchId": "mo67hzucqmt"
+        }
+      ]
+    }
+  ]
 }
