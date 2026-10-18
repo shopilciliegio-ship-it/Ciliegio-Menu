@@ -8905,6 +8905,31 @@
       "testoLibero": "",
       "prezzo": 32,
       "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-10-20_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hyneqw",
+          "mnsq9hyno6u",
+          "mnsq9hynuwh",
+          "mnsq9hynqk0",
+          "mnsq9hynxrp"
+        ],
+        "primo": [
+          "mo1waims7of"
+        ],
+        "secondo": [
+          "mnsq9hyns9r",
+          "mnsq9hyn4sj"
+        ],
+        "contorno": [],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 36,
+      "nomeSpecifico": "Menù del Sito"
     }
   },
   "prenotazioni": {
@@ -11308,66 +11333,6 @@
     ]
   },
   "importPending": [
-    {
-      "data": "2026-10-20",
-      "servizio": "pranzo",
-      "prezzo": 36,
-      "piatti": [
-        {
-          "portata": "antipasto",
-          "nome": "Crostino nero",
-          "stato": "match",
-          "matchId": "mnsq9hyneqw"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Tortino di pappa al pomodoro",
-          "stato": "match",
-          "suggestedMatchId": "mnsq9hyno6u",
-          "nota": "Scritto 'Tortino di pappa al rottoro', probabile refuso per 'pomodoro'",
-          "matchId": "mnsq9hyno6u"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Torta salata salsiccia e cipolla",
-          "stato": "match",
-          "suggestedMatchId": "mnsq9hynuwh",
-          "nota": "Scritto 'Tortino salata sale e cipolla', probabilmente intende Torta salata salsiccia e cipolla",
-          "matchId": "mnsq9hynuwh"
-        },
-        {
-          "portata": "primo",
-          "nome": "Pici al ragù bianco",
-          "stato": "match",
-          "matchId": "mo1waims7of"
-        },
-        {
-          "portata": "primo",
-          "nome": "Tagliata di salsiccia e santoreggia",
-          "stato": "incerto",
-          "suggestedMatchId": null,
-          "nota": "Scritto 'Tagliata di salsiccia' ma potrebbe riferirsi a un piatto diverso, non trovato corrispondente esatto"
-        },
-        {
-          "portata": "secondo",
-          "nome": "Patate arrosto",
-          "stato": "match",
-          "matchId": "mnsq9hynayz"
-        },
-        {
-          "portata": "dolce",
-          "nome": "Dolce della casa",
-          "stato": "match",
-          "matchId": "mo67hzucqmt"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Selezione di salumi toscani",
-          "stato": "match",
-          "matchId": "mnsq9hynqk0"
-        }
-      ]
-    },
     {
       "data": "2026-10-21",
       "servizio": "pranzo",
