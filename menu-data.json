@@ -11321,24 +11321,19 @@
         },
         {
           "portata": "antipasto",
-          "nome": "Crostino con gota, pecorino e miele",
-          "stato": "incerto",
-          "suggestedMatchId": "mnsq9hynkaz",
-          "nota": "Scritto 'sel. attenti vocazù' poco chiaro, probabile errore di lettura/trascrizione"
-        },
-        {
-          "portata": "primo",
           "nome": "Tortino di pappa al pomodoro",
-          "stato": "incerto",
+          "stato": "match",
           "suggestedMatchId": "mnsq9hyno6u",
-          "nota": "Scritto 'Tortino di pappa al rottoro', probabile refuso per 'pomodoro'"
+          "nota": "Scritto 'Tortino di pappa al rottoro', probabile refuso per 'pomodoro'",
+          "matchId": "mnsq9hyno6u"
         },
         {
-          "portata": "primo",
-          "nome": "Tortino salato sale e cipolla",
-          "stato": "incerto",
+          "portata": "antipasto",
+          "nome": "Torta salata salsiccia e cipolla",
+          "stato": "match",
           "suggestedMatchId": "mnsq9hynuwh",
-          "nota": "Scritto 'Tortino salata sale e cipolla', probabilmente intende Torta salata salsiccia e cipolla"
+          "nota": "Scritto 'Tortino salata sale e cipolla', probabilmente intende Torta salata salsiccia e cipolla",
+          "matchId": "mnsq9hynuwh"
         },
         {
           "portata": "primo",
@@ -11364,6 +11359,12 @@
           "nome": "Dolce della casa",
           "stato": "match",
           "matchId": "mo67hzucqmt"
+        },
+        {
+          "portata": "antipasto",
+          "nome": "Selezione di salumi toscani",
+          "stato": "match",
+          "matchId": "mnsq9hynqk0"
         }
       ]
     },
