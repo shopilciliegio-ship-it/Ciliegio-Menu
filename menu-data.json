@@ -8930,6 +8930,52 @@
       "testoLibero": "",
       "prezzo": 36,
       "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-10-22_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo1xei4h6yo"
+        ],
+        "primo": [
+          "mo76cwvebr1"
+        ],
+        "secondo": [
+          "mnsq9hyn4sj"
+        ],
+        "contorno": [
+          "mnsq9hync5b"
+        ],
+        "dolce": []
+      },
+      "testoLibero": "",
+      "prezzo": 32,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-10-23_cena_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hyneqw",
+          "mnsq9hynkaz",
+          "mnsq9hymoq1",
+          "mv48eas6ip4",
+          "mo687di42u2"
+        ],
+        "primo": [
+          "mnsq9hyn9ag"
+        ],
+        "secondo": [
+          "mnsq9hynlgw"
+        ],
+        "contorno": [
+          "mnsq9hynelb"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 32,
+      "nomeSpecifico": "Menù del Sito"
     }
   },
   "prenotazioni": {
@@ -11336,7 +11382,7 @@
     {
       "data": "2026-10-21",
       "servizio": "pranzo",
-      "prezzo": 35,
+      "prezzo": 32,
       "piatti": [
         {
           "portata": "antipasto",
@@ -11376,85 +11422,6 @@
       ]
     },
     {
-      "data": "2026-10-22",
-      "servizio": "pranzo",
-      "prezzo": 32,
-      "piatti": [
-        {
-          "portata": "antipasto",
-          "nome": "Prosciutto",
-          "stato": "incerto",
-          "suggestedMatchId": "mo1yfczjr82",
-          "nota": "Scritto 'Prosciutto', abbinato a Prosciutto Crudo"
-        },
-        {
-          "portata": "primo",
-          "nome": "Tagliatelle nane",
-          "stato": "incerto",
-          "suggestedMatchId": null,
-          "nota": "Scritto 'Tagliatelle nane', testo poco chiaro"
-        },
-        {
-          "portata": "primo",
-          "nome": "Straccetti con crema gialla",
-          "stato": "incerto",
-          "suggestedMatchId": null,
-          "nota": "Testo 'Stra cceti Alecorino gotta ruore' molto confuso, verifica con originale"
-        },
-        {
-          "portata": "secondo",
-          "nome": "⚠ MANCA IL RESTO DEL MENU",
-          "stato": "incerto",
-          "suggestedMatchId": null,
-          "nota": "Blocco SITO del Giovedì 22 ottobre pranzo appare incompleto/confuso, mancano secondo/contorno/dolce chiari"
-        }
-      ]
-    },
-    {
-      "data": "2026-10-23",
-      "servizio": "cena",
-      "prezzo": 32,
-      "piatti": [
-        {
-          "portata": "antipasto",
-          "nome": "Crostino nero",
-          "stato": "match",
-          "matchId": "mnsq9hyneqw"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Crostino con gota, pecorino e miele",
-          "stato": "match",
-          "matchId": "mnsq9hynkaz"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Battuta di manzo con maionese alla paprika",
-          "stato": "match",
-          "matchId": "mnsq9hymoq1"
-        },
-        {
-          "portata": "primo",
-          "nome": "Polenta con cavolo nero e pancetta",
-          "stato": "match",
-          "matchId": "mv48eas6ip4"
-        },
-        {
-          "portata": "primo",
-          "nome": "Crostino con lampredotto e salsa verde",
-          "stato": "match",
-          "matchId": "mo687di42u2"
-        },
-        {
-          "portata": "primo",
-          "nome": "Pici agli agrumi",
-          "stato": "incerto",
-          "suggestedMatchId": "mnsq9hyn9ag",
-          "nota": "Scritto 'Pici aguone', probabile refuso per 'Pici all'aglione'"
-        }
-      ]
-    },
-    {
       "data": "2026-10-24",
       "servizio": "pranzo",
       "prezzo": 35,
@@ -11466,38 +11433,42 @@
           "matchId": "mnsq9hyneqw"
         },
         {
-          "portata": "primo",
-          "nome": "Crostino con salsa verde e noce",
-          "stato": "incerto",
+          "portata": "antipasto",
+          "nome": "Crostino con salsa verde",
+          "stato": "match",
           "suggestedMatchId": "mnsq9hynn6x",
-          "nota": "Scritto 'Crostino con salsa verde', testo confuso con parola extra"
-        },
-        {
-          "portata": "primo",
-          "nome": "Crostino con cipolla e lardo e salsiccia",
-          "stato": "incerto",
-          "suggestedMatchId": null,
-          "nota": "Scritto 'Crostino con cipolla e lardo e Selezione di salumi', testo poco chiaro, verifica"
-        },
-        {
-          "portata": "primo",
-          "nome": "Pici al ragù di coniglio con cipolla e sopressata",
-          "stato": "incerto",
-          "suggestedMatchId": "mnsq9hynic3",
-          "nota": "Scritto 'Pici al ragù di conigli con cipolla e sopressata', dubbio su abbinamento esatto"
-        },
-        {
-          "portata": "secondo",
-          "nome": "Filetto di maiale al ragù di coniglio con brace",
-          "stato": "incerto",
-          "suggestedMatchId": null,
-          "nota": "Testo 'Filetto di maiale in crosta di pane con brace' confuso, verifica originale"
+          "nota": "Scritto 'Crostino con salsa verde', testo confuso con parola extra",
+          "matchId": "mnsq9hynn6x"
         },
         {
           "portata": "dolce",
           "nome": "Dolce della casa",
           "stato": "match",
           "matchId": "mo67hzucqmt"
+        },
+        {
+          "portata": "antipasto",
+          "nome": "Crostino con crema di ceci e soppressata",
+          "stato": "match",
+          "matchId": "mnsq9hyn8jt"
+        },
+        {
+          "portata": "antipasto",
+          "nome": "Crostone con cavolo nero e pancetta",
+          "stato": "match",
+          "matchId": "mnsq9hymtkv"
+        },
+        {
+          "portata": "antipasto",
+          "nome": "Selezione di salumi toscani",
+          "stato": "match",
+          "matchId": "mnsq9hynqk0"
+        },
+        {
+          "portata": "primo",
+          "nome": "Ribollita",
+          "stato": "match",
+          "matchId": "mnsq9hynwdm"
         }
       ]
     },
