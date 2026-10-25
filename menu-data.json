@@ -9137,6 +9137,98 @@
       "testoLibero": "",
       "prezzo": 32,
       "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-10-26_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo68jqekj3x"
+        ],
+        "primo": [
+          "mnsq9hynnla"
+        ],
+        "secondo": [
+          "mnsq9hyn4sj"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 32,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-10-26_cena_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hyneqw",
+          "mnsq9hynxni",
+          "mnsq9hynqk0",
+          "mohaxdaa2wx",
+          "mtsf6egwmnf"
+        ],
+        "primo": [
+          "mo69nj18fdk"
+        ],
+        "secondo": [
+          "mnsq9hyncpy"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mnsq9hynyyk"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 32,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-10-28_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo68jqekj3x"
+        ],
+        "primo": [
+          "mo68pp64giu"
+        ],
+        "secondo": [
+          "mnsq9hyn0ay"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 32,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-10-27_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo68jqekj3x"
+        ],
+        "primo": [
+          "mo67h4xg40w"
+        ],
+        "secondo": [
+          "mo69j5b1uwp"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 32,
+      "nomeSpecifico": "Menù del Sito"
     }
   },
   "prenotazioni": {
@@ -11566,178 +11658,6 @@
   },
   "importPending": [
     {
-      "data": "2026-10-26",
-      "servizio": "pranzo",
-      "prezzo": 32,
-      "piatti": [
-        {
-          "portata": "antipasto",
-          "nome": "Antipasto misto toscano",
-          "stato": "match",
-          "matchId": "mo68jqekj3x"
-        },
-        {
-          "portata": "primo",
-          "nome": "Pappardelle all'anatra",
-          "stato": "incerto",
-          "suggestedMatchId": "mnsq9hynnla",
-          "nota": "Scritto 'PAPPARDELLE AU'ANATRA', probabile refuso per 'all'anatra' = ragù di anatra"
-        },
-        {
-          "portata": "secondo",
-          "nome": "Tagliata di manzo agli aromi",
-          "stato": "match",
-          "matchId": "mnsq9hyn4sj"
-        },
-        {
-          "portata": "contorno",
-          "nome": "Patate arrosto",
-          "stato": "match",
-          "matchId": "mnsq9hynayz"
-        },
-        {
-          "portata": "dolce",
-          "nome": "Dolce della casa",
-          "stato": "match",
-          "matchId": "mo67hzucqmt"
-        }
-      ]
-    },
-    {
-      "data": "2026-10-26",
-      "servizio": "cena",
-      "prezzo": 32,
-      "piatti": [
-        {
-          "portata": "antipasto",
-          "nome": "Crostino nero",
-          "stato": "match",
-          "matchId": "mnsq9hyneqw"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Crostino con ricotta, miele, pecorino, pere e granella di noci",
-          "stato": "incerto",
-          "suggestedMatchId": "mnsq9hynsn7",
-          "nota": "Scritto 'CROSTINO NIEVE, PECORINO, PERE E NOCI' - probabile refuso per ricotta/miele, verifica"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Crostino con salsiccia, ricotta ed erbe aromatiche",
-          "stato": "match",
-          "matchId": "mnsq9hynxni"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Selezione di salumi e formaggi",
-          "stato": "incerto",
-          "suggestedMatchId": "mnsq9hynqk0",
-          "nota": "Nota 'SITO + SALUMI E FORMAGGI 32.00' indica sostituzione/aggiunta: antipasto salumi e formaggi da aggiungere oltre ai crostini elencati, verifica quale sostituisce cosa"
-        },
-        {
-          "portata": "primo",
-          "nome": "Straccetti al ragù",
-          "stato": "match",
-          "matchId": "mo69nj18fdk"
-        },
-        {
-          "portata": "secondo",
-          "nome": "Filetto di maiale in crosta di pane",
-          "stato": "match",
-          "matchId": "mnsq9hyncpy"
-        },
-        {
-          "portata": "contorno",
-          "nome": "Patate arrosto",
-          "stato": "match",
-          "matchId": "mnsq9hynayz"
-        },
-        {
-          "portata": "dolce",
-          "nome": "Crostata con marmellata fresca",
-          "stato": "incerto",
-          "suggestedMatchId": "mnsq9hynyyk",
-          "nota": "Scritto 'CROSTATA MARMELLATA', nome esatto nel db è leggermente diverso"
-        }
-      ]
-    },
-    {
-      "data": "2026-10-27",
-      "servizio": "pranzo",
-      "prezzo": 32,
-      "piatti": [
-        {
-          "portata": "antipasto",
-          "nome": "Antipasto misto toscano",
-          "stato": "match",
-          "matchId": "mo68jqekj3x"
-        },
-        {
-          "portata": "primo",
-          "nome": "Pasta fresca al ragù di anatra",
-          "stato": "match",
-          "matchId": "mqps9i0c302",
-          "nota": "Scritto 'PASTA FRESCA AL RAGÙ DI ANCHIALE', ma vicino alla sezione MICHELANGOLO TEDESCHI c'è anatra - verifica lettura, potrebbe essere 'anatra' male scritto"
-        },
-        {
-          "portata": "secondo",
-          "nome": "Scamerita alla griglia",
-          "stato": "incerto",
-          "suggestedMatchId": "mo69j5b1uwp",
-          "nota": "Scritto 'SCAMORITA ALLA GRICOLA', lettura incerta, probabile 'Scamerita alla griglia'"
-        },
-        {
-          "portata": "contorno",
-          "nome": "Patate arrosto",
-          "stato": "match",
-          "matchId": "mnsq9hynayz"
-        },
-        {
-          "portata": "dolce",
-          "nome": "Dolce della casa",
-          "stato": "match",
-          "matchId": "mo67hzucqmt"
-        }
-      ]
-    },
-    {
-      "data": "2026-10-28",
-      "servizio": "pranzo",
-      "prezzo": 32,
-      "piatti": [
-        {
-          "portata": "antipasto",
-          "nome": "Antipasto misto toscano",
-          "stato": "match",
-          "matchId": "mo68jqekj3x"
-        },
-        {
-          "portata": "primo",
-          "nome": "Pasta fresca al ragù toscano",
-          "stato": "match",
-          "matchId": "mo68pp64giu"
-        },
-        {
-          "portata": "secondo",
-          "nome": "Tagliata di manzo al pepe rosa",
-          "stato": "match",
-          "matchId": "mnsq9hyn0ay"
-        },
-        {
-          "portata": "contorno",
-          "nome": "Patate arrosto",
-          "stato": "match",
-          "matchId": "mnsq9hynayz"
-        },
-        {
-          "portata": "dolce",
-          "nome": "Dolce della casa",
-          "stato": "match",
-          "matchId": "mo67hzucqmt"
-        }
-      ]
-    },
-    {
       "data": "2026-10-28",
       "servizio": "cena",
       "prezzo": 32,
@@ -11782,13 +11702,6 @@
       "piatti": [
         {
           "portata": "antipasto",
-          "nome": "Polenta cavolo nero e pancetta affettati",
-          "stato": "incerto",
-          "suggestedMatchId": "mnsq9hymtkv",
-          "nota": "Scritto 'POLENTA CAVOLO NERO E PANCETTA AFFETTATI (NO FORMAGGI)' - combinazione insolita, forse due note separate: polenta con cavolo nero e affettati di pancetta, senza formaggi"
-        },
-        {
-          "portata": "antipasto",
           "nome": "Crostino nero",
           "stato": "match",
           "matchId": "mnsq9hyneqw"
@@ -11812,13 +11725,6 @@
           "matchId": "mnsq9hynval"
         },
         {
-          "portata": "secondo",
-          "nome": "Arrosto misto con pollo, coniglio, agnello e tagliata",
-          "stato": "incerto",
-          "suggestedMatchId": "mnsq9hynvd0",
-          "nota": "Scritto 'ARROSTO MISTO POLLO, CONIGLIO, AGNELLO / TAGLIATA' - composizione specifica non trovata esattamente nel db, verifica se serve nuovo piatto"
-        },
-        {
           "portata": "contorno",
           "nome": "Patate arrosto",
           "stato": "match",
@@ -11835,6 +11741,18 @@
           "nome": "Dolce della casa",
           "stato": "match",
           "matchId": "mo67hzucqmt"
+        },
+        {
+          "portata": "antipasto",
+          "nome": "Polenta ripiena con cavolo nero e granella di pancetta",
+          "stato": "match",
+          "matchId": "mnsq9hynxmp"
+        },
+        {
+          "portata": "antipasto",
+          "nome": "Selezione di salumi toscani",
+          "stato": "match",
+          "matchId": "mnsq9hynqk0"
         }
       ]
     },
