@@ -1896,6 +1896,13 @@
       "portata": "primo",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mvof2ol782x",
+      "nome": "Arrosto misto con pollo, coniglio, agnello e tagliata di manzo",
+      "portata": "secondo",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -9229,6 +9236,55 @@
       "testoLibero": "",
       "prezzo": 32,
       "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-10-29_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hyneqw",
+          "mnsq9hymfrx",
+          "mnsq9hyngse",
+          "mnsq9hynxmp",
+          "mnsq9hynqk0"
+        ],
+        "primo": [
+          "mnsq9hynval"
+        ],
+        "secondo": [
+          "mvof2ol782x"
+        ],
+        "contorno": [
+          "mnsq9hynayz",
+          "mnsq9hynkgr"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 40,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-10-28_cena_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo68jqekj3x"
+        ],
+        "primo": [
+          "mnsq9hynyof"
+        ],
+        "secondo": [
+          "mnsq9hynlgw"
+        ],
+        "contorno": [
+          "mnsq9hynelb"
+        ],
+        "dolce": [
+          "mnsq9hyntti"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 32,
+      "nomeSpecifico": "Menù del Sito"
     }
   },
   "prenotazioni": {
@@ -11657,105 +11713,6 @@
     ]
   },
   "importPending": [
-    {
-      "data": "2026-10-28",
-      "servizio": "cena",
-      "prezzo": 32,
-      "piatti": [
-        {
-          "portata": "antipasto",
-          "nome": "Antipasto misto toscano",
-          "stato": "match",
-          "matchId": "mo68jqekj3x"
-        },
-        {
-          "portata": "primo",
-          "nome": "Lasagne con zucca gialla e scamorza",
-          "stato": "match",
-          "matchId": "mnsq9hynyof"
-        },
-        {
-          "portata": "secondo",
-          "nome": "Stracotto toscano con salsa al Chianti",
-          "stato": "incerto",
-          "suggestedMatchId": "mnsq9hynlgw",
-          "nota": "Scritto solo 'STRACOTTO', assunto Stracotto toscano con salsa al Chianti"
-        },
-        {
-          "portata": "contorno",
-          "nome": "Patate sabbiate",
-          "stato": "match",
-          "matchId": "mnsq9hynelb"
-        },
-        {
-          "portata": "dolce",
-          "nome": "Pinolata alla crema",
-          "stato": "match",
-          "matchId": "mnsq9hyntti"
-        }
-      ]
-    },
-    {
-      "data": "2026-10-29",
-      "servizio": "pranzo",
-      "prezzo": 40,
-      "piatti": [
-        {
-          "portata": "antipasto",
-          "nome": "Crostino nero",
-          "stato": "match",
-          "matchId": "mnsq9hyneqw"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Bruschetta all'olio nuovo",
-          "stato": "match",
-          "matchId": "mnsq9hymfrx"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Tortino di ribollita con anelli di cipolla",
-          "stato": "match",
-          "matchId": "mnsq9hyngse"
-        },
-        {
-          "portata": "primo",
-          "nome": "Tagliatelle al ragù",
-          "stato": "match",
-          "matchId": "mnsq9hynval"
-        },
-        {
-          "portata": "contorno",
-          "nome": "Patate arrosto",
-          "stato": "match",
-          "matchId": "mnsq9hynayz"
-        },
-        {
-          "portata": "contorno",
-          "nome": "Insalata mista",
-          "stato": "match",
-          "matchId": "mnsq9hynkgr"
-        },
-        {
-          "portata": "dolce",
-          "nome": "Dolce della casa",
-          "stato": "match",
-          "matchId": "mo67hzucqmt"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Polenta ripiena con cavolo nero e granella di pancetta",
-          "stato": "match",
-          "matchId": "mnsq9hynxmp"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Selezione di salumi toscani",
-          "stato": "match",
-          "matchId": "mnsq9hynqk0"
-        }
-      ]
-    },
     {
       "data": "2026-10-29",
       "servizio": "cena",
