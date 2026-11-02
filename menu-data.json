@@ -1903,6 +1903,13 @@
       "portata": "secondo",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mvz1fblngkq",
+      "nome": "Risotto salsiccia e radicchio",
+      "portata": "primo",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -9776,6 +9783,29 @@
       "testoLibero": "",
       "prezzo": 35,
       "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-11-07_cena_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hynyoo",
+          "mnsq9hynb4l",
+          "mnsq9hymfot",
+          "mohaxdaa2wx",
+          "mnsq9hynfoi"
+        ],
+        "primo": [
+          "mvz1fblngkq",
+          "mnsq9hyngl1"
+        ],
+        "secondo": [
+          "mnsq9hyndcd"
+        ],
+        "contorno": [],
+        "dolce": []
+      },
+      "testoLibero": "",
+      "prezzo": null,
+      "nomeSpecifico": "Menù del Sito"
     }
   },
   "prenotazioni": {
@@ -11500,6 +11530,12 @@
       "gruppi": []
     },
     "2026-11-06_cena": {
+      "gruppi": []
+    },
+    "2026-11-07_pranzo": {
+      "gruppi": []
+    },
+    "2026-11-07_cena": {
       "gruppi": []
     }
   },
