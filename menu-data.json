@@ -9459,6 +9459,28 @@
       "testoLibero": "",
       "prezzo": 35,
       "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-11-06_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo1xei4h6yo"
+        ],
+        "primo": [
+          "mo68pp64giu"
+        ],
+        "secondo": [
+          "mnsq9hynlgw"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 32,
+      "nomeSpecifico": "Menù del Sito"
     }
   },
   "prenotazioni": {
@@ -11960,43 +11982,6 @@
     },
     {
       "data": "2026-11-06",
-      "servizio": "pranzo",
-      "prezzo": 32,
-      "piatti": [
-        {
-          "portata": "antipasto",
-          "nome": "Antipasto del Ciliegio",
-          "stato": "match",
-          "matchId": "mo1xei4h6yo"
-        },
-        {
-          "portata": "primo",
-          "nome": "Pasta fresca al ragù toscano",
-          "stato": "match",
-          "matchId": "mo68pp64giu"
-        },
-        {
-          "portata": "secondo",
-          "nome": "Stracotto toscano con salsa al Chianti",
-          "stato": "match",
-          "matchId": "mnsq9hynlgw"
-        },
-        {
-          "portata": "contorno",
-          "nome": "Patate arrosto",
-          "stato": "match",
-          "matchId": "mnsq9hynayz"
-        },
-        {
-          "portata": "dolce",
-          "nome": "Dolce della casa",
-          "stato": "match",
-          "matchId": "mo67hzucqmt"
-        }
-      ]
-    },
-    {
-      "data": "2026-11-06",
       "servizio": "cena",
       "prezzo": null,
       "piatti": [
@@ -12043,11 +12028,12 @@
           "nota": "Stesso dubbio del blocco"
         },
         {
-          "portata": "secondo",
-          "nome": "Straccetti briciole, crema di porri, guanciale",
-          "stato": "incerto",
+          "portata": "primo",
+          "nome": "Straccetti con crema di porri, briciole di pane e guanciale croccante",
+          "stato": "match",
           "suggestedMatchId": "mujyqw4dohy",
-          "nota": "Letto 'Straccetti briciole, crema di porri, guanciale', portata incerta (primo o secondo), stesso dubbio del blocco"
+          "nota": "Letto 'Straccetti briciole, crema di porri, guanciale', portata incerta (primo o secondo), stesso dubbio del blocco",
+          "matchId": "mujyqw4dohy"
         },
         {
           "portata": "secondo",
