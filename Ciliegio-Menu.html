@@ -451,7 +451,7 @@ textarea{resize:vertical;min-height:72px}
       <button class="btn btn-ghost btn-sm" onclick="document.getElementById('imp').click()" style="padding:6px 16px">📂 Importa backup</button>
     </div>
 
-    <div style="text-align:center;font-size:13px;color:#666;letter-spacing:3px;margin-top:12px;font-family:'Cinzel',serif">v95</div>
+    <div style="text-align:center;font-size:13px;color:#666;letter-spacing:3px;margin-top:12px;font-family:'Cinzel',serif">v96</div>
   </div>
 </div>
 
@@ -2049,6 +2049,7 @@ function apriGiornoDetail(dateStr){
             <button class="btn btn-ghost btn-xs" onclick="viewMenu('${mKey}')">👁 Vedi</button>
             <button class="btn btn-ghost btn-xs" onclick="editMenuFromCal('${dateStr}','${serv}','${pk.nome}')">✏ Modifica</button>
             <button class="btn btn-ghost btn-xs" onclick="apriStampaConKey('${mKey}')">🖨 Stampa</button>
+            <button class="btn btn-ghost btn-xs" onclick="apriCopiaSposta('${mKey}')">📋 Copia / Sposta</button>
             <button class="btn btn-teal btn-xs" onclick="openAccoda('${dsKey}','${mKey}')">+ Accoda prenotazione</button>
             ${totPax?`<span class="pren-total-badge">Totale: ${totPax} pax</span>`:''}
           </div>
@@ -2286,6 +2287,59 @@ function salvaNotaGiorno(dateStr, testo){
   });
 }
 
+
+// ── COPIA / SPOSTA MENÙ su un altro giorno/servizio ──
+function apriCopiaSposta(key){
+  const pk=parseKey(key);
+  const dt=parseDate(pk.data);
+  const altro=pk.serv==='pranzo'?'cena':'pranzo';
+  document.getElementById('mv-content').innerHTML=`
+    <div class="modal-title">Copia / Sposta menù${pk.nome?' '+pk.nome:''}</div>
+    <div class="text-muted" style="margin-bottom:14px">Da: <b>${dt.giornoLungo} — ${cap(pk.serv)}</b></div>
+    <div class="flex" style="gap:12px;margin-bottom:16px;align-items:center;flex-wrap:wrap">
+      <label>Giorno: <input type="date" id="cs-data" value="${pk.data}" style="margin-left:6px"></label>
+      <label>Servizio: <select id="cs-serv" style="margin-left:6px">
+        <option value="pranzo"${altro==='pranzo'?' selected':''}>Pranzo</option>
+        <option value="cena"${altro==='cena'?' selected':''}>Cena</option>
+      </select></label>
+    </div>
+    <div class="flex" style="gap:8px">
+      <button class="btn btn-gold btn-sm" onclick="eseguiCopiaSposta('${key}',false)">📋 Copia (resta anche l'originale)</button>
+      <button class="btn btn-teal btn-sm" onclick="eseguiCopiaSposta('${key}',true)">➡ Sposta (l'originale sparisce)</button>
+      <button class="btn btn-ghost btn-sm" onclick="closeOv('ov-mv')">Annulla</button>
+    </div>`;
+  openOv('ov-mv');
+}
+
+function eseguiCopiaSposta(key,sposta){
+  const pk=parseKey(key);
+  const data=document.getElementById('cs-data').value;
+  const serv=document.getElementById('cs-serv').value;
+  if(!data){alert('Scegli il giorno.');return;}
+  const nuova=mkKey(data,serv,pk.nome);
+  if(nuova===key){alert('Origine e destinazione sono uguali.');return;}
+  const dt=parseDate(data);
+  if(DB.menu[nuova] && countPiattiMenu(nuova)>0){
+    if(!confirm(`Per ${dt.giornoLungo} — ${cap(serv)} esiste già un menù con ${countPiattiMenu(nuova)} piatti. Sostituirlo?`))return;
+  }
+  DB.menu[nuova]=JSON.parse(JSON.stringify(DB.menu[key]));
+  DB.menu[nuova].nomeSpecifico=pk.nome;
+  let avviso='';
+  if(sposta){
+    const prenOld=(DB.prenotazioni[dsFromKey(key)]||{gruppi:[]}).gruppi.filter(g=>g.menuKey===key);
+    delete DB.menu[key];
+    if(prenOld.length) avviso=`
+
+Nota: ${prenOld.length} prenotazione/i del giorno di partenza erano collegate a questo menù e restano dove sono (ora senza menù): controllale.`;
+  }
+  saveDB();
+  closeOv('ov-mv');
+  renderCal();
+  alert(`${sposta?'Menù spostato':'Menù copiato'} su ${dt.giornoLungo} — ${cap(serv)}.${avviso}
+
+Poi: Genera JPG → Carica su GitHub per il sito.`);
+}
+
 // ── VIEW MENU ──
 function viewMenu(key){
   const pk=parseKey(key);
@@ -2295,6 +2349,7 @@ function viewMenu(key){
   html+=`<div class="flex mb-16">
     <button class="btn btn-gold btn-sm" onclick="editMenuFromCal('${pk.data}','${pk.serv}','${pk.nome}');closeOv('ov-mv')">✏ Modifica</button>
     <button class="btn btn-dark btn-sm" onclick="esportaMenuJPG('${key}')">📸 Salva JPG</button>
+    <button class="btn btn-ghost btn-sm" onclick="apriCopiaSposta('${key}')">📋 Copia / Sposta</button>
     <button class="btn btn-teal btn-sm" onclick="openAccoda('${dsFromKey(key)}','${key}');closeOv('ov-mv')">+ Accoda prenotazione</button>
     <button class="btn btn-danger btn-sm" onclick="if(confirm('Eliminare?')){delete DB.menu['${key}'];saveDB();closeOv('ov-mv');renderCal()}">Elimina</button>
   </div>`;

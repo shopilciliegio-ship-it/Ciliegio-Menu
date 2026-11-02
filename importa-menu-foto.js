@@ -54,7 +54,7 @@ REGOLA GENERALE PIÙ IMPORTANTE DI TUTTE: se hai un dubbio se un piatto/portata 
 
 REGOLE IMPORTANTI (frutto di sessioni precedenti, seguile alla lettera):
 1. Il menù del sito è normalmente l'ultimo blocco di piatti della pagina, spesso etichettato "SITO" e spesso con un prezzo totale a fine elenco. Le liste piatti scritte esplicitamente per un gruppo/comitiva con nome proprio accanto (es. un cognome, "Michelangelo", un nome di agenzia) sono normalmente per quella prenotazione privata, NON per il sito — ma se non è chiaro a quale dei due un blocco appartenga, applica la regola generale sopra: includilo comunque, flaggato.
-2. Se un servizio (pranzo o cena di un giorno) è chiaramente un evento privato/esclusivo che chiude il ristorante (parole come "ESCLUSIVA", "COMPLETO" riferito a tutto il locale, matrimoni, eventi aziendali che occupano "tutta una sala"/"tutto il ristorante") NON includerlo affatto nel risultato — nessuna voce per quel giorno/servizio. Il sistema userà automaticamente un'immagine generica "al completo" per quei casi, quindi ometterli è la scelta corretta. Questa è l'UNICA situazione in cui è corretto omettere del tutto un giorno/servizio — per tutto il resto vale la regola generale (includi, non escludere di tua iniziativa).
+2. Un servizio (pranzo o cena di un giorno) si OMETTE solo se sulla pagina c'è scritto ESPLICITAMENTE "ESCLUSIVA" o "COMPLETO" riferito a tutto il locale, oppure un evento che occupa tutto il ristorante (matrimonio, evento aziendale "tutto il ristorante") E NON c'è nessun elenco di piatti utilizzabile sulla pagina. Un gruppo/agenzia/comitiva (nome di agenzia, "ragione sociale", caparra, gratuità, CAP, telefono del referente) NON è un motivo per omettere: se sotto c'è un elenco di piatti, anche se sembra il menù di quel gruppo, INCLUDILO flaggato (stato "incerto" sulle righe e nota "Menù scritto per un gruppo (nome) — verifica se va sul sito"). Il sistema userà automaticamente un'immagine generica "al completo" per quei casi, quindi ometterli è la scelta corretta. Questa è l'UNICA situazione in cui è corretto omettere del tutto un giorno/servizio — per tutto il resto vale la regola generale (includi, non escludere di tua iniziativa).
 3. PATTERN "SITO con [piatto]": a volte c'è scritto un menù completo sotto un'intestazione (es. "OSPITI", o senza intestazione) e accanto/sotto una nota tipo "SITO con [nome piatto]" o "SITO [nome piatto]". Questo significa: il menù del sito è quello scritto per intero (stesse portate), TRANNE la portata a cui appartiene [nome piatto], che sul sito va sostituita con quel piatto specifico invece di quello/i scritto/i originariamente per quella portata. Comportamento da seguire: includi TUTTE le portate del menù scritto così come sono (antipasto/primo/secondo/contorno/dolce), PIÙ una riga aggiuntiva per il piatto della sostituzione (stato "match"/"incerto" a seconda dell'abbinamento). Sulla riga/righe originali di quella stessa portata (quelle sostituite) aggiungi una nota tipo "Scritto nel menù originale, prima della sostituzione indicata da 'SITO con [piatto]' — probabilmente da togliere, verifica". Non cancellarle tu: per la regola generale, lasciale lì flaggate e lascia decidere chi rivede.
 4. Se il blocco del menù del sito è incompleto (es. scritto solo l'antipasto, manca il prezzo, e non c'è nessun menù/OSPITI collegato da cui prendere il resto) NON inventare i piatti mancanti. Includi solo quello che è scritto, e aggiungi una voce con portata "primo" (o quella più sensata), stato "incerto", suggestedMatchId null, nome "⚠ MANCA IL RESTO DEL MENU", e una nota che spiega esattamente cosa manca e da dove viene la foto (giorno/servizio).
 5. Se per una portata ci sono scritte esplicitamente più opzioni alternative (es. due primi entrambi elencati per lo stesso giorno), includile entrambe con stato "incerto" e una nota che spiega che erano entrambe scritte, così chi rivede può cancellare quella che non serve.
@@ -84,7 +84,9 @@ FORMATO OUTPUT — rispondi SOLO con un array JSON valido, nessun testo prima o 
   }
 ]
 
-Se una foto non contiene nessun menù SITO utilizzabile (es. solo prenotazioni/eventi privati), semplicemente non generare nessuna voce per quel giorno/servizio — non è un errore.`;
+Se una foto non contiene nessun elenco di piatti utilizzabile (es. solo prenotazioni), non generare una voce normale per quel giorno/servizio, MA devi comunque segnalarlo: aggiungi all'array un oggetto di questo tipo, uno per ogni giorno/servizio visibile in una foto e non importato (compresi i completi/esclusive omessi per la regola 2):
+  { "data": "YYYY-MM-DD", "servizio": "pranzo", "omesso": true, "motivo": "breve spiegazione di cosa c'è scritto e perché non l'hai importato" }
+Nessuna foto deve sparire in silenzio: ogni foto deve produrre o una bozza o un oggetto "omesso".`;
 
 // Raddrizza le foto (rotazione EXIF) in una cartella temporanea prima di mandarle a Claude.
 let LETTURA_DIR = FOTO_DIR;
@@ -155,6 +157,15 @@ async function main() {
     fail(`la risposta di Claude non è JSON valido (${e.message}). Risposta salvata in ${outPath}, risposta completa (debug) in ${debugPath}.`);
   }
   if (!Array.isArray(days)) fail('la risposta di Claude non è un array');
+
+  const omessi = days.filter(d => d && d.omesso);
+  days = days.filter(d => d && !d.omesso);
+  if (omessi.length) {
+    console.log(`\n⚠️ ATTENZIONE: ${omessi.length} giorno/servizio NON importati (controlla le foto e inseriscili a mano se servono):`);
+    omessi.forEach(o => console.log(`  ✗ ${o.data} ${o.servizio}: ${o.motivo || '(nessun motivo indicato)'}`));
+    fs.writeFileSync(path.join(ROOT, 'ultimo-import-omessi.txt'),
+      omessi.map(o => `${o.data} ${o.servizio}: ${o.motivo || ''}`).join('\n') + '\n', 'utf8');
+  }
 
   console.log(`\nClaude ha trascritto ${days.length} giorno/servizio:`);
   days.forEach(d => {
