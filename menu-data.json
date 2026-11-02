@@ -9532,7 +9532,7 @@
         ]
       },
       "testoLibero": "",
-      "prezzo": 32,
+      "prezzo": 35,
       "nomeSpecifico": "Menù del Sito"
     },
     "2026-11-08_pranzo_Menù del Sito": {
@@ -9722,6 +9722,32 @@
       },
       "testoLibero": "",
       "prezzo": 32,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-11-03_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hynqk0",
+          "mnsq9hymfot",
+          "mohaxdaa2wx",
+          "mnsq9hynxmp",
+          "mnsq9hync35"
+        ],
+        "primo": [
+          "mo1waims7of"
+        ],
+        "secondo": [
+          "mnsq9hynlgw"
+        ],
+        "contorno": [
+          "mnsq9hyn657"
+        ],
+        "dolce": [
+          "mnsq9hyn5co"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 30,
       "nomeSpecifico": "Menù del Sito"
     }
   },
@@ -11429,6 +11455,18 @@
       "gruppi": []
     },
     "2026-11-04_cena": {
+      "gruppi": []
+    },
+    "2026-11-03_pranzo": {
+      "gruppi": []
+    },
+    "2026-11-03_cena": {
+      "gruppi": []
+    },
+    "2026-11-05_pranzo": {
+      "gruppi": []
+    },
+    "2026-11-05_cena": {
       "gruppi": []
     }
   },
