@@ -11571,6 +11571,18 @@
     },
     "2026-11-12_cena": {
       "gruppi": []
+    },
+    "2026-11-13_pranzo": {
+      "gruppi": []
+    },
+    "2026-11-13_cena": {
+      "gruppi": []
+    },
+    "2026-11-14_pranzo": {
+      "gruppi": []
+    },
+    "2026-11-14_cena": {
+      "gruppi": []
     }
   },
   "noteGiorno": {
@@ -11855,7 +11867,8 @@
     "mv48eas6ip4": "Polenta with black cabbage and pancetta",
     "mv49iqr2bdf": "Tortiglioni pasta with leek cream, breadcrumbs, and crispy pork shank",
     "mvebra1eplk": "Pici with rabbit sauce",
-    "mvof2ol782x": "Mixed roast with chicken, rabbit, lamb, and sliced beef"
+    "mvof2ol782x": "Mixed roast with chicken, rabbit, lamb, and sliced beef",
+    "mvz1fblngkq": "Risotto with Sausage and Radicchio"
   },
   "cartaDelGiorno": {
     "2026-05-31": [
