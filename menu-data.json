@@ -9410,6 +9410,55 @@
       "testoLibero": "",
       "prezzo": 36,
       "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-11-02_cena_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hyneqw",
+          "mor13kgqgpi",
+          "mnsq9hynak8",
+          "mnsq9hynqk0",
+          "mo1w8xtm5r2"
+        ],
+        "primo": [
+          "mnsq9hynyof"
+        ],
+        "secondo": [
+          "mnsq9hyncpy"
+        ],
+        "contorno": [
+          "mnsq9hynelb"
+        ],
+        "dolce": [
+          "mnsq9hyn5co"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 32,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-11-04_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo68jqekj3x"
+        ],
+        "primo": [
+          "mo68pp64giu"
+        ],
+        "secondo": [
+          "mo69j5b1uwp",
+          "mnsq9hynlgw"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 35,
+      "nomeSpecifico": "Menù del Sito"
     }
   },
   "prenotazioni": {
@@ -11846,118 +11895,9 @@
   },
   "importPending": [
     {
-      "data": "2026-11-02",
-      "servizio": "cena",
-      "prezzo": 32,
-      "piatti": [
-        {
-          "portata": "antipasto",
-          "nome": "Crostino nero",
-          "stato": "match",
-          "matchId": "mnsq9hyneqw"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Sformato di stagione",
-          "stato": "incerto",
-          "suggestedMatchId": "mor13kgqgpi",
-          "nota": "Scritto 'Sformato di stagione', potrebbe essere refuso per 'Tortino di stagione'"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Verdurine fritte",
-          "stato": "incerto",
-          "suggestedMatchId": "mnsq9hynak8",
-          "nota": "Potrebbe corrispondere a 'Frittini misti di verdure di stagione'"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Affettati misti",
-          "stato": "incerto",
-          "suggestedMatchId": "mnsq9hynqk0",
-          "nota": "Scritto 'Affettati misti', possibile corrispondenza con 'Selezione di salumi toscani'"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Formaggi Pecorini",
-          "stato": "match",
-          "matchId": "mo1w8xtm5r2"
-        },
-        {
-          "portata": "primo",
-          "nome": "Lasagne con zucca gialla e scamorza",
-          "stato": "match",
-          "matchId": "mnsq9hynyof"
-        },
-        {
-          "portata": "secondo",
-          "nome": "Filetto di maiale in crosta di pane",
-          "stato": "match",
-          "matchId": "mnsq9hyncpy"
-        },
-        {
-          "portata": "contorno",
-          "nome": "Patate sabbiate",
-          "stato": "match",
-          "matchId": "mnsq9hynelb"
-        },
-        {
-          "portata": "dolce",
-          "nome": "Torta di mele con crema di vin santo",
-          "stato": "match",
-          "matchId": "mnsq9hyn5co"
-        }
-      ]
-    },
-    {
-      "data": "2026-11-04",
-      "servizio": "pranzo",
-      "prezzo": 35,
-      "piatti": [
-        {
-          "portata": "antipasto",
-          "nome": "Antipasto misto toscano",
-          "stato": "match",
-          "matchId": "mo68jqekj3x"
-        },
-        {
-          "portata": "primo",
-          "nome": "Pasta fresca al ragù toscano",
-          "stato": "match",
-          "matchId": "mo68pp64giu"
-        },
-        {
-          "portata": "secondo",
-          "nome": "Scamerita alla griglia",
-          "stato": "incerto",
-          "suggestedMatchId": "mo69j5b1uwp",
-          "nota": "Scritto 'Scamenita alla Griglia', probabile refuso per Scamerita"
-        },
-        {
-          "portata": "primo",
-          "nome": "Stracotto al Chianti",
-          "stato": "incerto",
-          "suggestedMatchId": "mnsq9hynlgw",
-          "nota": "Scritto 'Stracotto al Chianti', portata ambigua (potrebbe essere secondo)"
-        },
-        {
-          "portata": "contorno",
-          "nome": "Patate arrosto",
-          "stato": "match",
-          "matchId": "mnsq9hynayz"
-        },
-        {
-          "portata": "dolce",
-          "nome": "Dolce della casa",
-          "stato": "match",
-          "matchId": "mo67hzucqmt"
-        }
-      ]
-    },
-    {
       "data": "2026-11-05",
       "servizio": "pranzo",
-      "prezzo": 32,
+      "prezzo": 30,
       "piatti": [
         {
           "portata": "antipasto",
