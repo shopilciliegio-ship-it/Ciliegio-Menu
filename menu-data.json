@@ -1910,6 +1910,13 @@
       "portata": "primo",
       "extra": 0,
       "note": ""
+    },
+    {
+      "id": "mwjb3t8povx",
+      "nome": "Risotti zucca gialla e salsiccia",
+      "portata": "primo",
+      "extra": 0,
+      "note": ""
     }
   ],
   "menu": {
@@ -9863,6 +9870,121 @@
       "testoLibero": "",
       "prezzo": 32,
       "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-11-17_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo1xei4h6yo"
+        ],
+        "primo": [
+          "mo67h4xg40w"
+        ],
+        "secondo": [
+          "mo69j5b1uwp"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 30,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-11-18_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo1xei4h6yo"
+        ],
+        "primo": [
+          "mo68pp64giu"
+        ],
+        "secondo": [
+          "mnsq9hyndcd"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 32,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-11-20_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo1xei4h6yo"
+        ],
+        "primo": [
+          "mwjb3t8povx"
+        ],
+        "secondo": [
+          "mnsq9hyn0ay"
+        ],
+        "contorno": [
+          "mnsq9hync5b"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 32,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-11-22_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mnsq9hynxni",
+          "mnsq9hynqk0",
+          "mohaxdaa2wx",
+          "mnsq9hyno6u",
+          "mnsq9hynxmp"
+        ],
+        "primo": [
+          "mnsq9hyngl1"
+        ],
+        "secondo": [
+          "mnsq9hyncpy",
+          "mnsq9hyn4sj"
+        ],
+        "contorno": [
+          "mnsq9hynelb"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 36,
+      "nomeSpecifico": "Menù del Sito"
+    },
+    "2026-11-21_pranzo_Menù del Sito": {
+      "piatti": {
+        "antipasto": [
+          "mo1xei4h6yo"
+        ],
+        "primo": [
+          "mo699pdh68y"
+        ],
+        "secondo": [
+          "mnsq9hyn4sj"
+        ],
+        "contorno": [
+          "mnsq9hynayz"
+        ],
+        "dolce": [
+          "mo67hzucqmt"
+        ]
+      },
+      "testoLibero": "",
+      "prezzo": 32,
+      "nomeSpecifico": "Menù del Sito"
     }
   },
   "prenotazioni": {
@@ -11185,7 +11307,8 @@
     "mv49iqr2bdf": "Tortiglioni pasta with leek cream, breadcrumbs, and crispy pork shank",
     "mvebra1eplk": "Pici with rabbit sauce",
     "mvof2ol782x": "Mixed roast with chicken, rabbit, lamb, and sliced beef",
-    "mvz1fblngkq": "Risotto with Sausage and Radicchio"
+    "mvz1fblngkq": "Risotto with Sausage and Radicchio",
+    "mwjb3t8povx": "Risotto with Yellow Squash and Sausage"
   },
   "cartaDelGiorno": {
     "2026-05-31": [
@@ -11254,229 +11377,5 @@
     ]
   },
   "tavoli": {},
-  "importPending": [
-    {
-      "data": "2026-11-17",
-      "servizio": "pranzo",
-      "prezzo": 30,
-      "piatti": [
-        {
-          "portata": "antipasto",
-          "nome": "Antipasto del Ciliegio",
-          "stato": "match",
-          "matchId": "mo1xei4h6yo"
-        },
-        {
-          "portata": "primo",
-          "nome": "Pasta fresca al ragù di cinghiale",
-          "stato": "match",
-          "matchId": "mo67h4xg40w"
-        },
-        {
-          "portata": "secondo",
-          "nome": "Scamerita alla griglia",
-          "stato": "incerto",
-          "suggestedMatchId": "mo69j5b1uwp",
-          "nota": "Scritto 'SCAMERITA AL GRIGLIA', letto come 'Scamerita alla griglia'"
-        },
-        {
-          "portata": "contorno",
-          "nome": "Patate arrosto",
-          "stato": "match",
-          "matchId": "mnsq9hynayz"
-        },
-        {
-          "portata": "dolce",
-          "nome": "Dolce della casa",
-          "stato": "match",
-          "matchId": "mo67hzucqmt"
-        }
-      ]
-    },
-    {
-      "data": "2026-11-18",
-      "servizio": "pranzo",
-      "prezzo": 32,
-      "piatti": [
-        {
-          "portata": "antipasto",
-          "nome": "Antipasto del Ciliegio",
-          "stato": "match",
-          "matchId": "mo1xei4h6yo"
-        },
-        {
-          "portata": "primo",
-          "nome": "Pasta fresca al ragù toscano",
-          "stato": "match",
-          "matchId": "mo68pp64giu"
-        },
-        {
-          "portata": "secondo",
-          "nome": "Tagliata di manzo al lardo e scaglie di pecorino",
-          "stato": "incerto",
-          "suggestedMatchId": "mnsq9hyndcd",
-          "nota": "Scritto 'TAGLIATA DI MANZO LARDO E PECORINO', probabile corrispondenza con 'Tagliata di manzo al lardo e scaglie di pecorino'"
-        },
-        {
-          "portata": "contorno",
-          "nome": "Patate arrosto",
-          "stato": "match",
-          "matchId": "mnsq9hynayz"
-        },
-        {
-          "portata": "dolce",
-          "nome": "Dolce della casa",
-          "stato": "match",
-          "matchId": "mo67hzucqmt"
-        }
-      ]
-    },
-    {
-      "data": "2026-11-20",
-      "servizio": "pranzo",
-      "prezzo": 32,
-      "piatti": [
-        {
-          "portata": "antipasto",
-          "nome": "Antipasto del Ciliegio",
-          "stato": "match",
-          "matchId": "mo1xei4h6yo"
-        },
-        {
-          "portata": "primo",
-          "nome": "Risotto salsiccia e zucca gialla",
-          "stato": "incerto",
-          "suggestedMatchId": "mp33amhtkmk",
-          "nota": "Scritto 'RISOTTO ZUCCA GIALLA E SALSICCIA', nel database esiste 'Risotto salsiccia e verdure' ma non un match esatto con zucca gialla"
-        },
-        {
-          "portata": "secondo",
-          "nome": "Tagliata di manzo al pepe rosa",
-          "stato": "match",
-          "matchId": "mnsq9hyn0ay"
-        },
-        {
-          "portata": "contorno",
-          "nome": "Verdure al forno",
-          "stato": "match",
-          "matchId": "mnsq9hync5b"
-        },
-        {
-          "portata": "dolce",
-          "nome": "Dolce della casa",
-          "stato": "match",
-          "matchId": "mo67hzucqmt"
-        }
-      ]
-    },
-    {
-      "data": "2026-11-22",
-      "servizio": "pranzo",
-      "prezzo": 36,
-      "piatti": [
-        {
-          "portata": "antipasto",
-          "nome": "Crostino con salsiccia, ricotta ed erbe aromatiche",
-          "stato": "match",
-          "matchId": "mnsq9hynxni"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Selezione di affettati locali",
-          "stato": "incerto",
-          "suggestedMatchId": "mnsq9hynqk0",
-          "nota": "Scritto 'SEL. AFFETTATI LOCALI', possibile corrispondenza con 'Selezione di salumi toscani'"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Selezione di formaggi",
-          "stato": "incerto",
-          "suggestedMatchId": "mohaxdaa2wx",
-          "nota": "Scritto 'SEL. FORMAGGI', possibile corrispondenza con 'Formaggi misti'"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Tortino di pappa al pomodoro",
-          "stato": "match",
-          "matchId": "mnsq9hyno6u"
-        },
-        {
-          "portata": "antipasto",
-          "nome": "Polenta ripiena con cavolo nero e pancetta",
-          "stato": "incerto",
-          "suggestedMatchId": "mokc8ptmc8k",
-          "nota": "Scritto 'POLENTA RIPIENA CAVOLO NERO E PANCETTA', nel database esiste 'Polenta ripiena con cavolo nero e pecorino' (ingrediente diverso: pecorino vs pancetta)"
-        },
-        {
-          "portata": "primo",
-          "nome": "Pici cacio e pepe",
-          "stato": "match",
-          "matchId": "mnsq9hyngl1"
-        },
-        {
-          "portata": "secondo",
-          "nome": "Filetto di maiale in crosta di pane",
-          "stato": "incerto",
-          "suggestedMatchId": "mnsq9hyncpy",
-          "nota": "Scritto 'FILETTO DI MAIALE IN CROSTA', probabile corrispondenza con 'Filetto di maiale in crosta di pane'"
-        },
-        {
-          "portata": "secondo",
-          "nome": "Tagliata di manzo agli aromi",
-          "stato": "match",
-          "matchId": "mnsq9hyn4sj"
-        },
-        {
-          "portata": "contorno",
-          "nome": "Patate sabbiate",
-          "stato": "match",
-          "matchId": "mnsq9hynelb"
-        },
-        {
-          "portata": "dolce",
-          "nome": "Dolce della casa",
-          "stato": "match",
-          "matchId": "mo67hzucqmt"
-        }
-      ]
-    },
-    {
-      "data": "2026-11-21",
-      "servizio": "pranzo",
-      "prezzo": 32,
-      "piatti": [
-        {
-          "portata": "antipasto",
-          "nome": "Antipasto del Ciliegio",
-          "stato": "match",
-          "matchId": "mo1xei4h6yo"
-        },
-        {
-          "portata": "primo",
-          "nome": "Pici al ragù di cinghiale",
-          "stato": "match",
-          "matchId": "mo699pdh68y"
-        },
-        {
-          "portata": "secondo",
-          "nome": "Tagliata di manzo agli aromi",
-          "stato": "incerto",
-          "suggestedMatchId": "mnsq9hyn4sj",
-          "nota": "Scritto 'TAGLIATA DI MANZO AGLI ARONI', probabile errore di trascrizione per 'agli aromi'"
-        },
-        {
-          "portata": "contorno",
-          "nome": "Patate arrosto",
-          "stato": "match",
-          "matchId": "mnsq9hynayz"
-        },
-        {
-          "portata": "dolce",
-          "nome": "Dolce della casa",
-          "stato": "match",
-          "matchId": "mo67hzucqmt"
-        }
-      ]
-    }
-  ]
+  "importPending": []
 }
