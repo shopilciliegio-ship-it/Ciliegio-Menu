@@ -11377,5 +11377,157 @@
     ]
   },
   "tavoli": {},
-  "importPending": []
+  "importPending": [
+    {
+      "data": "2026-11-19",
+      "servizio": "pranzo",
+      "piatti": [
+        {
+          "portata": "antipasto",
+          "nome": "Antipasto del Ciliegio",
+          "stato": "match",
+          "matchId": "mo1xei4h6yo"
+        },
+        {
+          "portata": "primo",
+          "nome": "Pasta fresca al ragù di cinghiale",
+          "stato": "match",
+          "matchId": "mo67h4xg40w"
+        },
+        {
+          "portata": "secondo",
+          "nome": "Capocollo al forno",
+          "stato": "incerto",
+          "suggestedMatchId": "mnsq9hynm2d",
+          "nota": "Scritto 'Capocolo di maiale al forno' - verosimilmente corrisponde a 'Capocollo al forno'"
+        },
+        {
+          "portata": "contorno",
+          "nome": "Verdure al forno",
+          "stato": "match",
+          "matchId": "mnsq9hync5b"
+        },
+        {
+          "portata": "dolce",
+          "nome": "Dolce della casa",
+          "stato": "match",
+          "matchId": "mo67hzucqmt"
+        }
+      ],
+      "prezzo": 30,
+      "nota_generale": "Elenco scritto sotto il blocco 'OSPITI Michelangelo' (gruppo con rif. prenotazione 245161, 14 pax, deg. 12+iva) — nome di gruppo accanto all'elenco. Per la regola generale è incluso comunque flaggato: verifica se questo è il menù del sito o solo per il gruppo Michelangelo."
+    },
+    {
+      "data": "2026-11-20",
+      "servizio": "cena",
+      "piatti": [
+        {
+          "portata": "antipasto",
+          "nome": "Crostino con gota, pecorino e miele",
+          "stato": "match",
+          "matchId": "mnsq9hynkaz"
+        },
+        {
+          "portata": "antipasto",
+          "nome": "Tortino di stagione con crema al pecorino",
+          "stato": "incerto",
+          "suggestedMatchId": "mq55n4fyfry",
+          "nota": "Scritto 'Tortino di stagione con crema di pecorino' - verosimile corrispondenza con piatto esistente"
+        },
+        {
+          "portata": "antipasto",
+          "nome": "Polenta ripiena con salsiccia e scamorza",
+          "stato": "match",
+          "matchId": "mnsq9hyn6l4"
+        },
+        {
+          "portata": "antipasto",
+          "nome": "Selezione di formaggi",
+          "stato": "incerto",
+          "suggestedMatchId": "mohaxdaa2wx",
+          "nota": "Scritto 'Sel. Formaggi' - abbreviazione, probabile corrispondenza con 'Formaggi misti'"
+        },
+        {
+          "portata": "antipasto",
+          "nome": "Selezione di salumi toscani",
+          "stato": "match",
+          "matchId": "mnsq9hynqk0"
+        },
+        {
+          "portata": "primo",
+          "nome": "Risotto con zucca gialla e pecorino",
+          "stato": "incerto",
+          "suggestedMatchId": "mwjb3t8povx",
+          "nota": "Scritto 'Risotto con zucca gialla e pecorino', simile a 'Risotti zucca gialla e salsiccia' ma senza salsiccia - verifica"
+        },
+        {
+          "portata": "secondo",
+          "nome": "Capocollo ripieno con salsiccia, pere e gorgonzola",
+          "stato": "match",
+          "matchId": "mnsq9hyn38r"
+        },
+        {
+          "portata": "secondo",
+          "nome": "Capocollo al forno semplice",
+          "stato": "incerto",
+          "suggestedMatchId": "mnsq9hynm2d",
+          "nota": "Nota evidenziata in arancione accanto alla prenotazione di Arianna Valle (1 bambino celiaco) - indica una sostituzione per intolleranza, probabilmente NON per il sito ma per quel singolo ospite celiaco; verifica se vada incluso"
+        },
+        {
+          "portata": "contorno",
+          "nome": "Patate sabbiate",
+          "stato": "match",
+          "matchId": "mnsq9hynelb"
+        },
+        {
+          "portata": "dolce",
+          "nome": "Pinolata alla crema",
+          "stato": "match",
+          "matchId": "mnsq9hyntti"
+        }
+      ],
+      "prezzo": 32,
+      "nota_generale": "Pagina con prenotazioni multiple (Carolina Becareli, Ariana Valle, intermissivi Sinana De Rosa) e un unico elenco di piatti con prezzo finale €32 - sembra il menù SITO del venerdì 20 novembre cena."
+    },
+    {
+      "data": "2026-11-21",
+      "servizio": "cena",
+      "piatti": [
+        {
+          "portata": "antipasto",
+          "nome": "Antipasto misto toscano",
+          "stato": "match",
+          "matchId": "mo68jqekj3x",
+          "nota": "Scritto 'Antipasto misto (diverso da venerdì)' - probabile corrispondenza, nota sul fatto che sia diverso dal giorno precedente"
+        },
+        {
+          "portata": "primo",
+          "nome": "Pici al ragù",
+          "stato": "match",
+          "matchId": "mo1zx4sfwtk"
+        },
+        {
+          "portata": "secondo",
+          "nome": "Tagliata di manzo agli aromi",
+          "stato": "match",
+          "matchId": "mnsq9hyn4sj"
+        },
+        {
+          "portata": "contorno",
+          "nome": "Patate arrosto",
+          "stato": "match",
+          "matchId": "mnsq9hynayz"
+        },
+        {
+          "portata": "dolce",
+          "nome": "Crostata alla crema e fragole",
+          "stato": "incerto",
+          "suggestedMatchId": "mpv0nouuems",
+          "nota": "Scritto 'Crostata marmellata' - potrebbe essere 'Crostata con marmellata fresca' invece di 'Crostata alla crema e fragole', verifica"
+        }
+      ],
+      "prezzo": 32,
+      "nota_generale": "Pagina con prenotazione Ariana Valle (1 bambino celiaco) e Marta Mazzuco (depennata/annullata) e un unico elenco piatti con prezzo finale €32 - sembra il menù SITO del sabato 21 novembre cena."
+    }
+  ]
 }
