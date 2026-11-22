@@ -11455,5 +11455,458 @@
     ]
   },
   "tavoli": {},
-  "importPending": []
+  "importPending": [
+    {
+      "data": "2026-11-24",
+      "servizio": "pranzo",
+      "prezzo": 32,
+      "piatti": [
+        {
+          "portata": "antipasto",
+          "nome": "Antipasto misto toscano",
+          "stato": "match",
+          "matchId": "mo68jqekj3x",
+          "nota": "Scritto 'ANTIPASTO MISTO TOSCANO' - nella parte alta pagina c'è anche 'TOGLIERE RICOTTA' riferito probabilmente a una prenotazione sopra, non chiaro se riguardi questo menù"
+        },
+        {
+          "portata": "primo",
+          "nome": "Pasta fresca con crema di porri e patate, briciole e guanciale croccante",
+          "stato": "nuovo",
+          "traduzione": "Fresh pasta with leek and potato cream, breadcrumbs and crispy guanciale",
+          "nota": "Simile a piatti con porri/guanciale esistenti ma con patate, non trovato match esatto"
+        },
+        {
+          "portata": "secondo",
+          "nome": "Tagliata di manzo agli aromi",
+          "stato": "match",
+          "matchId": "mnsq9hyn4sj"
+        },
+        {
+          "portata": "contorno",
+          "nome": "Patate arrosto",
+          "stato": "match",
+          "matchId": "mnsq9hynayz"
+        },
+        {
+          "portata": "dolce",
+          "nome": "Dolce della casa",
+          "stato": "match",
+          "matchId": "mo67hzucqmt"
+        }
+      ]
+    },
+    {
+      "data": "2026-11-25",
+      "servizio": "pranzo",
+      "prezzo": 32,
+      "piatti": [
+        {
+          "portata": "antipasto",
+          "nome": "Antipasto del Ciliegio",
+          "stato": "match",
+          "matchId": "mo1xei4h6yo"
+        },
+        {
+          "portata": "primo",
+          "nome": "Pasta fresca al ragù toscano",
+          "stato": "match",
+          "matchId": "mo68pp64giu"
+        },
+        {
+          "portata": "secondo",
+          "nome": "Tagliata di manzo al pepe rosa",
+          "stato": "match",
+          "matchId": "mnsq9hyn0ay"
+        },
+        {
+          "portata": "contorno",
+          "nome": "Patate arrosto",
+          "stato": "match",
+          "matchId": "mnsq9hynayz"
+        },
+        {
+          "portata": "dolce",
+          "nome": "Dolce della casa",
+          "stato": "match",
+          "matchId": "mo67hzucqmt"
+        }
+      ]
+    },
+    {
+      "data": "2026-11-25",
+      "servizio": "cena",
+      "prezzo": 35,
+      "piatti": [
+        {
+          "portata": "antipasto",
+          "nome": "Crostino nero",
+          "stato": "match",
+          "matchId": "mnsq9hyneqw"
+        },
+        {
+          "portata": "antipasto",
+          "nome": "Crostone con cavolo nero e pancetta",
+          "stato": "match",
+          "matchId": "mnsq9hymtkv"
+        },
+        {
+          "portata": "antipasto",
+          "nome": "Battuta di manzo con maionese semplice",
+          "stato": "incerto",
+          "suggestedMatchId": "mnsq9hymfot",
+          "nota": "Scritto 'BATTUTA DI MANZO CON MAIO SEMPLICE' - esistono varianti con maionese paprika/senape/aglio ma non 'semplice', probabile nuovo piatto o variante"
+        },
+        {
+          "portata": "antipasto",
+          "nome": "Tonno del Chianti",
+          "stato": "match",
+          "matchId": "mnsq9hynmjr"
+        },
+        {
+          "portata": "antipasto",
+          "nome": "Selezione formaggi",
+          "stato": "incerto",
+          "suggestedMatchId": "mohaxdaa2wx",
+          "nota": "Scritto 'SEL. FORMAGGI', possibile match con 'Formaggi misti'"
+        },
+        {
+          "portata": "primo",
+          "nome": "Ribollita",
+          "stato": "match",
+          "matchId": "mnsq9hynwdm"
+        },
+        {
+          "portata": "primo",
+          "nome": "Pici cacio e pepe",
+          "stato": "match",
+          "matchId": "mnsq9hyngl1"
+        },
+        {
+          "portata": "secondo",
+          "nome": "Capocollo ripieno con salsiccia, pere e gorgonzola",
+          "stato": "match",
+          "matchId": "mnsq9hyn38r"
+        },
+        {
+          "portata": "contorno",
+          "nome": "Patate arrosto",
+          "stato": "match",
+          "matchId": "mnsq9hynayz"
+        },
+        {
+          "portata": "dolce",
+          "nome": "Dolce della casa",
+          "stato": "match",
+          "matchId": "mo67hzucqmt"
+        }
+      ],
+      "nota": "Pagina mostra prenotazione Bacchini con celiaco - non è motivo di esclusione, c'è elenco piatti completo con prezzo (35) a fine pagina, incluso come da regola generale"
+    },
+    {
+      "data": "2026-11-26",
+      "servizio": "pranzo",
+      "prezzo": 32,
+      "piatti": [
+        {
+          "portata": "antipasto",
+          "nome": "Crostino con salsiccia, ricotta ed erbe aromatiche",
+          "stato": "match",
+          "matchId": "mnsq9hynxni",
+          "nota": "Scritto 'CROSTINO SALSICCIA E RICOTTA'"
+        },
+        {
+          "portata": "antipasto",
+          "nome": "Crostone con cavolo nero e pancetta",
+          "stato": "match",
+          "matchId": "mnsq9hymtkv"
+        },
+        {
+          "portata": "antipasto",
+          "nome": "Selezione affettati locali",
+          "stato": "incerto",
+          "suggestedMatchId": "mnsq9hynqk0",
+          "nota": "Scritto 'SEL. AFFETTATI LOCALI', possibile match con 'Selezione di salumi toscani'"
+        },
+        {
+          "portata": "antipasto",
+          "nome": "Tortino di patate con crema al pecorino",
+          "stato": "match",
+          "matchId": "mo1w9vxeqnt",
+          "nota": "Scritto 'TORTINO DI PATATE CON CREMA AL PECORINO'"
+        },
+        {
+          "portata": "antipasto",
+          "nome": "Selezione formaggi con miele",
+          "stato": "incerto",
+          "suggestedMatchId": "mo1w8xtm5r2",
+          "nota": "Scritto 'SEL. FORMAGGI CON MIELE', possibile match con 'Formaggi Pecorini con Marmellata e/o Miele'"
+        },
+        {
+          "portata": "primo",
+          "nome": "Pici al ragù di cortile",
+          "stato": "match",
+          "matchId": "mp33p0xskfv"
+        },
+        {
+          "portata": "secondo",
+          "nome": "Tagliata di manzo al lardo e scaglie di pecorino",
+          "stato": "match",
+          "matchId": "mnsq9hyndcd",
+          "nota": "Scritto 'TAGLIATA DI MANZO CON LARDO E PECORINO'"
+        },
+        {
+          "portata": "contorno",
+          "nome": "Patate sabbiate",
+          "stato": "match",
+          "matchId": "mnsq9hynelb"
+        },
+        {
+          "portata": "dolce",
+          "nome": "Dolce della casa",
+          "stato": "match",
+          "matchId": "mo67hzucqmt"
+        }
+      ]
+    },
+    {
+      "data": "2026-11-27",
+      "servizio": "pranzo",
+      "prezzo": 32,
+      "piatti": [
+        {
+          "portata": "antipasto",
+          "nome": "Gran tagliere del Ciliegio",
+          "stato": "match",
+          "matchId": "mo6acrp1vak"
+        },
+        {
+          "portata": "primo",
+          "nome": "Pappardelle al ragù di cortile",
+          "stato": "match",
+          "matchId": "mp6qq1hc6f9",
+          "nota": "Scritto 'PASTA FRESCA AL RAGÙ DI CORTILE', potrebbe essere Pici o Pappardelle - match su nome generico"
+        },
+        {
+          "portata": "secondo",
+          "nome": "Tagliata di manzo al lardo e scaglie di pecorino",
+          "stato": "match",
+          "matchId": "mnsq9hyndcd",
+          "nota": "Scritto 'TAGLIATA DI MANZO CON LARDO E PECORINO'"
+        },
+        {
+          "portata": "contorno",
+          "nome": "Patate arrosto",
+          "stato": "match",
+          "matchId": "mnsq9hynayz"
+        },
+        {
+          "portata": "dolce",
+          "nome": "Dolce della casa",
+          "stato": "match",
+          "matchId": "mo67hzucqmt"
+        }
+      ]
+    },
+    {
+      "data": "2026-11-27",
+      "servizio": "cena",
+      "prezzo": 28,
+      "piatti": [
+        {
+          "portata": "antipasto",
+          "nome": "Tortino di pappa al pomodoro",
+          "stato": "match",
+          "matchId": "mnsq9hyno6u"
+        },
+        {
+          "portata": "antipasto",
+          "nome": "Selezione affettati",
+          "stato": "incerto",
+          "suggestedMatchId": "mnsq9hynqk0",
+          "nota": "Scritto 'SELEZ. AFFETTATI', possibile match con 'Selezione di salumi toscani'"
+        },
+        {
+          "portata": "antipasto",
+          "nome": "Selezione formaggi",
+          "stato": "incerto",
+          "suggestedMatchId": "mohaxdaa2wx",
+          "nota": "Scritto 'SELEZ. FORMAGGI', possibile match con 'Formaggi misti'"
+        },
+        {
+          "portata": "antipasto",
+          "nome": "Crostino nero",
+          "stato": "match",
+          "matchId": "mnsq9hyneqw"
+        },
+        {
+          "portata": "antipasto",
+          "nome": "Polenta al forno con lardo e formaggio",
+          "stato": "match",
+          "matchId": "mnsq9hynfoi",
+          "nota": "Scritto 'POLENTA AL FORNO LARDO E FORMAGGIO', match con 'Polenta al forno con crema di lardo e formaggio'"
+        },
+        {
+          "portata": "primo",
+          "nome": "Lasagne con zucca gialla e scamorza",
+          "stato": "match",
+          "matchId": "mnsq9hynyof"
+        },
+        {
+          "portata": "secondo",
+          "nome": "Coscio di maiale arrosto",
+          "stato": "match",
+          "matchId": "mnsq9hynuo1"
+        },
+        {
+          "portata": "contorno",
+          "nome": "Verdure arrosto",
+          "stato": "match",
+          "matchId": "mokcau21bzk"
+        },
+        {
+          "portata": "dolce",
+          "nome": "Dolce della casa",
+          "stato": "match",
+          "matchId": "mo67hzucqmt"
+        }
+      ],
+      "nota": "Pagina contiene più prenotazioni (Soc. Sportiva Pedale Senese, Cassiopei, Alessandro Meiarini) sopra l'elenco piatti con prezzo finale 30€ — incluso per regola generale poiché c'è un unico elenco con prezzo a fine pagina, non chiaro a quale prenotazione sia abbinato specificamente, ma sembra essere il menù comune del servizio"
+    },
+    {
+      "data": "2026-11-28",
+      "servizio": "pranzo",
+      "prezzo": 32,
+      "piatti": [
+        {
+          "portata": "antipasto",
+          "nome": "Crostino nero",
+          "stato": "match",
+          "matchId": "mnsq9hyneqw"
+        },
+        {
+          "portata": "antipasto",
+          "nome": "Crostone con fagioli e lardo",
+          "stato": "match",
+          "matchId": "mnsq9hyn8gn"
+        },
+        {
+          "portata": "antipasto",
+          "nome": "Selezione affettati",
+          "stato": "incerto",
+          "suggestedMatchId": "mnsq9hynqk0",
+          "nota": "Scritto 'SEL. AFFETTATI', possibile match con 'Selezione di salumi toscani'"
+        },
+        {
+          "portata": "antipasto",
+          "nome": "Battuta di manzo con maionese senape",
+          "stato": "match",
+          "matchId": "mnsq9hymmle",
+          "nota": "Scritto 'BATTUTA DI MANZO CON MAIO SENAPE'"
+        },
+        {
+          "portata": "antipasto",
+          "nome": "Tonno del Chianti",
+          "stato": "match",
+          "matchId": "mnsq9hynmjr"
+        },
+        {
+          "portata": "primo",
+          "nome": "Tagliatelle al ragù di cinghiale",
+          "stato": "match",
+          "matchId": "mor0xlkqoe0"
+        },
+        {
+          "portata": "secondo",
+          "nome": "Tagliata di manzo agli aromi",
+          "stato": "match",
+          "matchId": "mnsq9hyn4sj"
+        },
+        {
+          "portata": "contorno",
+          "nome": "Patate arrosto",
+          "stato": "match",
+          "matchId": "mnsq9hynayz"
+        },
+        {
+          "portata": "dolce",
+          "nome": "Pinolata alla crema",
+          "stato": "match",
+          "matchId": "mnsq9hyntti"
+        }
+      ],
+      "nota": "Sopra l'elenco ci sono prenotazioni (Santacroce, Alessandra, Linda Betti) con note celiaco/vegetariano/no glutine - non motivo di esclusione, elenco piatti con prezzo finale incluso per intero"
+    },
+    {
+      "data": "2026-11-29",
+      "servizio": "pranzo",
+      "prezzo": 36,
+      "piatti": [
+        {
+          "portata": "antipasto",
+          "nome": "Crostino nero",
+          "stato": "match",
+          "matchId": "mnsq9hyneqw"
+        },
+        {
+          "portata": "antipasto",
+          "nome": "Crostone con cipolla e miele",
+          "stato": "match",
+          "matchId": "mnsq9hymnw1"
+        },
+        {
+          "portata": "antipasto",
+          "nome": "Selezione salumi locali",
+          "stato": "incerto",
+          "suggestedMatchId": "mnsq9hynqk0",
+          "nota": "Scritto 'SEL. SALUMI LOCALI', possibile match con 'Selezione di salumi toscani'"
+        },
+        {
+          "portata": "antipasto",
+          "nome": "Selezione formaggi con miele",
+          "stato": "incerto",
+          "suggestedMatchId": "mo1w8xtm5r2",
+          "nota": "Scritto 'SEL. FORMAGGI CON MIELE'"
+        },
+        {
+          "portata": "antipasto",
+          "nome": "Polenta ripiena con salsiccia e scamorza",
+          "stato": "match",
+          "matchId": "mnsq9hyn6l4",
+          "nota": "Scritto 'POLENTA RIPIENA SALSICCIA E SCAMORZA'"
+        },
+        {
+          "portata": "primo",
+          "nome": "Pappardelle al ragù di cinghiale",
+          "stato": "match",
+          "matchId": "mnsq9hyns1x"
+        },
+        {
+          "portata": "secondo",
+          "nome": "Arista arrosto",
+          "stato": "match",
+          "matchId": "mnsq9hynxpi"
+        },
+        {
+          "portata": "secondo",
+          "nome": "Tagliata di manzo al pepe rosa",
+          "stato": "match",
+          "matchId": "mnsq9hyn0ay",
+          "nota": "Scritte entrambe le opzioni di secondo (Arista e Tagliata), incluse entrambe come da regola 5"
+        },
+        {
+          "portata": "contorno",
+          "nome": "Patate arrosto",
+          "stato": "match",
+          "matchId": "mnsq9hynayz"
+        },
+        {
+          "portata": "dolce",
+          "nome": "Cantucci e vin santo",
+          "stato": "match",
+          "matchId": "mnsq9hynzar"
+        }
+      ],
+      "nota": "Pagina contiene molte prenotazioni/gruppi (Travel, Sabrina Becchi, Città del Palio con nota 'TUTTA UNA SALA - PREZZO LORO - NO TAGLIATA' tra parentesi, ecc.) ma elenco piatti finale con prezzo 36 sembra il menù generico del sito; la nota 'NO TAGLIATA' riferita al gruppo Città del Palio non è stata applicata per escludere il piatto dal sito, come da regola generale"
+    }
+  ]
 }
