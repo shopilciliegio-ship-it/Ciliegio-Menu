@@ -11469,13 +11469,6 @@
           "nota": "Scritto 'ANTIPASTO MISTO TOSCANO' - nella parte alta pagina c'è anche 'TOGLIERE RICOTTA' riferito probabilmente a una prenotazione sopra, non chiaro se riguardi questo menù"
         },
         {
-          "portata": "primo",
-          "nome": "Pasta fresca con crema di porri e patate, briciole e guanciale croccante",
-          "stato": "nuovo",
-          "traduzione": "Fresh pasta with leek and potato cream, breadcrumbs and crispy guanciale",
-          "nota": "Simile a piatti con porri/guanciale esistenti ma con patate, non trovato match esatto"
-        },
-        {
           "portata": "secondo",
           "nome": "Tagliata di manzo agli aromi",
           "stato": "match",
