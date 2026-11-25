@@ -37,6 +37,12 @@ async function ensureLoggedIn(context, page) {
     if (page.url().includes('Login2FA') || (await page.locator('#codice2fa').count()) > 0) {
       throw new Error('Richiesto codice 2FA: la sessione salvata (passweb-auth.json) e\' scaduta e serve un nuovo codice a 6 cifre manuale.');
     }
+    if (page.url().includes('ResetPassword')) {
+      throw new Error('PASSWORD PASSWEB SCADUTA: Passweb chiede una nuova password (pagina ResetPassword). Va reimpostata a mano su https://www.ilciliegio.com/Wizard/Login e poi aggiornata nel secret GitHub PASSWEB_PASS (e in passweb-credentials.json in locale).');
+    }
+    if (page.url().includes('/Login')) {
+      throw new Error('Login Passweb NON riuscito (credenziali rifiutate o pagina inattesa): ' + page.url());
+    }
     await context.storageState({ path: AUTH_PATH });
     console.log('Login OK, sessione salvata.');
   } else {

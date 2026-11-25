@@ -195,7 +195,12 @@ async function main() {
   log('✅ Tutto fatto: GitHub e sito live aggiornati.');
 }
 
-main().catch(err => {
+main().catch(async err => {
   console.error('❌ Errore:', err.message);
   process.exitCode = 1;
+  try {
+    await inviaEmail('❌ Menù della settimana: pubblicazione sul sito NON riuscita', `Errore: ${err.message}
+
+Se nel log compare "Promuovo la bozza", GitHub (immagini-sito/ e stories) e' gia' aggiornato: manca solo il caricamento sul sito ilciliegio.com.`);
+  } catch (e) {}
 });
