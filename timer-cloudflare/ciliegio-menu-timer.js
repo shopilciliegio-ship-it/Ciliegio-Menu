@@ -5,17 +5,18 @@
 // repo (token/permessi separati), perché il cron `schedule` di GitHub Actions parte
 // con ore di ritardo (vedi memoria "github-actions-cron-unreliable-external-timer").
 //
-// Un solo job: la domenica sera guarda l'ora vera di Roma e, quando sono le 23:00,
+// Un solo job: il lunedì notte guarda l'ora vera di Roma e, quando è l'1:00,
 // lancia workflow_dispatch su promuovi-menu-settimana.yml (repo Ciliegio-Menu). Quel
 // workflow non fa nulla se Luca non ha segnato una bozza "pronta" nell'app — quindi
 // lanciarlo anche a vuoto (es. doppio trigger nella stessa finestra) è innocuo.
 //
-// Cron trigger da impostare nel pannello Cloudflare (Triggers): "0 21,22 * * *"
-// (UTC, ogni giorno). Copre sia l'ora legale (23:00 Roma = 21 UTC) sia
-// l'ora solare (23:00 Roma = 22 UTC) senza bisogno di aggiornarlo il giorno del cambio ora.
+// Cron trigger da impostare nel pannello Cloudflare (Triggers): "0 23,0 * * *"
+// (UTC, ogni giorno). Copre sia l'ora legale (1:00 Roma = 23 UTC del giorno prima) sia
+// l'ora solare (1:00 Roma = 0 UTC) senza bisogno di aggiornarlo il giorno del cambio ora.
 // Il giorno della settimana NON è nel cron di proposito (Cloudflare usa la numerazione
 // Quartz, 1=domenica, trappola già vista il 27/9): lo controlla daLanciare() sull'ora
-// vera di Roma. Dal 26/10 era lunedì 1:00; il 25/11/2026 Luca ha chiesto di nuovo la domenica 23:00.
+// vera di Roma. Spostato dalla domenica 23:00 al lunedì 1:00 il 26/10/2026 perché Luca
+// prepara e approva i menù domenica sera dopo le 21.
 //
 // Segreti (Worker → Settings → Variables and Secrets, tipo "Secret"):
 //   GITHUB_TOKEN  token fine-grained GitHub, SOLO repo Ciliegio-Menu, permesso Actions: Read and write
@@ -38,7 +39,7 @@ function romeNow(date) {
 }
 
 function daLanciare(r) {
-  return r.weekday === 'Sun' && r.hour === 23 && r.minute < 15;
+  return r.weekday === 'Mon' && r.hour === 1 && r.minute < 15;
 }
 
 async function dispatch(env) {
@@ -82,7 +83,7 @@ export default {
         `GITHUB_TOKEN: ${segreto(env.GITHUB_TOKEN) ? 'impostato' : 'MANCANTE'}`,
         `TEST_KEY: ${segreto(env.TEST_KEY) ? 'impostata' : 'MANCANTE'}`,
         `Ora a Roma: ${r.weekday} ${r.hour}:${String(r.minute).padStart(2, '0')}`,
-        'Lancia promuovi-menu-settimana.yml la domenica alle 23:00 Roma.'
+        'Lancia promuovi-menu-settimana.yml il lunedì alle 01:00 Roma.'
       ].join('\n') + '\n');
     }
     if (sezione !== 'test' || !segreto(env.TEST_KEY) || chiave !== segreto(env.TEST_KEY)) return new Response('Not found', { status: 404 });
