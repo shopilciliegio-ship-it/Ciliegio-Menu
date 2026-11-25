@@ -4,7 +4,12 @@ on:
   # Lanciato dal timer esterno (Cloudflare Worker, timer-cloudflare/ciliegio-menu-timer.js) la
   # domenica sera Europe/Rome, o a mano da qui per un test. Non fa nulla se nessuna bozza è
   # stata segnata "pronta" nell'app (vedi promuovi-settimana.js) — lanciarlo a vuoto è innocuo.
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      solo_sito:
+        description: "1 = non promuovere nulla, carica su Passweb le immagini gia' in immagini-sito/"
+        required: false
+        default: ''
 
 concurrency:
   group: promuovi-menu-settimana
@@ -31,4 +36,5 @@ jobs:
           PASSWEB_PASS: ${{ secrets.PASSWEB_PASS }}
           PASSWEB_AUTH_JSON: ${{ secrets.PASSWEB_AUTH_JSON }}
           BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+          SOLO_SITO: ${{ github.event.inputs.solo_sito }}
         run: node promuovi-settimana.js

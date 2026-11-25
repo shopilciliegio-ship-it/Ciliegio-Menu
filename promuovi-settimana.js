@@ -79,11 +79,14 @@ function gitRun(cmd) {
 }
 
 async function main() {
+  const SOLO_SITO = process.env.SOLO_SITO === '1';
+  let manifest = { settimana: 'corrente (solo sito)' };
+  if (!SOLO_SITO) {
   if (!fs.existsSync(MANIFEST_PATH)) {
     log('Nessuna bozza in attesa (manca immagini-sito-prossima/settimana.json) — nessuna azione.');
     return;
   }
-  const manifest = JSON.parse(fs.readFileSync(MANIFEST_PATH, 'utf8'));
+  manifest = JSON.parse(fs.readFileSync(MANIFEST_PATH, 'utf8'));
   if (!manifest.pronta) {
     log(`Bozza presente per la settimana ${manifest.settimana} ma NON segnata "pronta" — nessuna azione. (Segnala nell'app, modal "Genera JPG per Sito".)`);
     return;
@@ -128,6 +131,7 @@ async function main() {
   gitRun(`git commit -m "Pubblicazione automatica settimana ${manifest.settimana}: bozza -> immagini-sito/"`);
   gitRun('git push');
   log('✅ immagini-sito/ aggiornata e pubblicata su GitHub (le stories la leggono da qui).');
+  }
 
   // ── Caricamento sul sito live (Passweb) ──
   const user = process.env.PASSWEB_USER, pass = process.env.PASSWEB_PASS, authJson = process.env.PASSWEB_AUTH_JSON;
